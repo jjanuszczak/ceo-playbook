@@ -16,11 +16,11 @@ title = "The CEO Playbook"
 
 [params.author]
   name = "John Januszczak"
-  email = "youremail@example.com"
+  email = "john@januszczak.org"
   image = "https://avatars.githubusercontent.com/u/2819290?v=4"
   imageQuality = 96
-  headline = "I'm only human"
-  bio = "A little bit about you"
+  headline = "Designing & leading systems that make innovation investable"
+  bio = "Bridging technology, capital, and leaderhsip to build"
   links = [
 #     { email = "mailto:hello@your_domain.com" },
 #     { link = "https://link-to-some-website.com/" },
@@ -35,7 +35,7 @@ title = "The CEO Playbook"
 #     { facebook = "https://facebook.com/username" },
 #     { flickr = "https://www.flickr.com/photos/username/" },
 #     { foursquare = "https://foursquare.com/username" },
-#     { github = "https://github.com/username" },
+     { github = "https://github.com/jjanuszczak" },
 #     { gitlab = "https://gitlab.com/username" },
 #     { google = "https://www.google.com/" },
 #     { hashnode = "https://username.hashnode.dev" },
@@ -45,7 +45,7 @@ title = "The CEO Playbook"
 #     { keyoxide = "https://keyoxide.org/URI" },
 #     { kickstarter = "https://www.kickstarter.com/profile/username" },
 #     { lastfm = "https://lastfm.com/user/username" },
-#     { linkedin = "https://linkedin.com/in/username" },
+     { linkedin = "https://linkedin.com/in/johnjanuszzcak" },
 #     { mastodon = "https://mastodon.instance/@username" },
 #     { matrix = "https://matrix.to/#/URI" },
 #     { medium = "https://medium.com/username" },
