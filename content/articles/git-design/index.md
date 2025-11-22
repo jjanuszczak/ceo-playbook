@@ -1,5 +1,5 @@
 ---
-title: "Design Around Constraints"
+title: "Designing Around Constraints"
 date: 2025-11-22
 draft: false
 ---
