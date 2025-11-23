@@ -10,8 +10,29 @@ draft: false
 ---
 
 
-_Git is a case study on cleverly, if not easthetically, designing around constraints vs throwing hardware at a problem_
+_Git is a case study on cleverly designing around constraints vs throwing hardware at a problem_
 
+## The Big Picture
+The Git object layout is a classic case of "design around the actual constraints" instead of assuming "hardware will save us."
+
+In 2005, when Linus Torvalds built Git:
+
+- Spinning hard drives were slow at random seeks and directory lookups.
+- Common filesystems (ext3, NTFS, etc.) choked badly once a directory crossed ~10,000–20,000 entries.
+- A busy Linux kernel repository could easily generate hundreds of thousands of objects over time.
+- SSDs basically didn’t exist for consumers, and even if you had fast hardware, many developers were on laptops or shared servers with mediocre disks.
+
+Throwing "faster hardware" at it wouldn’t have helped most users, and it certainly wouldn’t have made Git usable on large projects back then. Instead, Linus chose a tiny, zero-cost software fix: split into 256 subdirectories using the first two hex digits of the hash. It costs almost nothing in code complexity, adds no runtime overhead, and completely sidesteps the filesystem pathology.
+
+It’s a textbook example of thoughtful systems design:
+
+- Solves the real bottleneck (filesystem behavior) rather than a symptom.
+- Scales from tiny repos to monstrous ones with no configuration changes.
+- Still beneficial today even on NVMe SSDs and modern filesystems (fewer directory entries = fewer inodes, less metadata pressure, faster clones on network filesystems, etc.).
+
+You see the same philosophy elsewhere in Git: content-addressed storage, Merkle-tree history, packfiles, delta compression… almost everything is built to be stingy with I/O and robust on slow or unreliable hardware, because that was the reality when it was born. Faster CPUs and SSDs are nice bonuses, but Git didn’t need to wait for them to be blazingly fast. 
+
+## Under the Covers
 Git stores objects (blobs, trees, commits, and tags) in the `.git/objects` directory using a **loose object format** by default. Each object is identified by its **SHA-1 hash** (a 40-character hexadecimal string, e.g., `a1b2c3d4...` for SHA-1; Git now uses SHA-256 in some cases, but the structure is similar).
 
 When storing a loose object:
@@ -46,23 +67,3 @@ This is a deliberate performance optimization for filesystem efficiency:
 New objects start as **loose** (one file per object). Over time, `git gc` packs them into efficient **packfiles** (`.git/objects/pack/`) for storage and transfer, where this directory structure is no longer used. The fan-out is mainly for the loose phase.
 
 This design has proven extremely effective and is why Git repositories remain fast even when they contain hundreds of thousands or millions of objects.
-
-### The Big Picture
-The Git object layout is a classic case of "design around the actual constraints" instead of assuming "hardware will save us."
-
-In 2005, when Linus built Git:
-
-- Spinning hard drives were slow at random seeks and directory lookups.
-- Common filesystems (ext3, NTFS, etc.) choked badly once a directory crossed ~10,000–20,000 entries.
-- A busy Linux kernel repository could easily generate hundreds of thousands of objects over time.
-- SSDs basically didn’t exist for consumers, and even if you had fast hardware, many developers were on laptops or shared servers with mediocre disks.
-
-Throwing "faster hardware" at it wouldn’t have helped most users, and it certainly wouldn’t have made Git usable on large projects back then. Instead, Linus chose a tiny, zero-cost software fix: split into 256 subdirectories using the first two hex digits of the hash. It costs almost nothing in code complexity, adds no runtime overhead, and completely sidesteps the filesystem pathology.
-
-It’s a textbook example of thoughtful systems design:
-
-- Solves the real bottleneck (filesystem behavior) rather than a symptom.
-- Scales from tiny repos to monstrous ones with no configuration changes.
-- Still beneficial today even on NVMe SSDs and modern filesystems (fewer directory entries = fewer inodes, less metadata pressure, faster clones on network filesystems, etc.).
-
-You see the same philosophy elsewhere in Git: content-addressed storage, Merkle-tree history, packfiles, delta compression… almost everything is built to be stingy with I/O and robust on slow or unreliable hardware, because that was the reality when it was born. Faster CPUs and SSDs are nice bonuses, but Git didn’t need to wait for them to be blazingly fast. 

@@ -50,7 +50,7 @@ If AI is writing the rules, where does that leave us? The honest answer is: **We
 
 Because the new paradigm generates rules from data rather than human logic, the future of banking will likely look like nothing we have seen before. However, the potential is limitless. The goal isn't just better technology; it is total inclusion.
 
-As Januszczak concludes, the ultimate question isn't about the tech itself, but the outcome: _"What will it look like when all 115 million Filipinos are connected without any barrier to the global economy?"_.
+The ultimate question isn't about the tech itself, but the outcome: _"What will it look like when all 115 million Filipinos are connected without any barrier to the global economy?"_.
 
 ***
 
