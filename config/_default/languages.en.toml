@@ -2,7 +2,7 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "The CEO Playbook"
+title = "CEO Playbook"
 
 [params]
   displayName = "EN"

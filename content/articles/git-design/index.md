@@ -1,6 +1,8 @@
 ---
 title: "Designing Around Constraints"
 date: 2025-11-22
+summary: "Explains why Git stores loose objects in 256 subdirectories keyed by the first two hash characters and how that simple layout optimizes filesystem performance and scalability."
+description: "Details Git’s object storage strategy: content‑addressed objects (SHA hashes) are placed in a two‑character fan‑out (256 buckets) to avoid huge flat directories, speed lookups, and reduce filesystem pathology on older spinning disks. Covers loose objects vs. packfiles, partial‑hash lookups, historical constraints that shaped the design, and the broader lesson to solve real constraints rather than relying on faster hardware."
 tags: 
    - "Technology"
    - "Design"
