@@ -6,6 +6,7 @@ description: "Details Git’s object storage strategy: content‑addressed objec
 tags: 
    - "Technology"
    - "Design"
+showTableOfContents: true
 draft: false
 ---
 
