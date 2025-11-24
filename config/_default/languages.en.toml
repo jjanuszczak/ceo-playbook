@@ -9,8 +9,8 @@ title = "CEO Playbook"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  # logo = "images/ceo-playbook-logo-dark.png"
-  # secondaryLogo = "img/secondary-logo.png"
+  logo = "images/ceo-playbook-logo-dark-bg.png"
+  secondaryLogo = "images/ceo-playbook-logo-light-bg.png"
   # description = "My awesome website"
   # copyright = "Copy, _right?_ :thinking_face:"
 
