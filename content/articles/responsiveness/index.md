@@ -49,7 +49,7 @@ If you cannot meet the deadline you committed to in Step 2, you must reset expec
 
 I illustrate the protocol below:
 {{< figure
-    src="math-of-responsiveness.jpg"
+    src="math-of-responsiveness.png"
     alt="Math of Responsiveness infographic"
     caption="Responsiveness infographic by author"
     >}}
