@@ -12,7 +12,7 @@ tags:
 showTableOfContents: true
 draft: false
 ---
-Central Bank Digital Currencies will redefine money. We may be surprised by the implications.
+_Central Bank Digital Currencies will redefine money. We may be surprised by the implications._
 
 ## Adoption to Date
 Central banks are actively looking at, or already developing Central Bank Digital Currency (CDBC). At last count, 11 nations already have CBDCs with over 20 piloting it in some way.
