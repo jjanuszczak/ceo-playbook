@@ -1,5 +1,5 @@
 ---
-title: "Articles"
+title: "Articles & Insights"
 description: "Articles which I have written."
 # This explicitly disables the grouping for this section only
 groupByYear: false 
