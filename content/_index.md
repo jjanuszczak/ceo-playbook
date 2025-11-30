@@ -20,7 +20,7 @@
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.6rem;
     opacity: 0.6; /* Subtle label */
     font-weight: 600;
   }
