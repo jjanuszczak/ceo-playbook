@@ -9,9 +9,8 @@ tags:
    - "Governance"
    - "Leadership"
    - "Strategy"
-build:
-  render: "false"
-  list: "local"
+showTableOfContents: true
+draft: false
 ---
 
 There’s a story from my earlier corporate years that has stayed with me. Not because it was dramatic, but because of what it reveals about how organizations fail to think.

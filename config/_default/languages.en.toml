@@ -2,7 +2,7 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "CEO Playbook"
+title = "John Januszczak | Fintech & Innovation Strategy"
 
 [params]
   displayName = "EN"
@@ -19,8 +19,8 @@ title = "CEO Playbook"
   email = "john@januszczak.org"
   image = "https://avatars.githubusercontent.com/u/2819290?v=4"
   imageQuality = 96
-  headline = "<strong>Designing & leading systems that make innovation investable</strong><br><small>Bridging technology, capital, and leaderhsip for the next generation of transformative ventures</small>"
-  bio = "Bridging technology, capital, and leaderhsip for the next generation of transformative ventures"
+  headline = "<strong>Designing & leading systems that make innovation investable</strong><br><small>Former President & CEO, UBX (Fintech & Venture Capital arm, UnionBank of the Philippines)<br>Former Chief Operating Officer, Manulife Philippines</small>"
+  bio = "Bridging technology, capital, and leadership for the next generation of transformative ventures"
   links = [
 #     { email = "mailto:hello@your_domain.com" },
 #     { link = "https://link-to-some-website.com/" },
