@@ -14,7 +14,7 @@ draft: false
 ---
 _Grading Kevin Kelly’s The Inevitable 10 Years Later_
 
-I was struck by this recent post on X. The idea of instant cognition and a kind of pervasive surveillance immediately reminded my of futurist Kevin Kelly's 2016 book [The Inevitable](https://www.amazon.com/Inevitable-Understanding-Technological-Forces-Future/dp/0525428089), which I read at the time and very much liked because it _felt_ about right:
+I was struck by this recent post on X. The idea of instant cognition and a kind of pervasive surveillance immediately reminded me of futurist Kevin Kelly's 2016 book [The Inevitable](https://www.amazon.com/Inevitable-Understanding-Technological-Forces-Future/dp/0525428089), which I read at the time and very much liked because it _felt_ about right:
 
 {{< x user="pascal_bornet" id="1997215380423495938" >}} 
 
