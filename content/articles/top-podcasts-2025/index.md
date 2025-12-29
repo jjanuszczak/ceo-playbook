@@ -222,6 +222,4 @@ Secondly, Benchmark (Bill Gurley's firm) was also [featured](https://www.acquire
 
 {{< spotify type="episode" id="3LVKQ667Y7uc6Ngayos7TA" >}}
 
-Lastly, a bit of a technical one. I created a shortcode for embedding the Spotify episodes and playlists in this article by forking and adding to one on GitHub in case anyone is interested in using it: 
-
-{{< gist jjanuszczak e523463328e8304e8ceb03c0a1e6a4f3 >}}
+Lastly, a bit of a technical one. I created a shortcode for embedding the Spotify episodes and playlists in this article by forking and adding to [one on GitHub](https://gist.github.com/jjanuszczak/e523463328e8304e8ceb03c0a1e6a4f3) in case anyone is interested in using it. 

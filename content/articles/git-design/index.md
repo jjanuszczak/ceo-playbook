@@ -10,8 +10,23 @@ showTableOfContents: true
 draft: false
 ---
 
-
 _Git is a case study on cleverly designing around constraints vs throwing hardware at a problem_
+
+In the annals of software engineering, there are deadline crunches, and then there is the ten-day sprint that changed the world.
+
+## The Story Behind This Story
+
+Before we dive into the elegant plumbing of Git, we have to talk about how it got here. It starts with Linus Torvalds. By 2005, Torvalds was already a deity in the open source world for creating the Linux kernel. But he had a problem. The Linux community had been using a proprietary version control system called BitKeeper to manage their massive codebase. It was a controversial choice: using closed-source tools to build open-source software rubbbed many the wrong way. But it worked. Until it didn't.
+
+After a reverse-engineering dispute between the community and the company behind BitKeeper, the license was pulled. The Linux kernel, the most important open source project in history, was effectively left homeless.
+
+Torvalds cancelled his schedule. He disappeared to his home office with a singular, furious goal: to build a replacement that was faster, more robust, and fundamentally different from anything that existed before. He didn't just want a patch; he wanted a system that could handle the scale of the kernel without breaking a sweat.
+
+Ten days later, he emerged with the first working version of Git.
+
+It is perhaps the ultimate testament to the power of the open source movement: when backed into a corner, the community didn't capitulate or pay up. They built something better. Git wasn't just a replacement; it was a revolution in distributed version control that would eventually **underpin the entire modern software ecosystem**.
+
+So, how did he do it? How do you architect a system in a week and a half that ends up becoming the industry standard for decades? The secret lies in its design.
 
 ## The Big Picture
 The Git object layout is a classic case of "design around the actual constraints" instead of assuming "hardware will save us."
