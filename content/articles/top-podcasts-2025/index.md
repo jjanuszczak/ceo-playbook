@@ -247,7 +247,7 @@ If you are not on spotify, many of the episodes can be found on YouTube or the p
 
 ## Carve Outs
 
-The importantce of owning the tech stack for media and how the algorithm decimated the original creators reminded me of Jack Conte's SXSW 2024 Keynote: Death of the Follower & the Future of Creativity on the Web. _Fabntastic_ talk. Watch it:
+The importantce of owning the tech stack for media and how the algorithm decimated the original creators reminded me of Jack Conte's SXSW 2024 Keynote: Death of the Follower & the Future of Creativity on the Web. _Fantastic_ talk. Watch it:
 
 {{< youtubeLite id="5zUndMfMInc" label="Death of the Follower & the Future of Creativity on the Web" >}}
 
