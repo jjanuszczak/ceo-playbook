@@ -23,15 +23,15 @@ showTableOfContents: true
 draft: false
 ---
 
-## Introduction
-
 In the world of coding, Python has always been a bit of a chameleon: easy to learn, widely used by data scientists, and now a favorite of the “vibe coders” who mix a little (or a lot!) of generative AI into their workflow.
 
 Before we dive into the tools that keep Python projects tidy, it’s worth taking a quick look at why Python became the go-to language in the first place.
 
-Python’s readability and rich ecosystem of libraries made it the darling of the data science world. And today, with the rise of AI tools, Python has become the playground for everyone—from traditional developers to newcomers leveraging AI to help them code.
+Python’s readability and rich ecosystem of libraries made it the darling of the data science world. And today, with the rise of AI tools, Python has become the playground for everyone—from traditional developers to newcomers leveraging AI to help them code. For more on the history of Python's popularity, see the Python documentary in the [Carve Outs](#carve-outs) section.
 
-As I’ve been using Python more seriously, I’ve had to figure out a whole world of tools to manage my code. Like many, I’m exploring and learning as I go. And along the way, I discovered why Python’s flexibility is both a blessing and a bit of a puzzle to solve. That puzzle usually shows up the moment a project breaks after a `pip install`, or when code that worked yesterday suddenly doesn’t today.
+As I’ve been using Python more seriously, I’ve had to figure out the tools and frameworks to manage my code. Like many, I’m exploring and learning as I go. And along the way, I discovered why Python’s flexibility is both a blessing and a bit of a puzzle to solve. That puzzle usually shows up the moment a project breaks after a `pip install`, or when code that worked yesterday suddenly doesn’t today. 
+
+Sharing the overall _context_ here ("big picture"). There are many great resources with more details, tutorials and implementation steps. I won't be recreating that material here. With the big picture, hopefully it provides the context within which to best leverage these resources. I have provided some links to these in the context setting that follows. 
 
 ## Why Does Dependency Hell Happen in Python?
 
@@ -78,7 +78,7 @@ If you want a practical walkthrough, this [detailed tutorial on virtual environm
 
 ## Pyenv and Version Management
 
-Virtual environments solved *package* conflicts—but not *Python version* conflicts. Older macOS versions (pre-12.3) came with Python 2.7 pre-installed, intended for Apple's internal system tools. In modern macOS versions (12.3 and later) Apple has removed Python from the default operating system installation.
+Virtual environments solved *package* conflicts, but not *Python version* conflicts. Older macOS versions (pre-12.3) came with Python 2.7 pre-installed, intended for Apple's internal system tools. In modern macOS versions (12.3 and later) Apple has removed Python from the default operating system installation.
 
 However, if you have installed the Xcode Command Line Tools, you will have a version of Python 3 (e.g., Python 3.9.6) installed as a dependency for the developer tools. This version is intended for system use, not for general development, and it is recommended to install a separate, up-to-date Python version for your projects. Confusing?
 
@@ -129,3 +129,6 @@ For me, learning these tools wasn’t about mastering Python. It was about under
 
 ## Carve Outs
 
+**The Story of Python** and how it took over the world. I enjoyed this documentary on what "began as a side project in Amsterdam during the 1990s became the software powering artificial intelligence, data science and some of the world’s biggest companies. But Python's future wasn't certain; at one point it almost disappeared." Perhaps this provides some historical insights on the trade-offs mentioned above:
+
+{{< youtubeLite id="GfH4QL4VqJ0" label="The Story of Python and how it took over the world" >}}
