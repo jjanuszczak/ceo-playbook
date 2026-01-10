@@ -1,6 +1,6 @@
 ---
 title: "Category vs Tag"
-date: 2026-01-11
+date: 2026-01-10
 summary: "An in-depth explanation of the differences and strategic uses of categories and tags, drawing parallels to taxonomies in content management systems."
 description: "This post explores the philosophical and practical distinctions between categories and tags, arguing that they are both forms of taxonomy serving different strategic purposes for content organization and discovery, particularly for a personal brand site."
 draft: false
@@ -106,7 +106,7 @@ That’s the difference between a blog archive and a durable knowledge system.
 
 When using tools like **Wordpress** or **Hugo** for a websites, **tags** and **categories** are both *taxonomies* serving different strategic purposes.
 
-## The short version
+### The short version
 
 * **Categories = broad buckets**
 
@@ -124,6 +124,12 @@ Think of it like this:
 
 > **Categories answer:** *“What kind of content is this?”*
 > **Tags answer:** *“What exactly is this about?”*
+
+{{< figure
+    src="category-vs-tag.png"
+    alt="Categories vs. Tags infographic"
+    caption="Categories vs. Tags"
+    >}}
 
 ## Categories: your site’s macro-structure
 
@@ -215,11 +221,11 @@ For personal sites, **tags usually do more work than categories**.
 
 ## Common mistakes to avoid
 
-❌ Using tags and categories interchangeably
-❌ Having 30+ categories
-❌ One-off categories used once
-❌ Putting people’s names as categories
-❌ Treating categories as chronological (that’s what dates are for)
+- ❌ Using tags and categories interchangeably
+- ❌ Having 30+ categories
+- ❌ One-off categories used once
+- ❌ Putting people’s names as categories
+- ❌ Treating categories as chronological (that’s what dates are for)
 
 ## Recommended setup for a personal site
 
