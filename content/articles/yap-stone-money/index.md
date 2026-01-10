@@ -2,6 +2,8 @@
 title: "The Original Blockchain Was Carved in Stone"
 date: 2025-11-06
 description: "Centuries before Bitcoin, the Yapese people mastered the concepts of distributed ledgers and proof-of-work using massive limestone discs."
+categories:
+   - "Fintech"
 summary: "Long before digital wallets, the people of Yap solved the hardest problems in finance using 4-ton limestone rocks. This article explores how ancient 'Rai' stones utilized the same principles—scarcity, consensus, and proof-of-work—that underpin modern digital currencies and blockchain technology today."
 tags:
   - "Money"

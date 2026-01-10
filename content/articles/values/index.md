@@ -2,6 +2,8 @@
 title: "The Architecture of Organizational Soul"
 date: 2025-12-15
 description: "A deep dive into why company values must be a top-down strategic mandate, not a bottom-up consensus, and how to use the 'Opposite Test' and 'Pain Test' to differentiate meaningful core values from meaningless platitudes."
+categories:
+   - "Leadership"
 summary: "This article argues that true company values are decision-making heuristics imposed top-down by leadership to align culture with strategy, particularly during transformational change. It introduces a value taxonomy and provides two rigorous tests—Reversibility and Pain—to ensure values are costly, concrete, and strategically effective differentiators."
 tags:
   - strategy

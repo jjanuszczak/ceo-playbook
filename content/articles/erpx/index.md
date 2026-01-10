@@ -3,6 +3,8 @@ title: "Why Our \"Free ERP\" Failed (& Why AI Changes the Battlefield)"
 date: 2025-12-20
 summary: "We gave Philippine SMEs a free operating system, but they didn't use it. In this retrospective, I analyze the failure of ERPX through the lens of modern AI architecture and explain why solving the 'Cost' barrier wasn't enough without solving the 'Effort' barrier."
 description: "A strategic look at why legacy database architectures fail in the SME market, contrasting UBX's ERPX experiment with the AI-native approach of Digits."
+categories:
+   - "Venture Building"
 tags:
   - "Fintech"
   - "SME"

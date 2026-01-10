@@ -3,6 +3,8 @@ title: "The Next Chapter of the Web"
 date: 2025-05-15
 summary: "The internet's 'original sin' was the lack of a native payment layer. This report explores x402, a new protocol that utilizes the HTTP 402 status code to enable instant, autonomous stablecoin payments for AI agents and the modern web."
 description: "While the speed of commerce has accelerated, payment infrastructure has lagged behind due to reliance on legacy banking systems and human intervention. This report details Coinbase's x402 protocol, which operationalizes the HTTP 402 status code to allow instant, global stablecoin transactions. It examines how x402 enables micropayments for AI agents, challenges the traditional SaaS subscription model, and redefines the role of banks in the financial ecosystem."
+categories:
+   - "Fintech"
 tags:
   - stablecoins
   - fintech

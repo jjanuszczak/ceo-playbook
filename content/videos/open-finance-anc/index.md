@@ -3,6 +3,8 @@ title: "Unlocking the Value of Open Finance"
 date: 2024-05-23
 summary: "Open Finance is really quite simple: the data financial institutions hold on their customers belongs to their customers. But for the Philippines, we require a much broader view of what needs to be open and shareable to verify credibility."
 description: "Unpacking the true meaning of Open Finance and why the Philippines needs a unique approach to data sharing. By leveraging consumer consent and analyzing broad data patterns, we can unlock creditworthiness for the invisible consumer."
+categories:
+   - "Fintech"
 tags:
   - Digital
   - Open Finance

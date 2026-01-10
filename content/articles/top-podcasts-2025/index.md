@@ -2,6 +2,8 @@
 title: "The 2025 Strategy Playlist: 10 Masterclasses in Business & Innovation"
 date: 2025-12-28
 description: "A curated list of the absolute best podcast episodes from 2025. Features deep dives into Meta, Google, and Lockheed Martin, plus masterclass interviews with Jamie Dimon and the founders of Magnolia and AriZona Iced Tea."
+categories:
+   - "Essays"
 summary: "From the history of the Vikings to the future of the Metaverse, here are the 10 standout podcast episodes that defined the listening year."
 tags:
   - Startups

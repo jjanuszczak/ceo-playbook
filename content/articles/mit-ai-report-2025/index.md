@@ -3,6 +3,8 @@ title: "The GenAI Divide: Why 95% Still Get Zero ROI"
 date: 2025-11-27
 summary: "MIT’s 2025 State of AI in Business report reveals a stark truth: 95% of enterprises get zero ROI from GenAI. The problem isn’t the technology—it’s the approach. In this analysis, I break down the real causes of failure and what leaders must do to cross the GenAI Divide."
 description: "A strategic reflection on MIT’s 2025 State of AI in Business report. This article examines why most enterprises fail to generate ROI from GenAI, why the real divide is organizational—not technical—and what CEOs, boards, and transformation leaders must do to unlock meaningful P&L impact. Insights include the rise of shadow AI, the limits of generic LLM tools, and the emergence of agentic systems capable of transforming back-office economics."
+categories:
+   - "Strategy"
 tags:
   - AI 
   - Strategy

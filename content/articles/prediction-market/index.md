@@ -3,6 +3,8 @@ title: "The Temporal Architecture of Alpha"
 date: 2025-12-26
 summary: "An overlay on Alex Danco's 'Prediction' thesis, arguing that business strategy is finally moving from a spatial 'portfolio' model to a temporal 'stream' model."
 description: "Why 'Product-Market Fit' is a spatial trap and 'Product-Moment Fit' is the new alpha. We explore how Special Relativity, Bill Gross's data, and Prediction Markets are shifting venture building from static asset management to high-frequency temporal decisioning."
+categories:
+   - "Venture Building"
 tags:
   - Venture Building 
   - Strategy

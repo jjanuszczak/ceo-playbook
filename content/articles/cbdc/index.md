@@ -3,6 +3,8 @@ title: "Central Bank Digital Currencies will Redefine Money"
 date: 2024-06-11
 summary: "An analysis of the global shift toward Central Bank Digital Currencies (CBDCs), highlighting the transition from physical cash to programmable money. The article explores how CBDCs—exemplified by initiatives like the Philippines' Project Agila and the BIS mBridge project—will revolutionize monetary policy through granular control, improved AML compliance, and new cross-border settlement rails."
 description: "As central banks digitize base money, the implications go far beyond faster settlement. From negative interest rates to sector-specific monetary policy, discover how CBDCs are set to fundamentally alter the mechanics of the global economy and banking systems."
+categories:
+   - "Fintech"
 tags:
   - CBDC
   - Fintech

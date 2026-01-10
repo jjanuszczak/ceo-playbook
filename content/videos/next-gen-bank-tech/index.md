@@ -3,6 +3,8 @@ title: "Next Generation Banking Technology"
 date: 2023-11-12
 summary: "John Januszczak outlines the transition from linear banking to exponential fintech growth using AI, Open Finance, and Embedded ecosystems."
 description: "In this talk, UBX CEO John Januszczak breaks down the 'Path to Scale' for modern fintechs. He argues that to achieve 10x growth, companies must move beyond traditional linear banking models and embrace three key levers: Embedded Finance to integrate services where customers already are, Open Finance to leverage shared data for personalization, and Artificial Intelligence to automate decisions and operations at scale."
+categories:
+   - "Fintech"
 tags: 
    - "Technology"
    - "Transformation"

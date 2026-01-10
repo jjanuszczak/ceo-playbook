@@ -2,6 +2,8 @@
 title: "He Predicted ChatGPT in 2016"
 date: 2025-12-07
 description: "A 2025 retrospective on Kevin Kelly's 12 technological forces. How well did 'The Inevitable' predict the rise of Generative AI, the subscription economy, and the surveillance state?"
+categories:
+   - "Essays"
 summary: "In 2016, Kevin Kelly claimed AI would become a cheap utility like electricity. He was right. We revisit his 12 trends—from 'Cognifying' to 'Tracking'—to give them an informal report card for the current era."
 tags:
   - Futurism

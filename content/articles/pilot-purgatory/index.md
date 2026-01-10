@@ -3,6 +3,8 @@ title: "Are We Stuck in AI Pilot Purgatory?"
 date: 2025-12-06
 summary: "Trillions are flowing into AI, yet 95% of enterprise pilots are failing. By synthesizing four major perspectives—from speculative forecasts to rigorous 2025 enterprise reports—this article identifies the five themes defining the current AI moment and what leaders must do to break out of 'pilot purgatory.'"
 description: "We are living through two parallel AI realities: massive investment and bold predictions on one side, and stalled enterprise value capture on the other. This article synthesizes a speculative 2027 AI roadmap, Benedict Evans’s historical analysis, and two major enterprise reports from 2025, revealing a clear picture of where AI actually stands today. It explores five defining themes: pilot purgatory, the shift from chatbots to agents, the rise of Shadow AI, organizational barriers, and the disappearance of traditional moats—and offers a pragmatic playbook for the next 18–24 months. It also examines the radical outliers shaping the edges of the debate, from superintelligence timelines to geopolitical risks."
+categories:
+   - "Strategy"
 tags:
   - AI 
   - Strategy

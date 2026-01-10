@@ -3,6 +3,8 @@ title: "The Emails We Deleted, The Value We Never Saw Coming"
 date: 2025-11-25
 summary: "A strategic retrospective on how the corporate storage caps of the 2000s inadvertently destroyed valuable AI training data—and the mandate for today's leaders to practice deliberate retention."
 description: "Deleting corporate email archives to save storage costs was a standard practice that destroyed decades of institutional memory. This post explores why that was a strategic error and how leaders must pivot to 'deliberate retention' to fuel the generative AI of tomorrow."
+categories:
+   - "Strategy"
 tags: 
    - "Digital Transformation"
    - "AI"

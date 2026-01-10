@@ -3,6 +3,8 @@ title: "Responsiveness"
 date: 2024-06-01
 summary: "Ideally, you provide value immediately. When you can't, you provide speed. Here is the simple math behind high-performance communication that builds trust and loyalty."
 description: "A pragmatic guide to responsiveness for executives and founders. Discover the 'Responsiveness Recipe'—a simple 3-step protocol to manage expectations and turn speed into a competitive advantage when value isn't immediately available."
+categories:
+   - "Leadership"
 tags: 
    - "Productivity"
    - "Management"

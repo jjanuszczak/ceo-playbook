@@ -3,6 +3,8 @@ title: "From Discovery to Knowledge"
 date: 2026-01-06
 summary: "GenAI is to software development what LiDAR is to archaeology: exceptional at discovery, insufficient for knowledge. The real value still lies in human judgment, context, and accountability."
 description: "Drawing a parallel from archaeology to modern software engineering, this essay argues that while GenAI accelerates discovery and code production, humans remain essential for transforming outputs into real understanding, systems thinking, and long-term value."
+categories:
+   - "Technology"
 tags:
   - GenAI
   - Software Engineering

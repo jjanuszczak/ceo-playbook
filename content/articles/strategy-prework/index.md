@@ -7,6 +7,9 @@ summary: >
 description: >
   An opinion piece inspired by Roger Martin’s strategy-as-choices framework, explaining why real strategy must start with the gap between intent and outcome, stay owned by the executive leadership team, and avoid agenda-driven pre-work that turns strategy into a delegated planning exercise.
 
+categories:
+  - "Strategy"
+
 tags:
   - strategy
   - leadership

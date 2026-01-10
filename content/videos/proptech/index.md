@@ -3,6 +3,8 @@ title: "PropTech and the Future of Real Estate"
 date: 2021-09-09
 summary: "Real estate is one of the Philippines’ fastest-growing asset classes—but it remains illiquid, costly, and out of reach for most people. In this talk, I explore how PropTech, tokenization, and embedded finance can democratize property investing."
 description: "In this PropTech talk, John Januszczak explains how tokenizing real estate and embedding financial services into property experiences can unlock liquidity, reduce friction, and open up the Philippine real estate market to more investors."
+categories:
+   - "Fintech"
 author: "John Januszczak"
 tags:
   - PropTech
