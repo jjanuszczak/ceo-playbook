@@ -38,6 +38,14 @@ This is a static website built with Hugo, using the Blowfish theme, and deployed
 1. **Frontmatter:** Use YML format. Always include `title`, `date`, `summary`, `description`, `draft`, and `tags`.
 2. **Images:** Place images in content bundles or `/static/images` if used outside of content. Reference them as `/images/filename.jpg`.
 3. **Shortcodes:** Prefer built-in Hugo shortcodes over raw HTML where possible.
+4. **Categories:** Articles and Videos in `/content/articles` and `/content/videos` always include `categories` in the frontmatter. Each post will set `categories` to one of the following values:
+* Strategy
+* Leadership
+* Fintech
+* Energy Transition
+* Technology
+* Venture Building
+* Essays
 
 ## Common Commands
 - **Dev Server:** `hugo server -D` (renders drafts)
