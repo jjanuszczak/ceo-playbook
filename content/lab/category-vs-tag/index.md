@@ -13,7 +13,7 @@ tags:
 
 ## Categories, tags, and the broader idea of taxonomies
 
-### Websites that use categories and tags
+If you have ever created a blog, you know that blog _posts_ are usually associated with _categories_ and _tags_. What are they and what are best practices for their use?
 
 **Categories and tags are most common on content-management-driven websites**, where content is published continuously and needs to be organized, discovered, and reused over time. For example:
 

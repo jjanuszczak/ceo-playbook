@@ -9,7 +9,7 @@ tags:
   - long-term-thinking
 ---
 
-A mix of the impact of entrepreneurship, the FinTech market, mathematics and political risks in technology investment and capital structure questions surfaced in what I bookmarked or paused on this past week.
+A mix of the impact of entrepreneurship, the FinTech market, mathematics and political risks in technology investment surfaced in what I bookmarked or paused on this past week.
 
 ## David Senra on Capitalism
 {{< x user="davidsenra" id="2008637147063206070" >}} 
