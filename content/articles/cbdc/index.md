@@ -6,11 +6,10 @@ description: "As central banks digitize base money, the implications go far beyo
 categories:
    - "Fintech"
 tags:
-  - CBDC
-  - Fintech
-  - Monetary Policy
-  - Blockchain
-  - Economics
+  - stablecoins
+  - monetary-policy
+  - blockchain
+  - incentive-design
 showTableOfContents: true
 draft: false
 ---

@@ -6,14 +6,12 @@ description: "Why 'Product-Market Fit' is a spatial trap and 'Product-Moment Fit
 categories:
    - "Venture Building"
 tags:
-  - Venture Building 
-  - Strategy
-  - Venture Capital
-  - Prediction Markets
+  - prediction-markets
+  - capital-allocation
+  - systems-thinking
 showTableOfContents: true
 draft: false
 ---
-
 _Why time is the successor to investment space_
 
 I recently read Alex Danco’s thesis on [Prediction as the successor to Post-Modernism](https://a16z.com/prediction-the-successor-to-postmodernism/), and it struck a chord that resonates deeply with how we design innovation systems.

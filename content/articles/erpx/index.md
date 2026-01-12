@@ -6,16 +6,12 @@ description: "A strategic look at why legacy database architectures fail in the 
 categories:
    - "Venture Building"
 tags:
-  - "Fintech"
-  - "SME"
-  - "ERP"
-  - "AI"
-  - "Venture Building"
-  - "Transformation"
+  - embedded-finance
+  - platform-economics
+  - smb
 showTableOfContents: true
 draft: false
 ---
-
 In the trenches of building UBX, we operated with a clear mission: democratize financial access for the Philippine SME. We had the strategy, we had the capital (thanks to our investors), and we had the distribution channels. But even seasoned generals lose battles on the way to winning the war.
 
 One of our boldest experiments was [**ERPX**](https://januszczak.org/portfolio/). The vision was textbook fintech strategy: build an "Operating System" for small businesses, give it away for free (or close to it), and monetize the financial rails: payments, lending, and insurance embedded directly into the workflow.

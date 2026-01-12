@@ -6,11 +6,10 @@ summary: "Reflection on parallels between newspapers' business challenges and th
 description: "Examines how shifts in consumer behavior and revenue models are forcing legacy industries to rethink strategy. Highlights lessons insurers can take from newspapers—subscription approaches, trust-building, and diversification—to improve distribution, product design, and long-term customer engagement."
 categories:
    - "Strategy"
-tags: 
-   - "External"
-   - "Digital"
-   - "Insurance"
-   - "Strategy"
+tags:
+  - insurtech
+  - embedded-finance
+  - digital-transformation
 showReadingTime: false
 build:
   render: "false"

@@ -7,9 +7,10 @@ description: "A concise guide to 15 essential reads implicitly recommended by An
 categories:
    - "Essays"
 tags:
-   - "External"
-   - "VC"
-   - "Management"
+  - a16z
+  - venture-capital
+  - reading-list
+  - mental-models
 showReadingTime: false
 build:
   render: "false"

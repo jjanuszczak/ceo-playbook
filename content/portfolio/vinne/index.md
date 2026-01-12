@@ -5,9 +5,9 @@ externalUrl: "https://ubx.ph/"
 summary: "App that makes it easy for anyone to earn a yield on DeFi holdings."
 description: ""
 tags:
-  - Web3
-  - DeFi
-  - Wealth
+  - web3
+  - defi
+  - asset-management
 showSummary: true
 showDate: false
 showReadingTime: false

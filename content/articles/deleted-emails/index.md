@@ -5,16 +5,14 @@ summary: "A strategic retrospective on how the corporate storage caps of the 200
 description: "Deleting corporate email archives to save storage costs was a standard practice that destroyed decades of institutional memory. This post explores why that was a strategic error and how leaders must pivot to 'deliberate retention' to fuel the generative AI of tomorrow."
 categories:
    - "Strategy"
-tags: 
-   - "Digital Transformation"
-   - "AI"
-   - "Governance"
-   - "Leadership"
-   - "Strategy"
+tags:
+  - board-governance
+  - organizational-design
+  - artificial-intelligence
+  - digital-transformation
 showTableOfContents: true
 draft: false
 ---
-
 There’s a story from my earlier corporate years that has stayed with me. Not because it was dramatic, but because of what it reveals about how organizations fail to think.
 
 Back then, global compute and storage costs were brutally high. Every gigabyte mattered. IT was viewed strictly as a cost center. Expensive, necessary, and tightly governed. And so, a mandate came down from on high:

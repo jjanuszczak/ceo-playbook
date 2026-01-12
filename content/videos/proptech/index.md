@@ -7,15 +7,13 @@ categories:
    - "Fintech"
 author: "John Januszczak"
 tags:
-  - PropTech
-  - Tokenization
-  - Blockchain
-  - Embedded Finance
-  - Wealth
+  - proptech
+  - tokenization
+  - embedded-finance
+  - asset-management
 showReadingTime: false
 draft: false
---- 
-
+---
 {{< youtubeLite id="IGDHW7S9P6A" label="Proptech for the Real Estate Industry" >}}
 
 Real estate is one of the most meaningful economic and personal experiences people have: where we live, work, build communities, and invest for the future. Yet for all its significance, it remains one of the most digitally underserved and financially inaccessible sectors in the Philippines.

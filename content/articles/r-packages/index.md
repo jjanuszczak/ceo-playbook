@@ -6,10 +6,11 @@ summary: "Key lessons, impressions, and recommended resources for building your 
 description: "This article shares personal insights from the author's experience creating an R package to formalize and reuse code. It provides a curated list of essential books, tutorials, and best practices—particularly for handling APIs and date-time data—to help developers avoid common pitfalls."
 categories:
    - "Technology"
-tags: 
-   - "External"
-   - "Technology"
-   - "Machine Learning"
+tags:
+  - r
+  - open-source
+  - data-science
+  - programming
 showReadingTime: false
 build:
   render: "false"

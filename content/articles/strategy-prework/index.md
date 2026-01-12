@@ -11,15 +11,13 @@ categories:
   - "Strategy"
 
 tags:
-  - strategy
-  - leadership
-  - governance
-  - digital transformation
-
+  - board-governance
+  - long-term-thinking
+  - systems-thinking
+  - digital-transformation
 showTableOfContents: true
 draft: false
 ---
-
 _Why Strategy Should Never Begin With Pre-Work: Lessons From Roger Martin’s “Strategy as Choices”_
 
 For anyone who has spent time inside a large corporation, the annual strategy cycle is painfully familiar: weeks of pre-work, decks prepared by every function, one-off “strategic inputs” from planning teams and consultants, and a leadership offsite that feels more like a compliance ritual than an exercise in strategic thinking.

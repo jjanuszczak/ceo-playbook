@@ -6,18 +6,14 @@ categories:
    - "Essays"
 summary: "From the history of the Vikings to the future of the Metaverse, here are the 10 standout podcast episodes that defined the listening year."
 tags:
-  - Startups
-  - Fintech
-  - AI
-  - Strategy
-  - Technology 
-  - Trends
-  - History
-  - Podcasts
+  - reading-list
+  - podcasts
+  - venture-capital
+  - artificial-intelligence
+  - long-term-thinking
 showTableOfContents: true
 draft: false
 ---
-
 From Meta's "Founder Mode" to Lockheed's Skunk Works: the definitive list of business lessons from the year in podcasts. These episodes from 2025 featured deep dives into tech giants, historical epics, and masterclasses in business building. These episodes explain how the world's best companies are reinventing themselves. 
 
 {{< alert icon="circle-info" >}}

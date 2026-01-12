@@ -5,16 +5,13 @@ summary: "John Januszczak outlines the transition from linear banking to exponen
 description: "In this talk, UBX CEO John Januszczak breaks down the 'Path to Scale' for modern fintechs. He argues that to achieve 10x growth, companies must move beyond traditional linear banking models and embrace three key levers: Embedded Finance to integrate services where customers already are, Open Finance to leverage shared data for personalization, and Artificial Intelligence to automate decisions and operations at scale."
 categories:
    - "Fintech"
-tags: 
-   - "Technology"
-   - "Transformation"
-   - "History"
-   - "Banking"
-   - "AI"
+tags:
+  - digital-transformation
+  - artificial-intelligence
+  - systems-thinking
 showReadingTime: false
 draft: false
---- 
-
+---
 {{< youtubeLite id="R5Q7SAI-6Q0" label="Next Generation Banking Technology" >}}
 
 ## The End of "Emerging" Tech: Why the Future of Banking Looks Like Nothing We’ve Seen Before

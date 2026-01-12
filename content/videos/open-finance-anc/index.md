@@ -6,14 +6,12 @@ description: "Unpacking the true meaning of Open Finance and why the Philippines
 categories:
    - "Fintech"
 tags:
-  - Digital
-  - Open Finance
-  - Embedded Finance
-  - AI
+  - open-finance
+  - embedded-finance
+  - artificial-intelligence
 showReadingTime: false
 draft: false
---- 
-
+---
 {{< youtubeLite id="-TWpf8dblL0" label="Unlocking the Value of Open Finance" >}}
 
 If you strip away the jargon, the regulatory frameworks, and the complex APIs, Open Finance is actually a very simple concept.

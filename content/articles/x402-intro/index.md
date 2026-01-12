@@ -7,15 +7,12 @@ categories:
    - "Fintech"
 tags:
   - stablecoins
-  - fintech
   - payments
-  - digital transformation
-  - AI
-
+  - digital-transformation
+  - artificial-intelligence
 showTableOfContents: true
 draft: false
 ---
-
 _How x402 is changing the payments landscape_
 
 Why are online payments still stuck in 1999? While the web evolved from static pages to dynamic apps, and AI agents now act autonomously across the internet, the way we pay online hasn’t kept up. That’s about to change.

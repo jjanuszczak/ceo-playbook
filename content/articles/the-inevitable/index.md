@@ -6,11 +6,11 @@ categories:
    - "Essays"
 summary: "In 2016, Kevin Kelly claimed AI would become a cheap utility like electricity. He was right. We revisit his 12 trends—from 'Cognifying' to 'Tracking'—to give them an informal report card for the current era."
 tags:
-  - Futurism
-  - Book Reviews
-  - AI
-  - Technology Trends
-  - Society
+  - kevin-kelly
+  - long-term-thinking
+  - artificial-intelligence
+  - systems-thinking
+  - reading-list
 showTableOfContents: true
 draft: false
 ---

@@ -5,12 +5,10 @@ summary: "An in-depth explanation of the differences and strategic uses of categ
 description: "This post explores the philosophical and practical distinctions between categories and tags, arguing that they are both forms of taxonomy serving different strategic purposes for content organization and discovery, particularly for a personal brand site."
 draft: false
 tags:
-  - taxonomy
-  - categories
-  - tags
+  - systems-thinking
   - hugo
+  - taxonomy
 ---
-
 ## Categories, tags, and the broader idea of taxonomies
 
 If you have ever created a blog, you know that blog _posts_ are usually associated with _categories_ and _tags_. What are they and what are best practices for their use?

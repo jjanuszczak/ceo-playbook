@@ -7,11 +7,10 @@ description: "Presented at the 2011 Winter Simulation Conference, this paper ide
 categories:
    - "Technology"
 tags:
-  - BPM
-  - Workflow
-  - Automation
-  - Simulation
-  - Optimization
+  - simulation
+  - digital-twin
+  - systems-thinking
+  - bpm
 showReadingTime: false
 build:
   render: "false"

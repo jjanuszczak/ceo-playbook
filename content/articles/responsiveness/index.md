@@ -5,15 +5,13 @@ summary: "Ideally, you provide value immediately. When you can't, you provide sp
 description: "A pragmatic guide to responsiveness for executives and founders. Discover the 'Responsiveness Recipe'—a simple 3-step protocol to manage expectations and turn speed into a competitive advantage when value isn't immediately available."
 categories:
    - "Leadership"
-tags: 
-   - "Productivity"
-   - "Management"
-   - "Customer Experience"
-   - "Operations"
+tags:
+  - organizational-design
+  - asynchronous-work
+  - productivity
 showTableOfContents: true
 draft: false
 ---
-
 _The Math of Responsiveness: Why Speed is a Strategy_
 
 In over 25 years of leading transformation across banking, fintech, and insurance, I have observed a distinct correlation between high-performance teams and the speed of their communication.

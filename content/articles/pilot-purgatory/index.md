@@ -6,14 +6,12 @@ description: "We are living through two parallel AI realities: massive investmen
 categories:
    - "Strategy"
 tags:
-  - AI 
-  - Strategy
-  - Digital Transformation
-  - Leadership
+  - g-to-market
+  - incentive-design
+  - organizational-design
 showTableOfContents: true
 draft: false
 ---
-
 We are currently living through two simultaneous realities in the world of Artificial Intelligence. In one reality, trillions of dollars are pouring into datacenters, and CEOs are predicting a "glorious future" of superintelligence within three years. In the other, 95% of enterprise AI pilots are failing to reach production, and most companies have yet to see a dime of bottom-line impact.
 
 I analyzed several distinct perspectives on the immediate future of AI:  speculative roadmaps, historical market analyses, and rigorous enterprise reports from 2025. When synthesized, a clear picture emerges: we are trapped in the "absorb" phase of a massive platform shift. Breaking out requires moving from chatbots to agents, acknowledging the "Shadow AI" economy, and preparing for a future that might arrive much faster than our spreadsheets predict.

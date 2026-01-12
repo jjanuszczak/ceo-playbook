@@ -6,13 +6,10 @@ description: "Drawing a parallel from archaeology to modern software engineering
 categories:
    - "Technology"
 tags:
-  - GenAI
-  - Software Engineering
-  - Digital Transformation
-  - Technology Leadership
-  - AI
-  - Systems Thinking
-  - Innovation
+  - systems-thinking
+  - artificial-intelligence
+  - second-brain
+  - knowledge-management
 showTableOfContents: true
 draft: false
 ---

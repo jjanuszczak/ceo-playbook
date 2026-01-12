@@ -6,16 +6,13 @@ categories:
    - "Fintech"
 summary: "Long before digital wallets, the people of Yap solved the hardest problems in finance using 4-ton limestone rocks. This article explores how ancient 'Rai' stones utilized the same principles—scarcity, consensus, and proof-of-work—that underpin modern digital currencies and blockchain technology today."
 tags:
-  - "Money"
-  - "Blockchain"
-  - "Fintech"
-  - "Cryptocurrency"
-  - "Economics"
-  
+  - money
+  - systems-thinking
+  - long-term-thinking
+  - blockchain
 showTableOfContents: true
 draft: false
 ---
-
 _As finance evolves from physical to digital to decentralized, remembering stories like the Yap reminds us that money has always been a social technology: **built on belief**, not metal or code._
 
 Deep in the western Pacific Ocean, within the Federated States of Micronesia, lies the island state of Yap. While the archipelago is defined by its lush landscapes and enduring indigenous traditions, the Yapese people are globally renowned for an economic phenomenon that seems to defy modern logic: the "Rai." These massive, donut-shaped limestone discs served as a currency system that functioned without banks or written records. While often treated as a historical curiosity, the Yapese invention was actually a sophisticated financial instrument that mastered the abstract nature of value long before the rest of the world caught up.

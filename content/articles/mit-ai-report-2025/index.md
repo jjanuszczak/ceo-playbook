@@ -6,14 +6,14 @@ description: "A strategic reflection on MIT’s 2025 State of AI in Business rep
 categories:
    - "Strategy"
 tags:
-  - AI 
-  - Strategy
-  - Digital Transformation
-  - Leadership
+  - artificial-intelligence
+  - long-term-thinking
+  - digital-transformation
+  - reading-list
+  - mit
 showTableOfContents: true
 draft: false
 ---
-
 *Reflections on MIT’s “State of AI in Business 2025” Report*
 
 One statistic that reverberated loudly this year: **95% of organizations are getting *zero* return on their GenAI investments.** Not low returns. Not “early returns.” **Zero.**

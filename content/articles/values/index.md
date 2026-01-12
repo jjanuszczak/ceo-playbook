@@ -6,16 +6,12 @@ categories:
    - "Leadership"
 summary: "This article argues that true company values are decision-making heuristics imposed top-down by leadership to align culture with strategy, particularly during transformational change. It introduces a value taxonomy and provides two rigorous tests—Reversibility and Pain—to ensure values are costly, concrete, and strategically effective differentiators."
 tags:
-  - strategy
-  - values
-  - leadership
-  - talent
-  - transformation
-  - governance
+  - organizational-design
+  - board-governance
+  - long-term-thinking
 showTableOfContents: true
 draft: false
 ---
-
 Let’s take a deep dive into the DNA of high-performance organizations. We're talking about something that's often shoved into a dusty HR handbook: **company values**. But trust me, in today's cut-throat, rapid-growth, tech-driven world, values are *not* a soft skill or an afterthought. They are a mission-critical instrument for alignment and, frankly, operational efficiency.
 
 Some big questions to tackle: Where do these values actually come from? Is it some kumbaya, bottom-up discovery session, or a rigorous, top-down mandate? And here's the real gut check: How do you *know* you’ve nailed the right ones? 

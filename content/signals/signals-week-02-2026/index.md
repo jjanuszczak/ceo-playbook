@@ -4,11 +4,10 @@ date: 2026-01-11
 type: signals
 
 tags:
-  - entrepreneurship
   - capital-allocation
   - long-term-thinking
+  - reading-list
 ---
-
 A mix of the impact of entrepreneurship, the FinTech market, mathematics and political risks in technology investment surfaced in what I bookmarked or paused on this past week.
 
 ## David Senra on Capitalism

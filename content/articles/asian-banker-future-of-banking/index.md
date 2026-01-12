@@ -7,13 +7,11 @@ description: "A look at how the convergence of AI, blockchain, and digital asset
 categories:
    - "Fintech"
 tags:
-   - "External"
-   - "AI"
-   - "DeFi"
-   - "CBDC"
-   - "Digital Transformation"
-   - "Fintech"
-   - "Banking"
+  - artificial-intelligence
+  - stablecoins
+  - open-finance
+  - digital-transformation
+  - systems-thinking
 showReadingTime: false
 build:
   render: "false"

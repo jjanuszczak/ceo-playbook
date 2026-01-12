@@ -6,13 +6,11 @@ summary: "An overview of how Embedded, Open, and Decentralized Finance are conve
 description: "This article explores the three pillars driving the next evolution of financial services: Embedded Finance, which integrates banking into non-financial apps; Open Finance, which leverages data sharing for personalized solutions; and Decentralized Finance (DeFi), which uses blockchain to democratize access and remove intermediaries."
 categories:
    - "Fintech"
-tags: 
-   - "External"
-   - "Digital"
-   - "Banking"
-   - "Open Finance"
-   - "DeFi"
-   - "Embedded Finance"
+tags:
+  - open-finance
+  - embedded-finance
+  - payments
+  - stablecoins
 showReadingTime: false
 build:
   render: "false"

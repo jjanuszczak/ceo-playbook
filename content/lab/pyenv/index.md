@@ -12,17 +12,14 @@ description: >
   modern tools like UV represent the next step in Python’s developer experience,
   especially in the age of AI and vibe coding.
 tags:
-  - Python
-  - Software Engineering
-  - DevOps
-  - AI
-  - Vibe Coding
-  - Open Source
-  - Programming
+  - python
+  - open-source
+  - programming
+  - dev-ops
+  - software-engineering
 showTableOfContents: true
 draft: false
 ---
-
 In the world of coding, Python has always been a bit of a chameleon: easy to learn, widely used by data scientists, and now a favorite of the “vibe coders” who mix a little (or a lot!) of generative AI into their workflow.
 
 Before we dive into the tools that keep Python projects tidy, it’s worth taking a quick look at why Python became the go-to language in the first place.
