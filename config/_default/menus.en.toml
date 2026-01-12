@@ -21,6 +21,48 @@
   weight = 20
 
 [[main]]
+  name = "Strategy"
+  parent = "Articles"
+  pageRef = "categories/strategy"
+  weight = 21
+
+[[main]]
+  name = "Leadership"
+  parent = "Articles"
+  pageRef = "categories/leadership"
+  weight = 22
+
+[[main]]
+  name = "Fintech"
+  parent = "Articles"
+  pageRef = "categories/fintech"
+  weight = 23
+
+[[main]]
+  name = "Energy Transition"
+  parent = "Articles"
+  pageRef = "categories/energy-transition"
+  weight = 24
+
+[[main]]
+  name = "Technology"
+  parent = "Articles"
+  pageRef = "categories/technology"
+  weight = 25
+
+[[main]]
+  name = "Venture Building"
+  parent = "Articles"
+  pageRef = "categories/venture-building"
+  weight = 26
+
+[[main]]
+  name = "Essays"
+  parent = "Articles"
+  pageRef = "categories/essays"
+  weight = 27
+
+[[main]]
   name = "Videos"
   pageRef = "videos"
   weight = 30
