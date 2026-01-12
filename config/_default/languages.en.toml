@@ -2,7 +2,8 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "John Januszczak | Fintech & Innovation Strategy"
+#title = "John Januszczak | Fintech & Innovation Strategy"
+title = "**John Januszczak**<span class='font-light'> | Technology & Innovation</span>"
 
 [params]
   displayName = "EN"
