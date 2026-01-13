@@ -14,3 +14,17 @@ I’m a financial services executive and technology advisor with over 25 years o
 Today, I work with financial institutions, venture studios, startups and investors across Southeast Asia and North America to help them transform, innovate, and build institutional-grade digital capabilities. My focus is on making innovation investable: designing the systems, governance, and operating models that allow organizations to grow sustainably and confidently. Whether advising CEOs, shaping strategy, or structuring deals, I bring a balance of vision and execution that aligns teams, accelerates outcomes, and builds long-term resilience.
 
 Having worked across Canada, the United States, and Asia, I bring a global perspective to how financial systems evolve and how emerging markets leapfrog technology. I’m committed to strengthening innovation ecosystems, developing leaders, and advancing responsible transformation that expands access, opportunity, and economic participation.
+
+## Find Me on Social
+
+You can also find my work, thoughts, and professional updates on the following platforms:
+
+{{< social_links >}}
+
+## How I Stay Sharp
+
+In addition to longer essays and strategy pieces, I keep a running practice I call [Signals]({{< relref "signals" >}}).
+
+[Signals]({{< relref "signals" >}}) is a weekly or biweekly curation of things I bookmarked or paused on. Not because they were trending, but because they revealed something about how technology, capital, leadership, or systems are evolving.
+
+Each signal includes a short note on why it matters and how I’m interpreting it. It’s raw input before synthesis, and often the starting point for deeper essays.

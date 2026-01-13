@@ -4,6 +4,7 @@ date: 2025-11-24
 showDate: false
 showWordCount: false
 showReadingTime: false
+showAuthor: false
 draft: false
 ---
 Drawing on two decades of leadership in financial services, I help organizations navigate regulatory complexity, digital transformation, and growth strategy.
@@ -17,3 +18,9 @@ I’m always interested in connecting with fellow innovators in the fintech and 
     msgID="entry.129905947"
     submitText="Get in Touch" 
 >}}
+
+## Connect on Social
+
+You can also find my work, thoughts, professional updates and connect with me on the following platforms:
+
+{{< social_links >}}
