@@ -2,16 +2,16 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-#title = "John Januszczak | Fintech & Innovation Strategy"
-title = "**John Januszczak**<span class='font-light'> | Technology & Innovation</span>"
+# title = "John Januszczak | Fintech & Innovation Strategy"
+title = "<span class='font-light'> >_ </span>John Januszczak<span class='font-light'> | Technology & Innovation</span>"
 
 [params]
   displayName = "EN"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  logo = "images/ceo-playbook-logo-dark-bg.png"
-  secondaryLogo = "images/ceo-playbook-logo-light-bg.png"
+  #logo = "images/ceo-playbook-logo-dark-bg.png"
+  #secondaryLogo = "images/ceo-playbook-logo-light-bg.png"
   # description = "My awesome website"
   # copyright = "Copy, _right?_ :thinking_face:"
 
