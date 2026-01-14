@@ -6,7 +6,7 @@ description: "We are living through two parallel AI realities: massive investmen
 categories:
    - "Strategy"
 tags:
-  - g-to-market
+  - go-to-market
   - incentive-design
   - organizational-design
 showTableOfContents: true
