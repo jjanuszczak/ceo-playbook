@@ -5,6 +5,7 @@ showDate: false
 showWordCount: false
 showReadingTime: false
 showAuthor: false
+sharingLinks: false
 draft: false
 ---
 Drawing on two decades of leadership in financial services, I help organizations navigate regulatory complexity, digital transformation, and growth strategy.

@@ -4,6 +4,7 @@ date: 2025-11-22
 showDate: false
 showWordCount: false
 showReadingTime: false
+sharingLinks: false
 draft: false
 ---
 **Astrophysicist turned Fintech CEO**
