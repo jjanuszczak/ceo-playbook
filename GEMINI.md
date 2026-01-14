@@ -7,11 +7,13 @@ This is a static website built with Hugo, using the Blowfish theme, and deployed
 - **Engine:** Hugo Extended
 - **Theme:** Blowfish
 - **Scripting:** Vanilla JS
+- **Styling:** Tailwind CSS 
 
 ## Directory Structure
 - `/archetypes`: Contains templates for new content files created with `hugo new`.
 - `/assets`: Stores files that will be processed by Hugo Pipes, like CSS or JS.
   - `/images`: Contains site-level images (e.g., backgrounds, logos).
+- `/.policies`: Contains governance policies (e.g., categories, tags).
 - `/config/_default`: Main configuration files for the Hugo site.
   - `hugo.toml`: The main configuration file for the site.
   - `languages.en.toml`: Language-specific settings.
@@ -38,7 +40,7 @@ This is a static website built with Hugo, using the Blowfish theme, and deployed
 1. **Frontmatter:** Use YML format. Always include `title`, `date`, `summary`, `description`, `draft`, and `tags`.
 2. **Images:** Place images in content bundles or `/static/images` if used outside of content. Reference them as `/images/filename.jpg`.
 3. **Shortcodes:** Prefer built-in Hugo shortcodes over raw HTML where possible.
-4. **Categories:** Articles and Videos in `/content/articles` and `/content/videos` always include `categories` in the frontmatter. Each post will set `categories` to one of the following values:
+4. **Categories:** Articles and Videos in `/content/articles` and `/content/videos` always include `categories` in the frontmatter. Refer to `/.policies/category_governance_policy.md` for the official taxonomy. Each post will set `categories` to one of the following values:
 * Strategy
 * Leadership
 * Fintech
@@ -46,6 +48,7 @@ This is a static website built with Hugo, using the Blowfish theme, and deployed
 * Technology
 * Venture Building
 * Essays
+5. **Tags:** Always refer to the Tag Governance Policy in `/.policies/tag_governance_policy.md` before adding new tags to ensure consistency and reuse.
 
 ## Common Commands
 - **Dev Server:** `hugo server -D` (renders drafts)
