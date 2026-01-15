@@ -54,3 +54,10 @@ This is a static website built with Hugo, using the Blowfish theme, and deployed
 - **Dev Server:** `hugo server -D` (renders drafts)
 - **Build:** `hugo --minify`
 - **New Post:** `hugo new articles/my-new-post.md`
+
+## Developer Notes & Gotchas
+1. **Theme Configuration Overrides:** Global theme settings in `config/_default/params.toml` (e.g., `sharingLinks`) can be overridden on individual pages by adding the parameter to the frontmatter (e.g., `sharingLinks: false`).
+2. **Shortcode Syntax:** 
+    - Do not escape characters (like `\?` or `\:`) inside shortcode parameters (e.g., `alt` or `caption`). This breaks rendering.
+    - Avoid double-wrapping links when using `relref`. Use `[Link Text]({{< relref "path" >}})` instead of `[Link Text](({{< relref "path" >}}))`.
+3. **Governance Check:** Always verify tags against `/.policies/tag_governance_policy.md` *before* creating content to avoid clean-up tasks.
