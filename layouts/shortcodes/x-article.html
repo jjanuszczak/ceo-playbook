@@ -1,0 +1,79 @@
+<style>
+.x-article-card {
+    border: 1px solid #cfd9de; /* Darker border for contrast */
+    border-radius: 12px;
+    padding: 16px;
+    margin: 20px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #ffffff !important; /* Force White Background */
+    display: flex;
+    flex-direction: column;
+    text-decoration: none !important; /* Remove underline from card */
+    color: #000000 !important; /* Force Black Text */
+    max-width: 550px;
+    transition: background 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.x-article-card:hover {
+    background-color: #f7f9fa !important;
+}
+.x-article-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.x-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    fill: #000000; /* Ensure logo is black */
+}
+.x-author {
+    font-weight: bold;
+    font-size: 15px;
+    color: #0f1419 !important;
+}
+.x-label {
+    color: #536471 !important;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.x-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+    color: #0f1419 !important; /* Force black title */
+}
+.x-footer {
+    font-size: 14px;
+    color: #536471 !important;
+    margin-top: 4px;
+}
+/* New Image Styling */
+.x-banner-img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #eff3f4;
+}
+</style>
+
+<a href="https://x.com/{{ .Get "user" }}/article/{{ .Get "id" }}" target="_blank" class="x-article-card">
+    <div class="x-article-header">
+        <svg viewBox="0 0 24 24" class="x-logo"><g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg>
+        <span class="x-author">@{{ .Get "user" }}</span>
+        <span class="x-label"> wrote an Article</span>
+    </div>
+
+    {{ with .Get "image" }}
+    <img src="{{ . }}" class="x-banner-img" alt="Article Banner" />
+    {{ end }}
+    
+    <h3 class="x-title">{{ with .Get "title" }}{{ . }}{{ else }}Read this Article on X{{ end }}</h3>
+    
+    <div class="x-footer">x.com</div>
+</a>

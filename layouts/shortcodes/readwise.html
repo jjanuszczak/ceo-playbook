@@ -1,0 +1,90 @@
+
+<style>
+.rw-card {
+    background-color: #fbfbfb;
+    border-left: 5px solid #5ea597; /* Readwise Teal */
+    padding: 20px;
+    margin: 24px 0;
+    border-radius: 0 8px 8px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.rw-text {
+    font-size: 1.15em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 16px; 
+    font-style: italic;
+}
+.rw-meta {
+    display: flex;
+    align-items: center;
+    font-size: 0.95em;
+    color: #666;
+}
+.rw-cover {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 16px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    transition: transform 0.1s;
+}
+/* Slight pop effect on image hover if it's a link */
+a .rw-cover:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.rw-source-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.rw-author {
+    font-weight: 700;
+    color: #333;
+    font-size: 1em;
+}
+.rw-title {
+    color: #777;
+    margin-top: 2px;
+}
+/* Link Styling */
+.rw-link {
+    text-decoration: none;
+    color: inherit;
+}
+.rw-link:hover .rw-title {
+    color: #5ea597; /* Readwise Teal on hover */
+    text-decoration: underline;
+}
+</style>
+
+<div class="rw-card">
+    <div class="rw-text">
+        "{{ .Get "text" }}"
+    </div>
+    <div class="rw-meta">
+        {{ if .Get "url" }}
+            <a href="{{ .Get "url" }}" target="_blank" rel="noopener">
+                {{ with .Get "image" }}<img src="{{ . }}" class="rw-cover" alt="Book Cover">{{ end }}
+            </a>
+        {{ else }}
+            {{ with .Get "image" }}<img src="{{ . }}" class="rw-cover" alt="Book Cover">{{ end }}
+        {{ end }}
+
+        <div class="rw-source-info">
+            <span class="rw-author">{{ .Get "author" }}</span>
+            
+            {{ if .Get "url" }}
+                <a href="{{ .Get "url" }}" target="_blank" rel="noopener" class="rw-link">
+                    <span class="rw-title">{{ .Get "title" }}</span>
+                </a>
+            {{ else }}
+                <span class="rw-title">{{ .Get "title" }}</span>
+            {{ end }}
+        </div>
+    </div>
+</div>
