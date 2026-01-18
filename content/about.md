@@ -24,7 +24,7 @@ You can also find my work, thoughts, and professional updates on the following p
 
 ## How I Stay Sharp
 
-In addition to longer essays and strategy pieces, I keep a running practice I call [Signals]({{< relref "signals" >}}).
+In addition to longer [essays and strategy pieces]({{< relref "articles" >}}), I keep a running practice I call [Signals]({{< relref "signals" >}}).
 
 [Signals]({{< relref "signals" >}}) is a weekly or biweekly curation of things I bookmarked or paused on. Not because they were trending, but because they revealed something about how technology, capital, leadership, or systems are evolving.
 
