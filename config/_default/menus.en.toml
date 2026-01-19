@@ -63,6 +63,11 @@
   weight = 27
 
 [[main]]
+  name = "Playbooks"
+  pageRef = "advisory"
+  weight = 28
+
+[[main]]
   name = "Videos"
   pageRef = "videos"
   weight = 30
