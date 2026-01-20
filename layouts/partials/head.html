@@ -183,7 +183,11 @@
   {{ end }}
 
   {{/* Schema */}}
-  {{ partial "schema.html" . }}
+  {{ if .IsHome }}
+    {{ partial "schema-home.html" . }}
+  {{ else }}
+    {{ partial "schema.html" . }}
+  {{ end }}
 
   {{/* Analytics */}}
   {{ if hugo.IsProduction }}

@@ -16,51 +16,56 @@
   weight = 10
 
 [[main]]
-  name = "Articles"
+  name = "Insights"
   pageRef = "articles"
   weight = 20
 
 [[main]]
   name = "Strategy"
-  parent = "Articles"
+  parent = "Insights"
   pageRef = "categories/strategy"
   weight = 21
 
 [[main]]
   name = "Leadership"
-  parent = "Articles"
+  parent = "Insights"
   pageRef = "categories/leadership"
   weight = 22
 
 [[main]]
   name = "Fintech"
-  parent = "Articles"
+  parent = "Insights"
   pageRef = "categories/fintech"
   weight = 23
 
 [[main]]
   name = "Energy Transition"
-  parent = "Articles"
+  parent = "Insights"
   pageRef = "categories/energy-transition"
   weight = 24
 
 [[main]]
   name = "Technology"
-  parent = "Articles"
+  parent = "Insights"
   pageRef = "categories/technology"
   weight = 25
 
 [[main]]
   name = "Venture Building"
-  parent = "Articles"
+  parent = "Insights"
   pageRef = "categories/venture-building"
   weight = 26
 
 [[main]]
   name = "Essays"
-  parent = "Articles"
+  parent = "Insights"
   pageRef = "categories/essays"
   weight = 27
+
+[[main]]
+  name = "Playbooks"
+  pageRef = "advisory"
+  weight = 28
 
 [[main]]
   name = "Videos"
