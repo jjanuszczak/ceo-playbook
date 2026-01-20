@@ -1,5 +1,5 @@
 ---
-title: Advisory Playbooks
+title: Execution Playbooks
 description: Proven methodologies for scaling fintech ventures and driving digital transformation.
 layout: list
 cardView: true
