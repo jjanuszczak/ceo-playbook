@@ -1,13 +1,15 @@
 ---
-title: Corporate Venture Capital & Innovation Strategy | The Januszczak Method
+title: Corporate Venture Capital & Innovation Strategy
 description: Move beyond innovation theater. A disciplined framework for Corporate Venture Capital (CVC) and internal venture building that delivers 3.0x TVPI.
 layout: simple
 slug: corporate-innovation
 showDate: false
 showAuthor: false
+showBreadcrumbs: true
 ---
 
-# Stop Doing "Innovation Theater." Start Building Assets.
+---
+# Stop Doing "Innovation Theater." <span class="text-primary-600 dark:text-primary-400">Start Building Assets</span>.
 
 {{< lead >}}
 Most corporate innovation labs are cost centers disguised as R&D. I help large enterprises build [Venture Studios]({{< ref "advisory/venture-building" >}}) and CVC funds that actually return capital and strategic value.
@@ -50,7 +52,7 @@ Most corps never plan the exit. We define the success metrics on Day 1: Do we sp
 **The Challenge:** The bank needed exposure to emerging fintech models without diluting focus on core banking operations.
 
 **The Execution:**
-* Established a **$15M Corporate Venture Capital Fund**.
+* Established a multi-million dollar **Corporate Venture Capital Fund**.
 * Implemented a strict investment committee structure separate from bank credit committees.
 * Focused on "High-conviction" bets rather than "Spray and pray."
 
@@ -61,7 +63,9 @@ Most corps never plan the exit. We define the success metrics on Day 1: Do we sp
 
 ---
 
-### Why Hire John?
+### Beyond Innovation Theater
+
+Stop collecting sticky notes. Start building assets. While traditional consultants focus on process, I focus on P&L. Here is the difference:
 
 | Feature | Management Consultant | John Januszczak |
 | :---- | :---- | :---- |

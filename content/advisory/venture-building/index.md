@@ -1,16 +1,18 @@
 ---
-title: Venture Building & Fintech Scale | The Januszczak Method
+title: Venture Building & Fintech Scale
 description: From zero to >100B GTV. A pragmatic playbook for scaling fintech ventures in Southeast Asia.
 layout: simple
 slug: venture-building
 showDate: false
 showAuthor: false
+showBreadcrumbs: true
 ---
 
-# Don't Just Launch. Scale to Exit.
+---
+# Don't Just Launch. <span class="text-primary-600 dark:text-primary-400">Scale to Exit</span>.
 
 {{< lead >}}
-My method for building independent, revenue-generating fintech entities—not just "innovation theater."
+My method for building independent, revenue-generating fintech entities: not just "innovation theater."
 {{< /lead >}}
 
 {{< button href="/contact" >}}Get the Strategy{{< /button >}}
@@ -23,7 +25,7 @@ My method for building independent, revenue-generating fintech entities—not ju
 | :--- | :--- |
 | **Focus:** "Digital Transformation" buzzwords. | **Focus:** Creating standalone entities with P&L accountability. |
 | **Speed:** Slowed by parent company compliance. | **Speed:** Agile governance structures that bypass bureaucracy. |
-| **Talent:** Retrained bank staff. | **Talent:** Recruiting net-new tech DNA incentivized by equity. |
+| **Talent:** Retrained bank staff. | **Talent:** Recruiting net-new tech DNA incentivized by mission & equity. |
 | **Outcome:** A nice app with low usage. | **Outcome:** 22% Market Share & Strategic Exits. |
 
 ---
@@ -39,7 +41,7 @@ We design the legal entity to protect the parent company’s license while allow
 Top-tier tech talent will not work for a traditional bank salary structure. I help you structure equity/phantom stock pools and culture that attract the builders you need.
 
 **3. Regulatory Alignment (Day 1)**
-We engage regulators (like the BSP) early, turning compliance from a blocker into a competitive moat. *See my [Regulatory Playbook](/advisory/market-entry-strategic-structuring) for details.*
+We engage regulators early, turning compliance from a blocker into a competitive moat. *See my [Regulatory Playbook](/advisory/market-entry-strategic-structuring) for details.*
 
 ---
 
@@ -62,7 +64,9 @@ We engage regulators (like the BSP) early, turning compliance from a blocker int
 
 ---
 
-### Why Hire John?
+### De-Risk Your Execution
+
+Most innovation initiatives fail not because of bad ideas, but because of a disconnect between strategy and execution. Large consulting firms observe the market; I have shaped it. Compare the standard advisory approach against the Januszczak Operating System.
 
 | Feature | Large Consulting Firm | John Januszczak |
 | :--- | :--- | :--- |
