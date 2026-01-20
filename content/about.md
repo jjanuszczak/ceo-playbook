@@ -18,7 +18,7 @@ Having worked across Canada, the United States, and Asia, I bring a global persp
 
 ## Find Me on Social
 
-You can also find my work, thoughts, and professional updates on the following platforms:
+You can also find my work, thoughts, and professional updates on the following platforms:1
 
 {{< social_links >}}
 

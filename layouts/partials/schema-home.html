@@ -1,0 +1,92 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ (site.GetPage "/").Permalink | safeURL }}",
+      "url": "{{ (site.GetPage "/").Permalink | safeURL }}",
+      "name": "John Januszczak | Fintech Executive Advisor",
+      "description": "Visionary Strategy. Pragmatic Execution. 25 Years of Scaling Fintech in Southeast Asia.",
+      "publisher": {
+        "@id": "{{ (site.GetPage "/").Permalink | safeURL }}#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ (site.GetPage "/").Permalink | safeURL }}#person",
+      "name": "John Januszczak",
+      "jobTitle": "Fintech Executive Advisor & Venture Builder",
+      "url": "{{ (site.GetPage "/").Permalink | safeURL }}",
+      "image": "{{ "images/jj-head-shot.png" | absURL }}",
+      "sameAs": [
+        "https://www.linkedin.com/in/johnjanuszczak/",
+        "https://twitter.com/johnjanuszczak",
+        "https://github.com/jjanuszczak"
+      ],
+      "description": "Former President & CEO of UBX and COO of Manulife Philippines. Expert in venture building, regulatory strategy, and corporate innovation.",
+      "knowsAbout": [
+        "Fintech",
+        "Venture Building",
+        "Corporate Venture Capital (CVC)",
+        "Regulatory Strategy",
+        "Open Finance",
+        "Embedded Finance"
+      ],
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "UBX",
+          "sameAs": "https://ubx.ph/"
+        },
+        {
+          "@type": "Organization",
+          "name": "Manulife",
+          "sameAs": "https://www.manulife.com.ph/"
+        }
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "{{ (site.GetPage "/").Permalink | safeURL }}#service",
+      "name": "The Januszczak Method",
+      "description": "Strategic advisory for market entry, regulation, and venture building in Southeast Asia.",
+      "url": "{{ (site.GetPage "/").Permalink | safeURL }}",
+      "provider": {
+        "@id": "{{ (site.GetPage "/").Permalink | safeURL }}#person"
+      },
+      "areaServed": "Southeast Asia",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Advisory Playbooks",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Venture Building",
+              "description": "Scaling independent fintech entities from zero to >100B GTV."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Market Entry & Strategic Structuring",
+              "description": "Navigating BSP/SEC regulation and structuring JVs for control."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Corporate Innovation",
+              "description": "Designing CVC funds that deliver 3.0x TVPI and 1.05x DPI."
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
