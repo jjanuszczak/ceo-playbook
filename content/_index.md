@@ -32,7 +32,7 @@ Most corporate innovation labs are cost centers. Most market entrants get stuck 
 
 ## Proven Execution at Scale
 
-As the former **President & CEO, UBX** (Fintech & Venture Capital arm, **UnionBank of the Philippines**) and former **Chief Operating Officer, Manulife Philippines**, I leverage 25 years of operational leadership to de-risk your venture.
+As the former **President & CEO, UBX** (Fintech & Venture Capital arm, **UnionBank of the Philippines**) and former **Chief Operating Officer, Manulife Philippines**, I leverage 25 years of [operational leadership]({{< relref "/about" >}}) to de-risk your venture.
 
 <!--<div class="trust-bar-container my-8 text-center opacity-80">
   <p class="text-xs uppercase tracking-widest font-semibold mb-4 opacity-60">PREVIOUS LEADERSHIP & EXPERIENCE</p>
@@ -184,7 +184,7 @@ The market is flooded with consultants who sell strategy decks. I sell operation
 
 | Metric | Traditional Management Consultant | John Januszczak (Operator-Advisor) |
 | :---- | :---- | :---- |
-| **Output** | 100-page Strategy Deck | **Live Entities, Licenses & Hired Teams** |
+| **Output** | 100-page Strategy Deck | **[Live Entities]({{< relref "/portfolio" >}}), Licenses & Hired Teams** |
 | **Risk** | Fees for Time | **Reputation & Outcomes** |
 | **Experience** | Observed Industry Trends | **Built & Exited Ventures (UBX, DragonPay, Klaytyn, etc.)** |
 | **Network** | General "Contact List" | **Direct Access to Regulators & Tech Leaders** |
