@@ -1,11 +1,13 @@
 ---
 title: Corporate Venture Capital & Innovation Strategy
 description: Move beyond innovation theater. A disciplined framework for Corporate Venture Capital (CVC) and internal venture building that delivers 3.0x TVPI.
+summary: Move beyond innovation theater. A disciplined framework for Corporate Venture Capital (CVC) and internal venture building that delivers measurable ROI.
 layout: simple
 slug: corporate-innovation
 showDate: false
 showAuthor: false
 showBreadcrumbs: true
+showSummary: true
 ---
 
 ---

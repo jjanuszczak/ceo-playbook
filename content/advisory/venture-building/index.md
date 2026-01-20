@@ -1,11 +1,13 @@
 ---
 title: Venture Building & Fintech Scale
 description: From zero to >100B GTV. A pragmatic playbook for scaling fintech ventures in Southeast Asia.
+summary: From zero to >100B GTV. A pragmatic playbook for scaling fintech ventures in Southeast Asia.
 layout: simple
 slug: venture-building
 showDate: false
 showAuthor: false
 showBreadcrumbs: true
+ShowSummary: true
 ---
 
 ---
