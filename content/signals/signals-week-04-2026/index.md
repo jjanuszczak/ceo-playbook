@@ -3,8 +3,7 @@ title: "Signals: Week 04, 2026"
 date: 2026-01-25
 description: "AI reasoning vs. reaction, the Silicon Valley canon, and why running a business is a design job."
 summary: "This week's signals connect the limitations of AI agents, the ideology of tech leaders, and the relentless execution required for corporate turnarounds."
-categories: ["Strategy"]
-tags: ["reading-list", "artificial-intelligence", "strategy", "organizational-design", "macro-economics"]
+tags: ["reading-list", "artificial-intelligence", "organizational-design", "macro-economics"]
 draft: false
 ---
 
