@@ -1,6 +1,6 @@
 ---
 title: "Flatpeak: The Missing Layer of the Energy Transition"
-date: 2026-01-14
+date: 2026-01-26
 summary: "Why your EV is flying blind, and how Flatpeak—founded by the architect of M-PESA—is building the 'Stripe for Energy' to fix it."
 description: "At 1882 Energy Ventures, we look for the infrastructure that unlocks decentralized energy. Flatpeak is building the API layer that allows smart devices to trade energy like a currency, bypassing legacy grid bottlenecks."
 categories:
@@ -10,10 +10,10 @@ tags:
   - "api-economy"
   - "electric-vehicles"
   - "platform-economics"
-draft: true
+draft: false
 ---
 
-At 1882 Energy Ventures, we talk about decentralized energy: electric vehicles (EVs), batteries, solar panels, and the sheer physics of moving electrons. But if you look closely at the Energy Transition, you realize something that is a bit crazy: **The hardware is flying blind.**
+At [1882 Energy Ventures](https://www.1882energyventures.com/), we talk about decentralized energy: electric vehicles (EVs), batteries, solar panels, and the sheer physics of moving electrons. But if you look closely at the Energy Transition, you realize something that is a bit crazy: **The hardware is flying blind.**
 
 If you buy a state-of-the-art electric vehicle today, or a smart air conditioner, that device has almost no idea how much electricity costs *right now*. It doesn't know if the grid is dirty or clean. It doesn't know if you're paying 10 cents or 50 cents per kilowatt-hour.
 
@@ -27,15 +27,15 @@ I believe this might be the most important piece of infrastructure you’ve neve
 
 To understand Flatpeak, you have to understand its founders.
 
-**Matthew Roderick** is an engineer’s engineer. Before energy, he was the Chief Architect and CTO of **M-PESA**, the mobile money service that banked the unbanked population of Kenya. Matt’s superpower is taking complex, regulated, messy systems (banking) and turning them into something simple enough to work on a Nokia brick phone.
+**Matthew Roderick** is an engineer’s engineer. Before energy, he was the Chief Architect and CTO of **M-PESA**, the mobile money service that banked the unbanked population of Kenya. Matt’s superpower is taking complex, regulated, messy systems and turning them into something simple enough to work on a Nokia brick phone.
 
-After M-PESA, Matt was hired to run the technical side of the **Smart DCC** (Data Communications Company) in the UK. This was the government’s massive project to connect 40+ million smart meters to the grid. Matt built the plumbing. He saw the "Matrix" of energy data.
+After M-PESA, Matt shifted his focus to the UK grid, specifically the Smart DCC (Data Communications Company). It was here that he aligned with **Alex Alenberg**, an MIT grad with a deep background in defense and connectivity. Together, they tackled the government’s massive project to connect 50+ million smart meters to the grid.
 
-But he also saw the problem: The data was locked up.
+They built the plumbing and saw the "Matrix" of energy data. But they also saw the problem: The data was locked up.
 
-If you were Samsung, or a startup building EV chargers, you couldn't just "ping" the grid to ask for the price of power. You had to be a licensed energy supplier, which takes years and millions of dollars.
+If you were a multinational device provider like Samsung, or a startup building EV chargers, you couldn't just "ping" the grid to ask for the price of power. You had to be a licensed energy supplier, which takes years and millions of dollars—only to access a tiny subset of customers.
 
-In 2022, **Alex Alenberg**, an MIT grad with a background in defense and connectivity, teamed up with Matt to solve this. They realized that **energy tariffs are the new payments code.**
+In 2022, Matt and Alex officially teamed up to solve this, realizing that **energy tariffs are the new payments code**.
 
 ## The Tech Deep Dive: Inside the "Stripe for Energy"
 
@@ -84,4 +84,4 @@ Flatpeak is currently a Seed-stage company, but the macro tailwinds are undeniab
 
 Major OEMs (Chinese battery makers, European EV manufacturers) face a fragmented world. They want to sell one device that works in 50 countries. They can't integrate with 50 different national grids. Flatpeak offers them one API to rule them all.
 
-For us at 1882 Energy Ventures, this reinforces our thesis: The future of energy isn't just about building more power plants. It's about building the digital layer that tells the electrons where to go.
+The future of energy isn't just about building more power plants. **It's about building the digital layer that tells the electrons where to go**.
