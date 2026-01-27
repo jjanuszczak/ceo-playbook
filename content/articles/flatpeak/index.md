@@ -13,13 +13,15 @@ tags:
 draft: false
 ---
 
-At [1882 Energy Ventures](https://www.1882energyventures.com/), we talk about decentralized energy: electric vehicles (EVs), batteries, solar panels, and the sheer physics of moving electrons. But if you look closely at the Energy Transition, you realize something that is a bit crazy: **The hardware is flying blind.**
+I’ve spent a career building digital infrastructure for finance, but recently I’ve turned my attention to a different kind of grid. As a **Board Advisor** at [1882 Energy Ventures](https://www.1882energyventures.com/), I spend a lot of time discussing decentralized energy: electric vehicles (EVs), batteries, solar panels, and the sheer physics of moving electrons. But looking closely at the Energy Transition through a systems lens reveals something startling: **The hardware is flying blind.**
+
+*I’ve realized is that the industry has a massive data problem. Exactly the kind of systemic gap I look for!*
 
 If you buy a state-of-the-art electric vehicle today, or a smart air conditioner, that device has almost no idea how much electricity costs *right now*. It doesn't know if the grid is dirty or clean. It doesn't know if you're paying 10 cents or 50 cents per kilowatt-hour.
 
 It is like trying to run an algorithmic trading firm, but you only get the stock prices once a month via a paper statement in the mail.
 
-Enter **Flatpeak**.
+Enter **[Flatpeak](https://flatpeak.com/)**.
 
 I believe this might be the most important piece of infrastructure you’ve never heard of. They are building the "Stripe for Energy," and their story involves the legendary M-PESA payment network, the central nervous system of the UK power grid, and a counter-intuitive secret about how utility companies actually make money.
 
