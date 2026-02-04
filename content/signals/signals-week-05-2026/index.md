@@ -20,6 +20,7 @@ This week’s signals converge on the professionalization of the AI era. We are 
 
 **My Take:** **Thinking is a Full-Stack Activity.** We’ve over-indexed on STEM logic at the expense of creative intuition. The [best builders]({{< relref "/articles/discovery-to-knowledge" >}}) use intuition to define the "what" and logic to verify the "how."
 
+---
 
 {{< x user="Hesamation" id="2016712942545240203" >}}
 
@@ -29,6 +30,7 @@ This week’s signals converge on the professionalization of the AI era. We are 
 
 **My Take:** **The Manager is the New Coder.** We are moving from being individual contributors to being governors of an automated workforce. If you aren't [building your agentic swarm]({{< relref "/articles/pilot-purgatory" >}}), you are the bottleneck.
 
+---
 
 {{< x-article user="ishanxnagpal" id="2016281522735874441" title="How to Make Your AI Agent Its Own Forward-Deployed Engineer" image="https://pbs.twimg.com/media/G_s7hRqbAAQASF5?format=jpg&name=small" >}}
 
@@ -37,6 +39,8 @@ This week’s signals converge on the professionalization of the AI era. We are 
 **Why it Matters:** Pure software is a race to the bottom. Indispensability comes from **domain-specific customization**: something FDEs have done for years and agents must now replicate.
 
 **My Take:** **Context is the Moat.** An agent that understands the general rules is a tool; an agent that understands *your* specific constraints is an asset.
+
+---
 
 ## Strategy & Implementation
 
@@ -48,6 +52,7 @@ This week’s signals converge on the professionalization of the AI era. We are 
 
 **My Take:** **Data Gravity is Absolute.** The "Cursor-pill" moment is realizing that the model is only as smart as the folder it’s sitting in.
 
+---
 
 {{< x user="math_rachel" id="2016232367388819642" >}}
 
@@ -57,6 +62,7 @@ This week’s signals converge on the professionalization of the AI era. We are 
 
 **My Take:** **Engineering is the Art of Saying No.** Just because an agent can generate 1,000 lines of code doesn't mean you should have them. We need more architects, fewer typists.
 
+---
 
 {{< x-article user="nicbstme" id="2015174818497437834" title="Lessons from Building AI Agents for Financial Services" image="https://pbs.twimg.com/media/G_dVeCeXkAA3fK9?format=jpg&name=small" >}}
 
@@ -65,6 +71,8 @@ This week’s signals converge on the professionalization of the AI era. We are 
 **Why it Matters:** Finance is the ultimate testing ground for agent reliability. If it works here, it can work anywhere, but the **failure modes are catastrophic**.
 
 **My Take:** **Trust but Verify (Automatically).** In Fintech, the agent is the player, but the "guardrail" system is the referee. You can't have one without the other.
+
+---
 
 ## From the Library
 
@@ -81,6 +89,7 @@ This week’s signals converge on the professionalization of the AI era. We are 
 
 **My Take:** **The Question is the Strategy.** If you don't know what you're looking for, you'll find a lot of noise very quickly.
 
+---
 
 ## Deep Dives & Highlights
 
@@ -95,6 +104,7 @@ From Bryce G. Hoffman's [American Icon](https://www.amazon.com/dp/0307886069)
 
 **My Take:** **Systems Over Symbols.** Most CEOs focus on the logo. The greats focus on designing the machine behind the machine: the systems, the heartbeat of the machine.
 
+---
 
 {{< figure
     src="architecture.png"
@@ -107,6 +117,7 @@ From Guy Sereff's [Launching an Enterprise Business Architecture Practice](https
 
 **My Take:** **Architecture is Strategy in Code.** If your CTO and CEO aren't speaking the same language, you are building a bridge to nowhere.
 
+---
 
 {{< figure
     src="underwriters.png"
