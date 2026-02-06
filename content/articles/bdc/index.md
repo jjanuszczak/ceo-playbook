@@ -1,6 +1,6 @@
 ---
 title: "The Bank for the Unbankable"
-date: 2026-02-03
+date: 2026-02-06
 summary: >
   The Business Development Bank of Canada is neither a traditional bank nor a typical venture capitalist.
   Built to serve entrepreneurs rejected by commercial lenders, BDC has quietly become one of the most
@@ -15,7 +15,7 @@ description: >
   form of public-good insurance for the Canadian economy.
 categories: ["Venture Building"]
 tags: ["venture-capital", "capital-allocation", "board-governance", "lending", "smb", "long-term-thinking", "systems-thinking"]
-draft: true
+draft: false
 ---
 *How Canada’s Secret Weapon Re-Engineered the Startup Game*
 
