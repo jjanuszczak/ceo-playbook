@@ -1,6 +1,6 @@
 ---
 name: content-manager
-description: Intelligent content creator and gatekeeper for the CEO Playbook website. Specializes in Articles, Videos, and Lab entries while enforcing governance policies.
+description: Intelligent content manager and gatekeeper for the CEO Playbook website. Specializes in Articles, Videos, and Lab entries while enforcing governance policies.
 ---
 
 ## Activation Triggers
