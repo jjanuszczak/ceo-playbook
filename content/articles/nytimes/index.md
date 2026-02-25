@@ -48,4 +48,4 @@ Get the Case Study
 *I’ve added this report to the resources area to help our community of executives and digital leaders navigate the complexities of institutional change. [Let me know your thoughts]({{< relref "contact" >}})  on the "Bundle" strategy!*
 
 ---
-Featured image photo credit: [Wally Gobetz](https://www.flickr.com/photos/wallyg/) ([License](https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en))
+Featured image by [Wally Gobetz](https://www.flickr.com/photos/wallyg/) is licensed under [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en)
