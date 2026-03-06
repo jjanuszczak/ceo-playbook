@@ -23,7 +23,7 @@ This 17-page report explores x402, a new protocol by Coinbase that activates the
 Inside the Report:
 
 - Why HTTP was always meant to include payments
-- How PayPal and Stripe solved for speed—but not autonomy
+- How PayPal and Stripe solved for speed, but not autonomy
 - Why modern payment systems fail for AI agents, APIs, and micropayments
 - How x402 enables instant, autonomous payments using stablecoins
 - The end of subscriptions? How x402 could disrupt SaaS and banking models
@@ -41,4 +41,8 @@ This report is relevant for fintech founders, internet infrastructure builders, 
 Stripe made payments easy. x402 makes payments native.
 Get ahead of the next shift in internet infrastructure.
 
-[Download the report](https://januszczak.gumroad.com/l/nextchapteroftheweb). Join the conversation. Shape what’s next.
+{{< button href="https://januszczak.gumroad.com/l/nextchapteroftheweb" target="_self" >}}
+Get the Report
+{{< /button >}}
+
+Join the conversation. Shape what’s next.

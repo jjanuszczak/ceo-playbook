@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Basel Framework Interactive Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Smooth transitions for tab content */
+        .tab-content {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        input[type=range] {
+            height: 8px;
+            -webkit-appearance: none;
+            width: 100%;
+            background: #e2e8f0;
+            border-radius: 8px;
+            outline: none;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #2563eb;
+            cursor: pointer;
+        }
+        input[type=range]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #2563eb;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-slate-900 text-white pt-12 pb-8 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center space-x-4 mb-4">
+                <!-- Landmark Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400">
+                    <line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7 12 2"/>
+                </svg>
+                <h1 class="text-4xl font-bold tracking-tight">The Basel Framework</h1>
+            </div>
+            <p class="text-xl text-slate-300 max-w-3xl">
+                The global standard for the prudential regulation of banks, issued by the Basel Committee on Banking Supervision (BCBS).
+            </p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto flex overflow-x-auto" id="tabs-container">
+            <button onclick="switchTab('background')" id="btn-background" class="tab-btn flex items-center space-x-2 px-6 py-3 font-medium transition-colors border-b-2 border-blue-600 text-blue-700 bg-blue-50/50">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                <span>Background & Evolution</span>
+            </button>
+            <button onclick="switchTab('framework')" id="btn-framework" class="tab-btn flex items-center space-x-2 px-6 py-3 font-medium transition-colors border-b-2 border-transparent text-slate-500 hover:text-slate-800 hover:border-slate-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                <span>The Framework</span>
+            </button>
+            <button onclick="switchTab('approaches')" id="btn-approaches" class="tab-btn flex items-center space-x-2 px-6 py-3 font-medium transition-colors border-b-2 border-transparent text-slate-500 hover:text-slate-800 hover:border-slate-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Standardised vs IRB</span>
+            </button>
+            <button onclick="switchTab('calculator')" id="btn-calculator" class="tab-btn flex items-center space-x-2 px-6 py-3 font-medium transition-colors border-b-2 border-transparent text-slate-500 hover:text-slate-800 hover:border-slate-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16.01" y1="14" y2="14"/><line x1="16" x2="16.01" y1="18" y2="18"/><line x1="8" x2="8.01" y1="10" y2="10"/><line x1="12" x2="12.01" y1="10" y2="10"/><line x1="16" x2="16.01" y1="10" y2="10"/><line x1="8" x2="8.01" y1="14" y2="14"/><line x1="12" x2="12.01" y1="14" y2="14"/><line x1="8" x2="8.01" y1="18" y2="18"/><line x1="12" x2="12.01" y1="18" y2="18"/></svg>
+                <span>Interactive Model</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="max-w-6xl mx-auto py-10 px-6 flex-grow w-full">
+        
+        <!-- TAB 1: BACKGROUND -->
+        <div id="content-background" class="tab-content space-y-8 block">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Purpose and Evolution</h2>
+                <p class="text-lg text-slate-600 mb-6">
+                    The Basel Framework is applied on a consolidated basis to internationally active banks. Consolidated supervision is the best means to provide supervisors with a comprehensive view of risks and to reduce opportunities for regulatory arbitrage.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center space-x-3 mb-4 text-blue-800">
+                        <div class="p-2 bg-blue-50 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Core Objective</h3>
+                    </div>
+                    <div class="text-slate-600 leading-relaxed space-y-3">
+                        <p>The core objective is to reduce the probability of bank failures by increasing their going-concern loss-absorbency. For Global Systemically Important Banks (G-SIBs), the framework aims to reduce the extent or impact of their failure on the global financial system and wider economy.</p>
+                        <p>This is approached via a global, system-wide, loss-given-default (LGD) concept rather than merely a probability of default (PD) concept.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center space-x-3 mb-4 text-blue-800">
+                        <div class="p-2 bg-blue-50 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">G-SIB and D-SIB Metrics</h3>
+                    </div>
+                    <div class="text-slate-600 leading-relaxed space-y-3">
+                        <p>Systemic importance for Global and Domestic Systemically Important Banks (G-SIBs and D-SIBs) is measured using multiple indicator-based approaches across categories like:</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li><strong>Size:</strong> Total exposures.</li>
+                            <li><strong>Cross-jurisdictional activity:</strong> Claims and liabilities globally.</li>
+                            <li><strong>Interconnectedness:</strong> Intra-financial system assets/liabilities.</li>
+                            <li><strong>Substitutability:</strong> Financial institution infrastructure.</li>
+                            <li><strong>Complexity:</strong> OTC derivatives, Level 3 assets.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 2: FRAMEWORK -->
+        <div id="content-framework" class="tab-content space-y-8 hidden">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">Key Elements of the Framework</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center space-x-3 mb-4 text-blue-800">
+                        <div class="p-2 bg-blue-50 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7 12 2"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Definition of Capital (CAP)</h3>
+                    </div>
+                    <div class="text-slate-600 leading-relaxed space-y-3">
+                        <p>It is critical that banks' risk exposures are backed by a high-quality capital base. The framework categorizes eligible capital into three tiers:</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li><strong>Common Equity Tier 1 (CET1):</strong> The predominant form of Tier 1 capital, comprising common shares and retained earnings. Represents the most subordinated claim in liquidation.</li>
+                            <li><strong>Additional Tier 1 (AT1):</strong> Instruments that are perpetual, with no step-ups or incentives to redeem, absorbing losses on a going-concern basis.</li>
+                            <li><strong>Tier 2 Capital:</strong> Provides loss absorption on a gone-concern basis, subordinated to depositors and general creditors.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center space-x-3 mb-4 text-blue-800">
+                        <div class="p-2 bg-blue-50 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Risk-Based Capital Buffers (RBC)</h3>
+                    </div>
+                    <div class="text-slate-600 leading-relaxed space-y-3">
+                        <p>To ensure banks can absorb losses during periods of financial stress, the framework establishes mandatory buffers above the regulatory minimum:</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li><strong>Capital Conservation Buffer:</strong> 2.5%, comprised entirely of CET1. Capital distribution constraints (like dividend limits) are imposed if capital falls into this range.</li>
+                            <li><strong>Countercyclical Buffer:</strong> Extends the conservation buffer to protect against periods of excess aggregate credit growth.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center space-x-3 mb-4 text-blue-800">
+                        <div class="p-2 bg-blue-50 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Market Risk (MAR)</h3>
+                    </div>
+                    <div class="text-slate-600 leading-relaxed space-y-3">
+                        <p>Trading book instruments are subject to capital requirements against default risk, interest rate risk, equity risk, foreign exchange (FX) risk, and commodities risk.</p>
+                        <p>Calculated via either the Standardised Approach (Sensitivities-based method: Delta, Vega, Curvature) or the Internal Models Approach (IMA) for eligible trading desks.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center space-x-3 mb-4 text-blue-800">
+                        <div class="p-2 bg-blue-50 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Credit Risk (CRE)</h3>
+                    </div>
+                    <div class="text-slate-600 leading-relaxed space-y-3">
+                        <p>The largest component of Risk-Weighted Assets. Credit risk addresses unexpected losses (UL) from exposures ranging from corporate loans, retail portfolios, residential real estate, to specialised lending (project/object finance).</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center space-x-3 mb-4 text-blue-800">
+                        <div class="p-2 bg-blue-50 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Operational Risk (OPE)</h3>
+                    </div>
+                    <div class="text-slate-600 leading-relaxed space-y-3">
+                        <p>Addresses the risk of loss resulting from inadequate or failed internal processes, people, and systems, or from external events (including ICT and cyber risks). It is calculated using the operational risk standardised approach through the Business Indicator.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center space-x-3 mb-4 text-blue-800">
+                        <div class="p-2 bg-blue-50 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Liquidity & Leverage (LCR/LEV)</h3>
+                    </div>
+                    <div class="text-slate-600 leading-relaxed space-y-3">
+                        <p>Alongside risk-weighted capital, the framework mandates a non-risk-based Leverage Ratio to restrict the build-up of excessive leverage. It also enforces liquidity standards like the Liquidity Coverage Ratio (LCR) to ensure banks hold sufficient High-Quality Liquid Assets (HQLA).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: APPROACHES -->
+        <div id="content-approaches" class="tab-content space-y-8 hidden">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6">Measuring Risk: Standardised vs IRB</h2>
+            
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-4">The Standardised Approach</h3>
+                        <p class="mb-4 text-slate-600">Assigns fixed standardised risk weights to exposures based on counterparty type, external credit ratings (where permitted), and specific asset classifications.</p>
+                        <ul class="space-y-3 text-sm text-slate-700">
+                            <li class="flex items-start">
+                                <span class="text-emerald-500 mr-2 font-bold">✓</span>
+                                <span><strong>Bank Exposures:</strong> Can range from 20% (Grade A/AAA) to 150% (Grade C/Below B-).</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-emerald-500 mr-2 font-bold">✓</span>
+                                <span><strong>Corporate Exposures:</strong> Unrated exposures generally receive a 100% risk weight (85% for SMEs).</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-emerald-500 mr-2 font-bold">✓</span>
+                                <span><strong>Residential Real Estate:</strong> Weighted according to Loan-to-Value (LTV) ratios.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="p-8 bg-slate-50/50">
+                        <h3 class="text-2xl font-bold text-indigo-900 mb-4">Internal Ratings-Based (IRB)</h3>
+                        <p class="mb-4 text-slate-600">Subject to supervisory approval, banks use their own internal estimates of risk components to determine capital requirements for unexpected loss (UL).</p>
+                        <ul class="space-y-3 text-sm text-slate-700">
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-2 font-bold">→</span>
+                                <span><strong>Foundation IRB (F-IRB):</strong> Banks provide own estimates of Probability of Default (PD). Supervisors provide LGD, EAD, and Maturity (M).</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-2 font-bold">→</span>
+                                <span><strong>Advanced IRB (A-IRB):</strong> Banks provide internal estimates of PD, Loss Given Default (LGD), and Exposure at Default (EAD).</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-blue-900 text-white p-6">
+                    <h4 class="font-bold flex items-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-yellow-400"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+                        The Output Floor (RBC20.13)
+                    </h4>
+                    <p class="text-blue-100 text-sm">
+                        To ensure a level playing field, the Basel Framework mandates an output floor. Even if a bank's internal models suggest extremely low risk, their total Risk-Weighted Assets (RWA) calculated under internally modelled approaches cannot fall below <strong>72.5%</strong> of the RWA calculated using the Standardised Approaches.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 4: CALCULATOR -->
+        <div id="content-calculator" class="tab-content space-y-6 hidden">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Community Bank Capital Modeler</h2>
+                <p class="text-lg text-slate-600">
+                    Explore how moving from the Standardised Approach to an approved IRB Model impacts a bank's Risk-Weighted Assets (RWA), Capital Requirements, and Return on Equity (ROE). Adjust the Probability of Default (PD) below to see how internal ratings dynamically change the IRB Risk Weight.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8">
+                
+                <!-- Sliders Area -->
+                <div class="lg:col-span-4 space-y-6 bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-2">Loan Portfolio Mix</h3>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <label class="font-medium text-slate-700">Corporate Loans</label>
+                            <span class="text-blue-600 font-bold" id="corp-val">$500M</span>
+                        </div>
+                        <input type="range" id="corp-input" min="0" max="1000" step="10" value="500">
+                        <div class="mt-3 bg-slate-50 p-3 rounded-lg border border-slate-200 text-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-slate-500">Standardised RW:</span>
+                                <span class="font-bold text-slate-700">100%</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-slate-500">IRB LGD (Assumed):</span>
+                                <span class="font-bold text-blue-700">45%</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="text-slate-500" for="corp-pd">IRB PD Estimate:</label>
+                                <select id="corp-pd" class="bg-white border border-slate-300 rounded px-2 py-1 text-blue-700 font-bold outline-none cursor-pointer hover:border-blue-400">
+                                    <option value="0.05">0.05%</option>
+                                    <option value="0.10">0.10%</option>
+                                    <option value="0.25" selected>0.25%</option>
+                                    <option value="0.40">0.40%</option>
+                                    <option value="0.50">0.50%</option>
+                                </select>
+                            </div>
+                            <div class="flex justify-between items-center border-t border-slate-200 pt-2">
+                                <span class="text-blue-900 font-semibold">Resulting IRB RW:</span>
+                                <span id="corp-irb-rw" class="font-bold text-blue-900 text-base">43.97%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <div class="flex justify-between mb-1">
+                            <label class="font-medium text-slate-700">Residential Mortgages</label>
+                            <span class="text-blue-600 font-bold" id="mort-val">$400M</span>
+                        </div>
+                        <input type="range" id="mort-input" min="0" max="1000" step="10" value="400">
+                        <div class="mt-3 bg-slate-50 p-3 rounded-lg border border-slate-200 text-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-slate-500">Standardised RW:</span>
+                                <span class="font-bold text-slate-700">35%</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-slate-500">IRB LGD (Assumed):</span>
+                                <span class="font-bold text-blue-700">25%</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="text-slate-500" for="mort-pd">IRB PD Estimate:</label>
+                                <select id="mort-pd" class="bg-white border border-slate-300 rounded px-2 py-1 text-blue-700 font-bold outline-none cursor-pointer hover:border-blue-400">
+                                    <option value="0.05">0.05%</option>
+                                    <option value="0.10">0.10%</option>
+                                    <option value="0.25" selected>0.25%</option>
+                                    <option value="0.40">0.40%</option>
+                                    <option value="0.50">0.50%</option>
+                                </select>
+                            </div>
+                            <div class="flex justify-between items-center border-t border-slate-200 pt-2">
+                                <span class="text-blue-900 font-semibold">Resulting IRB RW:</span>
+                                <span id="mort-irb-rw" class="font-bold text-blue-900 text-base">11.83%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <div class="flex justify-between mb-1">
+                            <label class="font-medium text-slate-700">Other Retail</label>
+                            <span class="text-blue-600 font-bold" id="retail-val">$100M</span>
+                        </div>
+                        <input type="range" id="retail-input" min="0" max="1000" step="10" value="100">
+                        <div class="mt-3 bg-slate-50 p-3 rounded-lg border border-slate-200 text-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-slate-500">Standardised RW:</span>
+                                <span class="font-bold text-slate-700">75%</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-slate-500">IRB LGD (Assumed):</span>
+                                <span class="font-bold text-blue-700">85%</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="text-slate-500" for="retail-pd">IRB PD Estimate:</label>
+                                <select id="retail-pd" class="bg-white border border-slate-300 rounded px-2 py-1 text-blue-700 font-bold outline-none cursor-pointer hover:border-blue-400">
+                                    <option value="1.00">1.00%</option>
+                                    <option value="2.00">2.00%</option>
+                                    <option value="3.00" selected>3.00%</option>
+                                    <option value="4.00">4.00%</option>
+                                    <option value="5.00">5.00%</option>
+                                </select>
+                            </div>
+                            <div class="flex justify-between items-center border-t border-slate-200 pt-2">
+                                <span class="text-blue-900 font-semibold">Resulting IRB RW:</span>
+                                <span id="retail-irb-rw" class="font-bold text-blue-900 text-base">135.00%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t mt-6">
+                        <div class="flex justify-between text-lg font-bold text-slate-900">
+                            <span>Total Assets:</span>
+                            <span id="total-assets-val">$1,000M</span>
+                        </div>
+                        <div class="flex justify-between text-sm text-slate-500 mt-1">
+                            <span>Assumed Net Income (1.5% ROA):</span>
+                            <span id="net-income-val">$15.0M</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Area -->
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Standardised Results -->
+                    <div class="bg-slate-50 rounded-xl border border-slate-200 p-6 relative overflow-hidden h-fit">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-slate-400"></div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-slate-500"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                            Standardised
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-sm text-slate-500 mb-1">Risk-Weighted Assets (RWA)</p>
+                                <p class="text-3xl font-bold text-slate-700" id="std-rwa-val">$0M</p>
+                            </div>
+                            
+                            <div>
+                                <p class="text-sm text-slate-500 mb-1">Required Capital (10.5%)</p>
+                                <p class="text-2xl font-bold text-slate-700" id="std-cap-val">$0M</p>
+                            </div>
+
+                            <div class="pt-4 border-t border-slate-200">
+                                <p class="text-sm font-semibold text-slate-500 mb-1 uppercase tracking-wider">Return on Equity</p>
+                                <p class="text-4xl font-black text-slate-800" id="std-roe-val">0.00%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IRB Results -->
+                    <div class="bg-blue-50 rounded-xl border border-blue-200 p-6 relative overflow-hidden shadow-sm h-fit">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-6 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-blue-600"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            Internal Ratings-Based
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-sm text-blue-700/70 mb-1">Risk-Weighted Assets (RWA)</p>
+                                <div class="flex items-end space-x-2">
+                                    <p class="text-3xl font-bold text-blue-900" id="irb-rwa-val">$0M</p>
+                                    <span id="floor-warning" class="hidden text-xs font-bold text-orange-600 bg-orange-100 px-2 py-1 rounded-md mb-1 border border-orange-200">
+                                        72.5% Floor Active
+                                    </span>
+                                </div>
+                                <p class="text-xs text-blue-600 mt-1">Raw IRB Est: <span id="irb-raw-val">$0M</span></p>
+                            </div>
+                            
+                            <div>
+                                <p class="text-sm text-blue-700/70 mb-1">Required Capital (10.5%)</p>
+                                <p class="text-2xl font-bold text-blue-900" id="irb-cap-val">$0M</p>
+                            </div>
+
+                            <div class="pt-4 border-t border-blue-200/50">
+                                <p class="text-sm font-semibold text-blue-700/70 mb-1 uppercase tracking-wider">Return on Equity</p>
+                                <p class="text-4xl font-black text-blue-700" id="irb-roe-val">0.00%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Explanation/Insights Span -->
+                    <div class="md:col-span-2 bg-emerald-50 border border-emerald-100 rounded-xl p-5 mt-2 text-emerald-900 shadow-sm flex space-x-4 items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-emerald-600 mt-1"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                        <div>
+                            <h4 class="font-bold mb-2">Model Impact Analysis</h4>
+                            <p class="text-sm opacity-90 leading-relaxed space-y-2">
+                                <span>Under the Standardised approach, risk weights are static (RWA: <strong id="analysis-std-rwa">$0M</strong>). Under the IRB approach, internal parameters like <strong>PD</strong> and <strong>LGD</strong> directly shift the Raw IRB RWA estimate to <strong id="analysis-irb-raw-summary">$0M</strong>.</span>
+                                <br/><br/>
+                                <span>Without the 72.5% output floor, this would boost Return on Equity (ROE) from <strong id="analysis-std-roe">0.00%</strong> to <strong id="analysis-irb-roe-raw">0.00%</strong>.</span> 
+                                <br/>
+                                <span id="analysis-floor-text" class="hidden text-orange-700 font-medium block mt-1">However, the Basel output floor is currently active, clamping the final IRB RWA at <strong id="analysis-irb-rwa">$0M</strong> and capping the final ROE at <strong id="analysis-irb-roe">0.00%</strong> to ensure systemic safety regardless of internal model estimates.</span>
+                                <span id="analysis-no-floor-text" class="hidden text-emerald-700 font-medium block mt-1">Because the raw estimate is above the 72.5% output floor, the final IRB RWA remains <strong id="analysis-irb-rwa-nofloor">$0M</strong> and the final ROE is <strong id="analysis-irb-roe-nofloor">0.00%</strong>.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 px-6 mt-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto text-sm text-center md:text-left space-y-4">
+            <p>
+                A project brought to you by <a href="https://januszczak.org" class="text-blue-400 hover:text-blue-300 transition-colors" target="_blank" rel="noopener noreferrer">John Januszczak | Technology & Innovation</a>.
+            </p>
+            <p class="text-slate-500 text-xs">
+                <strong>Disclaimer:</strong> This is a project for educational and illustrative purposes. Readers should consult a compliance or legal professional for actual guidance on implementing the Basel Framework, and the <a href="https://www.bis.org/basel_framework/" class="text-blue-400 hover:text-blue-300 transition-colors underline" target="_blank" rel="noopener noreferrer">Basel Framework</a> itself for the most accurate, up to date and authoritative information on the framework.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Constants based on Basel Framework Text
+        const minCapitalRatio = 0.08; // 8% Base
+        const capitalConservationBuffer = 0.025; // 2.5%
+        const totalCapitalRatio = minCapitalRatio + capitalConservationBuffer; // 10.5%
+        const roaAssumption = 0.015; // Assume 1.5% Return on Assets for Net Income calculation
+
+        const stdWeights = { corp: 1.0, mort: 0.35, retail: 0.75 };
+        
+        // IRB Illustrative Lookups based on Basel Framework CRE99 Table 1
+        const irbLookup = {
+            corp: { "0.05": 0.1747, "0.10": 0.2636, "0.25": 0.4397, "0.40": 0.5575, "0.50": 0.6188 },
+            mort: { "0.05": 0.0346, "0.10": 0.0594, "0.25": 0.1183, "0.40": 0.1664, "0.50": 0.1949 },
+            retail: { "1.00": 0.8500, "2.00": 1.1500, "3.00": 1.3500, "4.00": 1.5000, "5.00": 1.6500 }
+        };
+
+        // DOM Elements
+        const corpInput = document.getElementById('corp-input');
+        const mortInput = document.getElementById('mort-input');
+        const retailInput = document.getElementById('retail-input');
+
+        const elements = {
+            corpVal: document.getElementById('corp-val'),
+            mortVal: document.getElementById('mort-val'),
+            retailVal: document.getElementById('retail-val'),
+            
+            corpPd: document.getElementById('corp-pd'),
+            mortPd: document.getElementById('mort-pd'),
+            retailPd: document.getElementById('retail-pd'),
+            
+            corpIrbRw: document.getElementById('corp-irb-rw'),
+            mortIrbRw: document.getElementById('mort-irb-rw'),
+            retailIrbRw: document.getElementById('retail-irb-rw'),
+
+            totalAssetsVal: document.getElementById('total-assets-val'),
+            netIncomeVal: document.getElementById('net-income-val'),
+            
+            stdRwaVal: document.getElementById('std-rwa-val'),
+            stdCapVal: document.getElementById('std-cap-val'),
+            stdRoeVal: document.getElementById('std-roe-val'),
+            
+            irbRwaVal: document.getElementById('irb-rwa-val'),
+            irbRawVal: document.getElementById('irb-raw-val'),
+            irbCapVal: document.getElementById('irb-cap-val'),
+            irbRoeVal: document.getElementById('irb-roe-val'),
+            
+            floorWarning: document.getElementById('floor-warning'),
+            analysisStdRwa: document.getElementById('analysis-std-rwa'),
+            analysisIrbRawSummary: document.getElementById('analysis-irb-raw-summary'),
+            analysisStdRoe: document.getElementById('analysis-std-roe'),
+            analysisIrbRoeRaw: document.getElementById('analysis-irb-roe-raw'),
+            analysisFloorText: document.getElementById('analysis-floor-text'),
+            analysisIrbRwa: document.getElementById('analysis-irb-rwa'),
+            analysisIrbRoe: document.getElementById('analysis-irb-roe'),
+            analysisNoFloorText: document.getElementById('analysis-no-floor-text'),
+            analysisIrbRwaNoFloor: document.getElementById('analysis-irb-rwa-nofloor'),
+            analysisIrbRoeNoFloor: document.getElementById('analysis-irb-roe-nofloor')
+        };
+
+        // Formatting Helpers
+        const formatM = (num) => `$${num.toLocaleString(undefined, {maximumFractionDigits: 0})}M`;
+        const formatMDec = (num) => `$${num.toLocaleString(undefined, {minimumFractionDigits: 1, maximumFractionDigits: 1})}M`;
+        const formatPct = (num) => `${num.toFixed(2)}%`;
+
+        function calculate() {
+            const corpLoans = Number(corpInput.value);
+            const mortgages = Number(mortInput.value);
+            const retailLoans = Number(retailInput.value);
+
+            // Fetch dynamic IRB weights from selectors
+            const irbWeights = {
+                corp: irbLookup.corp[elements.corpPd.value],
+                mort: irbLookup.mort[elements.mortPd.value],
+                retail: irbLookup.retail[elements.retailPd.value]
+            };
+
+            // Update Labels
+            elements.corpVal.textContent = formatM(corpLoans);
+            elements.mortVal.textContent = formatM(mortgages);
+            elements.retailVal.textContent = formatM(retailLoans);
+            
+            elements.corpIrbRw.textContent = formatPct(irbWeights.corp * 100);
+            elements.mortIrbRw.textContent = formatPct(irbWeights.mort * 100);
+            elements.retailIrbRw.textContent = formatPct(irbWeights.retail * 100);
+
+            // Core Calcs
+            const totalAssets = corpLoans + mortgages + retailLoans;
+            const netIncome = totalAssets * roaAssumption;
+
+            elements.totalAssetsVal.textContent = formatM(totalAssets);
+            elements.netIncomeVal.textContent = formatMDec(netIncome);
+
+            // Standardised Calcs
+            const stdRWA = (corpLoans * stdWeights.corp) + (mortgages * stdWeights.mort) + (retailLoans * stdWeights.retail);
+            const stdCapitalReq = stdRWA * totalCapitalRatio;
+            const stdROE = stdCapitalReq > 0 ? (netIncome / stdCapitalReq) * 100 : 0;
+
+            elements.stdRwaVal.textContent = formatM(stdRWA);
+            elements.stdCapVal.textContent = formatMDec(stdCapitalReq);
+            elements.stdRoeVal.textContent = formatPct(stdROE);
+
+            // IRB Calcs
+            const irbBaseRWA = (corpLoans * irbWeights.corp) + (mortgages * irbWeights.mort) + (retailLoans * irbWeights.retail);
+            const outputFloor = stdRWA * 0.725;
+            const irbFinalRWA = Math.max(irbBaseRWA, outputFloor);
+            const irbCapitalReq = irbFinalRWA * totalCapitalRatio;
+            const irbROE = irbCapitalReq > 0 ? (netIncome / irbCapitalReq) * 100 : 0;
+            const floorTriggered = irbBaseRWA < outputFloor;
+            
+            // Raw IRB calcs to show theoretical ROE without the floor
+            const irbRawCapitalReq = irbBaseRWA * totalCapitalRatio;
+            const irbRawROE = irbRawCapitalReq > 0 ? (netIncome / irbRawCapitalReq) * 100 : 0;
+
+            elements.irbRwaVal.textContent = formatM(irbFinalRWA);
+            elements.irbRawVal.textContent = formatM(irbBaseRWA);
+            elements.irbCapVal.textContent = formatMDec(irbCapitalReq);
+            elements.irbRoeVal.textContent = formatPct(irbROE);
+
+            // Warnings and Insights
+            if (floorTriggered) {
+                elements.floorWarning.classList.remove('hidden');
+                elements.analysisFloorText.classList.remove('hidden');
+                elements.analysisNoFloorText.classList.add('hidden');
+            } else {
+                elements.floorWarning.classList.add('hidden');
+                elements.analysisFloorText.classList.add('hidden');
+                elements.analysisNoFloorText.classList.remove('hidden');
+            }
+
+            elements.analysisStdRwa.textContent = formatM(stdRWA);
+            elements.analysisIrbRawSummary.textContent = formatM(irbBaseRWA);
+            elements.analysisStdRoe.textContent = formatPct(stdROE);
+            elements.analysisIrbRoeRaw.textContent = formatPct(irbRawROE);
+            
+            elements.analysisIrbRwa.textContent = formatM(irbFinalRWA);
+            elements.analysisIrbRoe.textContent = formatPct(irbROE);
+            
+            elements.analysisIrbRwaNoFloor.textContent = formatM(irbFinalRWA);
+            elements.analysisIrbRoeNoFloor.textContent = formatPct(irbROE);
+        }
+
+        // Tab Switching Logic
+        function switchTab(tabId) {
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('block');
+            });
+            // Show selected content
+            document.getElementById(`content-${tabId}`).classList.remove('hidden');
+            document.getElementById(`content-${tabId}`).classList.add('block');
+
+            // Reset all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = 'tab-btn flex items-center space-x-2 px-6 py-3 font-medium transition-colors border-b-2 border-transparent text-slate-500 hover:text-slate-800 hover:border-slate-300';
+            });
+            // Set active button
+            const activeBtn = document.getElementById(`btn-${tabId}`);
+            activeBtn.className = 'tab-btn flex items-center space-x-2 px-6 py-3 font-medium transition-colors border-b-2 border-blue-600 text-blue-700 bg-blue-50/50';
+        }
+
+        // Attach event listeners
+        corpInput.addEventListener('input', calculate);
+        mortInput.addEventListener('input', calculate);
+        retailInput.addEventListener('input', calculate);
+        
+        elements.corpPd.addEventListener('change', calculate);
+        elements.mortPd.addEventListener('change', calculate);
+        elements.retailPd.addEventListener('change', calculate);
+
+        // Initial render
+        calculate();
+
+    </script>
+</body>
+</html>
