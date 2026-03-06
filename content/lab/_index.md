@@ -1,6 +1,6 @@
 ---
-title: "The Lab: Exploring the mechanics of innovation"
-description: "My personal R&D sandbox."
+title: "The Engine Room"
+description: "Where strategy meets the technical machinery of innovation."
 # This explicitly disables the grouping for this section only
 groupByYear: false 
 ---
@@ -8,7 +8,7 @@ _Bridging the gap between executive strategy and the engine room._
 
 I have spent my career operating at the intersection of strategy, finance, and technology. In the boardroom, we discuss digital transformation and competitive moats. But true innovation doesn't happen on a slide deck; it happens when you understand the constraints and capabilities of the tools at your disposal.
 
-This section of my site is my personal R&D sandbox. It is distinct from my Articles & Insights, which focus on leadership and market strategy. Here in The Lab, I share my hands-on learnings and experiments, technical deep dives, and prototypes.
+This is the engine room of my digital home. It is distinct from my Articles & Insights, which focus on leadership and market strategy. Here, I share my hands-on learnings and experiments, technical deep dives, and prototypes.
 
 **Why do this?** Because the best way to cut through the hype cycle is to build something yourself. I explore these technologies not to become an engineer, but to become a better leader of engineers. By testing the limits of the technology myself, I gain the intuition necessary to make better strategic bets.
 

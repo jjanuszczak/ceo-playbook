@@ -135,7 +135,7 @@
   weight = 10
 
 [[footer]]
-  name = "Lab"
+  name = "The Engine Room"
   pageRef = "lab"
   weight = 20
 
