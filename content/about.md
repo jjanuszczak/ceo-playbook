@@ -29,3 +29,5 @@ In addition to longer [essays and strategy pieces]({{< relref "articles" >}}), I
 [Signals]({{< relref "signals" >}}) is a weekly or biweekly curation of things I bookmarked or paused on. Not because they were trending, but because they revealed something about how technology, capital, leadership, or systems are evolving.
 
 Each signal includes a short note on why it matters and how I’m interpreting it. It’s raw input before synthesis, and often the starting point for deeper essays.
+
+When I need to move from the 'what' to the 'how', I head into [The Engine Room]({{< relref "lab" >}}). It’s my technical sandbox where I document the mechanics of innovation—from regulatory capital models to software supply chain experiments—to ensure my strategic intuition is always grounded in operational reality.
