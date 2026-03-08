@@ -13,16 +13,12 @@
   </div>
 
   <form id="google-form" 
+        action="{{ $action }}" 
         method="POST" 
         target="hidden_iframe" 
-        class="w-full flex flex-col gap-4">
+        class="w-full flex flex-col gap-4"
+        onsubmit="document.getElementById('google-form').classList.add('hidden'); document.getElementById('form-success').classList.remove('hidden');">
     
-    <!-- Honeypot Field -->
-    <div class="hidden" aria-hidden="true">
-      <label for="honeypot">If you are human, leave this field blank.</label>
-      <input type="text" id="honeypot" name="hp_check" tabindex="-1" autocomplete="off" />
-    </div>
-
     <label class="flex flex-col gap-2 w-full">
       <span class="text-sm font-semibold text-neutral-700 dark:text-neutral-300">Name</span>
       <input type="text" name="{{ $nameID }}" required 
@@ -59,7 +55,7 @@
                 placeholder="Tell me a bit about your goals..."></textarea>
     </label>
 
-    <button type="submit" id="submit-btn"
+    <button type="submit" 
             class="mt-2 px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-md transition-colors duration-200">
       {{ $submitText }}
     </button>
@@ -67,38 +63,3 @@
 </div>
 
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
-<script>
-  (function() {
-    const form = document.getElementById('google-form');
-    const successMsg = document.getElementById('form-success');
-    const hpInput = document.getElementById('honeypot');
-    const loadTime = Date.now();
-    
-    form.addEventListener('submit', function(e) {
-      // 1. Check honeypot (bots often fill every field)
-      if (hpInput.value.length > 0) {
-        e.preventDefault();
-        console.warn('Bot detected via honeypot.');
-        return;
-      }
-
-      // 2. Check submission speed (humans take more than 3 seconds)
-      const submitTime = Date.now();
-      if (submitTime - loadTime < 3000) {
-        e.preventDefault();
-        console.warn('Submission too fast, likely a bot.');
-        return;
-      }
-
-      // 3. Set dynamic action (to break simple scrapers looking for the action attribute)
-      form.action = "{{ $action }}";
-      
-      // Proceed with showing success state
-      setTimeout(() => {
-        form.classList.add('hidden');
-        successMsg.classList.remove('hidden');
-      }, 500);
-    });
-  })();
-</script>
