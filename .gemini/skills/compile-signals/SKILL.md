@@ -62,6 +62,16 @@ tags: [tag1, tag2, tag3] # Must strictly follow .policies/tag_governance_policy.
 *   **Readwise Highlights:**
     *   Use `{{< readwise text="Highlight text" author="Author" title="Book Title" image="Cover URL" url="Amazon URL" >}}`.
     *   Use `https://covers.openlibrary.org/b/isbn/ISBN-M.jpg` for cover images if available, otherwise search.
+*   **Mandatory Footer:** Always append the following section at the end:
+    ```markdown
+    ---
+
+    Looking for more? You can explore the archives of previous fast-twitch market observation and insights on the [Signals]({{< relref "signals" >}}) page.
+
+    If these market observations are relevant to the operations of, or innovation at, your organization and you want to discuss these further and more indepth, let's talk.
+
+    {{< button href="/contact/" target="_self" >}}Book a Call{{< /button >}}
+    ```
 
 #### C. Featured Image
 *   **Copy:** Find the previous week's post (e.g., `signals-week-(xx-1)-yyyy`).
