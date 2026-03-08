@@ -62,27 +62,31 @@ As we move deeper into 2026, the noise around AI is shifting from "what can it d
 
 ## From the Bookshelf
 
+### Underwriters of the United States
+
+> "Investment is that which is beneficial to society, gambling is that which is immoral, and speculation lies in the legal and moral gray area in between."
+
+**Source:** [Underwriters of the United States](https://www.amazon.com/Underwriters-United-States-Insurance-University-ebook/dp/B0915PS84Q/)
+
 {{< figure
     src="farber.png"
     alt="Underwriters of the United States - Hannah Farber"
     caption="Hannah Farber: Underwriters of the United States"
     >}}
 
-> "Investment is that which is beneficial to society, gambling is that which is immoral, and speculation lies in the legal and moral gray area in between."
-
-**Source:** [Underwriters of the United States](https://www.amazon.com/Underwriters-United-States-Insurance-University-ebook/dp/B0915PS84Q/)
-
 *   **Why it Matters:** This historical framing of insurance and finance shows that our modern debates about crypto or AI risk aren't new—they are part of a centuries-old struggle to categorize "productive" versus "extractive" capital.
+
+### SOA in Practice
+
+> "If you do the same thing at three different times, you automate it. This is known as the 'Three Strikes and You Automate' pattern. If you do the same thing in three different places, you refactor your code."
+
+**Source:** [SOA in Practice](https://www.amazon.com/SOA-Practice-Distributed-System-Design-ebook/dp/B0026OR2R2/)
 
 {{< figure
     src="automate.png"
     alt="Three Strikes and You Automate"
     caption="Nicolai M. Josuttis: Three Strikes and You Automate"
     >}}
-
-> "If you do the same thing at three different times, you automate it. This is known as the 'Three Strikes and You Automate' pattern. If you do the same thing in three different places, you refactor your code."
-
-**Source:** [SOA in Practice](https://www.amazon.com/SOA-Practice-Distributed-System-Design-ebook/dp/B0026OR2R2/)
 
 *   **Why it Matters:** A classic engineering rule of thumb applied to management. It prevents premature automation (which creates debt) and ensures that systems are built on patterns of actual behavior.
 
