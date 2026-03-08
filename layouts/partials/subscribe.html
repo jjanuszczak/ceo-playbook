@@ -1,0 +1,84 @@
+{{ $kit := .Site.Params.kit }}
+<div class="not-prose my-12 w-full shadow-sm" 
+     style="background-color: rgba(120, 120, 120, 0.1); 
+            border: 1px solid rgba(120, 120, 120, 0.2); 
+            border-radius: 12px; 
+            padding: 20px; 
+            box-sizing: border-box;">
+  
+  <!-- Success State -->
+  <div id="kit-success" class="hidden" style="text-align: center;">
+    <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem;">You're on the Pulse.</h3>
+    <p style="opacity: 0.8;">Success! Now check your email to confirm your subscription.</p>
+  </div>
+
+  <!-- Form State -->
+  <form id="kit-form" 
+        action="https://app.kit.com/forms/{{ $kit.formID }}/subscriptions" 
+        method="post" 
+        data-sv-form="{{ $kit.formID }}" 
+        data-uid="{{ $kit.uid }}"
+        style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0; padding: 0;">
+    
+    <!-- Title & Description Group -->
+    <div style="margin-bottom: 25px; width: 100%;">
+      <h3 style="font-size: 1.5rem; font-weight: 800; margin: 0 0 1.5rem 0; line-height: 1.2;">
+        Subscribe to the Weekly Signal
+      </h3>
+      <p style="font-size: 1.1rem; opacity: 0.8; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+        The "Signal" isn't news; it's the pattern beneath it. Direct intelligence on Fintech and Strategy for the C-Suite, delivered weekly.
+      </p>
+    </div>
+
+    <!-- Input & Button Group -->
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; width: 100%; max-width: 550px; margin-bottom: 40px;">
+      <input type="email" name="email_address" required 
+             placeholder="exec@company.com"
+             style="flex: 1 1 300px; padding: 14px 20px; border-radius: 8px; border: 1px solid rgba(120, 120, 120, 0.3); background: rgba(255, 255, 255, 0.05); text-align: center; font-size: 1rem; outline: none; box-sizing: border-box;" />
+      
+      <button type="submit" 
+              style="padding: 14px 32px; border-radius: 8px; border: none; background-color: #1677be; color: white; font-weight: 700; cursor: pointer; white-space: nowrap; font-size: 1rem; transition: opacity 0.2s;">
+        Join the Pulse
+      </button>
+    </div>
+
+    <!-- Footer Disclaimer -->
+    <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.5; margin: 0;">
+      No spam • One-click unsubscribe • Intelligence only
+    </p>
+  </form>
+</div>
+
+<script>
+  (function() {
+    const form = document.getElementById('kit-form');
+    const successMsg = document.getElementById('kit-success');
+
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        form.style.display = 'none';
+        successMsg.classList.remove('hidden');
+        successMsg.style.display = 'block';
+      })
+      .catch(error => {
+        console.error('Subscription error:', error);
+        form.style.display = 'none';
+        successMsg.classList.remove('hidden');
+        successMsg.style.display = 'block';
+      });
+    });
+  })();
+</script>

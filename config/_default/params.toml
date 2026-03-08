@@ -177,3 +177,8 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [advertisement]
   # adsense = ""
+
+# Kit (ConvertKit) Configuration
+[kit]
+  formID = "9180706"
+  uid = "2db176a231"

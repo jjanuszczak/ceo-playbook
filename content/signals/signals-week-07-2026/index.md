@@ -3,6 +3,7 @@ title: "Signals: Week 07, 2026"
 date: 2026-02-15
 type: signals
 tags: [reading-list, artificial-intelligence, saas, platform-economics, board-governance, fintech, design-systems]
+summary: "Decentralizing the 'how' while centralizing the 'why'—navigating governance and complexity in the age of AI agents."
 ---
 
 The theme of the week is **The Architect of Outcomes**. As we move deeper into the "Agentic Era," the role of leadership is shifting from managing processes to designing the systems that produce outcomes. We are seeing a convergence where high-fidelity engineering (automated verification), macro-economic shifts (the Japan correlation flip), and legacy turnarounds all point to the same truth: **In a world of automated "doing," the premium on structural thinking and strategic design has never been higher.**
@@ -109,4 +110,7 @@ The theme of the week is **The Architect of Outcomes**. As we move deeper into t
 *   **My Take:** **Decentralize the 'how', centralize the 'why'.** Governance in the AI age means setting the constraints and the mission, then letting intelligence (human or artificial) optimize within them.
 
 ---
-If you enjoyed these, see previous editions [Signals]({{< relref "signals" >}})!
+If you enjoyed these, see previous editions [Signals]({{< relref "signals" >}}) or subscribe to automatically receive them in your inbox!
+
+{{< subscribe >}}
+

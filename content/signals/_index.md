@@ -10,3 +10,7 @@ capital, leadership, and systems are evolving.
 
 Each signal includes a short note on *why it matters* and *how I’m interpreting it*.
 Think of this as raw input before synthesis.
+
+{{< subscribe >}}
+
+Browse all of the past weekly Signals below:

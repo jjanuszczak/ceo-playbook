@@ -3,6 +3,7 @@ title: "Signals: Week 10, 2026"
 date: 2026-03-08
 type: signals
 tags: [reading-list, artificial-intelligence, fintech, saas, venture-capital, software-engineering]
+summary: "The efficiency paradox of AI, why 'plausible' code isn't engineered code, and the pragmatic path to the Agentic Economy through virtual cards."
 ---
 
 *Note: I took a couple weeks off to recover from some AI burnout! The **AI Productivity Paradox** seems real (well, real for me as I dig in). AI tools enable higher output, which paradoxically leads to higher expectations (even personally), increased workload (workload creep, because now you "can" do certain things that were difficult before), and longer hours, often resulting in less sleep! As the Hardvard Business Review aptly put it: [AI doesn’t reduce work—it intensifies it](https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it).*
@@ -91,9 +92,12 @@ As we move deeper into 2026, the noise around AI is shifting from "what can it d
 *   **Why it Matters:** A classic engineering rule of thumb applied to management. It prevents premature automation (which creates debt) and ensures that systems are built on patterns of actual behavior.
 
 ---
-
-Looking for more? You can explore the archives of previous fast-twitch market observation and insights on the [Signals]({{< relref "signals" >}}) page.
-
 If these market observations are relevant to the operations of, or innovation at, your organization and you want to discuss these further and more indepth, let's talk.
 
 {{< button href="/contact/" target="_self" >}}Book a Call{{< /button >}}
+
+---
+Looking for more? You can explore the archives of previous fast-twitch market observation and insights on the [Signals]({{< relref "signals" >}}) page or **subscribe** to automatically receive them in your inbox!
+
+{{< subscribe >}}
+

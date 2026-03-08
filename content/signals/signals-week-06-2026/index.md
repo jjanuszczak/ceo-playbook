@@ -3,6 +3,7 @@ title: "Signals: Week 06, 2026"
 date: 2026-02-08
 type: signals
 tags: [reading-list, artificial-intelligence, saas, platform-economics, systems-thinking, organizational-design]
+summary: "Escaping the rent-seeking trap of tech platforms: why the future of the agentic economy belongs to those who own the protocols."
 ---
 
 The theme of the week is **The Agentic Pivot**. We are witnessing a fundamental shift from SaaS as an interface to the "System of Record" to AI Agents as the "System of Action." This transition, which observers are calling *SaaSmageddon*, represents the crumbling of the traditional workflow moat. When agents can navigate UIs better than humans, the UI itself becomes a liability: a "tax" on efficiency rather than an asset. **Many abstractions become costly in light of agentic AI**. This shift necessitates a move toward "Agentic Engineering" where software is designed for autonomous execution rather than just human interaction.
@@ -88,4 +89,7 @@ The theme of the week is **The Agentic Pivot**. We are witnessing a fundamental 
 *   **My Take:** **Be a landlord, not a serf.** In the agentic economy, owning the protocol or the distribution layer is the only way to escape the rent-seeking trap.
 
 ---
-If you enjoyed these, see previous editions [Signals]({{< relref "signals" >}})!
+If you enjoyed these, see previous editions [Signals]({{< relref "signals" >}}) or subscribe to automatically receive them in your inbox!
+
+{{< subscribe >}}
+
