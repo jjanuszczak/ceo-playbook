@@ -6,13 +6,12 @@ summary: "In this deep-dive episode of FINCIRCLE, John Januszczak explores the j
 categories:
   - "Venture Building"
 tags:
-  - venture-building
   - open-finance
   - digital-transformation
   - podcasts
   - financial-inclusion
 showReadingTime: true
-draft: true
+draft: false
 ---
 
 Most corporate innovation labs share a common, quiet fate: they become cost centers. They produce slick slide decks and impressive demos, but they rarely return capital or scale into standalone market leaders. We call this "innovation theatre". It’s a script I’ve spent years trying to rewrite.
