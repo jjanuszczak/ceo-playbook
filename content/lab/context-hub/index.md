@@ -1,5 +1,5 @@
 ---
-title: "Context Hub vs. Context7: Solving AI Documentation Hallucinations"
+title: "Context Hub vs. Context7: Revolutionizing AI Coding with Accurate Documentation"
 date: 2026-03-16
 summary: "A comparison of Context Hub and Context7, two emerging tools designed to provide AI coding agents with accurate, up-to-date documentation and reduce hallucinations."
 description: "Explore the architectures, philosophies, and synergies of Andrew Ng's Context Hub and Upstash's Context7. This deep dive explains how these tools enable AI agents to access version-specific docs and share knowledge, paving the way for more reliable AI-driven development."
@@ -13,8 +13,6 @@ tags:
   - open-source
   - productivity
 ---
-
-# Context Hub vs. Context7: Revolutionizing AI Coding with Accurate, Up-to-Date Documentation
 
 In the fast-evolving world of AI-assisted coding, one persistent challenge stands out: hallucinations. AI agents, powered by large language models (LLMs), often generate outdated or incorrect code because they rely on static training data that can't keep pace with rapidly changing APIs and libraries. This issue was highlighted in a recent announcement by AI pioneer Andrew Ng, who introduced Context Hub as a solution to empower coding agents with versioned, community-driven documentation. But Context Hub isn't alone in tackling this problem. Context7, another innovative tool, offers a complementary approach. In this post, we'll explore what each service does, why they're different, how they work together, and some forward-looking insights on their potential.
 
