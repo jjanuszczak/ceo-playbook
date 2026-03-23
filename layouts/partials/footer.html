@@ -47,16 +47,16 @@
         <p class="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 mb-6">
           {{ .Site.Params.author.headline | default "Fintech & Innovation Strategy. Helping C-Suite executives navigate the future of finance." }}
         </p>
-        <div class="flex gap-6 text-neutral-500 dark:text-neutral-400">
+        <div class="flex items-center text-neutral-500 dark:text-neutral-400 text-2xl -ml-3">
           {{ range .Site.Params.author.links }}
             {{ range $name, $url := . }}
-              <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" class="hover:text-primary-500 transition-colors" aria-label="{{ $name | humanize }}">
+              <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" class="mx-3 hover:text-primary-500 transition-colors" aria-label="{{ $name | humanize }}">
                 {{ partial "icon.html" $name }}
               </a>
             {{ end }}
           {{ end }}
           {{ with .Site.Params.author.email }}
-          <a href="mailto:{{ . }}" class="hover:text-primary-500 transition-colors" aria-label="Email">
+          <a href="mailto:{{ . }}" class="mx-3 hover:text-primary-500 transition-colors" aria-label="Email">
             {{ partial "icon.html" "email" }}
           </a>
           {{ end }}
@@ -95,7 +95,7 @@
         </ul>
       </div>
 
-      <!-- Column 4: The Practice -->
+      <!-- Column 4: Company -->
       <div class="footer-col-nav w-full mb-10 md:mb-0">
         <h3 class="text-base font-bold uppercase tracking-widest mb-3 border-b border-neutral-200 dark:border-neutral-700 pb-2 inline-block">The Practice</h3>
         <ul class="space-y-3 text-sm font-medium">
