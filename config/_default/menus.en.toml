@@ -68,7 +68,7 @@
   weight = 28
 
 [[main]]
-  name = "Videos"
+  name = "Media"
   pageRef = "videos"
   weight = 30
 

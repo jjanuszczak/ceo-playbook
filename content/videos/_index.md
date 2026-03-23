@@ -1,6 +1,6 @@
 ---
-title: "Videos"
-description: "Videos which feature me."
+title: "Media"
+description: "Media which features me."
 # This explicitly disables the grouping for this section only
 groupByYear: false 
 ---
