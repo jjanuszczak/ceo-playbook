@@ -17,7 +17,7 @@ title = "<span class='font-light'> >_ </span>John Januszczak<span class='font-li
 
 [params.author]
   name = "John Januszczak"
-  email = "john@januszczak.org"
+  email = "info@januszczak.org"
   #image = "https://avatars.githubusercontent.com/u/2819290?v=4"
   image = "images/jj-head-shot.png"
   imageQuality = 96
