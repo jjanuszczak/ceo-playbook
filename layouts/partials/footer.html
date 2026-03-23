@@ -47,7 +47,7 @@
         <p class="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 mb-6">
           {{ .Site.Params.author.headline | default "Fintech & Innovation Strategy. Helping C-Suite executives navigate the future of finance." }}
         </p>
-        <div class="flex gap-5 text-neutral-500 dark:text-neutral-400">
+        <div class="flex gap-6 text-neutral-500 dark:text-neutral-400">
           {{ range .Site.Params.author.links }}
             {{ range $name, $url := . }}
               <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" class="hover:text-primary-500 transition-colors" aria-label="{{ $name | humanize }}">
