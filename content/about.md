@@ -8,17 +8,18 @@ showWordCount: false
 showReadingTime: false
 sharingLinks: false
 draft: false
+featureimage: "images/jj-head-shot.png"
 ---
 **Astrophysicist turned Fintech CEO**
 _Applying the rigor of astrophysics to the chaos of fintech innovation. Bridging technology, capital, and leadership for the next generation of transformative ventures_
 
 I’m a financial services executive and technology advisor with over 25 years of experience leading transformation across banking, insurance, and commercial software. Most recently, I served as President & CEO of UBX, the fintech and corporate venture capital arm of [UnionBank of the Philippines](https://www.unionbankph.com/), where we built the country’s leading embedded finance platform from the ground up. Over six years, I scaled the business from concept to industry leadership, launched multiple ventures through a venture studio model, secured strategic investment from [SBI Holdings of Japan](https://www.sbigroup.co.jp/english/), and introduced the Philippines’ first central bank recognized stablecoin and blockchain-based settlement network. My career has always centered on the intersection of technology, capital, and leadership: turning ideas into scalable, measurable value.
 
-{{< figure
+<!-- {{< figure
     src="images/jj-head-shot.png"
     alt="John Januszczak portrait"
     caption="John Januszczak: Visionary Strategy. Pragmatic Execution. Scale to Exit."
-    >}}
+    >}} -->
 
 
 Today, I work with financial institutions, venture studios, startups and investors across Southeast Asia and North America to help them transform, innovate, and build institutional-grade digital capabilities. My focus is on making innovation investable: designing the systems, governance, and operating models that allow organizations to grow sustainably and confidently. Whether advising CEOs, shaping strategy, or structuring deals, I bring a balance of vision and execution that aligns teams, accelerates outcomes, and builds long-term resilience.
