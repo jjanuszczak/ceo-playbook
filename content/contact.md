@@ -5,6 +5,7 @@ showDate: false
 showWordCount: false
 showReadingTime: false
 showAuthor: false
+showZenMode: false
 sharingLinks: false
 draft: false
 ---
