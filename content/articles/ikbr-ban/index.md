@@ -1,5 +1,5 @@
 ---
-title: "The Cost of Closed Doors: Why the Filipino Investor Deserves Global Access"
+title: "The Cost of Closed Doors: Why All Investors Deserve Global Access"
 date: 2026-03-24
 summary: "A reflection on the Philippine SEC’s decision to ban Interactive Brokers and the broader implications for financial inclusion, wealth democratization, and the urgent need for modernized regulatory frameworks in the digital age."
 description: "The Philippine SEC's ban on Interactive Brokers highlights a critical tension between consumer protection and global market access. John Januszczak explores why building bridges, rather than walls, is essential for the Filipino investor to participate in the global AI-driven economy."
