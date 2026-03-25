@@ -1,12 +1,15 @@
 <style>
-  /* Explicitly handle the 40/20/20/20 layout only on desktop to avoid mobile issues */
+  /* Update layout for 5 columns on desktop */
   @media (min-width: 853px) {
     .footer-col-brand {
-      flex: 0 0 40% !important;
-      padding-right: 4rem !important;
+      flex: 0 0 30% !important;
+      padding-right: 3rem !important;
     }
     .footer-col-nav {
-      flex: 0 0 20% !important;
+      flex: 0 0 15% !important;
+    }
+    .footer-col-subscribe {
+      flex: 0 0 25% !important;
     }
   }
 </style>
@@ -17,10 +20,10 @@
   <div class="max-w-7xl mx-auto px-6 sm:px-14 md:px-24 lg:px-32">
     
     <!-- 1. Navigation Columns (Top section) -->
-    <div class="pt-8 flex flex-col md:flex-row md:flex-nowrap md:gap-12 mb-12">
+    <div class="pt-8 flex flex-col md:flex-row md:flex-nowrap md:gap-8 mb-12">
       
       <!-- Column 1: Brand & Socials -->
-      <div class="footer-col-brand w-full space-y-6 mb-10 md:mb-0">
+      <div class="footer-col-brand w-full space-y-4 mb-10 md:mb-0">
         <a href="{{ "" | relLangURL }}" class="text-base font-medium block">
           {{ if .Site.Params.Logo }}
             {{ $logo := resources.Get .Site.Params.Logo }}
@@ -44,7 +47,7 @@
             {{ .Site.Title | markdownify }}
           {{ end }}
         </a>
-        <p class="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 mb-6">
+        <p class="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 mb-5">
           {{ .Site.Params.author.headline | default "Fintech & Innovation Strategy. Helping C-Suite executives navigate the future of finance." }}
         </p>
         <div class="flex items-center text-neutral-500 dark:text-neutral-400 text-2xl">
@@ -55,11 +58,6 @@
               </a>
             {{ end }}
           {{ end }}
-          <!-- {{ with .Site.Params.author.email }}
-          <a href="mailto:{{ . }}" class="mx-3 hover:text-primary-500 transition-colors" aria-label="Email">
-            {{ partial "icon.html" "email" }}
-          </a>
-          {{ end }} -->
         </div>
       </div>
 
@@ -95,50 +93,25 @@
         </ul>
       </div>
 
-      <!-- Column 4: Company -->
+      <!-- Column 4: The Practice -->
       <div class="footer-col-nav w-full mb-10 md:mb-0">
         <h3 class="text-base font-bold uppercase tracking-widest mb-3 border-b border-neutral-200 dark:border-neutral-700 pb-2 inline-block">The Practice</h3>
         <ul class="space-y-3 text-sm font-medium">
-          <li>
-            <a href="/about" class="text-neutral-600 dark:text-neutral-400 hover:text-primary-500 hover:underline decoration-primary-500 decoration-2 underline-offset-4 transition-all">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="/videos" class="text-neutral-600 dark:text-neutral-400 hover:text-primary-500 hover:underline decoration-primary-500 decoration-2 underline-offset-4 transition-all">
-              Media
-            </a>
-          </li>
-          <li>
-            <a href="/portfolio" class="text-neutral-600 dark:text-neutral-400 hover:text-primary-500 hover:underline decoration-primary-500 decoration-2 underline-offset-4 transition-all">
-              Portfolio
-            </a>
-          </li>
-          <li>
-            <a href="/contact" class="text-neutral-600 dark:text-neutral-400 hover:text-primary-500 hover:underline decoration-primary-500 decoration-2 underline-offset-4 transition-all">
-              Contact
-            </a>
-          </li>
-          {{ if .Site.GetPage "privacy-policy" }}
-          <li>
-            <a href="/privacy-policy" class="text-neutral-600 dark:text-neutral-400 hover:text-primary-500 hover:underline decoration-primary-500 decoration-2 underline-offset-4 transition-all">
-              Privacy Policy
-            </a>
-          </li>
-          {{ end }}
+          <li><a href="/about" class="text-neutral-600 dark:text-neutral-400 hover:text-primary-500 hover:underline decoration-primary-500 decoration-2 underline-offset-4 transition-all">About</a></li>
+          <li><a href="/videos" class="text-neutral-600 dark:text-neutral-400 hover:text-primary-500 hover:underline decoration-primary-500 decoration-2 underline-offset-4 transition-all">Media</a></li>
+          <li><a href="/portfolio" class="text-neutral-600 dark:text-neutral-400 hover:text-primary-500 hover:underline decoration-primary-500 decoration-2 underline-offset-4 transition-all">Portfolio</a></li>
+          <li><a href="/contact" class="text-neutral-600 dark:text-neutral-400 hover:text-primary-500 hover:underline decoration-primary-500 decoration-2 underline-offset-4 transition-all">Contact</a></li>
         </ul>
+      </div>
+
+      <!-- Column 5: Subscribe -->
+      <div class="footer-col-subscribe w-full">
+        {{ partial "footer-subscribe.html" . }}
       </div>
     </div>
 
-    <!-- Separator line -->
-    <hr class="border-neutral-200 dark:border-neutral-700 mb-12">
-
-    <!-- 2. Subscription Area (Middle section) -->
-    <div class="mb-12 text-center">
-      {{ partial "subscribe.html" . }}
-    </div>
-
     <!-- 3. Bottom Row -->
+
     <div class="pt-8 border-t border-neutral-200 dark:border-neutral-700 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
       <div class="text-xs text-neutral-500 dark:text-neutral-500 font-medium">
         &copy; {{ now.Format "2006" }} {{ .Site.Params.Author.name | default .Site.Title | markdownify | safeHTML }}. All rights reserved.
