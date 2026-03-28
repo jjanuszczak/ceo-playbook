@@ -19,9 +19,11 @@ build:
 
 *This article originally appeared on [LinkedIn](https://www.linkedin.com/pulse/airspace-john-januszczak-jp1yc) on 2025-09-24*.
 
-## Are banks, and maybe the world, becoming indistinguishable in the age of AI?
+{{< alert >}}
+**Note**: That’s not a typo in the title. I really meant AI + rSpace. You will see why below!
+{{< /alert >}}
 
-Note: That’s not a typo in the title. I really meant AI + rSpace. You will see why below!
+## Are banks, and maybe the world, becoming indistinguishable in the age of AI?
 
 I recently moderated a panel on AI in banking which I titled “Banking on AI” (get it?!?). I opened the panel by outlining some major themes, and ended on the following provocation: in the age of AI, **are we differentiating or just slowly gradient descending into sameness?**
 
