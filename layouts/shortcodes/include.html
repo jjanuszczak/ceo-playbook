@@ -1,0 +1,5 @@
+{{- with .Page.Resources.GetMatch (.Get 0) -}}
+  {{- .Content -}}
+{{- else -}}
+  {{- warnf "Resource %q not found in %q" (.Get 0) .Page.File.Path -}}
+{{- end -}}

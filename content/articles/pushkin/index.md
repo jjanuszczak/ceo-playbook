@@ -12,7 +12,7 @@ tags:
   - "capital-allocation"
   - "organizational-design"
   - "go-to-market"
-draft: false
+draft: true
 ---
 
 *In 2022, Pushkin Industries attempted to launch 11 new podcasts and 4 books in a single year: a **"growth at all costs"** gamble that nearly silenced one of the most prestigious voices in media. For any executive building a venture from zero to scale, the Pushkin saga is a cautionary masterclass (cautionary tale?) in the thin line between aggressive expansion and operational collapse.*
@@ -75,3 +75,18 @@ Pushkin Industries:
 * **Ecosystem Leverage**: The "Capital-Light" distribution model.
 
 **Final Word**: "Prestige" is the ultimate defensible asset in a commoditized, AI saturated market.
+
+{{< accordion mode="open" separated=true >}}
+{{< accordionItem title="Margin Notes" icon="edit" md=false >}}
+{{< include "margin-notes.md" >}}
+{{< /accordionItem >}}
+
+{{< accordionItem title="Links" icon="link" md=false >}}
+This item demonstrates shortcode rendering with <code>md=false</code>:
+
+{{< alert >}}This is an inline alert.{{< /alert >}}
+{{< /accordionItem >}}
+{{< accordionItem title="Sources" icon="search" md=false >}}
+{{< include "margin-notes.md" >}}
+{{< /accordionItem >}}
+{{< /accordion >}}

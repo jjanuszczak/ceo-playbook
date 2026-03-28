@@ -1,0 +1,6 @@
+{
+  "name": "article-migrator",
+  "description": "Automates the migration of content from external URLs (LinkedIn, Medium, etc.) into local Hugo article bundles, including image harvesting, social noise removal, and internal link resolution.",
+  "location": ".gemini/skills/article-migrator/SKILL.md",
+  "status": "active"
+}
