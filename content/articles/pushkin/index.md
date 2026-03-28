@@ -1,6 +1,6 @@
 ---
 title: "Beyond the Hype: What Pushkin Industries Teaches Us About Scaling Without Losing the Soul"
-date: 2026-04-09
+date: 2026-03-26
 summary: "A cautionary case study on Pushkin Industries' 'growth at all costs' gamble, exploring the thin line between aggressive expansion and operational collapse."
 description: "Discover the three critical lessons from the Pushkin Industries saga on scaling a boutique venture into a high-scale enterprise while protecting its core identity."
 categories:
@@ -60,33 +60,20 @@ By prioritizing operational efficiency and diversifying revenue streams, Pushkin
 **The Advisor’s Perspective**: I understand the value of "moats": from blockchain-based systems to 3.0x TVPI venture funds. Pushkin’s ultimate victory was protecting the Intellectual Property that makes them an attractive M&A target for the 2026 market.
 {{< /Alert >}}
 
-## Margin Notes
-*My own comments, annotations, or summaries I would be adding to the margins of this article, to highlight key ideas, summarize content, or add personal reflections.*
-
-Pushkin Industries:
-
-* **The Vision**: Boutique excellence meets the "Creator-First" era.
-* **The Strategic Trap**: "Growth at All Costs" (The September 2023 Reckoning).
-
-**The Januszczak [Playbook]({{< relref "/advisory/" >}})**: How Pushkin applied the three pillars of a successful turnaround:
-
-* **Leadership Realignment**: Cohn’s operational discipline.
-* **Revenue Diversification**: DTC and high-margin retail.
-* **Ecosystem Leverage**: The "Capital-Light" distribution model.
-
-**Final Word**: "Prestige" is the ultimate defensible asset in a commoditized, AI saturated market.
+## Notes
 
 {{< accordion mode="open" separated=true >}}
+
 {{< accordionItem title="Margin Notes" icon="edit" md=false >}}
 {{< include "margin-notes.md" >}}
 {{< /accordionItem >}}
 
 {{< accordionItem title="Links" icon="link" md=false >}}
-This item demonstrates shortcode rendering with <code>md=false</code>:
+{{< include "links.md" >}}
+{{< /accordionItem >}}
 
-{{< alert >}}This is an inline alert.{{< /alert >}}
-{{< /accordionItem >}}
 {{< accordionItem title="Sources" icon="search" md=false >}}
-{{< include "margin-notes.md" >}}
+{{< include "sources.md" >}}
 {{< /accordionItem >}}
+
 {{< /accordion >}}
