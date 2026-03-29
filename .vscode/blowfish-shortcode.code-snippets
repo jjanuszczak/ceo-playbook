@@ -1,0 +1,271 @@
+{
+	// Blowfish Theme Shortcodes Snippets
+	//
+	// This file contains VS Code snippets for the Hugo Blowfish theme shortcodes.
+	// These snippets are scoped to Markdown files and help in quickly inserting
+	// stylized components provided by the theme.
+	//
+	// Usage:
+	// 1. Open a Markdown file (.md).
+	// 2. Start typing the shortcode name (e.g., 'alert', 'figure', 'carousel').
+	// 3. Select the snippet from the suggestion list.
+	//
+	// VS Code Markdown Suggestions:
+	// By default, VS Code might not show suggestions in Markdown files.
+	// - Use 'Ctrl+Space' to manually trigger suggestions.
+	// - Alternatively, enable quick suggestions in your settings.json:
+	//   "[markdown]": {
+	//     "editor.quickSuggestions": {
+	//       "other": true,
+	//       "comments": false,
+	//       "strings": true
+	//     }
+	//   }
+
+	"Insert standard markdown figure": {
+		"scope": "markdown",
+		"prefix": "!figure",
+		"body": [
+			"![${1:alt text}](${2:image path} \"${3:title}\")"
+		],
+		"description": "Insert a figure with alt text, image path, and title"
+	},
+	"Insert figure": {
+		"scope": "markdown",
+		"prefix": "figure",
+		"body": [
+			"{{< figure", 
+    		"    src=\"${1:path filename}\"",
+    		"    alt=\"${2:alt text}\"",
+    		"    caption=\"${3:title}\"",
+			"    href=\"${4:url}\"",
+			"    >}}"
+		],
+		"description": "Insert a figure with alt text, image path, and title"
+	},
+	"Insert alert": {
+		"scope": "markdown",
+		"prefix": "alert",
+		"body": [
+			"{{< alert icon=\"${1:triangle-exclamation}\" cardColor=\"${2:#e63946}\" textColor=\"${3:#f1faee}\" >}}",
+			"${0:content}",
+			"{{< /alert >}}"
+		],
+		"description": "Insert a styled message box"
+	},
+	"Insert article": {
+		"scope": "markdown",
+		"prefix": "article",
+		"body": [
+			"{{< article link=\"${1:link}\" showSummary=${2:true} compactSummary=${3:false} >}}"
+		],
+		"description": "Embed a single article"
+	},
+	"Insert badge": {
+		"scope": "markdown",
+		"prefix": "badge",
+		"body": [
+			"{{< badge >}} ${0:content} {{< /badge >}}"
+		],
+		"description": "Insert a styled badge"
+	},
+	"Insert button": {
+		"scope": "markdown",
+		"prefix": "button",
+		"body": [
+			"{{< button href=\"${1:url}\" target=\"${2:_blank}\" >}} ${0:label} {{< /button >}}"
+		],
+		"description": "Insert a styled button"
+	},
+	"Insert carousel": {
+		"scope": "markdown",
+		"prefix": "carousel",
+		"body": [
+			"{{< carousel images=\"${1:pattern}\" aspectRatio=\"${2:16-9}\" interval=\"${3:2000}\" >}}"
+		],
+		"description": "Insert an interactive sliding gallery"
+	},
+	"Insert chart": {
+		"scope": "markdown",
+		"prefix": "chart",
+		"body": [
+			"{{< chart >}}",
+			"type: '${1:bar}',",
+			"data: {",
+			"  labels: [${2:'Tomato', 'Blueberry', 'Banana'}],",
+			"  datasets: [{ label: '${3:# of votes}', data: [${4:12, 19, 3}] }]",
+			"}",
+			"{{< /chart >}}"
+		],
+		"description": "Insert a Chart.js chart"
+	},
+	"Insert accordion": {
+		"scope": "markdown",
+		"prefix": "accordion",
+		"body": [
+			"{{< accordion mode=\"${1:open}\" >}}",
+			"  {{< accordionItem title=\"${2:title}\" icon=\"${3:code}\" >}}",
+			"  ${0:content}",
+			"  {{< /accordionItem >}}",
+			"{{< /accordion >}}"
+		],
+		"description": "Insert a collapsible accordion"
+	},
+	"Insert gallery": {
+		"scope": "markdown",
+		"prefix": "gallery",
+		"body": [
+			"{{< gallery >}}",
+			"  <img src=\"${1:image1.jpg}\" class=\"${2:grid-w50}\" />",
+			"  <img src=\"${3:image2.jpg}\" class=\"${4:grid-w50}\" />",
+			"{{< /gallery >}}"
+		],
+		"description": "Insert a responsive gallery"
+	},
+	"Insert github": {
+		"scope": "markdown",
+		"prefix": "github",
+		"body": [
+			"{{< github repo=\"${1:username/repo}\" showThumbnail=${2:true} >}}"
+		],
+		"description": "Insert a GitHub repository card"
+	},
+	"Insert icon": {
+		"scope": "markdown",
+		"prefix": "icon",
+		"body": [
+			"{{< icon \"${1:github}\" >}}"
+		],
+		"description": "Insert an SVG icon"
+	},
+	"Insert katex": {
+		"scope": "markdown",
+		"prefix": "katex",
+		"body": [
+			"{{< katex >}}",
+			"\\(${0:expression}\\)"
+		],
+		"description": "Insert a KaTeX mathematical expression"
+	},
+	"Insert lead": {
+		"scope": "markdown",
+		"prefix": "lead",
+		"body": [
+			"{{< lead >}}",
+			"${0:content}",
+			"{{< /lead >}}"
+		],
+		"description": "Insert lead text for emphasis"
+	},
+	"Insert list": {
+		"scope": "markdown",
+		"prefix": "list",
+		"body": [
+			"{{< list limit=${1:5} title=\"${2:Recent Posts}\" cardView=${3:true} >}}"
+		],
+		"description": "Insert a list of recent articles"
+	},
+	"Insert mermaid": {
+		"scope": "markdown",
+		"prefix": "mermaid",
+		"body": [
+			"{{< mermaid >}}",
+			"${0:graph LR;}",
+			"{{< /mermaid >}}"
+		],
+		"description": "Insert a Mermaid diagram"
+	},
+	"Insert swatches": {
+		"scope": "markdown",
+		"prefix": "swatches",
+		"body": [
+			"{{< swatches \"${1:#64748b}\" \"${2:#3b82f6}\" \"${3:#06b6d4}\" >}}"
+		],
+		"description": "Insert a color palette showcase"
+	},
+	"Insert tabs": {
+		"scope": "markdown",
+		"prefix": "tabs",
+		"body": [
+			"{{< tabs group=\"${1:group}\" >}}",
+			"  {{< tab label=\"${2:Tab 1}\" >}}",
+			"  ${3:content}",
+			"  {{< /tab >}}",
+			"  {{< tab label=\"${4:Tab 2}\" >}}",
+			"  ${0:content}",
+			"  {{< /tab >}}",
+			"{{< /tabs >}}"
+		],
+		"description": "Insert content tabs"
+	},
+	"Insert timeline": {
+		"scope": "markdown",
+		"prefix": "timeline",
+		"body": [
+			"{{< timeline >}}",
+			"  {{< timelineItem header=\"${1:header}\" badge=\"${2:2024}\" >}}",
+			"  ${0:content}",
+			"  {{< /timelineItem >}}",
+			"{{< /timeline >}}"
+		],
+		"description": "Insert a visual timeline"
+	},
+	"Insert typeit": {
+		"scope": "markdown",
+		"prefix": "typeit",
+		"body": [
+			"{{< typeit tag=\"${1:h1}\" speed=${2:50} loop=${3:true} >}}",
+			"${0:content}",
+			"{{< /typeit >}}"
+		],
+		"description": "Insert typewriter effect"
+	},
+	"Insert youtube": {
+		"scope": "markdown",
+		"prefix": "youtube",
+		"body": [
+			"{{< youtubeLite id=\"${1:videoID}\" label=\"${2:label}\" >}}"
+		],
+		"description": "Insert a lightweight YouTube embed"
+	},
+	"Insert codeimporter": {
+		"scope": "markdown",
+		"prefix": "codeimporter",
+		"body": [
+			"{{< codeimporter url=\"${1:url}\" type=\"${2:text}\" startLine=\"${3:1}\" endLine=\"${4:10}\" >}}"
+		],
+		"description": "Import code from external sources"
+	},
+	"Insert video": {
+		"scope": "markdown",
+		"prefix": "video",
+		"body": [
+			"{{< video src=\"${1:path}\" >}}"
+		],
+		"description": "Insert a video"
+	},
+	"Insert gist": {
+		"scope": "markdown",
+		"prefix": "gist",
+		"body": [
+			"{{< gist ${1:username} ${2:gistID} >}}"
+		],
+		"description": "Insert a GitHub Gist"
+	},
+	"Insert screenshot": {
+		"scope": "markdown",
+		"prefix": "screenshot",
+		"body": [
+			"{{< screenshot src=\"${1:url or path}\" alt=\"${2:alt text}\" >}}"
+		],
+		"description": "Insert a screenshot with a device frame"
+	},
+	"Insert huggingface": {
+		"scope": "markdown",
+		"prefix": "huggingface",
+		"body": [
+			"{{< huggingface model=\"${1:username/model}\" >}}"
+		],
+		"description": "Insert a Hugging Face model card"
+	}
+}

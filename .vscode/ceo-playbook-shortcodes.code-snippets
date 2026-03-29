@@ -1,0 +1,26 @@
+{
+	"Insert include shortcode": {
+		"scope": "markdown",
+		"prefix": "include",
+		"body": [
+			"{{< include \"${1:resource.md}\" >}}"
+		],
+		"description": "Include a local page resource content"
+	},
+	"Insert spotify shortcode": {
+		"scope": "markdown",
+		"prefix": "spotify",
+		"body": [
+			"{{< spotify type=\"${1|track,album,playlist,artist,show,episode|}\" id=\"${2:id}\" width=\"${3:100%}\" height=\"${4:380}\" >}}"
+		],
+		"description": "Embed a Spotify player"
+	},
+	"Insert subscribe shortcode": {
+		"scope": "markdown",
+		"prefix": "subscribe",
+		"body": [
+			"{{< subscribe >}}"
+		],
+		"description": "Insert the subscription form"
+	}
+}

@@ -1,7 +1,7 @@
 ---
 title: "Speaking"
 date: 2026-03-28
-draft: true
+draft: false
 summary: "John Januszczak: Keynote speaker on Fintech, Innovation Strategy, and Venture Building."
 description: "John Januszczak offers keynote presentations that bridge the gap between visionary technology and pragmatic executive leadership."
 showTitle: false
@@ -12,6 +12,7 @@ showDate: false
 # layoutBackgroundHeaderSpace: true
 # featureimage: "images/jj-final-pitch.jpg"
 featureimage: "images/jj-on-stage.png"
+showZenMode: false
 ---
 
 # Visionary Strategy. <span class="text-primary-600 dark:text-primary-400">Pragmatic Execution.</span>

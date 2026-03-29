@@ -73,6 +73,18 @@
   weight = 30
 
 [[main]]
+  name = "Appearances"
+  parent = "Media"
+  pageRef = "videos"
+  weight = 31
+
+[[main]]
+  name = "Speaking"
+  parent = "Media"
+  pageRef = "speaker"
+  weight = 32
+
+[[main]]
   name = "Portfolio"
   pageRef = "portfolio"
   weight = 40
