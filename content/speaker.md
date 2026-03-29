@@ -4,29 +4,38 @@ date: 2026-03-28
 draft: true
 summary: "John Januszczak: Keynote speaker on Fintech, Innovation Strategy, and Venture Building."
 description: "John Januszczak offers keynote presentations that bridge the gap between visionary technology and pragmatic executive leadership."
-tags: ["venture-building", "embedded-finance", "digital-transformation", "open-finance", "platform-economics", "systems-thinking"]
 showTitle: false
 showAuthor: false
 showReadingTime: false
 showWordCount: false
 showDate: false
-layoutBackgroundHeaderSpace: true
-featureimage: "images/jj-final-pitch.jpg"
+# layoutBackgroundHeaderSpace: true
+# featureimage: "images/jj-final-pitch.jpg"
+featureimage: "images/jj-on-stage.png"
 ---
 
 # Visionary Strategy. <span class="text-primary-600 dark:text-primary-400">Pragmatic Execution.</span>
 
 {{< lead >}}
-Bridging the gap between the rigor of science and the chaos of fintech innovation to make transformation investable.
+Bridging the gap between the rigor of science and the chaos of innovation to make transformation investable.
 {{< /lead >}}
 
 With over 25 years of experience leading transformation across banking, insurance, and commercial software, John Januszczak brings a unique "Operator-Advisor" perspective to the stage. As the former President & CEO of UBX, he scaled the Philippines' leading embedded finance platform from a white-paper concept to over $100B in transaction volume.
 
 John’s talks are designed for Board Directors, C-Suite executives, and innovation leaders who are tired of "Innovation Theater" and are looking for the mechanics of real-world results.
 
+<div class="flex flex-wrap justify-center gap-4 mt-10">
+  {{< button href="/contact" >}}Book John{{< /button >}}
+  <a class="!no-underline" href="#keynote-topics">
+    <button class="bg-transparent hover:text-primary-500 font-semibold py-2 px-4 border border-primary-500 hover:border-transparent rounded-md transition-all duration-300">
+      Explore Speaking Topics
+    </button>
+  </a>
+</div>
+
 ---
 
-## As Featured By
+## Trusted By
 
 <div class="speaker-logos-grid">
   <img src="/images/logos/abs-cbn-news-channel.svg" alt="ABS-CBN News Channel" class="speaker-logo">
@@ -84,6 +93,8 @@ John’s talks are designed for Board Directors, C-Suite executives, and innovat
 
 ## Keynote Topics
 
+John teaches people how to make **innovation investable**. Below are his most-requested keynotes, each optimized with carefully-curated examples and takeaways designed to best resonate with specific audiences.
+
 ### 1. The Future of Finance: Invisible & Embedded
 The "Bank" as a physical location or distinct entity is disappearing. John explores how open finance and embedded ecosystems are democratizing access to capital and why the most successful financial services of the future will be the ones you don't even notice.
 
@@ -99,8 +110,8 @@ Drawing on his background in Astrophysics, John discusses how to apply scientifi
 
 John has shared his insights with thousands of leaders across Southeast Asia and North America.
 
-*   **Asia Bank Tech Forum 2023:** *Keynote: Next Generation Banking Technology.  Moving from Linear to Exponential.*
-*   **The Final Pitch (Season 6 & 8):** *Judge & CEO Advisor. Investing in the heroes of the post-pandemic digital economy.*
+*   **Asia Bank Tech Forum:** *Keynote: Next Generation Banking Technology.  Moving from Linear to Exponential.*
+*   **The Final Pitch:** *Judge & CEO Advisor. Investing in the heroes of the digital economy.*
 *   **Singapore Fintech Festival:** *Panelist & Speaker on Open Finance and Regulatory Sandboxes.*
 *   **Philippine Economic Society:** *Guest Speaker on the role of Digital Assets in Emerging Markets.*
 
