@@ -16,73 +16,50 @@
   weight = 10
 
 [[main]]
-  name = "Insights"
-  pageRef = "articles"
+  name = "Services"
+  pageRef = "advisory"
   weight = 20
 
 [[main]]
-  name = "Strategy"
-  parent = "Insights"
-  pageRef = "categories/strategy"
+  name = "Advisory"
+  parent = "Services"
+  pageRef = "advisory"
   weight = 21
 
 [[main]]
-  name = "Leadership"
-  parent = "Insights"
-  pageRef = "categories/leadership"
+  name = "Speaking"
+  parent = "Services"
+  pageRef = "speaker"
   weight = 22
 
 [[main]]
-  name = "Fintech"
-  parent = "Insights"
-  pageRef = "categories/fintech"
-  weight = 23
-
-[[main]]
-  name = "Energy Transition"
-  parent = "Insights"
-  pageRef = "categories/energy-transition"
-  weight = 24
-
-[[main]]
-  name = "Technology"
-  parent = "Insights"
-  pageRef = "categories/technology"
-  weight = 25
-
-[[main]]
-  name = "Venture Building"
-  parent = "Insights"
-  pageRef = "categories/venture-building"
-  weight = 26
-
-[[main]]
-  name = "Essays"
-  parent = "Insights"
-  pageRef = "categories/essays"
-  weight = 27
-
-[[main]]
-  name = "Playbooks"
-  pageRef = "advisory"
-  weight = 28
-
-[[main]]
-  name = "Media"
-  pageRef = "videos"
+  name = "Insights"
+  pageRef = "articles"
   weight = 30
 
 [[main]]
-  name = "Appearances"
-  parent = "Media"
-  pageRef = "videos"
+  name = "Articles"
+  parent = "Insights"
+  pageRef = "articles"
   weight = 31
 
 [[main]]
-  name = "Speaking"
-  parent = "Media"
-  pageRef = "speaker"
+  name = "Media"
+  parent = "Insights"
+  pageRef = "videos"
   weight = 32
+
+[[main]]
+  name = "Signals"
+  parent = "Insights"
+  pageRef = "signals"
+  weight = 33
+
+[[main]]
+  name = "Engine Room"
+  parent = "Insights"
+  pageRef = "lab"
+  weight = 34
 
 [[main]]
   name = "Portfolio"
@@ -91,8 +68,21 @@
 
 [[main]]
   name = "Contact"
+  identifier = "contact-button"
   pageRef = "contact"
   weight = 50
+
+[[main]]
+  identifier = "X"
+  pre = "x-twitter"
+  url = "https://x.com/johnjanuszczak"
+  weight = 60
+
+[[main]]
+  identifier = "LinkedIn"
+  pre = "linkedin"
+  url = "https://linkedin.com/in/johnjanuszczak"
+  weight = 70
 
 #[[main]]
 #  name = "Blog"
