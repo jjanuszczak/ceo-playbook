@@ -15,7 +15,9 @@ showReadingTime: false
 draft: false
 ---
 
+{{< lead >}}
 Accelerating the Energy Transition: How Solviva is Democratizing Solar in the Philippines.
+{{< /lead >}}
 
 ## Problem: High Energy Costs
 
