@@ -1,0 +1,97 @@
+{
+  "details": {
+    "prefix": ["HSC-details", "details"],
+    "body": [
+      "{{< details summary=\"${1:summary text}\" >}}",
+      "$0",
+      "{{< /details >}}"
+    ],
+    "description": "Inserts an HTML <details> element into the content. Documentation: https://gohugo.io/content-management/shortcodes/#details"
+  },
+  // "figure": {
+  //   "prefix": ["HSC-figure", "figure"],
+  //   "body": [
+  //     "{{< figure src=\"${1:src}\"${2| , alt=\"alt text\"|}${3| , caption=\"caption text\"|}${4| , title=\"title text\"|}${5| , class=\"css-class\"|}${6| , link=\"url\"|}${7| , target=\"_blank\"|}${8| , height=\"height\"|}${9| , width=\"width\"|} >}}"
+  //   ],
+  //   "description": "Renders an HTML <figure> element with an image and caption. Documentation: https://gohugo.io/content-management/shortcodes/#figure"
+  // },
+  // "gist": {
+  //   "prefix": ["HSC-gist", "gist"],
+  //   "body": [
+  //     "{{< gist ${1:username} ${2:gistid}${3| , \"filename\"|} >}}"
+  //   ],
+  //   "description": "Embeds a GitHub Gist. Documentation: https://gohugo.io/content-management/shortcodes/#gist"
+  // },
+  "highlight": {
+    "prefix": ["HSC-highlight", "highlight"],
+    "body": [
+      "{{< highlight ${1:language}${2| , \"options\"|} >}}",
+      "${TM_SELECTED_TEXT:${CLIPBOARD}}$0",
+      "{{< /highlight >}}"
+    ],
+    "description": "Adds syntax highlighting to code. Documentation: https://gohugo.io/content-management/shortcodes/#highlight"
+  },
+  "instagram": {
+    "prefix": ["HSC-instagram", "instagram"],
+    "body": [
+      "{{< instagram ${1:postid}${2| , hidecaption=true, hidecaption=false|} >}}"
+    ],
+    "description": "Embeds an Instagram post. Documentation: https://gohugo.io/content-management/shortcodes/#instagram"
+  },
+  "param": {
+    "prefix": ["HSC-param", "param"],
+    "body": [
+      "{{< param ${1:name} >}}"
+    ],
+    "description": "Renders a parameter from the page's front matter, falling back to site configuration. Documentation: https://gohugo.io/content-management/shortcodes/#param"
+  },
+  "ref": {
+    "prefix": ["HSC-ref", "ref"],
+    "body": [
+      "{{< ref \"${1:path}\" >}}"
+    ],
+    "description": "Returns an absolute URL to a page reference. Documentation: https://gohugo.io/content-management/shortcodes/#ref-and-relref"
+  },
+  "relref": {
+    "prefix": ["HSC-relref", "relref"],
+    "body": [
+      "{{< relref \"${1:path}\" >}}"
+    ],
+    "description": "Returns a relative URL to a page reference. Documentation: https://gohugo.io/content-management/shortcodes/#ref-and-relref"
+  },
+  // "tweet": {
+  //   "prefix": ["HSC-tweet", "tweet"],
+  //   "body": [
+  //     "{{< tweet user=\"${1:username}\" id=\"${2:id}\" >}}"
+  //   ],
+  //   "description": "Embeds a post from X (formerly Twitter). Documentation: https://gohugo.io/content-management/shortcodes/#tweet"
+  // },
+  "vimeo": {
+    "prefix": ["HSC-vimeo", "vimeo"],
+    "body": [
+      "{{< vimeo id=\"${1:id}\"${2| , class=\"class\"|}${3| , title=\"title\"|}${4| , loading=\"lazy\"|} >}}"
+    ],
+    "description": "Embeds a Vimeo video. Documentation: https://gohugo.io/content-management/shortcodes/#vimeo"
+  },
+  // "x": {
+  //   "prefix": ["HSC-x", "x"],
+  //   "body": [
+  //     "{{< x user=\"${1:username}\" id=\"${2:id}\" >}}"
+  //   ],
+  //   "description": "Embeds a post from X (formerly Twitter). Documentation: https://gohugo.io/content-management/shortcodes/#x"
+  // },
+  // "youtube": {
+  //   "prefix": ["HSC-youtube", "youtube"],
+  //   "body": [
+  //     "{{< youtube id=\"${1:id}\"${2| , autoplay=true|}${3| , allowFullScreen=true|}${4| , class=\"class\"|}${5| , title=\"title\"|}${6| , loading=\"lazy\"|} >}}"
+  //   ],
+  //   "description": "Embeds a responsive YouTube video player. Documentation: https://gohugo.io/content-management/shortcodes/#youtube"
+  // },
+  "qr": {
+    "prefix": ["HSC-qr", "qr"],
+    "body": [
+      "{{< qr text=\"${1:text}\"${2| , level=\"medium\"|}${3| , scale=4|}${4| , alt=\"alt text\"|}${5| , title=\"title text\"|}${6| , class=\"class\"|}${7| , id=\"id\"|}${8| , loading=\"lazy\"|} >}}"
+    ],
+    "description": "Generates a QR code image from a given string. Documentation: https://gohugo.io/content-management/shortcodes/#qr"
+  }
+}
