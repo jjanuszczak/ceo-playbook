@@ -13,6 +13,7 @@ showSummary: true
 showDate: false
 showReadingTime: false
 draft: false
+#featureimage: "solar-panel.jpg"
 ---
 
 {{< lead >}}

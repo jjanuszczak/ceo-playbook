@@ -74,8 +74,16 @@ Review the full draft for flow, clarity, and consistency.
 
 When a user requests writing assistance:
 
+0. **Foundational Standard**
+   You MUST read and adhere to `references/article-writing-guide.md` before generating or reviewing any content. This guide defines the user's specific standards for purpose, hooks, skimmability, voice, and editing.
+
 1. **Understand the Writing Project**
-   
+...
+
+<AVAILABLE_RESOURCES>
+*   **Writing Guide:** `references/article-writing-guide.md` - MUST READ before drafting or providing feedback.
+</AVAILABLE_RESOURCES>
+
    Ask clarifying questions:
    - What's the topic and main argument?
    - Who's the target audience?
