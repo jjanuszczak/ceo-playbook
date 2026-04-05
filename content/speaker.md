@@ -11,7 +11,7 @@ showWordCount: false
 showDate: false
 # layoutBackgroundHeaderSpace: true
 # featureimage: "images/jj-final-pitch.jpg"
-featureimage: "images/jj-on-stage.png"
+featureimage: "images/jj-on-tv.jpg"
 showZenMode: false
 ---
 
