@@ -1,6 +1,6 @@
 ---
 title: "Beyond the Hype: What Pushkin Industries Teaches Us About Scaling Without Losing Your Soul"
-date: 2026-03-26
+date: 2026-04-06
 summary: "A cautionary case study on Pushkin Industries' 'growth at all costs' gamble, exploring the thin line between aggressive expansion and operational collapse."
 description: "Discover the three critical lessons from the Pushkin Industries saga on scaling a boutique venture into a high-scale enterprise while protecting its core identity."
 categories:
@@ -12,7 +12,7 @@ tags:
   - "capital-allocation"
   - "organizational-design"
   - "go-to-market"
-draft: true
+draft: false
 ---
 
 *In 2022, Pushkin Industries attempted to launch 11 new podcasts and 4 books in a single year: a **"growth at all costs"** gamble that nearly silenced one of the most prestigious voices in media. For any executive building a venture from zero to scale, the Pushkin saga is a cautionary masterclass (cautionary tale?) in the thin line between aggressive expansion and operational collapse.*
