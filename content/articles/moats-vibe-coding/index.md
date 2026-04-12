@@ -108,3 +108,8 @@ Here's how our 8 modern moats align with (or extend) Helmer's framework. Most fi
 - Missing from our list but relevant: **Counter-Positioning** (disrupting with a model incumbents can't adopt without harm) and **Cornered Resource** (exclusive assets like IP/talent). These can be huge in early AI waves but rarer/harder for most vibe-coded apps.
 
 This mapping shows Helmer's framework isn't outdated. It's even more relevant now, as AI compresses time and forces founders to prioritize durable Powers over fleeting features. **Great builders invent paths to real Power**.
+
+{{< related-posts title="Related Insights" paths="articles/ev-mobility-sea, articles/cvc-vs-cvb" >}}
+
+
+{{< read-next title="Read Next" link="articles/discovery-to-knowledge" buttonText="View More Insights" buttonLink="/articles/" >}}

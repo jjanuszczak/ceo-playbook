@@ -22,5 +22,21 @@
 			"{{< subscribe >}}"
 		],
 		"description": "Insert the subscription form"
+	},
+	"Insert read-next shortcode": {
+		"scope": "markdown",
+		"prefix": "read-next",
+		"body": [
+			"{{< read-next title=\"${1:Read Next}\" link=\"${2:path/to/page}\" buttonText=\"${3:View More Insights}\" buttonLink=\"${4:/articles/}\" >}}"
+		],
+		"description": "Insert the Read Next section"
+	},
+	"Insert related-posts shortcode": {
+		"scope": "markdown",
+		"prefix": "related-posts",
+		"body": [
+			"{{< related-posts title=\"${1:Related Posts}\" paths=\"${2:path/to/page1,path/to/page2}\" >}}"
+		],
+		"description": "Insert the Related Posts section"
 	}
 }

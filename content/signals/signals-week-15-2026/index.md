@@ -100,12 +100,6 @@ This week's signals converge on the theme of **reckoning vs. simulation**. In th
 
 ---
 
-Looking for more? You can explore the archives of previous fast-twitch market observation and insights on the [Signals]({{< relref "signals" >}}) page. Have Signals delivered directly to your inbox:
+{{< read-next title="Read Next" link="signals/signals-week-14-2026" buttonText="View More Signals" >}}
 
 {{< subscribe >}}
-
----
-
-If these market observations are relevant to the operations of, or innovation at, your organization and you want to discuss these further and more indepth, let's talk.
-
-{{< button href="/contact/" target="_self" >}}Book a Call{{< /button >}}

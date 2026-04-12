@@ -99,3 +99,8 @@ The 2012 aerial survey of the Lost White City was followed by a 2015 expedition 
 {{< youtubeLite id="zoYheMMTa-0" label="The Lost City of the Monkey God - Official Trailer" >}}
 
 Featured image credit: [National Geographic](https://www.nationalgeographic.com/history/article/maya-laser-lidar-guatemala-pacunam)
+
+{{< related-posts title="Related Insights" paths="lab/crm-llm, articles/burke-lecture" >}}
+
+
+{{< read-next title="Read Next" link="articles/top-podcasts-2025" buttonText="View More Insights" buttonLink="/articles/" >}}

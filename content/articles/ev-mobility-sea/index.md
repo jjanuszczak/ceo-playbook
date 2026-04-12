@@ -57,6 +57,6 @@ This is the ultimate survival metric. If you are simply leasing EVs to drivers o
 
 The electrification of Southeast Asia’s mass-market transport sector is inevitable, but the capture of its massive economic value is entirely up for grabs. The victors won’t be the companies shouting the loudest about saving the earth. They will be the pragmatic operators who execute the unglamorous, capital-intensive work of protecting operator cash flows, guaranteeing vehicle uptime, and turning the complex, chaotic realities of emerging markets into an unassailable defensive moat.
 
----
-Looking for more? Explore the archives of fast-twitch market observations and insights on the [Signals]({{< relref "signals" >}}) page or **subscribe** to automatically receive them in your inbox!
-{{< subscribe >}}
+{{< related-posts title="Related Insights" paths="articles/flatpeak, articles/cvc-vs-cvb" >}}
+
+{{< read-next title="Read Next" link="articles/nytimes" buttonText="View More Insights" buttonLink="/articles/" >}}

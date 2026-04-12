@@ -113,3 +113,7 @@ Use your **CVC fund as a radar**. It scans the horizon, identifies emerging thre
 Use your **Venture Builder as a laser**. When your CVC radar identifies a gap that is strategically vital to your core, and you have a high-conviction belief that you can solve it better than anyone else, that’s when you build.
 
 **The future isn’t a straight line; it’s a web of connections.** As a leader, your job isn't just to fund innovation. Your job is to architect the structure that allows it to survive.
+
+{{< related-posts title="Related Insights" paths="articles/ev-mobility-sea, articles/moats-vibe-coding" >}}
+
+{{< read-next title="Read Next" link="articles/ikbr-ban" buttonText="View More Insights" buttonLink="/articles/" >}}

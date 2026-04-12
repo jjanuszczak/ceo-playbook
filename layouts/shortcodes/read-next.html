@@ -1,0 +1,29 @@
+{{ $title := .Get "title" | default "Read Next" }}
+{{ $link := .Get "link" }}
+{{ $buttonText := .Get "buttonText" | default "View More Insights" }}
+{{ $buttonLink := .Get "buttonLink" | default "/articles/" }}
+
+<div class="read-next-container mt-12">
+  <h2 class="mb-6">{{ $title }}</h2>
+
+  {{ $target := .Site.GetPage $link }}
+  {{ if not $target }}
+    {{ $target = index (first 1 (where .Site.AllPages "RelPermalink" $link)) 0 }}
+  {{ end }}
+
+  {{ if $target }}
+    <div class="mb-10">
+      {{ $context := dict "target" $target "showSummary" true "compactSummary" false }}
+      {{ partial "article-link/_shortcode.html" $context }}
+    </div>
+  {{ end }}
+
+  <div class="flex justify-center mb-8">
+    <a
+      class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 transition-colors duration-200"
+      href="{{ $buttonLink }}"
+      role="button">
+      {{ $buttonText }}
+    </a>
+  </div>
+</div>

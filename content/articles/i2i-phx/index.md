@@ -60,3 +60,8 @@ This approach proved that you could be "bleeding edge" without being "reckless."
 The "experiment" of 2019 has stood the test of time. in 2025, that vision had evolved into PHPX, a multi-issuer stablecoin project operating on public ledgers like [Hedera](https://www.ledgerinsights.com/filipino-banks-plan-to-launch-multi-issuer-stablecoin-phpx-on-hedera-dlt/). The single-bank pilot of 2019 was poised to become the industry-wide standard of 2026.
 
 The lesson for today’s leaders is clear: The "stablecoin revolution" isn't a future event. For those of us who were in the trenches in 2019, it’s a proven reality. If you want to scale in Southeast Asia, you don't wait for the theory to be perfect. You build the bridge.
+
+{{< related-posts title="Related Insights" paths="articles/cbdc, videos/final-pitch-s06" >}}
+
+
+{{< read-next title="Read Next" link="articles/bdc" buttonText="View More Insights" buttonLink="/articles/" >}}

@@ -59,7 +59,12 @@ Today, as we parachute "intelligence" into the world via cheap smartphones and A
 
 The future isn't a straight line; it’s a web. It’s time we started leading like it.
 
----
-*Watch the lecture here:*
+## Watch the Lecture
+
+You can watch the lecture here:
 
 {{< youtubeLite id="gvIy52kX-uU" label="James Burke – Internet Knowledge" >}}
+
+{{< related-posts title="Related Insights" paths="lab/crm-llm, articles/discovery-to-knowledge" >}}
+
+{{< read-next title="Read Next" link="articles/ikbr-ban" buttonText="View More Insights" buttonLink="/articles/" >}}

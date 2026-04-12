@@ -40,7 +40,11 @@ Throughout my career, from managing corporate venture funds to scaling digital p
 
 The real heroes of our digital economy, the founders, the small businesses, and the individual retail investors, deserve a regulatory environment that opens doors, rather than locking them out.
 
----
+## Watch the Discussion
 I really enjoyed this discussion, take a look:
 
 {{< youtubeLite id="2rnoD0JLIpg" label="SEC Bans Interactive Brokers (IBKR): Discussion with Jon Lim (DragonFi)" >}}
+
+{{< related-posts title="Related Insights" paths="lab/yield-curve, lab/unlocking-the-basel-framework" >}}
+
+{{< read-next title="Read Next" link="articles/ev-mobility-sea" buttonText="View More Insights" buttonLink="/articles/" >}}
