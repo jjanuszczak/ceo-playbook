@@ -10,8 +10,13 @@ I have spent my career operating at the intersection of strategy, finance, and t
 
 This is the engine room of my digital home. It is distinct from my Articles & Insights, which focus on leadership and market strategy. Here, I share my hands-on learnings and experiments, technical deep dives, and prototypes.
 
-**Why do this?** Because the best way to cut through the hype cycle is to build something yourself. I explore these technologies not to become an engineer, but to become a better leader of engineers. By testing the limits of the technology myself, I gain the intuition necessary to make better strategic bets.
+{{< accordion mode="closed" >}}
+  {{< accordionItem title="Why do this?" icon="circle-question" >}}
+  Because the best way to cut through the hype cycle is to build something yourself. I explore these technologies not to become an engineer, but to become a better leader of engineers. By testing the limits of the technology myself, I gain the intuition necessary to make better strategic bets.
+  {{< /accordionItem >}}
+  {{< accordionItem title="What you will find here" icon="circle-info" >}}
+  Expect long-form overviews, technical walkthroughs, glimpses of code, unpolished hypotheses, and post-mortems on failed experiments. 
 
-**What you will find here**: Expect long-form overviews, technical walkthroughs, glimpses of code, unpolished hypotheses, and post-mortems on failed experiments. 
-
-If you are a business leader, scan these to understand the practical application of emerging tech. If you are a builder, dig in and let me know what I could have done better.
+  If you are a business leader, scan these to understand the practical application of emerging tech. If you are a builder, dig in and let me know what I could have done better.
+  {{< /accordionItem >}}
+{{< /accordion >}}

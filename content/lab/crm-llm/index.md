@@ -12,6 +12,8 @@ Andrej Karpathy’s recent LLM Knowledge Bases idea is best understood as a shif
 
 {{< x user="karpathy" id="2039805659525644595" >}}
 
+## CRM as an LLM Knowledge Base
+
 This CRM project is a domain-specific implementation of that same pattern:
 
 {{< github repo="jjanuszczak/crm-logic" showThumbnail=true >}}
@@ -47,18 +49,6 @@ That last part matters most: human judgment.
 ## New Philosophy for CRM
 
 A normal CRM app assumes that the software is the authority and the user fills in fields. This project assumes the opposite. The authority is the human operator, the files are the durable record, and agents are assistants that propose, enrich, classify, and execute with review. Gmail and Calendar ingestion, for example, do not directly rewrite the CRM blindly. They stage activity updates, contact discoveries, lead decisions, opportunity suggestions, and task suggestions. The agent can automate parts of that flow, but the human remains in the loop where judgment is required.
-
-{{< mermaid >}}
-flowchart TD
-    A["Google Workspace Inputs<br/>Gmail + Calendar"] --> B["Ingestion Layer<br/>crm-ingest-gws"]
-    C["Human Inputs<br/>Calls, WhatsApp, in-person, judgment"] --> D["Agent Review Loop"]
-    B --> E["Staging Files<br/>activity_updates, lead_decisions,<br/>task_suggestions, interactions"]
-    E --> D
-    D --> F["Canonical CRM Records<br/>Organizations, Accounts, Contacts,<br/>Leads, Opportunities, Deals,<br/>Activities, Notes, Tasks"]
-    F --> G["Derived Views<br/>DASHBOARD.md<br/>INTELLIGENCE.md<br/>RELATIONSHIP_MEMORY.md"]
-    F --> H["Git History<br/>Diffs, auditability, rollback"]
-    G --> D
-{{< /mermaid >}}
 
 That is a very different philosophy from traditional CRM software.
 
@@ -110,3 +100,24 @@ A relationship is not a ticket. It is not a row in a pipeline table. It is a com
 That is the real promise here: not “AI CRM” as a layer of automation on top of an old app, but **CRM rethought** as a maintained knowledge base with agents.
 
 The long-term destination is not a smarter form. It is a better memory system.
+
+## Further Reading & Resources
+
+{{< accordion mode="open" >}}
+  {{< accordionItem title="Margin Notes" icon="edit" >}}
+  
+  A CRM where agents are assistants that propose, enrich, classify, and execute with review. An overview of the overall workflow:
+
+  {{< mermaid >}}
+  flowchart TD
+    A["Google Workspace Inputs<br/>Gmail + Calendar"] --> B["Ingestion Layer<br/>crm-ingest-gws"]
+    C["Human Inputs<br/>Calls, WhatsApp, in-person, judgment"] --> D["Agent Review Loop"]
+    B --> E["Staging Files<br/>activity_updates, lead_decisions,<br/>task_suggestions, interactions"]
+    E --> D
+    D --> F["Canonical CRM Records<br/>Organizations, Accounts, Contacts,<br/>Leads, Opportunities, Deals,<br/>Activities, Notes, Tasks"]
+    F --> G["Derived Views<br/>DASHBOARD.md<br/>INTELLIGENCE.md<br/>RELATIONSHIP_MEMORY.md"]
+    F --> H["Git History<br/>Diffs, auditability, rollback"]
+    G --> D
+  {{< /mermaid >}}
+  {{< /accordionItem >}}
+{{< /accordion >}}
