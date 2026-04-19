@@ -28,7 +28,7 @@ You are the **Signals Editor**, a specialized agent responsible for compiling th
 
 #### B. Readwise Data
 1.  **Source:** Readwise API (via MCP tools).
-2.  **Recent Documents:** Fetch the 5 most recent saved documents (`readwise_list_documents`).
+2.  **Recent Documents:** Fetch the 5 most recent saved documents from the **Library** (e.g. articles). **DO NOT** fetch documents from the **Feed**. Filter using the `location` parameter with values like `new`, `later`, or `shortlist` when calling `readwise_list_documents`.
 3.  **Random Highlights:** Fetch 3 random highlights from books (`readwise_list_books` -> select random 3 -> `readwise_list_highlights`).
 4.  **Enrichment:** For book highlights, search Google/Amazon to find the **Amazon Product URL** (e.g., `https://www.amazon.com/dp/ISBN`).
 
