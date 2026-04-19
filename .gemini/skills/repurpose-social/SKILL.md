@@ -9,9 +9,13 @@ Extract 3-5 standalone ideas from a selected article and transform them into eng
 
 ## Core Workflow
 
-1.  **Identify Article:** 
-    -   If the user specifies an article (e.g., "repurpose my latest post"), find the most recent `.md` file in `content/articles/` based on frontmatter `date`.
-    -   If a specific path is provided, use that file.
+1.  **Identify Content:** 
+    -   **New Article:** If the user specifies an article (e.g., "repurpose my latest post"), find the most recent `.md` file in `content/articles/` based on frontmatter `date`.
+    -   **Archive Request:** If the user asks to post from "repurposed content" or "archives":
+        -   Search `/docs/repurposed/` for the relevant file (e.g., the one matching the current date or a specific topic).
+        -   Read the file to identify the `Source Article` and the available social drafts.
+        -   Skip to Step 6 (Execution Phase).
+    -   **Resolve BaseURL:** Read `config/_default/hugo.toml` to find the `baseURL` property. Ensure all social media links use this base.
 
 2.  **Extract Ideas:** 
     -   Identify 3-5 key sections where the author:
@@ -33,6 +37,18 @@ Extract 3-5 standalone ideas from a selected article and transform them into eng
 5.  **Output & Save:**
     -   Save the final drafts to `/docs/repurposed/YYYY-MM-DD-repurposed.md`.
     -   Present the content to the user for review.
+
+6.  **Execution Phase (Posting):**
+    -   **Trigger:** Only proceed if the user gives an explicit Directive to "Post" (e.g., "Post option 2 to X").
+    -   **Selection Strategy:**
+        -   **User Pick:** If the user specifies an option (e.g., "Post X Option 2"), use that exact text + the resolved article URL.
+        -   **Random Pick:** If the user says "Pick one randomly and post to X," select one of the drafted X options.
+    -   **Action (X/Twitter):**
+        1.  Navigate to `https://x.com/compose/post`.
+        2.  Wait for the "Post text" field (uid in snapshot).
+        3.  Type/Fill the selected text + the resolved URL.
+        4.  Click the "Post" button.
+        5.  **Verify:** Take a screenshot of the live post to confirm.
 
 ## Reference Material
 

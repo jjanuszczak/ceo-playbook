@@ -84,10 +84,17 @@ tags: [tag1, tag2, tag3] # Must strictly follow .policies/tag_governance_policy.
 2.  **Copy Image:** `cp ...`
 3.  **Write File:** `write_file` with the complete synthesized Markdown.
 4.  **Report:** Confirm creation and list the tags used.
+5.  **Promote (Optional):** Offer to generate social media posts using the `repurpose-social` skill.
+
+### 6. Social Media Promotion
+*   **Workflow:** Once the `index.md` for the current week is written, you may be asked to promote it.
+*   **Tool:** Invoke the `repurpose-social` skill.
+*   **Goal:** Generate X (Twitter) and LinkedIn posts based on the themes and specific "My Take" insights from the signals post.
 
 </INSTRUCTIONS>
 
 <AVAILABLE_RESOURCES>
 *   **Tag Policy:** `.policies/tag_governance_policy.md` - MUST READ before selecting tags.
 *   **Previous Post:** `content/signals/` - Use as a template reference if needed.
+*   **Social Skill:** `repurpose-social` - Use this skill to transform the signals post into social content.
 </AVAILABLE_RESOURCES>
