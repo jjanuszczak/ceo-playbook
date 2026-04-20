@@ -3,7 +3,7 @@ title: "The Predictive Web: What a 2001 Lecture Taught Me About the Future of AI
 date: 2026-04-03
 summary: "James Burke's 2001 lecture predicted the 'Knowledge Web' and the transition from reductionism to connection. Decades later, Generative AI and Agentic systems are making this vision a reality."
 description: "An analysis of James Burke's 2001 'Knowledge Web' lecture and its profound implications for Generative AI, Agentic systems, and leadership in the Intelligence Age."
-draft: true
+draft: false
 categories:
   - "Technology"
 tags:
