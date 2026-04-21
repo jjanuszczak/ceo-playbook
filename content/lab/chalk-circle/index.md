@@ -1,7 +1,7 @@
 ---
 title: "The Terminal is Your Chalk Circle: Why I Code from the Observation Deck"
 date: 2026-04-21T13:18:40+08:00
-draft: true
+draft: false
 summary: "Why leading in the era of Generative AI requires a shift from 'getting your hands dirty' in code to observing systems like a Toyota foreman in a chalk circle."
 description: "Exploring the metaphor of Taiichi Ohno’s chalk circle in the context of AI-enabled software development and why the terminal is the best place for a leader to observe and manage the production line of intelligent agents."
 categories: ["Technology"]
