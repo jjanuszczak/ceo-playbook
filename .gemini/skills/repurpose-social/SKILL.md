@@ -46,9 +46,14 @@ Extract 3-5 standalone ideas from a selected article and transform them into eng
     -   **Action (X/Twitter):**
         1.  Navigate to `https://x.com/compose/post`.
         2.  Wait for the "Post text" field (uid in snapshot).
-        3.  Type/Fill the selected text + the resolved URL.
-        4.  Click the "Post" button.
-        5.  **Verify:** Take a screenshot of the live post to confirm.
+        3.  **Reliable Entry:** Use `evaluate_script` on the "Post text" field to:
+            - Clear any existing content (`el.innerText = ''`).
+            - Dispatch an `input` event to reset X's internal state.
+            - Use `document.execCommand('insertText', false, text)` to insert the drafted post. This method is preferred over `fill` to avoid desynchronization with X's React-based editor.
+            - Dispatch `input`, `change`, and `blur` events to ensure the "Post" button is enabled.
+        4.  **Pre-Post Validation:** Before clicking the button, run a final `evaluate_script` to check `el.innerText` and confirm the content is correct and not duplicated.
+        5.  Click the "Post" button.
+        6.  **Verify:** Take a screenshot of the live post to confirm.
 
 ## Reference Material
 
