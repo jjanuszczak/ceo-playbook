@@ -1,0 +1,6 @@
+{
+  "name": "article-creator",
+  "description": "Automates the creation of new article bundles, including GitHub issue tracking, feature branch isolation, and front matter standardization.",
+  "location": ".gemini/skills/article-creator/SKILL.md",
+  "status": "active"
+}

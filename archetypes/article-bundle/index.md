@@ -12,4 +12,5 @@ tags:
 showReadingTime: true
 showTableOfContents: true
 draft: true
+status: agent-pending
 ---
