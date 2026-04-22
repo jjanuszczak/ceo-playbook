@@ -27,6 +27,11 @@ Automates the creation of new article bundles, including GitHub issue tracking, 
 
 Provide the article slug (e.g., `my-new-post`) and any initial Markdown content. The skill will handle the infrastructure setup.
 
+## Implementation
+
+To execute this workflow, use the supporting Python script:
+`python3 .gemini/skills/article-creator/create_article.py <slug> [optional_content_file]`
+
 ## Standards
 
 -   **Slug Formatting:** Slugs should be lowercase and hyphen-separated.
