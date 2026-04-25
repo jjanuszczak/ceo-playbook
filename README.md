@@ -1,6 +1,6 @@
 # CEO Playbook
 
-Personal branding and strategy platform for John Januszczak, focusing on Fintech, Innovation Strategy, and C-Suite leadership.
+My profesisonal branding and strategy platform, focusing on Fintech, Innovation Strategy, and C-Suite leadership. Includes a lot of what I have been up to, including and stuff I am interested in. I made this repo public so that people can suggest edits to articles using github.
 
 ## Overview
 
@@ -22,25 +22,6 @@ This site is a static website built with **Hugo** and the **Blowfish** theme. It
 - `/signals`: Weekly synthesized insights and bookmarks.
 - `/.policies`: Governance documentation for categories and tags.
 - `/.gemini`: Custom AI coding skills and agent configurations.
-
-## Development
-
-### Prerequisites
-
-- Hugo Extended (latest version recommended)
-- Git
-
-### Local Setup
-
-1. Clone the repository:
-   ```bash
-   git clone --recursive https://github.com/jjanuszczak/ceo-playbook.git
-   ```
-2. Run the development server:
-   ```bash
-   hugo server -D
-   ```
-3. Open `http://localhost:1313` in your browser.
 
 ## Content Governance
 
