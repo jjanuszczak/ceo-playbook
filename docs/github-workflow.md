@@ -52,3 +52,16 @@ To make this workflow even more robust, the following can be implemented:
 | **Tue/Wed** | Refine & Review | `git push`, Open PR |
 | **Thu** | Merge & Deploy | `git merge main`, GH Action triggers |
 | **Fri** | Social & Newsletter | `repurpose-social`, Kit RSS Automation |
+
+## IV. Content Status
+
+| Status Code | Owner | Meaning |
+| :--- | :--- | :--- |
+| `agent_queued` | System | The idea exists, but the agent hasn't started research yet. |
+| `agent_researching` | Agent | Agent is actively using search/research skills. |
+| `agent_drafting` | Agent | Content is being written to the Hugo Leaf Bundle. |
+| `human_review` | Human | The Pause. Agent is finished; waiting for your edits. |
+| `human_revised` | Human | You've finished editing and want the agent to take it back. |
+| `agent_optimizing` | Agent | Agent is performing SEO, linking, or image alt-text skills. |
+| `agent_finalizing` | Agent | Agent is running hugo build checks and Git staging. |
+| `published` | None | The post is live and the branch is merged.
