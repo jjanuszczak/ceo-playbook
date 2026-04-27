@@ -132,14 +132,9 @@
 # the copyright notice. Configure as per the main menu above.
 
 [[footer]]
-  name = "Signals"
-  pageRef = "signals"
+  name = "Research"
+  pageRef = "research"
   weight = 10
-
-[[footer]]
-  name = "The Engine Room"
-  pageRef = "lab"
-  weight = 20
 
 [[footer]]
   name = "Tags"
