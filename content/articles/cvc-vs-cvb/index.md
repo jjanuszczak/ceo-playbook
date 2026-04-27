@@ -1,9 +1,9 @@
 ---
 title: "The Build vs. Buy of Innovation: CVC vs. Corporate Venture Building"
-date: 2026-04-03
+date: 2026-04-27
 summary: "Choosing between a CVC and a CVB is a defining strategic decision. Understanding the ROI math—why a $100M exit can be more valuable than a $1B Unicorn—is the key to winning the innovation game."
 description: "An executive's guide to the structural differences, ROI mechanics, and organizational friction of Corporate Venture Capital (CVC) versus Corporate Venture Building (CVB)."
-draft: true
+draft: false
 categories:
   - "Venture Building"
 tags:

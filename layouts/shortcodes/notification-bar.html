@@ -1,0 +1,40 @@
+{{- $type := .Get "type" | default "info" -}}
+{{- $message := .Get "message" -}}
+{{- $link := .Get "link" -}}
+{{- $linkText := .Get "linktext" | default "Learn more" -}}
+{{- $bgColor := .Get "bgcolor" -}}
+
+{{- $config := dict 
+    "info" (dict "class" "bg-blue-600 text-white" "icon" "circle-info")
+    "warning" (dict "class" "bg-yellow-500 text-black" "icon" "triangle-exclamation")
+    "success" (dict "class" "bg-green-600 text-white" "icon" "check")
+-}}
+
+{{- $current := index $config $type | default (index $config "info") -}}
+{{- $bgClass := $current.class -}}
+{{- $icon := $current.icon -}}
+{{- $style := "" -}}
+
+{{- if $bgColor -}}
+    {{- $bgClass = "text-white" -}}
+    {{- $style = printf "style=\"background-color: %s;\"" $bgColor -}}
+{{- end -}}
+
+<div class="fixed top-0 left-0 w-full z-[999] {{ $bgClass }} shadow-md" {{ $style | safeHTMLAttr }}>
+    <div class="container mx-auto px-4 py-1.5 flex items-center justify-center text-sm font-medium">
+        <span class="mr-2 h-4 w-4">
+            {{ partial "icon.html" $icon }}
+        </span>
+        {{ $message }}
+        {{ if $link }}
+            <a href="{{ $link }}" class="underline hover:opacity-80 ml-2">{{ $linkText }} &rarr;</a>
+        {{ end }}
+    </div>
+</div>
+
+<script>
+    document.body.style.paddingTop = "32px";
+</script>
+
+
+

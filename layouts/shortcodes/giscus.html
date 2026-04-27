@@ -1,0 +1,51 @@
+{{- $discussion := .Get "discussion" -}}
+{{- $reactions := .Get "reactions" | default "1" -}}
+
+<script src="https://giscus.app/client.js"
+        data-repo="jjanuszczak/ceo-playbook"
+        data-repo-id="R_kgDOQaK65w"
+        data-category="Article Feedback"
+        data-category-id="DIC_kwDOQaK6584C7taA"
+        {{- if $discussion }}
+        data-term="{{ $discussion }}"
+        data-mapping="specific"
+        {{- else }}
+        data-mapping="title"
+        {{- end }}
+        data-strict="0"
+        data-reactions-enabled="{{ $reactions }}"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<script>
+    function updateGiscusTheme() {
+        const isDark = document.documentElement.classList.contains('dark');
+        const giscusTheme = isDark ? 'transparent_dark' : 'light';
+        const iframe = document.querySelector('iframe.giscus-frame');
+        
+        if (iframe) {
+            iframe.contentWindow.postMessage({
+                giscus: {
+                    setConfig: {
+                        theme: giscusTheme
+                    }
+                }
+            }, 'https://giscus.app');
+        }
+    }
+
+    // Observe changes to the class attribute of the html element
+    const observer = new MutationObserver(updateGiscusTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    
+    // Also trigger on Giscus load
+    window.addEventListener('message', (event) => {
+        if (event.origin !== 'https://giscus.app') return;
+        updateGiscusTheme();
+    });
+</script>
