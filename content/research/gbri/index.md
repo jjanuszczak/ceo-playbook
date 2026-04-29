@@ -176,9 +176,9 @@ Min-max normalization was selected over other methods such as z-score standardiz
 | **Percentile Ranking**      | Good               | Weak                        | Moderate                   | Good                         |
 | **Rank Normalization**      | Excellent          | Poor                        | Weak                       | Moderate                     |
 
-## Global Rankings (Illustrative Top 20)
+## Global Rankings (Illustrative Only, Top 20)
 
-The following Global Rankings (Illustrative Top 20) present the highest-performing countries under the current GBRI methodology, based on the weighted combination of financial depth, ease of doing business, English proficiency, and education quality. These rankings should be interpreted as a comparative measure of overall business readiness rather than economic size or income level. Countries at the top tend to combine strong access to capital, efficient operating environments, globally deployable talent, and high-quality human capital pipelines. 
+The following Global Rankings *(illustrative only pending verification)* present the highest-performing countries under the current GBRI methodology, based on the weighted combination of financial depth, ease of doing business, English proficiency, and education quality. These rankings should be interpreted as a comparative measure of overall business readiness rather than economic size or income level. Countries at the top tend to combine strong access to capital, efficient operating environments, globally deployable talent, and high-quality human capital pipelines. 
 
 | Rank | Country        | GBRI |
 | ---- | -------------- | ---: |
