@@ -2,17 +2,21 @@
 title: "The Global Business Readiness Index (GBRI)"
 date: 2026-04-29T08:51:31+08:00
 # externalUrl: ""
-summary: ""
-description: ""
+summary: "The Global Business Readiness Index (GBRI) benchmarks countries by measuring the intersection of capital, execution friction, global operability, and future talent pipelines."
+description: "Draft whitepaper introducing the Global Business Readiness Index (GBRI), a new framework for evaluating where businesses can most effectively build, hire, fund, and scale."
 # Assign exactly one category: Strategy, Leadership, Fintech, Energy Transition, Technology, Venture Building, Essays
 categories:
-  - ""
+  - "Strategy"
 tags:
-  - ""
+  - "capital-allocation"
+  - "ecosystem-design"
+  - "organizational-design"
+  - "systems-thinking"
+  - "venture-capital"
 showReadingTime: true
 showTableOfContents: true
-draft: true
-status: agent-pending
+draft: false
+status: "Public Draft"
 ---
 
 {{< lead >}}
@@ -20,6 +24,9 @@ A New Framework for Evaluating Where Businesses Can Build, Hire, Fund, and Scale
 {{< /lead >}}
 
 **Draft Whitepaper: Verison 1.0** | *April 2026*
+
+> [!NOTE]+ Call for Expert Feedback
+> This whitepaper is currently in **Public Draft** status. Given the rapidly evolving nature of the business landscape, I am seeking peer review and data verification from the community to ensure this analysis remains as accurate and comprehensive as possible. If you have insights, data corrections, or alternative strategic perspectives, please contribute to the discussion at the [bottom of this page](#call-for-feedback).
 
 ## Executive Summary
 
@@ -439,17 +446,130 @@ Many countries can attract investment once. Few countries can repeatedly turn ca
 
 ## Call for Feedback
 
-Call for Expert Feedback: This report is currently in Public Draft status. Given the rapidly evolving nature of the global business landscape, we are seeking peer review and data verification from the community to ensure this analysis remains as accurate and comprehensive as possible. If you have insights, data corrections, or alternative strategic perspectives, please contribute to the discussion by posting a comment below. *Note: To maintain a high-quality, professional dialogue, you will be required to log in with a GitHub account to post comments.*
+This report is currently in Public Draft status. Given the rapidly evolving nature of the global business landscape, we are seeking peer review and data verification from the community to ensure this analysis remains as accurate and comprehensive as possible. If you have insights, data corrections, or alternative strategic perspectives, please contribute to the discussion by posting a comment below. 
+
+> [!NOTE]+ Authentication Required to Comment
+> To maintain a high-quality, professional dialogue, you will be required to log in with a GitHub account to post feedback and comments.
 
 {{< giscus discussion="Feedback request: Global Business Readiness Index" reactions=false >}}
 
+---
+
 ## Sources
 
-[IMF Financial Development Index Dataset](https://data.imf.org/en/datasets/IMF.MCM%3AFDI)
+### Core GBRI Methodology Sources
 
-[1]: https://documents1.worldbank.org/curated/en/688761571934946384/pdf/Doing-Business-2020-Comparing-Business-Regulation-in-190-Economies.pdf? "Doing Business 2020 - Documents & Reports - World Bank"
-[2]: https://archive.doingbusiness.org/en/doingbusiness "Explore Data Details - Doing Business"
+* International Monetary Fund (IMF). **Financial Development Index (FDI): Dataset Portal**
+  [https://data.imf.org/en/datasets/IMF.MCM%3AFDI](https://data.imf.org/en/datasets/IMF.MCM%3AFDI) ([data.imf.org][1])
 
-[Doing Business 2020 Rankings & Scores](https://www.doingbusiness.org/content/dam/doingBusiness/pdf/db2020/Doing-Business-2020_rankings.pdf)
+* International Monetary Fund (IMF). **About Financial Development Index (Methodology Overview)**
+  [https://data.imf.org/en/Datasets/FDI/About-FDI](https://data.imf.org/en/Datasets/FDI/About-FDI) ([data.imf.org][2])
 
-[OECD PISA Programme Overview](https://www.oecd.org/en/about/programmes/pisa.html), [PISA 2022 Results Volume I](https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html), and the [PISA 2022 Database](https://www.oecd.org/en/data/datasets/pisa-2022-database.html)
+* Svirydzenka, K. (2016). **Introducing a New Broad-based Index of Financial Development. IMF Working Paper WP/16/05**
+  [https://www.imf.org/external/pubs/ft/wp/2016/wp1605.pdf](https://www.imf.org/external/pubs/ft/wp/2016/wp1605.pdf) ([IMF][3])
+
+### Financial Depth Proxy Sources Used for GBRI Snapshot
+
+(Used where direct harmonized IMF depth values were unavailable or where blended market depth estimates improved comparability.)
+
+* World Bank. **Global Financial Development Database**
+  Includes indicators for private credit, financial institutions, stock markets, bond markets, access, stability, efficiency.
+  [https://www.worldbank.org/en/publication/gfdr/data/global-financial-development-database](https://www.worldbank.org/en/publication/gfdr/data/global-financial-development-database) ([World Bank][4])
+
+* World Bank DataBank / World Development Indicators. **Domestic Credit to Private Sector (% GDP)**
+  Common proxy for bank-led financial depth.
+  [https://data.worldbank.org/indicator/FS.AST.PRVT.GD.ZS](https://data.worldbank.org/indicator/FS.AST.PRVT.GD.ZS)
+
+* World Bank DataBank / World Development Indicators. **Market Capitalization of Listed Domestic Companies (% GDP)**
+  Common proxy for equity market depth.
+  [https://data.worldbank.org/indicator/CM.MKT.LCAP.GD.ZS](https://data.worldbank.org/indicator/CM.MKT.LCAP.GD.ZS)
+
+* World Bank DataBank / World Development Indicators. **Stocks Traded, Total Value (% GDP)**
+  Liquidity / capital market activity proxy.
+  [https://data.worldbank.org/indicator/CM.MKT.TRAD.GD.ZS](https://data.worldbank.org/indicator/CM.MKT.TRAD.GD.ZS)
+
+* Bank for International Settlements (BIS). **Debt Securities Statistics**
+  Proxy for local bond market depth.
+  [https://www.bis.org/statistics/secstats.htm](https://www.bis.org/statistics/secstats.htm)
+
+* OECD Global Pension Statistics
+  Proxy for long-duration domestic institutional capital pools.
+  [https://www.oecd.org/finance/private-pensions/globalpensionstatistics.htm](https://www.oecd.org/finance/private-pensions/globalpensionstatistics.htm)
+
+### Ease of Doing Business Component
+
+* World Bank Group. **Doing Business 2020: Comparing Business Regulation in 190 Economies**
+  Final full Doing Business report.
+  [https://documents1.worldbank.org/curated/en/688761571934946384/pdf/Doing-Business-2020-Comparing-Business-Regulation-in-190-Economies.pdf](https://documents1.worldbank.org/curated/en/688761571934946384/pdf/Doing-Business-2020-Comparing-Business-Regulation-in-190-Economies.pdf)
+
+* World Bank Group. **Doing Business 2020 Rankings and Scores**
+  [https://archive.doingbusiness.org/en/rankings](https://archive.doingbusiness.org/en/rankings) ([data.imf.org][2])
+
+### English Proficiency Component
+
+* EF Education First. **EF English Proficiency Index (EF EPI)**
+  Global ranking of adult English proficiency.
+  [https://www.ef.com/wwen/epi/](https://www.ef.com/wwen/epi/)
+
+* EF Education First. **EF EPI Methodology**
+  [https://www.ef.com/wwen/epi/about/](https://www.ef.com/wwen/epi/about/)
+
+### Education Quality Component
+
+* OECD. **Programme for International Student Assessment (PISA)**
+  [https://www.oecd.org/en/about/programmes/pisa.html](https://www.oecd.org/en/about/programmes/pisa.html)
+
+* OECD. **PISA 2022 Results Volume I**
+  [https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html](https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html)
+
+* OECD. **PISA 2022 Database**
+  [https://www.oecd.org/en/data/datasets/pisa-2022-database.html](https://www.oecd.org/en/data/datasets/pisa-2022-database.html)
+
+### Supporting Comparative / Validation References
+
+* World Economic Forum. **Global Competitiveness Reports (archived series)**
+  [https://www.weforum.org/reports/](https://www.weforum.org/reports/)
+
+* United Nations Development Programme (UNDP). **Human Development Reports / HDI**
+  [https://hdr.undp.org/](https://hdr.undp.org/)
+
+* World Intellectual Property Organization (WIPO). **Global Innovation Index**
+  [https://www.wipo.int/global_innovation_index/](https://www.wipo.int/global_innovation_index/)
+
+* StartupBlink. **Global Startup Ecosystem Rankings**
+  [https://www.startupblink.com/](https://www.startupblink.com/)
+
+* Startup Genome. **Global Startup Ecosystem Report**
+  [https://startupgenome.com/reports](https://startupgenome.com/reports)
+
+### Statistical Methodology References
+
+* OECD. **Handbook on Constructing Composite Indicators**
+  Widely cited reference for normalization, weighting, aggregation.
+  [https://www.oecd.org/sdd/42495745.pdf](https://www.oecd.org/sdd/42495745.pdf)
+
+* World Bank. **Composite Indicator Guidance / Governance Indicators Methods**
+  [https://info.worldbank.org/governance/wgi/](https://info.worldbank.org/governance/wgi/)
+
+### Notes on GBRI Snapshot Construction
+
+* Financial Depth scores in the GBRI snapshot were based primarily on IMF FDI concepts, supplemented where necessary with blended proxies such as:
+
+  * private sector credit / GDP
+  * stock market capitalization / GDP
+  * debt securities / GDP
+  * pension / insurance / fund assets
+  * observed market sophistication
+
+* Ease of Doing Business used World Bank Doing Business 2020 scores.
+
+* English used EF EPI rankings / scores.
+
+* Education used OECD PISA 2022 Math + Science + Reading totals.
+
+* Inputs were normalized to a 0–100 scale using min-max normalization prior to weighting and aggregation.
+
+[1]: https://data.imf.org/en/datasets/IMF.MCM%3AFDI?utm_source=chatgpt.com "FDI - IMF Data - International Monetary Fund"
+[2]: https://data.imf.org/en/Datasets/FDI/About-FDI?utm_source=chatgpt.com "About Financial Development Index - IMF Data"
+[3]: https://www.imf.org/external/pubs/ft/wp/2016/wp1605.pdf?utm_source=chatgpt.com "Introducing a New Broad-based Index of Financial ..."
+[4]: https://www.worldbank.org/en/publication/gfdr/data/global-financial-development-database?utm_source=chatgpt.com "Global Financial Development Database"
