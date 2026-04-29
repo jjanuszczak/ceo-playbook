@@ -31,7 +31,7 @@ Evolution, Economics, and the Future of Digital Finance
 Stablecoins have rapidly emerged as a cornerstone of digital finance, bridging traditional money and cryptocurrencies. These assets are designed to maintain a steady value (often pegged to fiat currencies like the U.S. dollar) while leveraging blockchain’s speed and programmability. Since their inception in 2014, stablecoins have grown from niche experiments to a global market exceeding $250 billion in supply, enabling trillions in annual transaction volume[^1]<sup>,</sup>[^2]. Financial executives and investors now view stablecoins as both a transformative opportunity and a source of new risks. This strategic analysis provides a detailed study of stablecoins’ evolution, technical design, value flows, economic models, use cases, and the regulatory landscape. It also examines future outlooks, investment considerations, and potential challenges – including the case against stablecoins – to offer a balanced, in-depth understanding for decision-makers.
 
 > [!NOTE]+ Call for Expert Feedback
-> This report is currently in **Public Draft** status. Given the rapidly evolving nature of the digital finance landscape, we are seeking peer review and data verification from the community to ensure this analysis remains as accurate and comprehensive as possible. If you have insights, data corrections, or alternative strategic perspectives, please contribute to the discussion at the [bottom of this page](#call-for-expert-feedback).
+> This report is currently in **Public Draft** status. Given the rapidly evolving nature of the digital finance landscape, I am seeking peer review and data verification from the community to ensure this analysis remains as accurate and comprehensive as possible. If you have insights, data corrections, or alternative strategic perspectives, please contribute to the discussion at the [bottom of this page](#call-for-expert-feedback).
 
 ## 1\. History and Background
 
@@ -463,7 +463,10 @@ For financial executives and investors, stablecoins represent both an opportunit
 
 ## Call for Expert Feedback
 
-**Call for Expert Feedback:** This report is currently in **Public Draft** status. Given the rapidly evolving nature of the digital finance landscape, we are seeking peer review and data verification from the community to ensure this analysis remains as accurate and comprehensive as possible. If you have insights, data corrections, or alternative strategic perspectives, please contribute to the discussion by posting a comment below. *Note: To maintain a high-quality, professional dialogue, you will be required to log in with a GitHub account to post comments.*
+**Call for Expert Feedback:** This report is currently in **Public Draft** status. Given the rapidly evolving nature of the digital finance landscape, we are seeking peer review and data verification from the community to ensure this analysis remains as accurate and comprehensive as possible. If you have insights, data corrections, or alternative strategic perspectives, please contribute to the discussion by posting a comment below. 
+
+> [!NOTE]+ Authentication Required to Comment
+> To maintain a high-quality, professional dialogue, you will be required to log in with a GitHub account to post feedback and comments.
 
 {{< giscus discussion="Feedback request: Stablecoins Global Strategic Analysis" reactions=false >}}
 
