@@ -1,6 +1,6 @@
 ---
 title: "The Art of Strategic Forgetting: World Models and the Future of AI"
-date: 2026-04-25T13:23:20+08:00
+date: 2026-05-04
 summary: "AI pioneer Yann LeCun argues that intelligence is the art of strategic forgetting. Discover why 'world models' and hierarchical abstraction are the keys to human-level AI."
 description: "Yann LeCun, the Godfather of AI, recently shared his vision for the future of artificial intelligence. He argues that true intelligence requires finding the right level of abstraction—ignoring infinite subatomic detail to make long-term predictions about the world."
 categories:
@@ -13,10 +13,10 @@ tags:
   - "simulation"
 showReadingTime: true
 showTableOfContents: true
-draft: true
+draft: false
 status: "user-review"
 ---
-[Yann LeCun](http://yann.lecun.com/) is a pioneering French-American computer scientist, currently serving as the Chief AI Scientist at Meta and a Silver Professor at New York University. Often hailed as one of the "Godfathers of AI," he was co-awarded the 2018 Turing Award for his foundational breakthroughs in deep learning and the development of Convolutional Neural Networks (CNNs), which revolutionized computer vision. Today, LeCun is a leading advocate for moving beyond current Large Language Models toward "World Models"—autonomous systems capable of hierarchical abstraction, common sense, and human-level reasoning.
+[Yann LeCun](http://yann.lecun.com/) is a pioneering French-American computer scientist, currently serving as the Chief AI Scientist at Meta and a Silver Professor at New York University. Often hailed as one of the "Godfathers of AI," he was co-awarded the 2018 Turing Award for his foundational breakthroughs in deep learning and the development of Convolutional Neural Networks (CNNs), which revolutionized computer vision. Today, LeCun is a leading advocate for moving beyond current Large Language Models toward "World Models": autonomous systems capable of hierarchical abstraction, common sense, and human-level reasoning.
 
 He recently shared the following perspective on intelligence:
 
