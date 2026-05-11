@@ -9,7 +9,7 @@ description: >
   strategic lessons on network effects, ecosystem design, and the hidden power of legacy systems.
 categories: ["Strategy"]
 tags: ["ecosystem-design", "platform-economics", "long-term-thinking", "software-engineering", "mental-models", "systems-thinking"]
-draft: true
+draft: false
 ---
 
 In 1996, Apple was dying.
