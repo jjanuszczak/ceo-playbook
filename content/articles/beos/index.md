@@ -1,6 +1,6 @@
 ---
 title: "The Most Brilliant Failure in Tech: What Leaders Can Learn from BeOS"
-date: 2026-04-15
+date: 2026-05-11
 summary: >
   The story of BeOS is a masterclass in platform strategy. Despite its technical superiority, the "Media OS" failed because it lacked one critical component: an ecosystem. This is the story of how Be Inc. almost saved Apple, and why being "better" isn't always enough to win.
 description: >
