@@ -16,9 +16,11 @@ Automates the creation of new article bundles, including GitHub issue tracking, 
     -   Use the `hugo new --kind article-bundle articles/<slug>` command to generate a new leaf bundle.
     -   This ensures all required front matter (title, date, categories, tags, etc.) is included.
 
-4.  **Front Matter Initialization:**
+-   **Front Matter & Structure:** 
     -   Automatically set the `status` property in the front matter to `"user-review"`.
+    -   **Pillar One Alignment:** Ensure the article includes the `{{< quick-answer >}}` and `{{< faq >}}` placeholders as defined in the `article-bundle` archetype.
     -   Optionally append provided Markdown content to the `index.md` file.
+
 
 5.  **User Notification:**
     -   Provide the user with the path to the newly created `index.md` and the name of the feature branch.
