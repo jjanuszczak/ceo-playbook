@@ -27,6 +27,10 @@ Automates the migration of external article content (from LinkedIn, Medium, Subs
         -   Convert YouTube or Vimeo links into Hugo `{{< youtube id >}}` or `{{< vimeo id >}}` shortcodes.
 
 4.  **Semantic Cleanup & Link Resolution:**
+    -   **Pillar One AEO injection:** 
+        -   Generate a `{{< quick-answer >}}` block based on the article's summary or first paragraph.
+        -   Append a `{{< faq >}}` block with at least two relevant Q&A pairs extracted from the content.
+        -   Ensure H2 headings are phrased as questions where appropriate.
     -   **Internal Links:** Detect if the external article links to another URL on `johnjanuszczak.com`. Replace these with Hugo `{{< relref "path" >}}` shortcodes.
     -   **Formatting:** Convert HTML elements (headings, bold, lists) into clean Markdown.
     -   **Attribution:** Add the mandatory attribution line below the front matter: `*This article originally appeared on [Platform](ExternalURL) on YYYY-MM-DD*.`.

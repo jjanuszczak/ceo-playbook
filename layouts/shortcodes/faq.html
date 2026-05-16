@@ -1,0 +1,44 @@
+{{/*
+    FAQ Shortcode with FAQPage Structured Data
+    Usage:
+    {{< faq >}}
+      {{% faq-item question="What is AEO?" %}}
+        Answer Engine Optimization (AEO) is the process of...
+      {{% /faq-item %}}
+    {{< /faq >}}
+*/}}
+
+<div class="aeo-faq my-12">
+    <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+        {{ .Inner }}
+    </div>
+</div>
+
+{{/* Inject JSON-LD for the FAQPage */}}
+{{- if .Inner -}}
+{{- $questions := findRE "data-question=\"([^\"]+)\"" .Inner -}}
+{{- $answers := findRE "data-answer=\"([^\"]+)\"" .Inner -}}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- range $index, $q := $questions -}}
+      {{- if $index -}},{{- end -}}
+      {{- $questionText := index (findRE "[^\"]+" (index (findRE "\"[^\"]+\"" $q) 0)) 0 -}}
+      {{- $answerText := index (findRE "[^\"]+" (index (findRE "\"[^\"]+\"" (index $answers $index)) 0)) 0 -}}
+      {
+        "@type": "Question",
+        "name": "{{ $questionText | safeJS }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ $answerText | safeJS }}"
+        }
+      }
+    {{- end -}}
+  ]
+}
+</script>
+{{- end -}}

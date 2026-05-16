@@ -12,6 +12,16 @@ tags:
   - "capital-allocation"
   - "platform-economics"
   - "systems-thinking"
+about:
+  - name: "Corporate venture capital"
+    url: "https://en.wikipedia.org/wiki/Corporate_venture_capital"
+  - name: "Venture builder"
+    url: "https://en.wikipedia.org/wiki/Venture_builder"
+mentions:
+  - name: "Return on investment"
+    url: "https://en.wikipedia.org/wiki/Return_on_investment"
+  - name: "Unicorn (finance)"
+    url: "https://en.wikipedia.org/wiki/Unicorn_(finance)"
 ---
 
 In the C-Suite, we often treat "innovation" like a bucket of spare parts. We know we need it, but we rarely agree on the assembly instructions. 
@@ -19,6 +29,10 @@ In the C-Suite, we often treat "innovation" like a bucket of spare parts. We kno
 I’ve spent a good part of my career running both **Corporate Venture Capital (CVC)** funds and **Corporate Venture Builders (CVB)**. From the outside, they look like cousins: both involve startups, both require capital, and both aim to "disrupt" before being disrupted. 
 
 But from the inside? They are entirely different asset classes. 
+
+{{< quick-answer >}}
+Corporate Venture Capital (CVC) is about **optionality**—investing minority stakes in existing startups for market insight. Corporate Venture Building (CVB) is about **execution**—creating and owning new ventures from scratch to solve specific industry problems. The choice depends on whether you need to **scout the market** or **build a new capability**.
+{{< /quick-answer >}}
 
 One is about **optionality**: buying a seat at the table to see which way the wind is blowing. The other is about **execution**: building the table ourselves because we have a high-conviction belief that we can own the room. 
 
@@ -113,6 +127,18 @@ Use your **CVC fund as a radar**. It scans the horizon, identifies emerging thre
 Use your **Venture Builder as a laser**. When your CVC radar identifies a gap that is strategically vital to your core, and you have a high-conviction belief that you can solve it better than anyone else, that’s when you build.
 
 **The future isn’t a straight line; it’s a web of connections.** As a leader, your job isn't just to fund innovation. Your job is to architect the structure that allows it to survive.
+
+{{< faq >}}
+  {{% faq-item question="When should a company choose CVC over Venture Building?" %}}
+  Choose CVC when you want to **scan the horizon** for emerging trends, disruptive technologies, or potential M&A targets with low operational overhead. It's about optionality and ecosystem access.
+  {{% /faq-item %}}
+  {{% faq-item question="Why is ownership higher in Venture Building?" %}}
+  In Venture Building (CVB), the corporation is the **founding entity**. You provide the initial capital, resources, and "unfair advantage," which typically results in 80-100% equity ownership at inception, compared to 5-15% in CVC.
+  {{% /faq-item %}}
+  {{% faq-item question="What is the biggest risk in Corporate Venture Building?" %}}
+  The biggest risk is the **"Corporate Immune System."** Internal bureaucracy, procurement, and legal processes can accidentally kill a startup by forcing it to comply with slow, enterprise-grade standards too early.
+  {{% /faq-item %}}
+{{< /faq >}}
 
 {{< related-posts title="Related Insights" paths="articles/ev-mobility-sea, articles/moats-vibe-coding" >}}
 

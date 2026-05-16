@@ -45,6 +45,16 @@ draft: true
 summary: "Short SEO-friendly summary."
 description: "Longer, descriptive text for social cards."
 tags: ["governance-checked-tag-1", "governance-checked-tag-2"]
+# Pillar 2: Advanced Schema (Map to global Knowledge Graph)
+about:
+  - name: "Primary Topic"
+    url: "https://en.wikipedia.org/wiki/Primary_Topic"
+mentions:
+  - name: "Secondary Concept"
+    url: "https://en.wikipedia.org/wiki/Secondary_Concept"
+citations:
+  - title: "Supporting Evidence/Report"
+    url: "https://example.com/report"
 showReadingTime: false
 ---
 ```
@@ -52,6 +62,7 @@ showReadingTime: false
 #### Specific Nuances
 *   **Articles:**
     *   Must include `categories: ["Category Name"]`.
+    *   **Advanced Schema:** Proactively research and populate `about` and `mentions` with high-authority links (Wikipedia, Industry Standards) to build semantic authority.
     *   If reposting, add `externalUrl: "..."`.
 *   **Videos:**
     *   Must include `categories: ["Category Name"]`.
@@ -59,10 +70,14 @@ showReadingTime: false
 *   **Lab:**
     *   Frontmatter: `showTableOfContents: true`.
 
-### 3. Phase 3: Content Generation
+### 3. Phase 3: Content Generation & AEO Optimization
 *   **Tone:** Professional, C-Suite strategic, first-person ("I").
+*   **AEO (Answer Engine Optimization) Mandates:**
+    *   **Quick Answer:** Every article MUST start with the `{{< quick-answer >}}` shortcode immediately after the introduction, providing a 2-3 sentence summary of the core answer/insight.
+    *   **Semantic Hierarchy:** Start with H2 (`##`). H2s should be phrased as questions where possible to capture natural language search intent (e.g., "Why choose X?" instead of "Benefits of X").
+    *   **FAQ Section:** Every major article should conclude with a `{{< faq >}}` block containing at least 2-3 `{{% faq-item %}}` pairs to capture "People Also Ask" intent and inject FAQPage schema.
 *   **Images:** Use the shortcode: `{{< figure src="image.png" alt="SEO text" caption="Visible caption" >}}`.
-*   **Headings:** Start with H2 (`##`).
+*   **Headings:** Strictly follow H2 -> H3 hierarchy. Never skip levels.
 
 ### 4. Execution
 1.  **Propose:** Show the user the planned file path (`content/.../index.md`) and the generated frontmatter for approval.
