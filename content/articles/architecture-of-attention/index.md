@@ -1,25 +1,35 @@
 ---
 title: "Architecture of Attention: Emerging Trends in 2026"
-date: 2026-05-10T11:58:43+08:00
-# externalUrl: ""
+date: 2026-05-17
 summary: "Tracing the strategic evolution of januszczak.org's Signals series and the underlying architecture of content curation."
 description: "A mid-year audit of the Signals series reveals a shift from mapping AI capability to understanding organizational culture and systemic infrastructure."
-# Assign exactly one category: Strategy, Leadership, Fintech, Energy Transition, Technology, Venture Building, Essays
-categories:
-  - "Strategy"
-tags:
-  - "knowledge-management"
-  - "systems-thinking"
-  - "taxonomy"
-  - "long-term-thinking"
-  - "artificial-intelligence"
+categories: ["Strategy"]
+tags: ["knowledge-management", "systems-thinking", "taxonomy", "long-term-thinking", "artificial-intelligence"]
 showReadingTime: true
-showTableOfContents: true
-draft: true
+showTableOfContents: false
+draft: false
 status: "user-review"
+# Pillar 2: Advanced Schema
+about:
+  - name: "Information synthesis"
+    url: "https://en.wikipedia.org/wiki/Information_synthesis"
+  - name: "Systems thinking"
+    url: "https://en.wikipedia.org/wiki/Systems_thinking"
+mentions:
+  - name: "Artificial Intelligence"
+    url: "https://en.wikipedia.org/wiki/Artificial_intelligence"
+  - name: "SaaS"
+    url: "https://en.wikipedia.org/wiki/Software_as_a_service"
+citations:
+  - title: "The Jevons Paradox"
+    url: "https://en.wikipedia.org/wiki/Jevons_paradox"
 ---
 
 Since the start of the year, I have maintained a weekly discipline called **[Signals]({{< relref "signals" >}})**. 
+
+{{< quick-answer >}}
+**Architecture of Attention** is the strategic framework of synthesizing high-frequency market observations into coherent systemic insights. By auditing 19 weeks of the "Signals" series, we see an evolution from tracking AI capability to prioritizing organizational culture and systemic infrastructure as the new "cultural moats" for businesses.
+{{< /quick-answer >}}
 
 The premise is simple: for every hour spent on "slow-twitch" deep analysis, the kind found in my long-form [articles]({{< relref "articles" >}}), there are dozens of "fast-twitch" market observations that catch my eye. These are the tweets, book highlights, and technical breakthroughs that act as the early-warning system for strategic shifts.
 
@@ -59,7 +69,17 @@ The most significant evolution in my writing has been the **shifting "altitude" 
 
 We are moving out of the "AI Model Era" and into the Systemic AI Era, where the value lies not in intelligence itself, but in the architecture that directs it.
 
----
+{{< faq >}}
+  {{% faq-item question="What is the 'Systemic AI Era'?" %}}
+  The Systemic AI Era marks a shift where the primary business value is found not in AI intelligence itself, but in the organizational architecture that directs it. Success now depends on goal-alignment and the ability to define intent, rather than just managing processes.
+  {{% /faq-item %}}
+  {{% faq-item question="Why are legacy SaaS giants facing a 'Great UI Culling'?" %}}
+  As "Agentic UIs" become the standard, traditional dashboards and manual interfaces are becoming obsolete. Companies that sell tools instead of outcomes will struggle as autonomous agents bypass legacy SaaS interfaces entirely.
+  {{% /faq-item %}}
+  {{% faq-item question="How can leaders become 'System Architect' leaders?" %}}
+  Success now requires leaders to design an organization’s operating model with the same rigor used to code software. This means blending CTO-level technical insight with COO-level operational precision to align the entire organization around clear, AI-governed outcomes.
+  {{% /faq-item %}}
+{{< /faq >}}
 
 {{< related-posts title="Related Insights" paths="lab/category-vs-tag, articles/burke-lecture" >}}
 
