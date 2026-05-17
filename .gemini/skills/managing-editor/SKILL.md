@@ -76,6 +76,7 @@ showReadingTime: false
     *   **Quick Answer:** Every article MUST start with the `{{< quick-answer >}}` shortcode immediately after the introduction, providing a 2-3 sentence summary of the core answer/insight.
     *   **Semantic Hierarchy:** Start with H2 (`##`). H2s should be phrased as questions where possible to capture natural language search intent (e.g., "Why choose X?" instead of "Benefits of X").
     *   **FAQ Section:** Every major article should conclude with a `{{< faq >}}` block containing at least 2-3 `{{% faq-item %}}` pairs to capture "People Also Ask" intent and inject FAQPage schema.
+    *   **Related/Read-Next Content:** Every article MUST conclude with `{{< related-posts ... >}}` and `{{< read-next ... >}}` shortcodes. Use the `related-posts-suggester` and `read-next-suggester` skills to identify appropriate links.
 *   **Images:** Use the shortcode: `{{< figure src="image.png" alt="SEO text" caption="Visible caption" >}}`.
 *   **Headings:** Strictly follow H2 -> H3 hierarchy. Never skip levels.
 
