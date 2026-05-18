@@ -23,7 +23,7 @@ Automates the technical provisioning of all site content types (Articles, Resear
 ## Implementation
 
 To execute this workflow, use the supporting Python script:
-`python3 .gemini/skills/article-creator/scripts/create_content.py <content_type> <slug>`
+`python3 .gemini/skills/content-creator/scripts/create_content.py <content_type> <slug>`
 
 **Available Types:** `article`, `research`, `video`, `lab`, `portfolio`, `signals`.
 

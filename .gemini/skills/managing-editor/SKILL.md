@@ -16,8 +16,8 @@ Activate this skill when the user wants to:
 
 ### 0. Phase 0: Provisioning & Normalization
 1.  **Infrastructure Provisioning (New Posts):**
-    - If the request is to create a *new* post, you MUST first leverage the `article-creator` skill to provision the GitHub issue, feature branch, and leaf bundle.
-    - Provide the `article-creator` with the `slug`.
+    - If the request is to create a *new* post, you MUST first leverage the `content-creator` skill to provision the GitHub issue, feature branch, and leaf bundle.
+    - Provide the `content-creator` with the `slug`.
     - Once provisioned, continue work in the new feature branch at the returned `index.md` path.
 2.  **Input Normalization:**
     - **Pasted Content:** Generate a URL-friendly `slug` from the title/content.
@@ -90,8 +90,8 @@ You MUST autonomously verify every content task:
 *   **Category Policy:** `.policies/category_governance_policy.md`
 *   **Tag Policy:** `.policies/tag_governance_policy.md`
 *   **Evaluation Runner:** `.gemini/skills/managing-editor/evals/runner.py`
-* **Provisioner:** `.gemini/skills/article-creator/scripts/create_content.py`
+* **Provisioner:** `.gemini/skills/content-creator/scripts/create_content.py`
 </AVAILABLE_RESOURCES>
 er.py`
-* **Provisioner:** `.gemini/skills/article-creator/scripts/create_article.py`
+* **Provisioner:** `.gemini/skills/content-creator/scripts/create_article.py`
 </AVAILABLE_RESOURCES>
