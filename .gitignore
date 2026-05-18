@@ -5,3 +5,5 @@
 docs/repurposed/
 .env
 .gemini/skills/managing-editor/evals/reports/
+__pycache__/
+*.pyc
