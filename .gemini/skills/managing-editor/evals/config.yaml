@@ -1,0 +1,23 @@
+pipeline:
+  target_version: "hugo-blowfish-v2"
+  steps:
+    - name: "Leaf Bundle Verification"
+      id: "structure"
+      script: "checks/structure.py"
+      halt_on_fail: true
+    - name: "Governance & Frontmatter"
+      id: "frontmatter"
+      script: "checks/frontmatter.py"
+      halt_on_fail: true
+    - name: "AEO Compliance (Answer/FAQ)"
+      id: "aeo"
+      script: "checks/aeo.py"
+      halt_on_fail: false
+    - name: "Semantic Navigation"
+      id: "links"
+      script: "checks/links.py"
+      halt_on_fail: false
+    - name: "Hugo Build Verification"
+      id: "build"
+      script: "checks/build.py"
+      halt_on_fail: true

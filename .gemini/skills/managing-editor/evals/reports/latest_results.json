@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-05-18T10:56:24.722955",
+  "article_path": "content/articles/trust-as-infrastructure/index.md",
+  "overall_status": "PASS",
+  "checks": [
+    {
+      "id": "structure",
+      "name": "Leaf Bundle Verification",
+      "status": "PASS",
+      "details": {
+        "message": "Structure is valid Leaf Bundle"
+      }
+    },
+    {
+      "id": "frontmatter",
+      "name": "Governance & Frontmatter",
+      "status": "PASS",
+      "details": {
+        "message": "Frontmatter is valid and AEO compliant"
+      }
+    },
+    {
+      "id": "aeo",
+      "name": "AEO Compliance (Answer/FAQ)",
+      "status": "PASS",
+      "details": {
+        "message": "AEO compliance (Quick Answer & FAQ) verified"
+      }
+    },
+    {
+      "id": "links",
+      "name": "Semantic Navigation",
+      "status": "PASS",
+      "details": {
+        "message": "Semantic navigation (Related Posts & Read Next) verified with parameters"
+      }
+    },
+    {
+      "id": "build",
+      "name": "Hugo Build Verification",
+      "status": "PASS",
+      "details": {
+        "message": "Hugo build successful"
+      }
+    }
+  ]
+}
