@@ -20,7 +20,7 @@ Automates the technical provisioning of new article bundles, including GitHub is
 ## Implementation
 
 To execute this workflow, use the supporting Python script:
-`python3 .gemini/skills/article-creator/create_article.py <slug>`
+`python3 .gemini/skills/article-creator/scripts/create_article.py <slug>`
 
 ## Integration Note
 This skill is a "downstream" dependency for the `managing-editor`. When asked to create an article, the system should:
