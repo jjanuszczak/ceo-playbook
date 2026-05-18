@@ -13,7 +13,7 @@ showReadingTime: true
 showTableOfContents: true
 draft: true
 status: agent-pending
-# Advanced Schema: Link to authoritative entities (e.g., Wikipedia)
+# Pillar 2: Advanced Schema
 about:
   - name: ""
     url: ""
@@ -43,3 +43,7 @@ Summarize the core answer or insight of this article in 2-3 sentences here to ta
   Detailed answer for search snippets.
   {{% /faq-item %}}
 {{< /faq >}}
+
+{{< related-posts title="Related Insights" paths="" >}}
+
+{{< read-next title="Read Next" link="" buttonText="View More Insights" >}}

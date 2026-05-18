@@ -14,27 +14,25 @@ Activate this skill when the user wants to:
 
 ## Instructions
 
-### 0. Phase 0: Ingestion & Normalization
-Before applying governance, normalize the input:
-1.  **Input Source Identification:**
-    - **Case A (File Path):** Read the file contents. If it is a "flat" markdown file (e.g., `articles/my-post.md`), plan to migrate it to a **Leaf Bundle** (`articles/my-post/index.md`).
-    - **Case B (Pasted Content):** Treat as a new draft. Generate a URL-friendly `slug` from the title or content.
-2.  **Content Sanitization:**
-    - Strip redundant H1 titles from the body (the frontmatter `title` field handles this).
-    - Identify and preserve any existing metadata (date, author, etc.) if present.
+### 0. Phase 0: Provisioning & Normalization
+1.  **Infrastructure Provisioning (New Posts):**
+    - If the request is to create a *new* post, you MUST first leverage the `content-creator` skill to provision the GitHub issue, feature branch, and leaf bundle.
+    - Provide the `content-creator` with the `slug`.
+    - Once provisioned, continue work in the new feature branch at the returned `index.md` path.
+2.  **Input Normalization:**
+    - **Pasted Content:** Generate a URL-friendly `slug` from the title/content.
+    - **Sanitization:** Strip redundant H1 titles (the frontmatter handles this). Preserve any existing metadata (date, author).
 
 ### 1. Phase 1: Context & Governance
 Before writing any content, you MUST:
-1.  **Identify Content Type:** Determine if the request is for an **Article**, **Video**, or **Lab** entry.
-2.  **Read Governance Policies:**
-    - Read `.policies/category_governance_policy.md`.
-    - Read `.policies/tag_governance_policy.md`.
+1.  **Identify Content Type:** Article, Video, or Lab.
+2.  **Read Governance Policies:** `.policies/category_governance_policy.md` and `.policies/tag_governance_policy.md`.
 3.  **Validate Taxonomy:**
-    - **Categories:** For Articles and Videos, select ONE category from the strictly enforced list. If the topic doesn't fit, ask for clarification.
-    - **Tags:** Compare draft keywords against the canonical list. **Proactive Mapping:** Map common terms to canonical tags (e.g., "AI" → "artificial-intelligence"). Flag any brand-new tags for user approval per the "New Tag Test".
+    - **Categories:** Select ONE from the approved list.
+    - **Tags:** Proactively map keywords to canonical tags. Flag brand-new tags for approval.
 
-### 2. Phase 2: Bundle Structure & Frontmatter
-Always enforce a **Leaf Bundle** structure (`content/<section>/<slug>/index.md`).
+### 2. Phase 2: Frontmatter & Metadata
+Ensure the **Leaf Bundle** structure is maintained.
 
 #### Common Frontmatter
 ```yaml
@@ -60,44 +58,37 @@ showReadingTime: false
 ```
 
 #### Specific Nuances
-*   **Articles:**
-    *   Must include `categories: ["Category Name"]`.
-    *   **Advanced Schema:** Proactively research and populate `about` and `mentions` with high-authority links (Wikipedia, Industry Standards) to build semantic authority.
-    *   If reposting, add `externalUrl: "..."`.
-*   **Videos:**
-    *   Must include `categories: ["Category Name"]`.
-    *   **Body:** Start with: `{{< youtubeLite id="VIDEO_ID" label="Title" >}}`.
-*   **Lab:**
-    *   Frontmatter: `showTableOfContents: true`.
+*   **Articles:** Must include `categories: ["Category Name"]`. Proactively research `about` and `mentions` with high-authority links.
+*   **Videos:** Must include `categories: ["Category Name"]`. Body starts with `{{< youtubeLite id="VIDEO_ID" label="Title" >}}`.
+*   **Lab:** Frontmatter: `showTableOfContents: true`.
 
 ### 3. Phase 3: Content Generation & AEO Optimization
 *   **Tone & Style:**
     *   Professional, C-Suite strategic, first-person ("I").
-    *   **Punctuation:** Avoid the use of em dashes (`—`). Use colons, commas, or parentheses instead to maintain a clean, executive style.
-*   **AEO (Answer Engine Optimization) Mandates:**
-    *   **Quick Answer:** Every article MUST start with the `{{< quick-answer >}}` shortcode immediately after the introduction, providing a 2-3 sentence summary of the core answer/insight.
-    *   **Semantic Hierarchy:** Start with H2 (`##`). H2s should be phrased as questions where possible to capture natural language search intent (e.g., "Why choose X?" instead of "Benefits of X").
-    *   **FAQ Section:** Every major article should conclude with a `{{< faq >}}` block containing at least 2-3 `{{% faq-item %}}` pairs to capture "People Also Ask" intent and inject FAQPage schema.
-    *   **Related/Read-Next Content:** Every article MUST conclude with `{{< related-posts ... >}}` and `{{< read-next ... >}}` shortcodes. Use the `related-posts-suggester` and `read-next-suggester` skills to identify appropriate links.
-*   **Images:** Use the shortcode: `{{< figure src="image.png" alt="SEO text" caption="Visible caption" >}}`.
-*   **Headings:** Strictly follow H2 -> H3 hierarchy. Never skip levels.
+    *   **Punctuation:** Avoid em dashes (`—`). Use colons, commas, or parentheses.
+*   **AEO Mandates:**
+    *   **Quick Answer:** Start with `{{< quick-answer >}}` shortcode after the introduction (2-3 sentence summary).
+    *   **Semantic Hierarchy:** H2 headings (`##`) phrased as questions where possible.
+    *   **FAQ Section:** Conclude with `{{< faq >}}` block and at least 2-3 `{{% faq-item %}}` pairs.
+    *   **Related/Read-Next:** MUST conclude with `{{< related-posts ... >}}` and `{{< read-next ... >}}`. Use `related-posts-suggester` and `read-next-suggester`.
+*   **Images:** Use `{{< figure src="image.png" alt="SEO text" caption="Visible caption" >}}`.
 
-### 4. Phase 4: Execution
-1.  **Propose:** Show the user the planned file path (`content/.../index.md`) and the generated frontmatter for approval.
-2.  **Create/Move:** Use `write_file` for the `index.md`. If migrating a flat file, ensure the old file is deleted after the bundle is created.
+### 4. Phase 4: Execution & Verification
+1.  **Propose:** Show the planned file path and frontmatter for approval.
+2.  **Write:** Use `write_file` or `replace` to populate the `index.md`.
 
 ### 5. Phase 5: Self-Evaluation & Correction
-After creating or updating an article, you MUST autonomously verify your work:
-1.  **Run Evaluation Suite:** Execute the deterministic evaluation script:
-    `python3 .gemini/skills/managing-editor/evals/runner.py [path/to/article/index.md]`
-2.  **Analyze Report:** Read the JSON results in `.gemini/skills/managing-editor/evals/reports/latest_results.json`.
+You MUST autonomously verify every content task:
+1.  **Run Evaluation Suite:** `python3 .gemini/skills/managing-editor/evals/runner.py [path/to/article/index.md]`
+2.  **Analyze Report:** Read results in `.gemini/skills/managing-editor/evals/reports/latest_results.json`.
 3.  **Self-Correction Loop:**
-    - **Attempt 1:** If any checks return `FAIL`, analyze the `details` field, apply surgical fixes to the file, and re-run the evaluation.
-    - **Attempt 2:** If failures persist, perform one final targeted fix and re-run.
-4.  **Human Escalation:** If the evaluation still fails after 2 self-correction attempts, stop and present the failure report to the user. Explain clearly what failed and why you are stuck (e.g., "The AEO check is failing because the draft is too short to sustain an FAQ section. Should I proceed without it?").
+    - **Attempt 1:** If any checks `FAIL`, apply surgical fixes and re-run.
+    - **Attempt 2:** One final targeted fix and re-run.
+4.  **Escalation:** If still failing after 2 attempts, stop and present the failure report to the user.
 
 <AVAILABLE_RESOURCES>
 *   **Category Policy:** `.policies/category_governance_policy.md`
 *   **Tag Policy:** `.policies/tag_governance_policy.md`
 *   **Evaluation Runner:** `.gemini/skills/managing-editor/evals/runner.py`
+*   **Provisioner:** `.gemini/skills/content-creator/scripts/create_content.py`
 </AVAILABLE_RESOURCES>
