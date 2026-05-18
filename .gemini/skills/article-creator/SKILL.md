@@ -1,41 +1,28 @@
-# Article Creator
+# Article Creator (Infrastructure Layer)
 
-Automates the creation of new article bundles, including GitHub issue tracking, feature branch isolation, and front matter standardization.
+Automates the technical provisioning of new article bundles, including GitHub issue tracking and feature branch isolation. This skill provides the "plumbing" for new content and should be leveraged by the `managing-editor` for content creation tasks.
 
 ## Core Workflow
 
 1.  **Issue Creation:**
     -   Given an article slug, create a GitHub issue tagged as an `enhancement`.
-    -   This ensures the new article is tracked in the project backlog.
-
 2.  **Branch Isolation:**
     -   Create a new feature branch specifically for the new article (e.g., `feature/article-<slug>`).
-    -   This keeps the `main` branch clean during the draft and review phase.
+3.  **Bundle Provisioning:**
+    -   Use the `hugo new --kind article-bundle articles/<slug>` command to generate the physical leaf bundle directory and `index.md` file.
 
-3.  **Bundle Generation:**
-    -   Use the `hugo new --kind article-bundle articles/<slug>` command to generate a new leaf bundle.
-    -   This ensures all required front matter (title, date, categories, tags, etc.) is included.
+## Instructions
 
--   **Front Matter & Structure:** 
-    -   Automatically set the `status` property in the front matter to `"user-review"`.
-    -   **Pillar One Alignment:** Ensure the article includes the `{{< quick-answer >}}` and `{{< faq >}}` placeholders as defined in the `article-bundle` archetype.
-    -   Optionally append provided Markdown content to the `index.md` file.
-
-
-5.  **User Notification:**
-    -   Provide the user with the path to the newly created `index.md` and the name of the feature branch.
-
-## Usage
-
-Provide the article slug (e.g., `my-new-post`) and any initial Markdown content. The skill will handle the infrastructure setup.
+- **Role:** You are an infrastructure provisioner. Do not attempt to validate taxonomy, tone, or AEO standards. Leave all "intelligence" tasks to the `managing-editor`.
+- **Slug Formatting:** Slugs should be lowercase and hyphen-separated.
+- **Output:** Always provide the path to the newly created `index.md` and the name of the feature branch to the calling skill or user.
 
 ## Implementation
 
 To execute this workflow, use the supporting Python script:
-`python3 .gemini/skills/article-creator/create_article.py <slug> [optional_content_file]`
+`python3 .gemini/skills/article-creator/create_article.py <slug>`
 
-## Standards
-
--   **Slug Formatting:** Slugs should be lowercase and hyphen-separated.
--   **Front Matter:** Always include the governance-checked categories and tags placeholders.
--   **Status:** The initial status for automated creation is always `"user-review"`.
+## Integration Note
+This skill is a "downstream" dependency for the `managing-editor`. When asked to create an article, the system should:
+1. Call `article-creator` to set up the infrastructure.
+2. Call `managing-editor` to populate and validate the content.
