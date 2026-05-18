@@ -27,6 +27,19 @@ To execute this workflow, use the supporting Python script:
 
 **Available Types:** `article`, `research`, `video`, `lab`, `portfolio`, `signals`.
 
+### 5. Phase 5: Self-Evaluation & Correction
+You MUST autonomously verify every provisioning task:
+1.  **Run Evaluation Suite:** `python3 .gemini/skills/content-creator/evals/runner.py <content_type> <slug>`
+2.  **Analyze Report:** Read results in `.gemini/skills/content-creator/evals/reports/latest_results.json`.
+3.  **Self-Correction Loop:**
+    - **Attempt 1:** If any checks `FAIL` (e.g., branch not created, issue missing), analyze the error and attempt to fix the provisioning issue.
+    - **Attempt 2:** One final targeted fix and re-run.
+4.  **Escalation:** If still failing after 2 attempts, stop and present the failure report to the user.
+
+<AVAILABLE_RESOURCES>
+*   **Evaluation Runner:** `.gemini/skills/content-creator/evals/runner.py`
+</AVAILABLE_RESOURCES>
+
 ## Integration Note
 This skill is a "downstream" dependency for the `managing-editor`. When asked to create any content, the system should:
 1. Call `content-creator` to set up the infrastructure.
