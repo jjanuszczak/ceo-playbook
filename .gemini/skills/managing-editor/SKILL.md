@@ -71,7 +71,9 @@ showReadingTime: false
     *   Frontmatter: `showTableOfContents: true`.
 
 ### 3. Phase 3: Content Generation & AEO Optimization
-*   **Tone:** Professional, C-Suite strategic, first-person ("I").
+*   **Tone & Style:**
+    *   Professional, C-Suite strategic, first-person ("I").
+    *   **Punctuation:** Avoid the use of em dashes (`—`). Use colons, commas, or parentheses instead to maintain a clean, executive style.
 *   **AEO (Answer Engine Optimization) Mandates:**
     *   **Quick Answer:** Every article MUST start with the `{{< quick-answer >}}` shortcode immediately after the introduction, providing a 2-3 sentence summary of the core answer/insight.
     *   **Semantic Hierarchy:** Start with H2 (`##`). H2s should be phrased as questions where possible to capture natural language search intent (e.g., "Why choose X?" instead of "Benefits of X").
@@ -80,12 +82,22 @@ showReadingTime: false
 *   **Images:** Use the shortcode: `{{< figure src="image.png" alt="SEO text" caption="Visible caption" >}}`.
 *   **Headings:** Strictly follow H2 -> H3 hierarchy. Never skip levels.
 
-### 4. Execution
+### 4. Phase 4: Execution
 1.  **Propose:** Show the user the planned file path (`content/.../index.md`) and the generated frontmatter for approval.
 2.  **Create/Move:** Use `write_file` for the `index.md`. If migrating a flat file, ensure the old file is deleted after the bundle is created.
-3.  **Verify:** Remind the user to run `hugo server -D` to view the draft.
+
+### 5. Phase 5: Self-Evaluation & Correction
+After creating or updating an article, you MUST autonomously verify your work:
+1.  **Run Evaluation Suite:** Execute the deterministic evaluation script:
+    `python3 .gemini/skills/managing-editor/evals/runner.py [path/to/article/index.md]`
+2.  **Analyze Report:** Read the JSON results in `.gemini/skills/managing-editor/evals/reports/latest_results.json`.
+3.  **Self-Correction Loop:**
+    - **Attempt 1:** If any checks return `FAIL`, analyze the `details` field, apply surgical fixes to the file, and re-run the evaluation.
+    - **Attempt 2:** If failures persist, perform one final targeted fix and re-run.
+4.  **Human Escalation:** If the evaluation still fails after 2 self-correction attempts, stop and present the failure report to the user. Explain clearly what failed and why you are stuck (e.g., "The AEO check is failing because the draft is too short to sustain an FAQ section. Should I proceed without it?").
 
 <AVAILABLE_RESOURCES>
 *   **Category Policy:** `.policies/category_governance_policy.md`
 *   **Tag Policy:** `.policies/tag_governance_policy.md`
+*   **Evaluation Runner:** `.gemini/skills/managing-editor/evals/runner.py`
 </AVAILABLE_RESOURCES>
