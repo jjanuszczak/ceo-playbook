@@ -90,5 +90,8 @@ You MUST autonomously verify every content task:
 *   **Category Policy:** `.policies/category_governance_policy.md`
 *   **Tag Policy:** `.policies/tag_governance_policy.md`
 *   **Evaluation Runner:** `.gemini/skills/managing-editor/evals/runner.py`
+* **Provisioner:** `.gemini/skills/article-creator/scripts/create_content.py`
+</AVAILABLE_RESOURCES>
+er.py`
 * **Provisioner:** `.gemini/skills/article-creator/scripts/create_article.py`
 </AVAILABLE_RESOURCES>
