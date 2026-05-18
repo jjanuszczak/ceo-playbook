@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-18T10:56:24.722955",
+  "timestamp": "2026-05-18T13:33:52.519618",
   "article_path": "content/articles/trust-as-infrastructure/index.md",
   "overall_status": "PASS",
   "checks": [
@@ -33,6 +33,14 @@
       "status": "PASS",
       "details": {
         "message": "Semantic navigation (Related Posts & Read Next) verified with parameters"
+      }
+    },
+    {
+      "id": "style",
+      "name": "Style & Punctuation",
+      "status": "PASS",
+      "details": {
+        "message": "Style check (no em dashes) passed"
       }
     },
     {

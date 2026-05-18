@@ -71,7 +71,9 @@ showReadingTime: false
     *   Frontmatter: `showTableOfContents: true`.
 
 ### 3. Phase 3: Content Generation & AEO Optimization
-*   **Tone:** Professional, C-Suite strategic, first-person ("I").
+*   **Tone & Style:**
+    *   Professional, C-Suite strategic, first-person ("I").
+    *   **Punctuation:** Avoid the use of em dashes (`—`). Use colons, commas, or parentheses instead to maintain a clean, executive style.
 *   **AEO (Answer Engine Optimization) Mandates:**
     *   **Quick Answer:** Every article MUST start with the `{{< quick-answer >}}` shortcode immediately after the introduction, providing a 2-3 sentence summary of the core answer/insight.
     *   **Semantic Hierarchy:** Start with H2 (`##`). H2s should be phrased as questions where possible to capture natural language search intent (e.g., "Why choose X?" instead of "Benefits of X").
