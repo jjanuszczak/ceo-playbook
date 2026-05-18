@@ -13,7 +13,7 @@ tags:
   - taxonomy
 showReadingTime: true
 showTableOfContents: true
-draft: true
+draft: false
 status: agent-pending
 # Pillar 2: Advanced Schema
 about:
@@ -27,7 +27,7 @@ citations:
     url: "https://www.promptengineering.org/evaluating-large-language-models-a-comprehensive-guide/"
 ---
 
-The challenge with integrating Large Language Models (LLMs) into production workflows is not their intelligence; it is their variance. When an AI agent acts as a "Managing Editor" or "Content Creator," how do we ensure it doesn't just produce a great "vibe," but also follows every strict technical requirement of the platform?
+The challenge with integrating Large Language Models (LLMs) into production workflows is not their intelligence; it is their variance. When an AI agent acts as a "Managing Editor" or "Content Creator", how do we ensure it doesn't just produce a great "vibe," but also follows every strict technical requirement of the platform?
 
 {{< quick-answer >}}
 Evaluation frameworks (Evals) are deterministic quality gates that verify AI outputs against specific rules. By bundling a modular pipeline of Python-based validators directly with an AI skill, we can autonomously enforce governance, formatting, and build standards, allowing agents to self-correct before human review.
@@ -35,26 +35,26 @@ Evaluation frameworks (Evals) are deterministic quality gates that verify AI out
 
 ## The Problem: The "Vibe Check" vs. Production Standards
 
-In the early stages of AI development, we rely on "vibe checks": reading an output and deciding if it looks correct. This doesn't scale. For this platform, every post must meet eight specific criteria:
+In the early stages of AI development, we rely on "vibe checks": reading an output and deciding if it looks correct. This doesn't scale. For example, on this platform, every post must meet eight specific criteria:
 1. Correct directory structure (Leaf Bundles).
 2. Category and Tag governance compliance.
 3. Specific AEO/SEO frontmatter fields.
 4. Presence of "Quick Answer" shortcodes.
 5. Presence of FAQ blocks.
 6. Semantic navigation (Related/Next) with valid parameters.
-7. Executive style (no em dashes).
+7. Executive style (speak in the first person).
 8. A successful Hugo build.
 
 Manually checking these is tedious and error-prone. We need a way to make the agent its own most rigorous critic.
 
 ## The Solution: Modular Deterministic Evals
 
-We implemented a **Deterministic Evaluation Pipeline** bundled directly within the skill directory. This architecture treats an AI skill as a self-contained unit of work that includes both its instructions and its verification logic.
+I implemented a **Deterministic Evaluation Pipeline** bundled directly within the skill directory. This architecture treats an AI skill as a self-contained unit of work that includes both its instructions and its verification logic.
 
 ### 1. The Directory Structure
 By co-locating the evals, we ensure the skill is portable and maintainable.
 ```text
-.gemini/skills/managing-editor/
+./skills/managing-editor/
 ├── SKILL.md                 # The "Brain" (Instructions)
 └── evals/                   # The "Nervous System" (Verification)
     ├── runner.py            # Orchestrator
