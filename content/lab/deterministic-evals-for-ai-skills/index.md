@@ -30,7 +30,7 @@ citations:
 The challenge with integrating Large Language Models (LLMs) into production workflows is not their intelligence; it is their variance. When an AI agent acts as a "Managing Editor" or "Content Creator", how do we ensure it doesn't just produce a great "vibe," but also follows every strict technical requirement of the platform?
 
 {{< quick-answer >}}
-Evaluation frameworks (Evals) are deterministic quality gates that verify AI outputs against specific rules. By bundling a modular pipeline of Python-based validators directly with an AI skill, we can autonomously enforce governance, formatting, and build standards, allowing agents to self-correct before human review.
+Evaluation frameworks (Evals) are quality gates that verify AI outputs against specific rules and rubrics. By bundling a modular pipeline of Python-based validators directly with an AI agent skill, we can autonomously enforce governance, formatting & style, and build standards, allowing agents to self-correct before human review.
 {{< /quick-answer >}}
 
 ## The Problem: The "Vibe Check" vs. Production Standards
@@ -39,11 +39,11 @@ In the early stages of AI development, we rely on "vibe checks": reading an outp
 1. Correct directory structure (Leaf Bundles).
 2. Category and Tag governance compliance.
 3. Specific AEO/SEO frontmatter fields.
-4. Presence of "Quick Answer" shortcodes.
+4. Presence of a "Quick Answer" block.
 5. Presence of FAQ blocks.
 6. Semantic navigation (Related/Next) with valid parameters.
-7. Executive style (speak in the first person).
-8. A successful Hugo build.
+7. Executive style (e.g. speak in the first person).
+8. A successful site build.
 
 Manually checking these is tedious and error-prone. We need a way to make the agent its own most rigorous critic.
 
@@ -72,7 +72,7 @@ The `runner.py` acts as a central orchestrator. It reads a `config.yaml` file to
 * **Output:** Returns an exit code (0 for pass, 1 for fail) and a JSON string via STDOUT.
 
 ### 3. The Self-Correction Loop
-The most powerful aspect of this framework is its integration into the agent's workflow. The `SKILL.md` defines a **Phase 5: Self-Evaluation** protocol:
+The most powerful aspect of this framework is its integration into the agent's workflow. The `SKILL.md` defines a **Self-Evaluation** protocol:
 1. **Act:** The agent creates the content.
 2. **Eval:** The agent runs the `runner.py`.
 3. **Analyze:** The agent parses the JSON results.
@@ -80,9 +80,9 @@ The most powerful aspect of this framework is its integration into the agent's w
 
 ## Sample Implementation
 
-You can see this pattern in action in the [GitHub Repository](https://github.com/jjanuszczak/ceo-playbook/tree/main/.gemini/skills/managing-editor/evals). 
+You can see this pattern in action in this [GitHub Repository](https://github.com/jjanuszczak/ceo-playbook/tree/main/.gemini/skills/managing-editor/evals). 
 
-For example, our `build.py` check doesn't just say the build failed; it captures Hugo's error output and passes it back to the LLM:
+For example, our `build.py` check doesn't just say the build failed; it captures the build's error output and passes it back to the LLM:
 ```python
 # Extract relevant error context for the agent
 error_lines = [line for line in result.stderr.split('\n') if "ERROR" in line]
