@@ -34,3 +34,23 @@ python3 .gemini/skills/git-workflow-lifecycle/scripts/cleanup_branch.py
 ## Scripts
 - `scripts/submit_work.py`
 - `scripts/cleanup_branch.py`
+
+## Self-Evaluation & Correction
+
+You MUST autonomously verify every git workflow task:
+
+### 1. Verify Submission
+Immediately after running `submit_work.py`:
+1.  **Run Evaluation Suite:** `python3 .gemini/skills/git-workflow-lifecycle/evals/runner.py submit <branch_name>`
+2.  **Analyze Report:** Read results in `.gemini/skills/git-workflow-lifecycle/evals/reports/latest_submit_results.json`.
+3.  **Self-Correction:** If the PR is missing or not linked, attempt to fix the PR body using `gh pr edit`.
+
+### 2. Verify Cleanup
+Immediately after running `cleanup_branch.py`:
+1.  **Run Evaluation Suite:** `python3 .gemini/skills/git-workflow-lifecycle/evals/runner.py cleanup <branch_name>`
+2.  **Analyze Report:** Read results in `.gemini/skills/git-workflow-lifecycle/evals/reports/latest_cleanup_results.json`.
+3.  **Self-Correction:** If branches remain, manually delete them (`git branch -D` or `git push origin --delete`) and ensure you are on `main`.
+
+<AVAILABLE_RESOURCES>
+*   **Evaluation Runner:** `.gemini/skills/git-workflow-lifecycle/evals/runner.py`
+</AVAILABLE_RESOURCES>

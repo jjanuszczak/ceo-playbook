@@ -52,18 +52,17 @@ def main():
     
     print(f"Issue created: {issue_url}")
 
-    # 2. Create the branch with new naming convention: type/abbreviated-title
-    # Note: We omit the issue number in the branch name as requested, 
-    # but often it's helpful to keep it. However, the request specifically 
-    # asked for type/title.
+    # 2. Create the branch using 'gh issue develop'
+    # This creates the branch AND links it to the issue in GitHub's metadata.
+    # We use the naming convention: type/number-slug
     slug = slugify(args.title)
-    branch_name = f"{branch_type}/{slug}"
+    branch_name = f"{branch_type}/{issue_number}-{slug}"
     
-    print(f"Creating branch: {branch_name}...")
+    print(f"Creating linked branch: {branch_name}...")
     
-    run_command(["git", "checkout", "-b", branch_name])
+    run_command(["gh", "issue", "develop", issue_number, "--name", branch_name, "--checkout"])
     
-    print(f"Successfully created issue #{issue_number} and switched to branch {branch_name}.")
+    print(f"Successfully created issue #{issue_number} and switched to linked branch {branch_name}.")
 
 if __name__ == "__main__":
     main()

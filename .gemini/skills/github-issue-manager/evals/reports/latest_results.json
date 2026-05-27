@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-05-27T19:34:56.804002",
+  "issue_type": "enhancement",
+  "title": "Publish Article: The AI-Enabling Bank",
+  "overall_status": "PASS",
+  "checks": [
+    {
+      "id": "convention",
+      "name": "Naming & Linking Convention",
+      "status": "PASS",
+      "details": {
+        "message": "Branch 'feature/66-publish-article-the-ai-enabling-bank' follows all naming and linking conventions",
+        "status": "VALID"
+      }
+    },
+    {
+      "id": "git",
+      "name": "Git Branch Verification",
+      "status": "PASS",
+      "details": {
+        "message": "Correctly on branch 'feature/66-publish-article-the-ai-enabling-bank'",
+        "linked_issue": 66,
+        "convention": "VALID"
+      }
+    },
+    {
+      "id": "github",
+      "name": "GitHub Issue Verification",
+      "status": "PASS",
+      "details": {
+        "message": "Found matching issue #66 with linked branches.",
+        "url": "https://github.com/jjanuszczak/ceo-playbook/issues/66",
+        "linked_branches": [
+          "feature/66-publish-article-the-ai-enabling-bank\thttps://github.com/jjanuszczak/ceo-playbook/tree/feature/66-publish-article-the-ai-enabling-bank"
+        ]
+      }
+    }
+  ]
+}
