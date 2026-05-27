@@ -15,7 +15,7 @@ tags:
   - autonomous-finance
 showReadingTime: true
 showTableOfContents: true
-draft: true
+draft: false
 status: published
 about:
   - name: "Model Context Protocol (MCP)"
