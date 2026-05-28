@@ -30,10 +30,16 @@ This skill automates the publication lifecycle of content (Articles, Videos, Lab
 
 ## Instructions
 
--   **Discovery:** The script supports fuzzy matching on both the folder name (slug) and the `title` field in the frontmatter.
--   **Validation:** Always run the evaluation suite after a transformation:
+- **Discovery:** The script supports fuzzy matching on both the folder name (slug) and the `title` field in the frontmatter.
+- **Validation:** Always run the evaluation suite after a transformation:
     `python3 .gemini/skills/content-publisher/evals/runner.py [path/to/index.md]`
--   **Draft Protection:** The script will warn if the post is already in the requested state.
+- **Self-Healing Loop:** 
+    1. If the runner returns `FAIL`, examine `latest_results.json`.
+    2. Based on the failure output, autonomously apply a surgical fix to the frontmatter (e.g., correct `draft` vs `status` mismatch).
+    3. Re-run the runner to verify the fix.
+    4. If the runner fails after 2 attempts, escalate to the user with the failure report.
+- **Draft Protection:** The script will warn if the post is already in the requested state.
+
 
 ## Scripts
 

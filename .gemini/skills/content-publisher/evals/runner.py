@@ -1,5 +1,6 @@
-import sys
 import os
+import sys
+import yaml
 import json
 import subprocess
 from datetime import datetime
@@ -22,52 +23,41 @@ def run_eval(file_path):
         "checks": []
     }
     
-    # Self-healing loop: Attempt 1 & 2
-    for attempt in range(1, 3):
-        failed_checks = []
-        all_passed = True
-
-        for step in config['pipeline']['steps']:
-            script_path = os.path.join(base_dir, step['script'])
-            check_id = step['id']
-            name = step['name']
-            
-            print(f"Attempt {attempt}: Running check: {name}...")
-            
-            result = subprocess.run(
-                [sys.executable, script_path, file_path],
-                capture_output=True,
-                text=True
-            )
-            
-            if result.returncode != 0:
-                print(f"  Check {name} failed: {result.stdout.strip() or result.stderr.strip()}")
-                failed_checks.append(step)
-                all_passed = False
-            else:
-                print(f"  Check {name} passed.")
-
-        if all_passed:
-            break
+    for step in config['pipeline']['steps']:
+        script_path = os.path.join(base_dir, step['script'])
+        check_id = step['id']
+        name = step['name']
         
-        if attempt < 2:
-            print(f"Attempt {attempt} failed. Attempting autonomous self-correction...")
-            # Trigger fixer script if it exists
-            fixer_script = os.path.join(base_dir, "fixer.py")
-            if os.path.exists(fixer_script):
-                subprocess.run([sys.executable, fixer_script, file_path], capture_output=True)
-            else:
-                print("No fixer.py found. Escalating.")
-                break
-        else:
-            print("Multiple attempts failed. Escalating to user.")
+        print(f"Running check: {name}...")
+        
+        result = subprocess.run(
+            [sys.executable, script_path, file_path],
+            capture_output=True,
+            text=True
+        )
+        
+        status = "PASS" if result.returncode == 0 else "FAIL"
+        
+        check_result = {
+            "id": check_id,
+            "name": name,
+            "status": status,
+            "output": result.stdout.strip() or result.stderr.strip()
+        }
+        
+        results["checks"].append(check_result)
+        
+        if status == "FAIL":
             results["overall_status"] = "FAIL"
 
-    # Final result logging
+    # Save report
     report_path = os.path.join(base_dir, "reports", "latest_results.json")
     os.makedirs(os.path.dirname(report_path), exist_ok=True)
     with open(report_path, "w") as f:
         json.dump(results, f, indent=2)
+    
+    print(f"Evaluation complete. Status: {results['overall_status']}")
+    print(f"Report saved to: {report_path}")
     
     return 0 if results["overall_status"] == "PASS" else 1
 
