@@ -1,0 +1,7 @@
+pipeline:
+  target_version: "v1.0"
+  steps:
+    - name: "Publication State Check"
+      id: "publication_state"
+      script: "checks/publication_check.py"
+      halt_on_fail: true
