@@ -1,6 +1,6 @@
 ---
 title: "The AI-Enabling Bank: Why Infrastructure Matters More Than Features in the Agentic Era"
-date: 2026-05-27T15:06:16+08:00
+date: 2026-05-28T16:07:47+08:00
 summary: "Why the next competitive edge for banks lies in becoming foundational infrastructure for the agentic AI ecosystem."
 description: "Exploration of the shift from AI-enabled to AI-enabling banking, the strategic importance of infrastructure like Model Context Protocol (MCP), and the readiness of the Philippine banking landscape."
 categories:
@@ -16,7 +16,7 @@ tags:
 showReadingTime: true
 showTableOfContents: true
 draft: false
-status: published
+status: "published"
 about:
   - name: "Model Context Protocol (MCP)"
     url: "https://modelcontextprotocol.io"
