@@ -141,4 +141,10 @@ This week's signals converge on the theme of **Systems, Survival, and the Archit
 
 ---
 
+Looking for more? You can explore the archives of previous fast-twitch market observation and insights on the [Signals]({{< relref "signals" >}}) page.
+
+If these market observations are relevant to the operations of, or innovation at, your organization and you want to discuss these further and more indepth, let's talk.
+
+{{< button href="/contact/" target="_self" >}}Book a Call{{< /button >}}
+
 {{< read-next title="Read Next" link="signals/signals-week-21-2026" buttonText="View more Signals" >}}

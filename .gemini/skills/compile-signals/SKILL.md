@@ -29,7 +29,15 @@ You are the **Signals Editor**, a specialized agent responsible for compiling th
 #### B. Readwise Data
 1.  **Source:** Readwise API (via MCP tools).
 2.  **Recent Documents:** Fetch the 5 most recent saved documents from the **Library** (e.g. articles). **DO NOT** fetch documents from the **Feed**. Filter using the `location` parameter with values like `new`, `later`, or `shortlist` when calling `readwise_list_documents`.
-3.  **Random Highlights:** Fetch 3 random highlights from books (`readwise_list_books` -> select random 3 -> `readwise_list_highlights`).
+3.  **Random Highlights:** Fetch a diverse pool of book highlights and select 3 randomly.
+    *   **Method:** Fetch a large list of books (e.g., `readwise_list_books` with `page_size=200`).
+    *   **Filtering (Mandatory):** EXCLUDE the following over-used titles/authors:
+        *   *American Caesar* (William Manchester)
+        *   *Underwriters of the United States* (Hannah Farber)
+        *   *The Code of Capital* (Katharina Pistor)
+        *   Warren Buffett
+        *   Derek Sivers
+    *   **Selection:** Select 3 books randomly from the filtered pool, then fetch 1 random highlight from each.
 4.  **Enrichment:** For book highlights, search Google/Amazon to find the **Amazon Product URL** (e.g., `https://www.amazon.com/dp/ISBN`).
 
 ### 3. Content Synthesis Phase
@@ -55,8 +63,9 @@ tags: [tag1, tag2, tag3] # Must strictly follow .policies/tag_governance_policy.
 #### B. Content Body
 *   **Intro:** Write a synthesis paragraph connecting the disparate themes of the week.
 *   **X Section:**
-    *   Use `{{< x user="handle" id="12345" >}}` for standard tweets.
-    *   Use `{{< x-article user="handle" id="12345" title="Title" image="url" >}}` for Articles.
+    *   **Detect Articles:** If a bookmark has an "Article" badge or long-form content, you MUST use `x-article`.
+    *   Standard Tweets: `{{< x user="handle" id="12345" >}}`.
+    *   Articles: `{{< x-article user="handle" id="12345" title="Full Title" image="Image URL" >}}`. Extract the title and cover image from the bookmark.
 *   **Readwise Documents:**
     *   Format as H3 headers with links.
 *   **Readwise Highlights:**
@@ -81,10 +90,13 @@ tags: [tag1, tag2, tag3] # Must strictly follow .policies/tag_governance_policy.
 
 ### 5. Execution Order
 1.  **Create Directory:** `mkdir -p content/signals/signals-week-xx-yyyy`
-2.  **Copy Image:** `cp ...`
+2.  **Copy Image:** `cp content/signals/signals-week-(xx-1)-yyyy/featured-week-(xx-1)-yyyy.png content/signals/signals-week-xx-yyyy/featured-week-xx-yyyy.png`
 3.  **Write File:** `write_file` with the complete synthesized Markdown.
-4.  **Report:** Confirm creation and list the tags used.
-5.  **Promote (Optional):** Offer to generate social media posts using the `repurpose-social` skill.
+4.  **Add Navigation:**
+    *   Invoke `related-posts-suggester` to identify and embed related content.
+    *   Invoke `read-next-suggester` to identify and embed the "Read Next" section.
+5.  **Report:** Confirm creation and list the tags used.
+6.  **Promote (Optional):** Offer to generate social media posts using the `repurpose-social` skill.
 
 ### 6. Social Media Promotion
 *   **Workflow:** Once the `index.md` for the current week is written, you may be asked to promote it.

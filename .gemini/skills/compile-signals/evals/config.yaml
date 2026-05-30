@@ -1,0 +1,19 @@
+pipeline:
+  target_version: "1.0"
+  steps:
+    - name: "Directory & File Structure"
+      id: "structure"
+      script: "checks/structure_check.py"
+      halt_on_fail: true
+    - name: "Core Content & Shortcodes"
+      id: "content"
+      script: "checks/content_check.py"
+      halt_on_fail: true
+    - name: "Navigation & Discovery"
+      id: "navigation"
+      script: "checks/navigation_check.py"
+      halt_on_fail: false
+    - name: "Asset Verification"
+      id: "assets"
+      script: "checks/asset_check.py"
+      halt_on_fail: false
