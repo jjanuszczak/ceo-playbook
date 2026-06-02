@@ -1,0 +1,1101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Margo Authoring Guide</title>
+  <meta name="margo-example" content="authoring-guide-deck">
+  <style>
+    :root {
+      color-scheme: dark;
+      --accent: #4db6ac;
+      --bg: #131617;
+      --fg: #f3efe8;
+      --muted: #a9b0ac;
+      --card: #1c2123;
+      --shadow: rgba(0, 0, 0, 0.28);
+    }
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+      background: linear-gradient(180deg, #0f1213 0%, #1a2022 100%);
+      color: var(--fg);
+    }
+    main {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    .deck {
+      width: min(1200px, 100%);
+      aspect-ratio: 16 / 9;
+      background: var(--card);
+      box-shadow: 0 24px 80px var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+    .slide {
+      display: none;
+      height: 100%;
+      padding: 72px;
+      box-sizing: border-box;
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--margo-background-overlay, transparent);
+      opacity: var(--margo-background-opacity, 1);
+      pointer-events: none;
+    }
+    .slide.active {
+      display: block;
+    }
+    .slide > * {
+      position: relative;
+      z-index: 1;
+    }
+    .deck-logo {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 28px;
+      font: 12px/1 sans-serif;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .deck-logo img {
+      display: block;
+      max-height: 28px;
+      max-width: 140px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+    .deck-footer {
+      position: absolute;
+      left: 72px;
+      bottom: 28px;
+      font: 12px/1.2 sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .slide-meta {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+    .section-meta {
+      margin-bottom: 0;
+      font: 12px/1.2 sans-serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .slide-shell {
+      display: grid;
+      grid-template-rows: auto auto minmax(0, 1fr);
+      align-content: start;
+      gap: 14px;
+      height: 100%;
+      min-width: 0;
+    }
+    .slide-body {
+      min-width: 0;
+    }
+    .prose-body {
+      max-width: 860px;
+    }
+    .content-slide .slide-body {
+      align-self: start;
+    }
+    .title-slide {
+      gap: 18px;
+      align-content: end;
+    }
+    .title-stack {
+      display: grid;
+      gap: 18px;
+      align-content: end;
+      max-width: 920px;
+      padding-bottom: 24px;
+    }
+    .title-stack h1 {
+      font-size: 88px;
+      line-height: 0.94;
+      letter-spacing: -0.04em;
+      max-width: 9ch;
+    }
+    .title-stack p {
+      max-width: 24ch;
+      font-size: 27px;
+      line-height: 1.28;
+      color: var(--muted);
+    }
+    .section-slide {
+      align-content: center;
+      gap: 20px;
+    }
+    .section-stack {
+      display: grid;
+      align-content: center;
+      gap: 18px;
+      max-width: 760px;
+    }
+    .section-stack::before {
+      content: "";
+      width: 92px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 10px 24px color-mix(in srgb, var(--accent) 28%, transparent);
+    }
+    .section-stack h1 {
+      font-size: 84px;
+      line-height: 0.94;
+      letter-spacing: -0.04em;
+    }
+    .draft-badge {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 6px 10px;
+      border: 1px solid currentColor;
+      font: 12px/1 sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8a3b12;
+      background: #f7dcc9;
+    }
+    .slide-body h1,
+    .slide-body h2,
+    .slide-body h3,
+    .slide-body p,
+    .slide-body ul,
+    .slide-body ol,
+    .slide-body blockquote,
+    .slide-body figure {
+      margin: 0 0 16px;
+    }
+    .slide-body h1 {
+      font-size: 64px;
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+    }
+    .slide-body h2 {
+      font-size: 34px;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
+    .slide-body h3 {
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+      font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+    }
+    .slide-body p,
+    .slide-body li {
+      font-size: 22px;
+      line-height: 1.42;
+    }
+    .slide-body ul {
+      padding-left: 24px;
+    }
+    .slide-body ol {
+      padding-left: 28px;
+    }
+    .slide-body strong {
+      color: color-mix(in srgb, var(--fg) 82%, var(--accent));
+    }
+    .slide-body img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 18px;
+      object-position: var(--margo-image-position, center);
+    }
+    .slide.image-fit-contain .slide-body img {
+      width: 100%;
+      max-height: 48vh;
+      object-fit: contain;
+    }
+    .slide.image-fit-cover .slide-body img {
+      width: 100%;
+      max-height: 48vh;
+      object-fit: cover;
+    }
+    .image-caption {
+      margin-top: 14px;
+      font: 12px/1.3 sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .callout {
+      margin: 24px 0;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: color-mix(in srgb, var(--accent) 10%, var(--card));
+      border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    }
+    .callout p:last-child {
+      margin-bottom: 0;
+    }
+    .shortcode-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 28px 0;
+    }
+    .shortcode-column {
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: color-mix(in srgb, var(--card) 88%, var(--accent) 12%);
+      border: 1px solid color-mix(in srgb, var(--accent) 14%, transparent);
+    }
+    .shortcode-column > :first-child {
+      margin-top: 0;
+    }
+    .shortcode-stat {
+      margin: 28px 0 0;
+      padding: 22px 24px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 12%, transparent), color-mix(in srgb, var(--card) 92%, transparent));
+      border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+    }
+    .shortcode-stat-value {
+      font-size: 52px;
+      line-height: 0.95;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .shortcode-stat-label {
+      margin-top: 10px;
+      font: 13px/1.2 sans-serif;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .shortcode-stat-detail {
+      margin-top: 10px;
+      color: var(--fg);
+    }
+    .shortcode-figure {
+      margin: 28px 0;
+      max-width: min(100%, var(--shortcode-figure-width, 100%));
+    }
+    .shortcode-figure-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+    .shortcode-figure-image {
+      display: block;
+      width: 100%;
+      max-height: 48vh;
+      object-fit: contain;
+      border-radius: 20px;
+      box-shadow: 0 20px 48px var(--shadow);
+      background: color-mix(in srgb, var(--card) 92%, transparent);
+    }
+    .shortcode-figure-fit-cover .shortcode-figure-image {
+      object-fit: cover;
+    }
+    .shortcode-figure-fit-contain .shortcode-figure-image {
+      object-fit: contain;
+    }
+    .shortcode-figure-caption {
+      margin-top: 12px;
+      display: grid;
+      gap: 6px;
+      font: 12px/1.3 sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .shortcode-figure-credit {
+      color: color-mix(in srgb, var(--muted) 88%, var(--fg));
+    }
+    .shortcode-video {
+      margin: 28px 0;
+    }
+    .shortcode-video video {
+      width: 100%;
+      max-height: 48vh;
+      border-radius: 20px;
+      box-shadow: 0 20px 48px var(--shadow);
+      background: #000;
+    }
+    .shortcode-video figcaption {
+      margin-top: 12px;
+      font: 12px/1.3 sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .agenda-slide ol {
+      margin: 22px 0 0;
+      padding-left: 28px;
+      font-size: 28px;
+      line-height: 1.45;
+    }
+    .agenda-slide li {
+      margin-bottom: 14px;
+      padding-left: 8px;
+    }
+    .image-slide {
+      display: grid;
+      align-content: start;
+      height: 100%;
+    }
+    .image-shell {
+      display: grid;
+      gap: 20px;
+      align-content: start;
+    }
+    .image-slide p:has(img) {
+      margin: 0;
+    }
+    .image-slide img {
+      width: 100%;
+      max-height: 52vh;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: 0 20px 48px var(--shadow);
+    }
+    .two-column-slide {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-content: start;
+      height: 100%;
+    }
+    .two-column-slide .column {
+      min-width: 0;
+      padding: 22px 24px;
+      border-radius: 24px;
+      background: color-mix(in srgb, var(--card) 90%, var(--accent) 10%);
+      border: 1px solid color-mix(in srgb, var(--accent) 14%, transparent);
+    }
+    .two-column-slide .column > :first-child {
+      margin-top: 0;
+    }
+    .media-split-slide {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 36px;
+      align-items: center;
+      height: 100%;
+    }
+    .media-split-slide.media-left {
+      grid-template-areas: "media content";
+    }
+    .media-split-slide.media-right {
+      grid-template-areas: "content media";
+    }
+    .media-pane {
+      grid-area: media;
+      min-width: 0;
+    }
+    .content-pane {
+      grid-area: content;
+      min-width: 0;
+    }
+    .media-pane p {
+      margin: 0;
+    }
+    .media-pane img {
+      width: 100%;
+      max-height: 58vh;
+      object-fit: cover;
+      border-radius: 26px;
+      box-shadow: 0 24px 56px var(--shadow);
+    }
+    .content-pane > :first-child {
+      margin-top: 0;
+    }
+    .content-pane > :last-child {
+      margin-bottom: 0;
+    }
+    .quote-slide {
+      display: grid;
+      gap: 28px;
+      align-content: center;
+      height: 100%;
+    }
+    .quote-shell {
+      max-width: 880px;
+      padding: 24px 0;
+    }
+    .quote-slide blockquote {
+      margin: 0;
+      padding-left: 28px;
+      border-left: 4px solid var(--accent);
+      font-size: 42px;
+      line-height: 1.2;
+      color: var(--fg);
+    }
+    .quote-slide p:last-child {
+      margin: 0;
+      font: 16px/1.3 sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .metric-slide {
+      display: grid;
+      gap: 18px;
+      align-content: center;
+      height: 100%;
+      text-align: center;
+    }
+    .metric-shell {
+      padding: 40px 48px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 12%, transparent), color-mix(in srgb, var(--card) 96%, white 4%));
+      border: 1px solid color-mix(in srgb, var(--accent) 24%, transparent);
+      box-shadow: 0 24px 56px var(--shadow);
+    }
+    .metric-slide h1 {
+      margin: 0;
+      font-size: 132px;
+      line-height: 0.95;
+      color: var(--accent);
+    }
+    .metric-slide p {
+      margin: 0;
+    }
+    .metric-slide p:first-of-type {
+      font-size: 28px;
+    }
+    .metric-slide p:last-of-type {
+      max-width: 560px;
+      margin-inline: auto;
+      color: var(--muted);
+    }
+    .closing-slide {
+      display: grid;
+      place-items: center;
+      height: 100%;
+      text-align: center;
+    }
+    .closing-shell {
+      background:
+        radial-gradient(circle at top, color-mix(in srgb, var(--accent) 18%, transparent), transparent 45%),
+        linear-gradient(180deg, color-mix(in srgb, var(--card) 92%, white 8%), color-mix(in srgb, var(--card) 98%, white 2%));
+      border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+      border-radius: 28px;
+      padding: 40px 42px;
+      box-sizing: border-box;
+      box-shadow: 0 24px 56px var(--shadow);
+    }
+    .closing-shell h1 {
+      font-size: 72px;
+      margin-bottom: 18px;
+    }
+    .closing-shell p {
+      max-width: 540px;
+      margin-inline: auto;
+      color: var(--muted);
+      font-size: 22px;
+      line-height: 1.4;
+    }
+    .controls {
+      position: absolute;
+      right: 24px;
+      bottom: 18px;
+      color: var(--muted);
+      font: 14px/1.2 sans-serif;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .pdf-export {
+      border: 1px solid rgba(28, 26, 23, 0.18);
+      background: rgba(255, 253, 249, 0.92);
+      color: var(--fg);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font: 12px/1 sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .pdf-export:hover {
+      background: #fffdf9;
+    }
+    @media (max-width: 900px) {
+      .slide {
+        padding: 48px;
+      }
+      .title-stack h1,
+      .section-stack h1 {
+        font-size: 64px;
+      }
+      .slide-body h1 {
+        font-size: 48px;
+      }
+      .media-split-slide,
+      .two-column-slide,
+      .shortcode-columns {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media print {
+      @page {
+        size: 13.333in 7.5in;
+        margin: 0;
+      }
+      html, body {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      main {
+        display: block;
+        min-height: auto;
+        padding: 0;
+      }
+      .deck {
+        width: 100%;
+        aspect-ratio: auto;
+        background: transparent;
+        box-shadow: none;
+      }
+      .slide {
+        display: block !important;
+        width: 100%;
+        min-height: 7.5in;
+        height: 7.5in;
+        break-after: page;
+        page-break-after: always;
+      }
+      .slide:last-of-type {
+        break-after: auto;
+        page-break-after: auto;
+      }
+      .controls {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="deck">
+      
+      
+      <section class="slide active" style="background-image: url(&#39;slides/01-title/mago-background.png&#39;); background-size: cover; background-position: center; --margo-background-overlay: linear-gradient(180deg, rgba(8,14,18,0.52), rgba(8,14,18,0.72)); --margo-background-opacity: 1.00">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell title-slide">
+  
+  <div class="slide-meta">Margo Authoring Guide</div>
+  <div class="slide-body title-stack">
+    <h1>Margo Authoring Guide</h1>
+<p>The practical workflow for building, styling, and sharing decks from Markdown.</p>
+
+  </div>
+</div>
+
+        
+        <div class="deck-footer">Margo Workflow Overview</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell section-slide">
+  <div class="slide-meta">Section</div>
+  <div class="slide-body section-stack">
+    <h1>Workflow</h1>
+  </div>
+</div>
+
+        
+        <div class="deck-footer">Margo Workflow Overview</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell agenda-layout">
+  <div class="slide-meta">Agenda</div>
+  <div class="slide-body agenda-slide prose-body">
+    <ol>
+<li>Getting a deck running</li>
+<li>Structuring slides and front matter</li>
+<li>Reusing assets, shortcodes, and includes</li>
+<li>Choosing and customizing themes</li>
+<li>Understanding the render pipeline</li>
+<li>Knowing the current limits</li>
+</ol>
+
+  </div>
+</div>
+
+        
+        <div class="deck-footer">Workflow Map</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell section-slide">
+  <div class="slide-meta">Section</div>
+  <div class="slide-body section-stack">
+    <h1>Getting Started</h1>
+  </div>
+</div>
+
+        
+        <div class="deck-footer">Getting Started</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell split-layout">
+  <div class="section-meta">Workflow</div>
+  <div class="slide-meta">Build The CLI And Create A Deck</div>
+  <div class="slide-body two-column-slide prose-body">
+    <div class="column">
+      <h3>Build and Start</h3>
+<ul>
+<li><code>go build -o ./bin/margo ./cmd/margo</code></li>
+<li><code>./bin/margo new my-deck</code></li>
+<li><code>cd my-deck</code></li>
+<li><code>../bin/margo serve</code></li>
+</ul>
+
+    </div>
+    <div class="column">
+      <h3>Generated Structure</h3>
+<ul>
+<li><code>margo.yaml</code></li>
+<li><code>slides/</code></li>
+<li><code>themes/default/</code></li>
+<li><code>archetypes/</code></li>
+<li><code>assets/</code></li>
+<li><code>shortcodes/</code></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+        
+        <div class="deck-footer">CLI Setup</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell content-slide">
+  <div class="section-meta">Workflow</div>
+  <div class="slide-meta">Configure margo.yaml</div>
+  <div class="slide-body prose-body"><h2>One file sets the deck contract</h2>
+<ul>
+<li>deck metadata defines title, logo, language, and footer</li>
+<li>theme selection activates the visual system</li>
+<li>outputs control which artifacts are built</li>
+<li>snippets inject approved shell-level HTML when needed</li>
+</ul>
+<div class="callout callout-info">
+<p>Treat <code>margo.yaml</code> as the deck's operating contract. It is the first file to read when you are orienting yourself in a new project.</p>
+</div>
+<pre><code class="language-yaml">theme:
+  name: default
+  color_mode: dark
+  typography: executive
+  accent_color: &quot;#4db6ac&quot;
+</code></pre>
+</div>
+</div>
+
+        
+        <div class="deck-footer">Root Config</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell content-slide">
+  <div class="section-meta">Workflow</div>
+  <div class="slide-meta">Preview, Build, And Clean</div>
+  <div class="slide-body prose-body"><h2>The loop is intentionally short</h2>
+<ul>
+<li><code>margo serve</code> previews at <code>127.0.0.1:1313</code></li>
+<li><code>margo build</code> writes the configured outputs</li>
+<li><code>--port</code> handles conflicts cleanly</li>
+<li><code>--include-drafts</code> is useful during editing</li>
+<li><code>margo clean</code> removes generated output</li>
+</ul>
+<div class="shortcode-stat">
+  <div class="shortcode-stat-value">3</div>
+  <div class="shortcode-stat-label">Core Commands</div>
+  <div class="shortcode-stat-detail">Serve, build, and clean cover most day-to-day authoring.</div>
+</div>
+</div>
+</div>
+
+        
+        <div class="deck-footer">Dev Loop</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell section-slide">
+  <div class="slide-meta">Section</div>
+  <div class="slide-body section-stack">
+    <h1>Slides And Archetypes</h1>
+  </div>
+</div>
+
+        
+        <div class="deck-footer">Slide Authoring</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell split-layout">
+  <div class="section-meta">Authoring</div>
+  <div class="slide-meta">New Slides And Front Matter</div>
+  <div class="slide-body media-split-slide media-right">
+    <div class="content-pane prose-body">
+      <h2>New slides are bundles</h2>
+<ul>
+<li>each slide lives at <code>slides/&lt;id&gt;/index.md</code></li>
+<li>slide-local assets can sit beside <code>index.md</code></li>
+<li>front matter selects order, section, layout, and visibility</li>
+<li>archetypes help create the initial shape, but rendering uses layouts</li>
+</ul>
+    </div>
+    <div class="media-pane">
+      <p><img src="assets/margo-logo-glow.png" alt="Margo logo glow"></p>
+    </div>
+  </div>
+</div>
+
+        
+        <div class="deck-footer">Slide Bundles</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell split-layout">
+  <div class="section-meta">Authoring</div>
+  <div class="slide-meta">Layouts, Shortcodes, And Includes</div>
+  <div class="slide-body two-column-slide prose-body">
+    <div class="column">
+      <h3>Structural layers</h3>
+<ul>
+<li>layouts control shell and slide structure</li>
+<li>shortcodes add reusable content blocks inside Markdown</li>
+<li>includes keep repeated Markdown in one place</li>
+</ul>
+<div class="callout callout-info">
+<p>Stay in Markdown for content. Let layouts and shortcodes carry the visual weight.</p>
+</div>
+    </div>
+    <div class="column">
+      <h3>Why this split works</h3>
+<ul>
+<li>authors stay mostly in Markdown</li>
+<li>shared fragments reduce repetition</li>
+<li>shortcodes carry richer content blocks</li>
+<li>layouts keep the visual system consistent</li>
+</ul>
+<h3>Rule of thumb</h3>
+<p>Keep content in Markdown and let layouts, shortcodes, and includes do the repetitive structural work.</p>
+
+    </div>
+  </div>
+</div>
+
+        
+        <div class="deck-footer">Reuse Patterns</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell split-layout">
+  <div class="section-meta">Authoring</div>
+  <div class="slide-meta">Override Model And Rendering Roles</div>
+  <div class="slide-body two-column-slide prose-body">
+    <div class="column">
+      <h3>Current Override Model</h3>
+<ul>
+<li>deck-local shortcodes override theme shortcodes</li>
+<li>deck-local partials override theme partials</li>
+<li>one active theme per deck</li>
+<li>layouts choose structure, shortcodes choose content blocks</li>
+</ul>
+
+    </div>
+    <div class="column">
+      <h3>Authoring</h3>
+<ul>
+<li>front matter</li>
+<li>body Markdown</li>
+<li>shared fragments</li>
+</ul>
+<h3>Rendering</h3>
+<ul>
+<li>shortcodes expand</li>
+<li>Markdown becomes HTML</li>
+<li>layouts wrap the result</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+        
+        <div class="deck-footer">Reuse Model</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell content-slide">
+  <div class="section-meta">Authoring</div>
+  <div class="slide-meta">Assets And Figure Shortcodes</div>
+  <div class="slide-body prose-body"><h2>Shared assets can stay elegant</h2>
+<ul>
+<li>deck-level assets live under <code>assets/</code></li>
+<li>slide-level assets live beside slide Markdown</li>
+<li><code>figure</code> gives you semantic image markup with caption support</li>
+<li><code>video</code> handles poster assets and remote video sources</li>
+</ul>
+<figure class="shortcode-figure shortcode-figure-fit-contain" style="--shortcode-figure-width: 62%;"><img class="shortcode-figure-image" src="assets/margo-logo-dark-bg-flat.png" alt="Margo logo on light background"><figcaption class="shortcode-figure-caption"><span>The default theme can render shared deck assets through a shortcode.</span><span class="shortcode-figure-credit">Source: repo assets</span></figcaption></figure>
+</div>
+</div>
+
+        
+        <div class="deck-footer">Media Handling</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell section-slide">
+  <div class="slide-meta">Section</div>
+  <div class="slide-body section-stack">
+    <h1>Themes</h1>
+  </div>
+</div>
+
+        
+        <div class="deck-footer">Themes</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell split-layout">
+  <div class="section-meta">Theming</div>
+  <div class="slide-meta">Theme Structure And Overrides</div>
+  <div class="slide-body two-column-slide prose-body">
+    <div class="column">
+      <h3>A theme can provide</h3>
+<ul>
+<li><code>layouts/deck.html</code></li>
+<li><code>layouts/print-deck.html</code></li>
+<li><code>layouts/slide-*.html</code></li>
+<li><code>partials/*.html</code></li>
+<li><code>shortcodes/*.html</code></li>
+</ul>
+
+    </div>
+    <div class="column">
+      <h3>A deck can override locally</h3>
+<ul>
+<li><code>partials/*.html</code></li>
+<li><code>shortcodes/*.html</code></li>
+<li><code>theme</code> options in <code>margo.yaml</code></li>
+</ul>
+<p>This keeps project-specific variation explicit rather than magical.</p>
+
+    </div>
+  </div>
+</div>
+
+        
+        <div class="deck-footer">Theme Anatomy</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell content-slide">
+  <div class="section-meta">Theming</div>
+  <div class="slide-meta">Render Pipeline</div>
+  <div class="slide-body prose-body"><h2>The pieces operate in sequence</h2>
+<ol>
+<li>archetypes create the initial slide files</li>
+<li>slide Markdown and front matter are loaded</li>
+<li>shortcodes expand inside the body</li>
+<li>Markdown is converted to HTML</li>
+<li>slide layouts wrap the content</li>
+<li>deck and print layouts wrap the slide collection</li>
+<li>partials provide reusable layout fragments</li>
+</ol>
+<div class="callout callout-info">
+<p>The Go code should stay generic: parsing, validation, asset resolution, and model shaping. Markup shape belongs in templates.</p>
+</div>
+</div>
+</div>
+
+        
+        <div class="deck-footer">Rendering Model</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell section-slide">
+  <div class="slide-meta">Section</div>
+  <div class="slide-body section-stack">
+    <h1>Wrap-up</h1>
+  </div>
+</div>
+
+        
+        <div class="deck-footer">Margo Workflow Overview</div>
+
+      </section>
+      
+      <section class="slide">
+        
+        <div class="deck-logo"><img src="assets/margo-simple-logo-dark-bg-flat.png" alt="Margo Authoring Guide logo"></div>
+
+        <div class="slide-shell closing-layout">
+  <div class="slide-meta">Closing</div>
+  <div class="slide-body closing-slide">
+    <div class="closing-shell">
+      <h2>Current realities</h2>
+<p>PDF still depends on a local browser path and needs ongoing QA
+PPTX export is not implemented yet
+Presenter mode is not implemented yet
+Theme APIs can still evolve</p>
+<h2>Good files to study</h2>
+<p><code>examples/reference-deck/</code>
+<code>examples/benchmark-deck/</code>
+<code>docs/AUTHORING_GUIDE.md</code></p>
+<h2>Get Margo</h2>
+<p><a href="https://github.com/jjanuszczak/margo">Margo Repo</a> on Github</p>
+
+    </div>
+  </div>
+</div>
+
+        
+        <div class="deck-footer">Current State</div>
+
+      </section>
+      
+      <div class="controls">
+        
+        <span>Use left/right arrow keys</span>
+      </div>
+    </div>
+  </main>
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    let index = 0;
+    const show = (nextIndex) => {
+      if (!slides.length) return;
+      index = Math.max(0, Math.min(nextIndex, slides.length - 1));
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+    };
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight' || event.key === 'PageDown') show(index + 1);
+      if (event.key === 'ArrowLeft' || event.key === 'PageUp') show(index - 1);
+    });
+    const exportButton = document.getElementById('export-pdf');
+    if (exportButton) {
+      exportButton.addEventListener('click', async () => {
+        try {
+          const response = await fetch('/__margo/export/pdf', { method: 'POST' });
+          const message = (await response.text()).trim();
+          if (!response.ok) {
+            throw new Error(message || 'PDF export failed');
+          }
+          window.alert(message || 'PDF export complete');
+        } catch (error) {
+          window.alert(error.message || 'PDF export failed');
+        }
+      });
+    }
+    let currentRevision = null;
+    const checkRevision = async () => {
+      try {
+        const response = await fetch('/__margo/version', { cache: 'no-store' });
+        const nextRevision = (await response.text()).trim();
+        if (currentRevision === null) {
+          currentRevision = nextRevision;
+          return;
+        }
+        if (nextRevision !== currentRevision) {
+          window.location.reload();
+        }
+      } catch (_) {}
+    };
+    setInterval(checkRevision, 1000);
+    checkRevision();
+  </script>
+  <script>window.__margoExample = "authoring-guide-deck";</script>
+</body>
+</html>
