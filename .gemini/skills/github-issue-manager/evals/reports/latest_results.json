@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-05-28T12:58:11.372877",
+  "timestamp": "2026-05-30T10:23:09.048710",
   "issue_type": "enhancement",
-  "title": "General codebase housekeeping and cleanup of stale artifacts",
+  "title": "Enhance compile-signals skill with better randomization and integrated shortcodes",
   "overall_status": "PASS",
   "checks": [
     {
@@ -9,7 +9,7 @@
       "name": "Naming & Linking Convention",
       "status": "PASS",
       "details": {
-        "message": "Branch 'feature/71-general-codebase-housekeeping-and' follows all naming and linking conventions",
+        "message": "Branch 'feature/75-enhance-compile-signals-skill-with' follows all naming and linking conventions",
         "status": "VALID"
       }
     },
@@ -18,8 +18,8 @@
       "name": "Git Branch Verification",
       "status": "PASS",
       "details": {
-        "message": "Correctly on branch 'feature/71-general-codebase-housekeeping-and'",
-        "linked_issue": 71,
+        "message": "Correctly on branch 'feature/75-enhance-compile-signals-skill-with'",
+        "linked_issue": 75,
         "convention": "VALID"
       }
     },
@@ -28,10 +28,10 @@
       "name": "GitHub Issue Verification",
       "status": "PASS",
       "details": {
-        "message": "Found matching issue #71 with linked branches.",
-        "url": "https://github.com/jjanuszczak/ceo-playbook/issues/71",
+        "message": "Found matching issue #75 with linked branches.",
+        "url": "https://github.com/jjanuszczak/ceo-playbook/issues/75",
         "linked_branches": [
-          "feature/71-general-codebase-housekeeping-and\thttps://github.com/jjanuszczak/ceo-playbook/tree/feature/71-general-codebase-housekeeping-and"
+          "feature/75-enhance-compile-signals-skill-with\thttps://github.com/jjanuszczak/ceo-playbook/tree/feature/75-enhance-compile-signals-skill-with"
         ]
       }
     }
