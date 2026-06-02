@@ -1,7 +1,7 @@
 ---
 title: "Margo: The Presentation Engine for the AI Era"
 date: 2026-06-02
-draft: true
+draft: false
 summary: "Margo is a markdown-native, highly scriptable presentation tool designed for the age of AI agents, bridging the gap between developer workflows and presentation decks."
 description: "Explore Margo, the presentation engine that combines the speed of Hugo with the simplicity of Markdown. Designed for automation and AI-driven workflows, Margo is the hacker-friendly, designer-approved way to compile presentations."
 categories: ["Technology"]
