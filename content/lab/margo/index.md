@@ -73,6 +73,14 @@ GUI slide makers are dead ends for automation. Margo is entirely text-based and 
 ### 3. Hacker-Friendly, Designer-Approved
 No locked-in, proprietary design systems. If you know HTML and CSS, you know how to build a custom Margo theme. From minimalist developer pitch decks to highly branded corporate presentations.
 
+## How to get started?
+
+Clone the repo below and follow the instructions to build margo:
+
+{{< github repo="jjanuszczak/margo" showThumbnail=false >}}
+
+Once built, use the [authoring guide](/margo-guide/) to create your first slide deck!
+
 {{< faq >}}
   {{% faq-item question="Is Margo just another slide tool?" %}}
   No. Margo is an automated presentation engine designed for a "compile-to-deck" workflow, rather than a traditional design-first approach.
