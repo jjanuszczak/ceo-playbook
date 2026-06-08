@@ -1,19 +1,40 @@
 ---
 title: "Investing in Atoms: How AI is Forcing Venture Capital to Break its Software Addiction"
-date: 2026-05-11
-draft: true
-summary: "Venture capital has spent 15 years addicted to the easy returns of software. Now, AI is exposing the scarcity of physical infrastructure, energy, and hardware—the 'atoms' that actually power intelligence."
+date: 2026-06-08
+draft: false
+summary: "Venture capital has spent 15 years addicted to the easy returns of software. Now, AI is exposing the scarcity of physical infrastructure, energy, and hardware: the 'atoms' that actually power intelligence."
 description: "An analysis of the structural shift from capital-light software to the high-capex reality of the AI era. We explore why venture capital must rediscover its hardware roots to survive the transition from bits to atoms."
 categories: ["Venture Building"]
 tags: ["venture-capital", "artificial-intelligence", "infrastructure", "capital-allocation", "energy-markets", "long-term-thinking", "systems-thinking", "deep-tech", "cleantech", "project-finance"]
 showReadingTime: true
+about:
+  - name: "Venture Capital"
+    url: "https://en.wikipedia.org/wiki/Venture_capital"
+  - name: "Energy Transition"
+    url: "https://en.wikipedia.org/wiki/Energy_transition"
+mentions:
+  - name: "Fairchild Semiconductor"
+    url: "https://en.wikipedia.org/wiki/Fairchild_Semiconductor"
+  - name: "Artificial Intelligence"
+    url: "https://en.wikipedia.org/wiki/Artificial_intelligence"
+  - name: "Arthur Rock"
+    url: "https://en.wikipedia.org/wiki/Arthur_Rock"
+citations:
+  - title: "Venture Capital and the Original Energy Transition"
+    url: "https://www.hbs.edu/faculty/Pages/item.aspx?num=41457"
+  - title: "Elon Musk on Power Plant Manufacturing Capacity"
+    url: "https://x.com/r0ck3t23/status/2053439772413030905"
 ---
 
-Imagine this: The world’s most valuable AI companies aren’t bottlenecked by chips, models, or even talent. They’re waiting on *turbines*. As Elon Musk recently highlighted in a widely circulated post, power plant manufacturing capacity—not compute or code—is the real gatekeeper to scaling AI data centers. Backlogs stretch for years. Permitting drags on for longer. And the physics of energy is proving far more stubborn than any algorithmic breakthrough.
+Imagine this: The world’s most valuable AI companies aren’t bottlenecked by chips, models, or even talent. They’re waiting on *turbines*. As Elon Musk recently highlighted in a widely circulated post, power plant manufacturing capacity (not compute or code!) is the real gatekeeper to scaling AI data centers. Backlogs stretch for years. Permitting drags on for longer. And the physics of energy is proving far more stubborn than any algorithmic breakthrough.
 
 {{< x user="r0ck3t23" id="2053439772413030905" >}}
 
 For strategists and investors, this isn’t just an infrastructure hiccup. It’s the moment the credit card bill arrives after a 15-year spending spree on software’s easy, capital-light returns. Venture capital got hooked on bits. Now AI is demanding atoms and the hangover is here.
+
+{{< quick-answer >}}
+AI is driving a structural shift in venture capital from capital-light software ("bits") to energy-intensive physical infrastructure ("atoms"). As software becomes commoditized, long-term value is migrating to the hardware and energy grids that power intelligence, requiring investors to rebuild their deep-tech and capex muscle.
+{{< /quick-answer >}}
 
 ## Silicon Valley’s Forgotten Hardware Roots
 
@@ -43,7 +64,7 @@ Yet the same AI driving this democratization is creating unprecedented demand fo
 
 Big Tech’s capex numbers tell the story. In 2026, Alphabet, Amazon, Meta, and Microsoft are on track to spend a combined $725 billion, up 77% from last year’s record. Projections for 2027 push toward $1 trillion annually. This isn’t marketing spend or office fit-outs. It’s turbines, substations, custom chips, nuclear restarts, and on-site gas generation. Hyperscalers are issuing debt and signing PPAs at industrial scale because their balance sheets can’t keep pace.
 
-We lived off the software dividend: high ROIC on borrowed time and cheap capital. The bill is due. AI has made software abundant. Atoms: energy, manufacturing, grids—are scarce again.
+We lived off the software dividend: high ROIC on borrowed time and cheap capital. The bill is due. AI has made software abundant. Atoms: energy, manufacturing, and grids are scarce again.
 
 ## What Comes Next: Insights for Strategists and Investors
 
@@ -69,6 +90,18 @@ For **policymakers (and those who influence them)**: Recognize that AI’s econo
 The software party was fun. It created enormous value and trained a generation of operators. But AI has flipped the script: bits are now cheap; atoms are the scarce resource that will determine who scales intelligence next.
 
 The bill is due. Pay it wisely and the next wave of Silicon Valley-scale fortunes will belong to those who remember how to build in the physical world.
+
+{{< faq >}}
+{{% faq-item question="Why is AI forcing a shift from software to hardware?" %}}
+Software is becoming commoditized through AI-driven development, eroding traditional moats. Simultaneously, scaling AI requires massive amounts of energy and physical infrastructure, making "atoms" the new scarce and valuable resource.
+{{% /faq-item %}}
+{{% faq-item question="What was the 'Cleantech Burn' and how did it affect VC?" %}}
+Between 2006 and 2011, VCs lost billions in clean energy startups due to high capex and regulatory risks. This trauma led to a decade-long addiction to low-risk software bets, which is now being challenged by the physical requirements of the AI era.
+{{% /faq-item %}}
+{{% faq-item question="What should investors do to adapt to the 'Atoms' era?" %}}
+Investors should reallocate capital toward energy, infrastructure, and deep-tech. This involves developing expertise in physical systems, permitting, and partnering with hyperscalers for de-risked infrastructure projects.
+{{% /faq-item %}}
+{{< /faq >}}
 
 {{< related-posts title="Related Insights" paths="articles/bdc, articles/top-podcasts-2025" >}}
 
