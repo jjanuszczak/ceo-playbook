@@ -1,6 +1,6 @@
 ---
 title: "The Sun That Set: Why Apple Is Crushing It And Why Sun’s Identical Playbook Failed 40 Years Ago"
-date: 2026-05-11T07:42:54+08:00
+date: 2026-05-16
 # externalUrl: ""
 summary: "A comparative analysis of the vertical integration strategies used by Apple and Sun Microsystems, focusing on hardware-software synergy and ecosystem control."
 description: ""
@@ -15,8 +15,8 @@ tags:
   - "hardware-software-synergy"
 showReadingTime: true
 showTableOfContents: true
-draft: true
-status: "user-review"
+draft: false
+status: "published"
 ---
 Imagine a company that doesn’t just sell computers.  
 
