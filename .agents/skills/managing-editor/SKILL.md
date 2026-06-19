@@ -79,8 +79,8 @@ showReadingTime: false
 
 ### 5. Phase 5: Self-Evaluation & Correction
 You MUST autonomously verify every content task:
-1.  **Run Evaluation Suite:** `python3 .gemini/skills/managing-editor/evals/runner.py [path/to/article/index.md]`
-2.  **Analyze Report:** Read results in `.gemini/skills/managing-editor/evals/reports/latest_results.json`.
+1.  **Run Evaluation Suite:** `python3 .agents/skills/managing-editor/evals/runner.py [path/to/article/index.md]`
+2.  **Analyze Report:** Read results in `.agents/skills/managing-editor/evals/reports/latest_results.json`.
 3.  **Self-Correction Loop:**
     - **Attempt 1:** If any checks `FAIL`, apply surgical fixes and re-run.
     - **Attempt 2:** One final targeted fix and re-run.
@@ -89,6 +89,6 @@ You MUST autonomously verify every content task:
 <AVAILABLE_RESOURCES>
 *   **Category Policy:** `.policies/category_governance_policy.md`
 *   **Tag Policy:** `.policies/tag_governance_policy.md`
-*   **Evaluation Runner:** `.gemini/skills/managing-editor/evals/runner.py`
-*   **Provisioner:** `.gemini/skills/content-creator/scripts/create_content.py`
+*   **Evaluation Runner:** `.agents/skills/managing-editor/evals/runner.py`
+*   **Provisioner:** `.agents/skills/content-creator/scripts/create_content.py`
 </AVAILABLE_RESOURCES>

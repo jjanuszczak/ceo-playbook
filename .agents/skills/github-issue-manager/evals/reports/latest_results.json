@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-06-20T07:24:45.773261",
+  "issue_type": "enhancement",
+  "title": "Update workspace organization to standard structure",
+  "overall_status": "PASS",
+  "checks": [
+    {
+      "id": "convention",
+      "name": "Naming & Linking Convention",
+      "status": "PASS",
+      "details": {
+        "message": "Branch 'feature/83-update-workspace-organization-to' follows all naming and linking conventions",
+        "status": "VALID"
+      }
+    },
+    {
+      "id": "git",
+      "name": "Git Branch Verification",
+      "status": "PASS",
+      "details": {
+        "message": "Correctly on branch 'feature/83-update-workspace-organization-to'",
+        "linked_issue": 83,
+        "convention": "VALID"
+      }
+    },
+    {
+      "id": "github",
+      "name": "GitHub Issue Verification",
+      "status": "PASS",
+      "details": {
+        "message": "Found matching issue #83 with linked branches.",
+        "url": "https://github.com/jjanuszczak/ceo-playbook/issues/83",
+        "linked_branches": [
+          "feature/83-update-workspace-organization-to\thttps://github.com/jjanuszczak/ceo-playbook/tree/feature/83-update-workspace-organization-to"
+        ]
+      }
+    }
+  ]
+}
