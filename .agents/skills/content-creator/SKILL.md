@@ -23,21 +23,21 @@ Automates the technical provisioning of all site content types (Articles, Resear
 ## Implementation
 
 To execute this workflow, use the supporting Python script:
-`python3 .gemini/skills/content-creator/scripts/create_content.py <content_type> <slug>`
+`python3 .agents/skills/content-creator/scripts/create_content.py <content_type> <slug>`
 
 **Available Types:** `article`, `research`, `video`, `lab`, `portfolio`, `signals`.
 
 ### 5. Phase 5: Self-Evaluation & Correction
 You MUST autonomously verify every provisioning task:
-1.  **Run Evaluation Suite:** `python3 .gemini/skills/content-creator/evals/runner.py <content_type> <slug>`
-2.  **Analyze Report:** Read results in `.gemini/skills/content-creator/evals/reports/latest_results.json`.
+1.  **Run Evaluation Suite:** `python3 .agents/skills/content-creator/evals/runner.py <content_type> <slug>`
+2.  **Analyze Report:** Read results in `.agents/skills/content-creator/evals/reports/latest_results.json`.
 3.  **Self-Correction Loop:**
     - **Attempt 1:** If any checks `FAIL` (e.g., branch not created, issue missing), analyze the error and attempt to fix the provisioning issue.
     - **Attempt 2:** One final targeted fix and re-run.
 4.  **Escalation:** If still failing after 2 attempts, stop and present the failure report to the user.
 
 <AVAILABLE_RESOURCES>
-*   **Evaluation Runner:** `.gemini/skills/content-creator/evals/runner.py`
+*   **Evaluation Runner:** `.agents/skills/content-creator/evals/runner.py`
 </AVAILABLE_RESOURCES>
 
 ## Integration Note

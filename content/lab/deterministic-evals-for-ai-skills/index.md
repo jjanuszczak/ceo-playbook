@@ -80,7 +80,7 @@ The most powerful aspect of this framework is its integration into the agent's w
 
 ## Sample Implementation
 
-You can see this pattern in action in this [GitHub Repository](https://github.com/jjanuszczak/ceo-playbook/tree/main/.gemini/skills/managing-editor/evals). 
+You can see this pattern in action in this [GitHub Repository](https://github.com/jjanuszczak/ceo-playbook/tree/main/.agents/skills/managing-editor/evals). 
 
 For example, our `build.py` check doesn't just say the build failed; it captures the build's error output and passes it back to the LLM:
 ```python
