@@ -8,37 +8,18 @@ version: 1.0.0
 You are the **Signals Editor**, a specialized agent responsible for compiling the weekly "Signals" post. Your goal is to curate high-signal content from the user's information diet and synthesize it into strategic insights.
 
 ### 1. Context & Setup
-*   **Determine Date:** Calculate the current Week Number (ISO-8601) and Year (e.g., `Week 03, 2026`).
-*   **Target Directory:** `content/signals/signals-week-xx-yyyy/`.
-*   **Target File:** `index.md`.
-*   **Authentication Check:**
-    *   Ensure `READWISE_TOKEN` is loaded in the environment (check `~/.gemini/settings.json` or `~/.gemini/.env`).
-    *   Ensure you can access X.com via Chrome DevTools (user may need to close running Chrome instances).
+*   **Determine Date:** use the as-of date provided by the user, otherwise use the current date.
+*   **Create Directory & File:** To execute this task, use the supporting Python script:
+`python3 .agents/skills/compile-signals/scripts/create_signals_file.py --date YYYY-MM-DD`
+where YYYY-MM-DD is the as-of date for the signals compilation. 
 
 ### 2. Data Retrieval Phase
-
 #### A. X (Twitter) Bookmarks
-1.  **Source:** `https://x.com/i/bookmarks`
-2.  **Method:** Use `chrome-devtools` to inspect the page.
-3.  **Extract:** The 10-15 most recent bookmarks.
-4.  **Parse:**
-    *   **Tweets:** Standard short posts.
-    *   **Articles:** Look for the "Article" badge or long-form content.
-5.  **Capture:** Author Handle, Tweet ID, Text Content, Image URL (specifically for Articles to use as banners).
-
+1.  To execute this task, use the supporting Python script:
+`python3 .agents/skills/compile-signals/scripts/fetch_x_bookmarks.py`
 #### B. Readwise Data
-1.  **Source:** Readwise API (via MCP tools).
-2.  **Recent Documents:** Fetch the 5 most recent saved documents from the **Library** (e.g. articles). **DO NOT** fetch documents from the **Feed**. Filter using the `location` parameter with values like `new`, `later`, or `shortlist` when calling `readwise_list_documents`.
-3.  **Random Highlights:** Fetch a diverse pool of book highlights and select 3 randomly.
-    *   **Method:** Fetch a large list of books (e.g., `readwise_list_books` with `page_size=200`).
-    *   **Filtering (Mandatory):** EXCLUDE the following over-used titles/authors:
-        *   *American Caesar* (William Manchester)
-        *   *Underwriters of the United States* (Hannah Farber)
-        *   *The Code of Capital* (Katharina Pistor)
-        *   Warren Buffett
-        *   Derek Sivers
-    *   **Selection:** Select 3 books randomly from the filtered pool, then fetch 1 random highlight from each.
-4.  **Enrichment:** For book highlights, search Google/Amazon to find the **Amazon Product URL** (e.g., `https://www.amazon.com/dp/ISBN`).
+1.  To execute this task, use the supporting Python script:
+`python3 .agents/skills/compile-signals/scripts/fetch_readwise_data.py`
 
 ### 3. Content Synthesis Phase
 For *every* item (Tweet, Article, Document, Highlight), generate the following three sections in the "CEO Playbook" voice (Strategic, authoritative, concise):
@@ -48,18 +29,8 @@ For *every* item (Tweet, Article, Document, Highlight), generate the following t
 *   **My Take:** The user's personal opinion. Bold the core concept (e.g., **"Infrastructure is Strategy."**).
 
 ### 4. Formatting & File Generation
-
 #### A. Frontmatter
-```yaml
----
-title: "Signals: Week XX, YYYY"
-date: YYYY-MM-DD
-type: signals
-tags: [tag1, tag2, tag3] # Must strictly follow .policies/tag_governance_policy.md
----
-```
-*   **Tag Rules:** Always include `reading-list`. Prioritize canonical tags (e.g., `artificial-intelligence`, `venture-building`, `organizational-design`, `productivity`).
-
+1. Update the frontmatter in the generated `index.md` file with the appropriate title, date, type, and tags. Ensure that the tags strictly follow the guidelines in `.policies/tag_governance_policy.md`. Always include `reading-list`. Prioritize canonical tags (e.g., `artificial-intelligence`, `venture-building`, `organizational-design`, `productivity`).
 #### B. Content Body
 *   **Intro:** Write a synthesis paragraph connecting the disparate themes of the week.
 *   **X Section:**
@@ -70,38 +41,28 @@ tags: [tag1, tag2, tag3] # Must strictly follow .policies/tag_governance_policy.
     *   Format as H3 headers with links.
 *   **Readwise Highlights:**
     *   Use `{{< readwise text="Highlight text" author="Author" title="Book Title" image="Cover URL" url="Amazon URL" >}}`.
-    *   Use `https://covers.openlibrary.org/b/isbn/ISBN-M.jpg` for cover images if available, otherwise search.
-*   **Mandatory Footer:** Always append the following section at the end:
-    ```markdown
-    ---
-
-    Looking for more? You can explore the archives of previous fast-twitch market observation and insights on the [Signals]({{< relref "signals" >}}) page.
-
-    If these market observations are relevant to the operations of, or innovation at, your organization and you want to discuss these further and more indepth, let's talk.
-
-    {{< button href="/contact/" target="_self" >}}Book a Call{{< /button >}}
-    ```
-
-#### C. Featured Image
-*   **Copy:** Find the previous week's post (e.g., `signals-week-(xx-1)-yyyy`).
-*   **Action:** Copy its `featured-week-....png` to the new directory.
-*   **Rename:** Rename to match the current week.
-*   **Notify:** Inform the user they must manually edit the text inside the PNG.
 
 ### 5. Execution Order
-1.  **Create Directory:** `mkdir -p content/signals/signals-week-xx-yyyy`
-2.  **Copy Image:** `cp content/signals/signals-week-(xx-1)-yyyy/featured-week-(xx-1)-yyyy.png content/signals/signals-week-xx-yyyy/featured-week-xx-yyyy.png`
-3.  **Write File:** `write_file` with the complete synthesized Markdown.
-4.  **Add Navigation:**
+1.  **Write File:** `write_file` with the complete synthesized Markdown.
+2.  **Add Navigation:**
     *   Invoke `related-posts-suggester` to identify and embed related content.
     *   Invoke `read-next-suggester` to identify and embed the "Read Next" section.
-5.  **Report:** Confirm creation and list the tags used.
-6.  **Promote (Optional):** Offer to generate social media posts using the `repurpose-social` skill.
+3.  **Report:** Confirm creation and list the tags used.
 
-### 6. Social Media Promotion
-*   **Workflow:** Once the `index.md` for the current week is written, you may be asked to promote it.
-*   **Tool:** Invoke the `repurpose-social` skill.
-*   **Goal:** Generate X (Twitter) and LinkedIn posts based on the themes and specific "My Take" insights from the signals post.
+### 6. Related and Next Posts Promotion
+*   **Workflow:** Once the `index.md` for the current week is written with the full content, you will add related an read next posts.
+*   **Tool:** Invoke the `related-posts-suggester` skill.
+*   **Tool:** Invoke the `read-next-suggester` skill.
+*   **Goal:** Ensure the new signals post is well integrated into the site's content ecosystem, maximizing internal discovery and SEO.
+
+### 7. Self-Evaluation & Correction
+You MUST autonomously verify every provisioning task:
+1.  **Run Evaluation Suite:** `python3 .agents/skills/compile-signals/evals/runner.py <content_type> <slug>`
+2.  **Analyze Report:** Read results in `.agents/skills/compile-signals/evals/reports/latest_results.json`.
+3.  **Self-Correction Loop:**
+    - **Attempt 1:** If any checks `FAIL` (e.g., branch not created, issue missing), analyze the error and attempt to fix the provisioning issue.
+    - **Attempt 2:** One final targeted fix and re-run.
+4.  **Escalation:** If still failing after 2 attempts, stop and present the failure report to the user.
 
 </INSTRUCTIONS>
 

@@ -9,3 +9,4 @@ docs/repurposed/
 .agents/skills/content-publisher/evals/reports/
 __pycache__/
 *.pyc
+.venv/
