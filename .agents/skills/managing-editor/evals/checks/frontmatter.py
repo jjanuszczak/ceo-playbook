@@ -5,10 +5,16 @@ import yaml
 import json
 
 def get_project_root(current_path):
-    # Traverse up to find .git or GEMINI.md
+    # Traverse up to find a stable project marker
     path = os.path.abspath(current_path)
     while path != os.path.dirname(path):
+        if os.path.exists(os.path.join(path, ".git")):
+            return path
         if os.path.exists(os.path.join(path, "GEMINI.md")):
+            return path
+        if os.path.exists(os.path.join(path, "AGENTS.md")):
+            return path
+        if os.path.exists(os.path.join(path, ".agents")):
             return path
         path = os.path.dirname(path)
     return None
