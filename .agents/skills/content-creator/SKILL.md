@@ -23,13 +23,13 @@ Automates the technical provisioning of all site content types (Articles, Resear
 ## Implementation
 
 To execute this workflow, use the supporting Python script:
-`python3 .agents/skills/content-creator/scripts/create_content.py <content_type> <slug>`
+`uv run python .agents/skills/content-creator/scripts/create_content.py <content_type> <slug>`
 
 **Available Types:** `article`, `research`, `video`, `lab`, `portfolio`, `signals`.
 
 ### 5. Phase 5: Self-Evaluation & Correction
 You MUST autonomously verify every provisioning task:
-1.  **Run Evaluation Suite:** `python3 .agents/skills/content-creator/evals/runner.py <content_type> <slug>`
+1.  **Run Evaluation Suite:** `uv run python .agents/skills/content-creator/evals/runner.py <content_type> <slug>`
 2.  **Analyze Report:** Read results in `.agents/skills/content-creator/evals/reports/latest_results.json`.
 3.  **Self-Correction Loop:**
     - **Attempt 1:** If any checks `FAIL` (e.g., branch not created, issue missing), analyze the error and attempt to fix the provisioning issue.

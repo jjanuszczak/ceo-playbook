@@ -12,6 +12,32 @@ This site is a static website built with **Hugo** and the **Blowfish** theme. It
 - **Theme:** [Blowfish](https://blowfish.page/)
 - **Styling:** Tailwind CSS (via Hugo Pipes)
 - **Hosting:** GitHub Pages
+- **Python Tooling:** [uv](https://docs.astral.sh/uv/) managed project environment for repo automation
+
+## Local Setup
+
+This repository is primarily a Hugo site, but it also includes Python-based automation under `.agents/skills/`.
+
+### Prerequisites
+
+- Install `uv`
+- Install Hugo Extended
+
+### Python Tooling Setup
+
+From the repository root:
+
+```bash
+uv sync
+```
+
+This creates or updates the local `.venv` from the committed `pyproject.toml` and `uv.lock`.
+
+Run repository Python tooling through `uv` so commands use the managed environment:
+
+```bash
+uv run python .agents/skills/github-issue-manager/scripts/manage_issue.py "Title" "Description" --type enhancement
+```
 
 ## Project Structure
 

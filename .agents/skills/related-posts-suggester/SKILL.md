@@ -12,7 +12,7 @@ This skill helps you automatically identify and embed related content into a Hug
 1.  **Identify Target:** Determine the article that needs related post suggestions.
 2.  **Calculate Similarity:** Run the `find_related_posts.py` script to get the most relevant articles.
     ```bash
-    python3 .agents/skills/related-posts-suggester/scripts/find_related_posts.py <path/to/article.md> --limit <count>
+    uv run python .agents/skills/related-posts-suggester/scripts/find_related_posts.py <path/to/article.md> --limit <count>
     ```
 3.  **Automatic Embedding (Default):**
     Unless the user explicitly asks to "show" or "suggest" without inserting, automatically append the generated `related-posts` shortcode to the target article.

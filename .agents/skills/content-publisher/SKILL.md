@@ -7,15 +7,15 @@ This skill automates the publication lifecycle of content (Articles, Videos, Lab
 1.  **Track & Branch:**
     -   Create an enhancement issue and branch using `github-issue-manager`.
     -   Title: `Publish: [Article Title]`
-    -   Command: `python3 .agents/skills/github-issue-manager/scripts/manage_issue.py "Publish: [Article Title]" "Publishing [Article Title]" --type enhancement`
+    -   Command: `uv run python .agents/skills/github-issue-manager/scripts/manage_issue.py "Publish: [Article Title]" "Publishing [Article Title]" --type enhancement`
 
 2.  **Transform Content:**
     -   On the new branch, run the publication script to update the frontmatter and timestamp.
-    -   Command: `python3 .agents/skills/content-publisher/scripts/manage_publication.py --publish "[Fuzzy Title or Slug]"`
+    -   Command: `uv run python .agents/skills/content-publisher/scripts/manage_publication.py --publish "[Fuzzy Title or Slug]"`
 
 3.  **Submit for Review:**
     -   Commit and push changes using `git-workflow-lifecycle`.
-    -   Command: `python3 .agents/skills/git-workflow-lifecycle/scripts/submit_work.py --message "chore: publish [slug]"`
+    -   Command: `uv run python .agents/skills/git-workflow-lifecycle/scripts/submit_work.py --message "chore: publish [slug]"`
     -   The linked issue will automatically close when the PR is merged.
 
 ## Workflow: Unpublishing Content (Review Mode)
@@ -23,7 +23,7 @@ This skill automates the publication lifecycle of content (Articles, Videos, Lab
 1.  **Track & Branch:**
     -   Create an issue/branch: `Unpublish: [Article Title]`
 2.  **Transform Content:**
-    -   Command: `python3 .agents/skills/content-publisher/scripts/manage_publication.py --unpublish "[Fuzzy Title or Slug]"`
+    -   Command: `uv run python .agents/skills/content-publisher/scripts/manage_publication.py --unpublish "[Fuzzy Title or Slug]"`
     -   Updates `status` to `"review"` and `draft` to `true`. Timestamp is preserved.
 3.  **Submit:**
     -   Submit the PR as usual.
@@ -32,7 +32,7 @@ This skill automates the publication lifecycle of content (Articles, Videos, Lab
 
 - **Discovery:** The script supports fuzzy matching on both the folder name (slug) and the `title` field in the frontmatter.
 - **Validation:** Always run the evaluation suite after a transformation:
-    `python3 .agents/skills/content-publisher/evals/runner.py [path/to/index.md]`
+    `uv run python .agents/skills/content-publisher/evals/runner.py [path/to/index.md]`
 - **Self-Healing Loop:** 
     1. If the runner returns `FAIL`, examine `latest_results.json`.
     2. Based on the failure output, autonomously apply a surgical fix to the frontmatter (e.g., correct `draft` vs `status` mismatch).

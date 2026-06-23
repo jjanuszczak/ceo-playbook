@@ -12,7 +12,7 @@ This skill helps you automatically identify and embed a "Read Next" section into
 1.  **Identify Target:** Determine the article that needs a "Read Next" section.
 2.  **Find Latest Post:** Run the `find_latest_post.py` script to get the most recent published post in the same content section (e.g., `articles/`, `videos/`).
     ```bash
-    python3 .agents/skills/read-next-suggester/scripts/find_latest_post.py <path/to/article.md>
+    uv run python .agents/skills/read-next-suggester/scripts/find_latest_post.py <path/to/article.md>
     ```
     - The script identifies the content section of the target file.
     - It finds the latest non-draft post in that section.
