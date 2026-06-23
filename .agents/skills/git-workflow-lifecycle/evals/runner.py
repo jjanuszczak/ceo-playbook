@@ -80,6 +80,7 @@ def run_eval(task, identifier):
 
     # Save report
     report_path = os.path.join(base_dir, "reports", f"latest_{task}_results.json")
+    os.makedirs(os.path.dirname(report_path), exist_ok=True)
     with open(report_path, 'w') as f:
         json.dump(results, f, indent=2)
     

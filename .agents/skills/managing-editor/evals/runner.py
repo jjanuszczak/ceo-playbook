@@ -70,6 +70,7 @@ def run_eval(article_path):
 
     # Save report
     report_path = os.path.join(base_dir, "reports", "latest_results.json")
+    os.makedirs(os.path.dirname(report_path), exist_ok=True)
     with open(report_path, 'w') as f:
         json.dump(results, f, indent=2)
     
