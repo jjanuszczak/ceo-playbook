@@ -10,16 +10,16 @@ You are the **Signals Editor**, a specialized agent responsible for compiling th
 ### 1. Context & Setup
 *   **Determine Date:** use the as-of date provided by the user, otherwise use the current date.
 *   **Create Directory & File:** To execute this task, use the supporting Python script:
-`python3 .agents/skills/compile-signals/scripts/create_signals_file.py --date YYYY-MM-DD`
+`uv run python .agents/skills/compile-signals/scripts/create_signals_file.py --date YYYY-MM-DD`
 where YYYY-MM-DD is the as-of date for the signals compilation. 
 
 ### 2. Data Retrieval Phase
 #### A. X (Twitter) Bookmarks
 1.  To execute this task, use the supporting Python script:
-`python3 .agents/skills/compile-signals/scripts/fetch_x_bookmarks.py`
+`uv run python .agents/skills/compile-signals/scripts/extract_bookmarks.py`
 #### B. Readwise Data
 1.  To execute this task, use the supporting Python script:
-`python3 .agents/skills/compile-signals/scripts/fetch_readwise_data.py`
+`uv run python .agents/skills/compile-signals/scripts/extract_readwise_data.py`
 
 ### 3. Content Synthesis Phase
 For *every* item (Tweet, Article, Document, Highlight), generate the following three sections in the "CEO Playbook" voice (Strategic, authoritative, concise):
@@ -57,7 +57,7 @@ For *every* item (Tweet, Article, Document, Highlight), generate the following t
 
 ### 7. Self-Evaluation & Correction
 You MUST autonomously verify every provisioning task:
-1.  **Run Evaluation Suite:** `python3 .agents/skills/compile-signals/evals/runner.py <content_type> <slug>`
+1.  **Run Evaluation Suite:** `uv run python .agents/skills/compile-signals/evals/runner.py <content_type> <slug>`
 2.  **Analyze Report:** Read results in `.agents/skills/compile-signals/evals/reports/latest_results.json`.
 3.  **Self-Correction Loop:**
     - **Attempt 1:** If any checks `FAIL` (e.g., branch not created, issue missing), analyze the error and attempt to fix the provisioning issue.

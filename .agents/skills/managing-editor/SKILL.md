@@ -79,7 +79,7 @@ showReadingTime: false
 
 ### 5. Phase 5: Self-Evaluation & Correction
 You MUST autonomously verify every content task:
-1.  **Run Evaluation Suite:** `python3 .agents/skills/managing-editor/evals/runner.py [path/to/article/index.md]`
+1.  **Run Evaluation Suite:** `uv run python .agents/skills/managing-editor/evals/runner.py [path/to/article/index.md]`
 2.  **Analyze Report:** Read results in `.agents/skills/managing-editor/evals/reports/latest_results.json`.
 3.  **Self-Correction Loop:**
     - **Attempt 1:** If any checks `FAIL`, apply surgical fixes and re-run.

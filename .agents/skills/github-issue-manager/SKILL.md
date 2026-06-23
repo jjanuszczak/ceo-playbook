@@ -11,7 +11,7 @@ This skill automates the creation of GitHub issues and the setup of local develo
 
 1.  **Create Issue & Branch:** Run the `manage_issue.py` script to create a GitHub issue with appropriate labels and switch to a new branch.
     ```bash
-    python3 .agents/skills/github-issue-manager/scripts/manage_issue.py "Title" "Description" --type <bug|enhancement|documentation>
+    uv run python .agents/skills/github-issue-manager/scripts/manage_issue.py "Title" "Description" --type <bug|enhancement|documentation>
     ```
 
 ## Instructions
@@ -33,7 +33,7 @@ This skill automates the creation of GitHub issues and the setup of local develo
 ## Self-Evaluation & Correction
 
 You MUST autonomously verify every issue management task:
-1.  **Run Evaluation Suite:** `python3 .agents/skills/github-issue-manager/evals/runner.py <issue_type> "<title>"`
+1.  **Run Evaluation Suite:** `uv run python .agents/skills/github-issue-manager/evals/runner.py <issue_type> "<title>"`
 2.  **Analyze Report:** Read results in `.agents/skills/github-issue-manager/evals/reports/latest_results.json`.
 3.  **Self-Correction Loop:**
     - **Attempt 1:** If any checks `FAIL` (e.g., branch not created, issue missing), analyze the error and attempt to fix the issue.

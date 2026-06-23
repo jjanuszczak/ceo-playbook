@@ -1,0 +1,15 @@
+[project]
+name = "ceo-playbook-tooling"
+version = "0.1.0"
+description = "Python tooling for CEO Playbook repository workflows"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "drissionpage",
+    "python-dotenv",
+    "pyyaml",
+    "requests",
+]

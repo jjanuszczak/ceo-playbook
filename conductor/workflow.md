@@ -8,7 +8,7 @@ This workflow ensures that the website (**The Hub**) remains the single source o
 
 ### 1. Content Drafting & Research
 *   **Branching:** Use the `github-issue-manager` skill to provision a new branch and link it to a GitHub issue.
-    *   *Command:* `python3 .agents/skills/github-issue-manager/scripts/manage_issue.py "Title" "Description" --type enhancement`
+    *   *Command:* `uv run python .agents/skills/github-issue-manager/scripts/manage_issue.py "Title" "Description" --type enhancement`
 *   **Drafting:** Utilize the `content-research-writer` and `managing-editor` skills to:
     *   Research and cite high-quality sources.
     *   Enforce **Category & Tag Governance** (automatically validated via `managing-editor` evals).
@@ -17,13 +17,13 @@ This workflow ensures that the website (**The Hub**) remains the single source o
 
 ### 2. Quality Control & Submission
 *   **Submit Work:** Use the `git-workflow-lifecycle` skill to stage changes, commit, push, and create a Pull Request.
-    *   *Command:* `python3 .agents/skills/git-workflow-lifecycle/scripts/submit_work.py --message "feat: description"`
+    *   *Command:* `uv run python .agents/skills/git-workflow-lifecycle/scripts/submit_work.py --message "feat: description"`
 *   **Automated Validation:** PRs are automatically checked for structural integrity and governance alignment via the `managing-editor` evaluation suite.
 
 ### 3. Deployment & Cleanup
 *   **Merge to Main:** Merge the PR once all checks pass.
 *   **Cleanup:** Use the `git-workflow-lifecycle` skill to sync `main` and delete the feature branch.
-    *   *Command:* `python3 .agents/skills/git-workflow-lifecycle/scripts/cleanup_branch.py`
+    *   *Command:* `uv run python .agents/skills/git-workflow-lifecycle/scripts/cleanup_branch.py`
 
 ---
 
