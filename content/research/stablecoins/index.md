@@ -16,7 +16,7 @@ tags:
   - "Research"
 showReadingTime: true
 showTableOfContents: true
-draft: true
+draft: false
 status: agent-pending
 # notification: "Looking for latest research? [Check out our new page](/path/to/page) &rarr;"
 # notificationColor: "bg-purple-600"
