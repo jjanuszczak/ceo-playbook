@@ -18,6 +18,8 @@ I analyzed several distinct perspectives on the immediate future of AI:  specula
 
 Here are the top themes defining the current state of AI, the consensus on how to prepare, and the radical outliers that might catch us off guard.
 
+If you are a CEO or board-level operator trying to turn that diagnosis into a concrete operating plan, I built a dedicated [Executive AI Strategy Discovery]({{< relref "/advisory/ai-executive-strategy-discovery/" >}}) for exactly that problem.
+
 ## Top Common Themes
 
 ### The "Pilot Purgatory" and the Value Gap 
@@ -61,6 +63,8 @@ If we strip away the sci-fi speculation, most sources converge on a pragmatic pl
 - **Prepare for the "Agentic Web"**: We are moving toward an ecosystem where AI agents negotiate and transact with one another. Companies need to adopt frameworks (like MCP or NANDA) to allow these agents to connect to their data.
 - **Governance is the Killer App**: You cannot scale what you cannot trust. Implementing rigorous governance, risk management (for IP and accuracy), and KPI tracking is the single highest-leverage activity for leadership right now.
 
+That is also the practical logic behind my [Executive AI Strategy Discovery]({{< relref "/advisory/ai-executive-strategy-discovery/" >}}): start with workflow economics, governance, and leadership alignment before committing more capital to pilots.
+
 ## The Outliers: Radical Speculations & Disagreements
 While the business reports focus on near term impact and earnings, the speculative sources paint a picture that is, well, interesting. Here are some notable _outliers_ from the consensus view:
 
@@ -93,6 +97,8 @@ While the business reports focus on near term impact and earnings, the speculati
 
 ## Final Thought
 We are likely in the "elevator operator" moment of AI. We are currently hiring people to press the buttons (prompt engineering), staring at the operator (the chatbot) and wondering if this is all there is. But the automation is coming for the elevator mechanism itself. Whether that mechanism arrives in 2027 as a superintelligence or slowly evolves over a decade of enterprise integration, the instruction is the same: **stop looking at the chatbot, and start rewiring the building**.
+
+If your organization needs a disciplined way to do that, the next step is not another workshop. It is a clear operating diagnosis, a leadership-level readiness assessment, and a 90-day action plan. That is what the [Executive AI Strategy Discovery]({{< relref "/advisory/ai-executive-strategy-discovery/" >}}) is designed to deliver.
 
 ## Postscript
 I have mentioned Benedict Evans more than once. His November 2025 [AI eats the world](https://www.ben-evans.com/presentations) presentation is worth reviewing. Here he is delivering the same presentation at Slush at Helsinki. Worth a watch!:
