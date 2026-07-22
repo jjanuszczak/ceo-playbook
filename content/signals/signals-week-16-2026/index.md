@@ -49,7 +49,7 @@ This week’s signals revolve around the intersection of **probability, infrastr
 - **My Take:** **Infrastructure is the only safe bet in a gold rush.** If you can't own the data center, you're just another tenant in a collapsing building.
 
 ### Headless ERP and SAP Complexity
-{{< x user="stevesi" id="2043776414416249052" >}}
+[Steven Sinofsky on headless ERP and SAP complexity](https://x.com/stevesi/status/2043776414416249052)
 
 - **Summary:** Steven Sinofsky discusses the 100,000+ tables in a typical SAP install and the rise of headless enterprise systems.
 - **Why it Matters:** It highlights the "invisible friction" that slows down large organizations.

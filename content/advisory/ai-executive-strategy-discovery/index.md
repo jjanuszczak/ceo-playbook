@@ -1,5 +1,6 @@
 ---
 title: Executive AI Strategy Discovery
+date: 2026-07-17
 description: Stop burning capital on AI pilots that never scale. A focused executive discovery process to identify where AI can create real operating advantage before you commit major budget.
 summary: A disciplined executive assessment for leadership teams that need decision-useful clarity on where AI can drive measurable ROI, where the risks sit, and what to do in the next 90 days.
 layout: simple

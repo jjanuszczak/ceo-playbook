@@ -1,3 +1,11 @@
+---
+title: Pushkin links
+date: 2026-04-06
+build:
+  render: never
+  list: never
+---
+
 * [Sign up](https://januszczak.kit.com/subscribe) for email updates
 * Pushkin Industries [website](https://www.pushkin.fm/)
 * [The Journey to CEO | Podcast Perspectives with Pushkin Industries’ Gretta Cohn](https://www.youtube.com/watch?v=J7vBxzSaAjs)

@@ -70,7 +70,7 @@ The week's signals converge on a singular theme: the shift from humans using too
 
 ## Book Highlights
 
-### [American Icon](ttps://www.amazon.com/American-Icon-Mulally-Fight-Company/dp/0307886069)
+### [American Icon](https://www.amazon.com/American-Icon-Mulally-Fight-Company/dp/0307886069)
 
 > “What I have learned is the power of a compelling vision, a comprehensive strategy, a relentless implementation process, and talented people working together based on those commitments”
 

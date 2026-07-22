@@ -1,3 +1,11 @@
+---
+title: Pushkin margin notes
+date: 2026-04-06
+build:
+  render: never
+  list: never
+---
+
 *My own comments, annotations, or summaries I would be adding to the margins of this article, to highlight key ideas, content, or add personal reflections.*
 
 Pushkin Industries:
