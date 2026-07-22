@@ -1,5 +1,6 @@
 ---
 title: Philippines Market Entry & Strategic Structuring
+date: 2026-01-20
 description: Navigate the BSP and SEC with confidence. Strategic advisory for fintech licensing, JVs, and market entry in the Philippines.
 summary: Navigate the regulators with confidence. Strategic advisory for fintech licensing, JVs, and market entry in the Philippines.
 layout: simple
