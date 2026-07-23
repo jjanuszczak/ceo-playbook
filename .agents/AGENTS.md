@@ -55,6 +55,13 @@ This is a static website built with Hugo, using the Blowfish theme, and deployed
 - **Build:** `hugo --minify`
 - **New Post:** `hugo new articles/my-new-post.md`
 
+## Agent Skills and Evaluation
+
+- Reusable skills live in `/.agents/skills/<skill-name>/`. Read the relevant `SKILL.md` before using a skill.
+- Run a skill's deterministic eval with `uv run python .agents/skills/<skill-name>/evals/runner.py <target-markdown-file>` when that skill provides an `evals/` directory.
+- Run `hugo --minify` after changing content, shortcodes, or Hugo references.
+- Keep eval fixtures under version control. Eval `reports/` are generated artifacts and are ignored by Git.
+
 ## Developer Notes & Gotchas
 1. **Theme Configuration Overrides:** Global theme settings in `config/_default/params.toml` (e.g., `sharingLinks`) can be overridden on individual pages by adding the parameter to the frontmatter (e.g., `sharingLinks: false`).
 2. **Shortcode Syntax:** 

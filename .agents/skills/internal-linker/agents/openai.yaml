@@ -1,0 +1,4 @@
+interface:
+  display_name: "Internal Linker"
+  short_description: "Optimize Hugo article internal links"
+  default_prompt: "Use $internal-linker to optimize internal links for this Hugo article."

@@ -17,7 +17,7 @@ The cartoon below captures the specific brand of existential dread rippling thro
 
 {{< figure src="vibe-code-therapy.jpeg" alt="If anyone can vibe code, what's my advantage?" caption="Image source: Dan Goldstein" >}}
 
-We have officially entered the era of "vibe coding." The technical barrier to entry has collapsed from a fortress into a speed bump. Today, a distinct vision and a few natural language prompts can manifest into functional software over a weekend ([or less!](https://www.msn.com/en-in/autos/photos/this-isn-t-funny-google-engineer-says-ai-did-in-1-hour-what-her-team-took-a-year-to-build/ar-AA1TAZbb)). When the *how* of building becomes commoditized, the *what* and the *why* come under intense scrutiny.
+We have officially entered the era of "vibe coding." The technical barrier to entry has collapsed from a fortress into a speed bump. Today, a distinct vision and a few natural language prompts can manifest into functional software over a weekend ([or less!](https://www.msn.com/en-in/autos/photos/this-isn-t-funny-google-engineer-says-ai-did-in-1-hour-what-her-team-took-a-year-to-build/ar-AA1TAZbb)). When the *how* of building becomes commoditized, the *what* and the *why* come under intense scrutiny. [The Next Compiler]({{< ref "articles/the-next-compiler" >}}) examines the software-engineering shift that makes this compression possible.
 
 The industry is currently debating where the new value lies:
 

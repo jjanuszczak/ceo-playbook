@@ -39,15 +39,33 @@ Run repository Python tooling through `uv` so commands use the managed environme
 uv run python .agents/skills/github-issue-manager/scripts/manage_issue.py "Title" "Description" --type enhancement
 ```
 
+### Internal Linking Skill
+
+Use the internal-linker helper to rank local cross-link candidates for an article:
+
+```bash
+uv run python .agents/skills/internal-linker/scripts/find_link_candidates.py \
+  content/articles/the-next-compiler/index.md --limit 4
+```
+
+Run its deterministic eval after changing the skill or applying its suggestions:
+
+```bash
+uv run python .agents/skills/internal-linker/evals/runner.py \
+  content/articles/the-next-compiler/index.md
+```
+
+Eval fixtures are version-controlled test data. Generated evaluation reports are ignored by Git.
+
 ## Project Structure
 
-- `/articles`: Long-form strategy and technology essays.
-- `/videos`: Curated video content and lectures.
-- `/lab`: Technical overviews, experiments, and project documentation.
-- `/portfolio`: Investment and project showcase.
-- `/signals`: Weekly synthesized insights and bookmarks.
+- `/content/articles`: Long-form strategy and technology essays.
+- `/content/videos`: Curated video content and lectures.
+- `/content/lab`: Technical overviews, experiments, and project documentation.
+- `/content/portfolio`: Investment and project showcase.
+- `/content/signals`: Weekly synthesized insights and bookmarks.
 - `/.policies`: Governance documentation for categories and tags.
-- `/.gemini`: Custom AI coding skills and agent configurations.
+- `/.agents`: Custom AI skills, agent guidance, and deterministic skill evals.
 
 ## Content Governance
 
