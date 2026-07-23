@@ -71,6 +71,7 @@ showReadingTime: false
     *   **Semantic Hierarchy:** H2 headings (`##`) phrased as questions where possible.
     *   **FAQ Section:** Conclude with `{{< faq >}}` block and at least 2-3 `{{% faq-item %}}` pairs.
     *   **Related/Read-Next:** MUST conclude with `{{< related-posts ... >}}` and `{{< read-next ... >}}`. Use `related-posts-suggester` and `read-next-suggester`.
+    *   **Internal Linking:** After the draft is complete, use `internal-linker` for Articles, Videos, and Labs to identify contextual outgoing links, incoming-link opportunities, and an optional Further Reading section. Apply target-page edits only when authorized. Present edits to other published pages separately for approval. Do not force a Further Reading section or duplicate destinations already covered by `related-posts` or `read-next`.
 *   **Images:** Use `{{< figure src="image.png" alt="SEO text" caption="Visible caption" >}}`.
 
 ### 4. Phase 4: Execution & Verification
@@ -91,4 +92,5 @@ You MUST autonomously verify every content task:
 *   **Tag Policy:** `.policies/tag_governance_policy.md`
 *   **Evaluation Runner:** `.agents/skills/managing-editor/evals/runner.py`
 *   **Provisioner:** `.agents/skills/content-creator/scripts/create_content.py`
+*   **Internal Linking:** `.agents/skills/internal-linker/SKILL.md`
 </AVAILABLE_RESOURCES>

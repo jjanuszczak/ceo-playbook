@@ -1,0 +1,128 @@
+{{ define "main" }}
+  {{/* The stats generator can briefly remove the data file while rewriting it. Keep Hugo's watch rebuild healthy during that window. */}}
+  {{ $stats := index site.Data "site-stats" | default dict }}
+  {{ $generatedAt := time.AsTime ($stats.generated_at | default "1970-01-01T00:00:00Z") }}
+  {{ $firstPublished := time.AsTime ($stats.first_published | default "1970-01-01") }}
+  {{ $latestPublished := time.AsTime ($stats.latest_published | default "1970-01-01") }}
+  {{ $posts := $stats.posts | default 0 }}
+  {{ $totalWords := $stats.total_words | default 0 }}
+  {{ $averageWords := $stats.average_words_per_post | default 0 }}
+  {{ $sections := $stats.sections | default dict }}
+  {{ $tags := $stats.tags | default dict }}
+  {{ $years := $stats.years | default dict }}
+  {{ $recent := $stats.recent | default slice }}
+  {{ $sectionRows := slice }}
+  {{ range $name, $record := $sections }}
+    {{ $sectionRows = $sectionRows | append (dict "name" $name "posts" $record.posts "words" $record.words) }}
+  {{ end }}
+  {{ $sectionRows = sort $sectionRows "posts" "desc" }}
+  {{ $tagRows := slice }}
+  {{ range $name, $count := $tags }}
+    {{ $tagRows = $tagRows | append (dict "name" $name "count" $count) }}
+  {{ end }}
+  {{ $topTags := first 12 (sort $tagRows "count" "desc") }}
+  {{ $maxYearPosts := 1 }}
+  {{ range $year, $record := $years }}
+    {{ if gt $record.posts $maxYearPosts }}{{ $maxYearPosts = $record.posts }}{{ end }}
+  {{ end }}
+
+  <style>
+    .stats-dashboard { --stats-ink: #20252b; --stats-muted: #66717c; --stats-line: #dce1e5; --stats-card: #f5f6f6; --stats-accent: #d76136; --stats-accent-soft: #f7e5de; color: var(--stats-ink); }
+    .dark .stats-dashboard { --stats-ink: #f3f5f6; --stats-muted: #aab4bd; --stats-line: #3b444e; --stats-card: #20272e; --stats-accent: #f08a62; --stats-accent-soft: #432d29; }
+    .stats-dashboard * { box-sizing: border-box; }
+    .stats-kicker { color: var(--stats-accent); font-size: .75rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .stats-hero { border-bottom: 1px solid var(--stats-line); padding: 3.25rem 0 2rem; }
+    .stats-hero h1 { letter-spacing: -.055em; line-height: .95; margin: .6rem 0 .9rem; max-width: 12ch; }
+    .stats-subtitle, .stats-meta { color: var(--stats-muted); }
+    .stats-meta { font-size: .8rem; margin-top: 1.5rem; }
+    .stats-grid { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 2rem 0 3.5rem; }
+    .stats-card { background: var(--stats-card); border-radius: 1rem; min-height: 8.5rem; padding: 1.15rem; }
+    .stats-card span, .stats-label { color: var(--stats-muted); display: block; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .stats-card strong { display: block; font-size: clamp(1.75rem, 5vw, 3rem); letter-spacing: -.05em; line-height: 1; margin-top: 1.35rem; }
+    .stats-section { border-top: 1px solid var(--stats-line); padding: 2.25rem 0; }
+    .stats-section h2 { font-size: 1.4rem; letter-spacing: -.035em; margin: 0; }
+    .stats-section-header { align-items: end; display: flex; justify-content: space-between; margin-bottom: 1.5rem; }
+    .stats-section-header p { color: var(--stats-muted); font-size: .85rem; margin: 0; }
+    .stats-sections { display: grid; gap: .75rem; }
+    .stats-section-row { align-items: center; display: grid; gap: .75rem; grid-template-columns: minmax(6.5rem, 1fr) minmax(6rem, 2fr) auto; }
+    .stats-section-name { font-size: .9rem; font-weight: 700; text-transform: capitalize; }
+    .stats-track { background: var(--stats-card); border-radius: 99px; height: .6rem; overflow: hidden; }
+    .stats-fill { background: var(--stats-accent); border-radius: inherit; height: 100%; min-width: 3px; }
+    .stats-section-value { color: var(--stats-muted); font-size: .8rem; text-align: right; white-space: nowrap; }
+    .stats-timeline { align-items: end; display: grid; gap: .45rem; grid-template-columns: repeat(10, minmax(0, 1fr)); height: 11.5rem; }
+    .stats-year { align-items: center; display: flex; flex-direction: column; height: 100%; justify-content: end; min-width: 0; }
+    .stats-year-bar { background: linear-gradient(180deg, var(--stats-accent), #9e3d23); border-radius: .3rem .3rem 0 0; min-height: 3px; width: 100%; }
+    .stats-year-label { color: var(--stats-muted); font-size: .68rem; margin-top: .5rem; transform: rotate(-45deg); white-space: nowrap; }
+    .stats-year-value { font-size: .65rem; font-weight: 700; margin-bottom: .3rem; }
+    .stats-topic-grid { display: flex; flex-wrap: wrap; gap: .55rem; }
+    .stats-topic { background: var(--stats-accent-soft); border-radius: 99px; color: var(--stats-ink); font-size: .82rem; padding: .4rem .75rem; }
+    .stats-topic small { color: var(--stats-muted); margin-left: .3rem; }
+    .stats-recent { display: grid; }
+    .stats-recent-item { border-top: 1px solid var(--stats-line); color: inherit; display: grid; gap: .25rem; padding: 1rem 0; text-decoration: none; }
+    .stats-recent-item:hover .stats-recent-title { color: var(--stats-accent); }
+    .stats-recent-title { font-size: 1.05rem; font-weight: 700; letter-spacing: -.015em; transition: color .15s ease; }
+    .stats-recent-meta { color: var(--stats-muted); font-size: .8rem; }
+    @media (min-width: 640px) { .stats-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } .stats-card { min-height: 10rem; padding: 1.4rem; } .stats-recent-item { align-items: baseline; grid-template-columns: minmax(0, 1fr) auto; } }
+  </style>
+
+  <article class="stats-dashboard mb-16">
+    <header class="stats-hero">
+      <p class="stats-kicker">The CEO Playbook</p>
+      <h1 class="text-5xl font-extrabold sm:text-6xl">Publishing, by the numbers.</h1>
+      <p class="stats-subtitle max-w-xl text-lg">A live view of the ideas, analysis, and field notes published here.</p>
+      {{ if gt $posts 0 }}<p class="stats-meta">Last calculated {{ $generatedAt.Format "2 January 2006, 15:04 MST" }}</p>{{ end }}
+    </header>
+
+    <section class="stats-grid" aria-label="Publishing overview">
+      <div class="stats-card"><span>Published posts</span><strong>{{ lang.FormatNumber 0 $posts }}</strong></div>
+      <div class="stats-card"><span>Words published</span><strong>{{ lang.FormatNumber 0 $totalWords }}</strong></div>
+      <div class="stats-card"><span>Average post</span><strong>{{ lang.FormatNumber 0 $averageWords }}</strong></div>
+      <div class="stats-card"><span>Years publishing</span><strong>{{ if gt $posts 0 }}{{ add (sub $latestPublished.Year $firstPublished.Year) 1 }}{{ else }}0{{ end }}</strong></div>
+    </section>
+
+    <section class="stats-section">
+      <div class="stats-section-header"><div><p class="stats-kicker mb-2">Portfolio</p><h2>Where the work lives</h2></div><p>{{ len $sections }} sections</p></div>
+      <div class="stats-sections">
+        {{ range $sectionRows }}
+          {{ $name := .name | default "General" }}
+          {{ $width := cond (gt $posts 0) (div (mul .posts 100) $posts) 0 }}
+          <div class="stats-section-row">
+            <div class="stats-section-name">{{ $name }}</div>
+            <div class="stats-track" aria-label="{{ $name }}: {{ .posts }} posts"><div class="stats-fill" style="width: {{ $width }}%"></div></div>
+            <div class="stats-section-value">{{ .posts }} posts · {{ lang.FormatNumber 0 .words }} words</div>
+          </div>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="stats-section-header"><div><p class="stats-kicker mb-2">Cadence</p><h2>Publishing over time</h2></div>{{ if gt $posts 0 }}<p>{{ $firstPublished.Format "2006" }} to {{ $latestPublished.Format "2006" }}</p>{{ end }}</div>
+      <div class="stats-timeline" aria-label="Posts published by year">
+        {{ range $year, $record := $years }}
+          {{ $height := div (mul $record.posts 100) $maxYearPosts }}
+          <div class="stats-year" title="{{ $year }}: {{ $record.posts }} posts">
+            <span class="stats-year-value">{{ $record.posts }}</span><div class="stats-year-bar" style="height: {{ $height }}%"></div><span class="stats-year-label">{{ $year }}</span>
+          </div>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="stats-section-header"><div><p class="stats-kicker mb-2">Subjects</p><h2>Most discussed</h2></div><p>{{ len $tags }} tags tracked</p></div>
+      <div class="stats-topic-grid">
+        {{ range $topTags }}<span class="stats-topic">{{ replace .name "-" " " }} <small>{{ .count }}</small></span>{{ end }}
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="stats-section-header"><div><p class="stats-kicker mb-2">Latest</p><h2>Recent publishing</h2></div></div>
+      <div class="stats-recent">
+        {{ range first 8 $recent }}
+          <a class="stats-recent-item" href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>
+            <span class="stats-recent-title">{{ .title }}</span><span class="stats-recent-meta">{{ (time.AsTime .date).Format "2 Jan 2006" }} · {{ .section | default "general" }} · {{ .word_count }} words</span>
+          </a>
+        {{ end }}
+      </div>
+    </section>
+  </article>
+{{ end }}

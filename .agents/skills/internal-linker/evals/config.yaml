@@ -1,0 +1,31 @@
+pipeline:
+  target_version: "internal-linker-v1"
+  steps:
+    - name: "Skill Contract"
+      id: "skill_contract"
+      script: "checks/skill_contract.py"
+      halt_on_fail: true
+    - name: "Candidate Discovery"
+      id: "candidate_discovery"
+      script: "checks/candidate_discovery.py"
+      halt_on_fail: true
+    - name: "Hugo Reference Integrity"
+      id: "reference_integrity"
+      script: "checks/hugo_reference_integrity.py"
+      halt_on_fail: true
+    - name: "Further Reading Structure"
+      id: "further_reading"
+      script: "checks/further_reading_structure.py"
+      halt_on_fail: false
+    - name: "Report Contract"
+      id: "report_contract"
+      script: "checks/report_contract.py"
+      halt_on_fail: false
+    - name: "Discovery Helper Is Read-Only"
+      id: "non_mutation"
+      script: "checks/helper_non_mutation.py"
+      halt_on_fail: true
+    - name: "Hugo Build"
+      id: "build"
+      script: "checks/hugo_build.py"
+      halt_on_fail: true

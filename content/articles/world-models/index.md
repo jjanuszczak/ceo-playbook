@@ -74,7 +74,7 @@ Intelligence, in LeCun's view, is the ability to find the **right level of abstr
 
 ## How do World Models impact AI?
 
-LeCun is currently critical of Large Language Models because he believes they mostly predict the "next token" (the low-level detail) without truly understanding the "world model" (the high-level abstraction). He’s arguing that for AI to reach human-level intelligence, it must learn to perceive the world in these hierarchical layers, allowing it to plan long-term actions instead of just reacting to immediate data.
+LeCun is currently critical of Large Language Models because he believes they mostly predict the "next token" (the low-level detail) without truly understanding the "world model" (the high-level abstraction). He’s arguing that for AI to reach human-level intelligence, it must learn to perceive the world in these hierarchical layers, allowing it to plan long-term actions instead of just reacting to immediate data. [The Next Compiler]({{< ref "articles/the-next-compiler" >}}) examines what that shift in abstraction means for software teams.
 
 **The Takeaway**: You don't understand a forest by looking at the atoms in a leaf. You understand it by seeing the "Forest" as its own thing. Understanding is the process of ignoring what doesn't matter so you can see what does.
 
