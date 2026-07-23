@@ -7,7 +7,6 @@ description: "Evolution, Economics, and the Future of Digital Finance: An in-dep
 # Assign exactly one category: Strategy, Leadership, Fintech, Energy Transition, Technology, Venture Building, Essays
 categories:
   - "Fintech"
-  - "Strategy"
 tags:
   - "Stablecoins"
   - "Digital Finance"
