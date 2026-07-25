@@ -37,6 +37,7 @@ Use concise, decision-useful updates. Do not expose private reasoning.
 - Rationale: `<one concise paragraph>`
 - Research basis: `<primary sources and permitted secondary sources>`
 - Taxonomy: `<category and tags, or approval request>`
+- Internal links: `<selected target-draft paths and rationale; incoming recommendations if any>`
 - Featured image: `<three candidate URLs, rights basis, and selection>`
 - Social drafts: `<path>`
 ```

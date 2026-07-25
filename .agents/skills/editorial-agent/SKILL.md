@@ -22,7 +22,7 @@ Never change `draft` to `false`, merge a PR, publish, or post social content unl
 3. Propose the content type from the brief. Use Articles for strategic analysis, Labs for technical work, Videos for a primary video URL, and Research for evidence-led analysis. Record the choice in the issue.
 4. Invoke `content-research-writer` when the issue needs research or a full draft. Preserve a supplied draft unless substantial rewriting is authorized.
 5. Invoke `content-creator` with the existing issue identifier. Do not create a second issue. Create a new issue only when this skill is invoked directly without one.
-6. Invoke `managing-editor` to enforce taxonomy, metadata, AEO structure, internal links, and draft status. Force `draft: true` regardless of supplied frontmatter.
+6. Invoke `managing-editor` to enforce taxonomy, metadata, AEO structure, internal links, and draft status. Run `internal-linker` with `--allow-draft-target`, read its shortlist, and add 2 to 4 relevant contextual Hugo links to the draft itself. Record the selected paths and rationale in `notes.md` and the issue. A `No contextual-link fit:` exception requires a concise rationale. Force `draft: true` regardless of supplied frontmatter.
 7. Source three featured-image candidates. Prefer licensed real photography. When `PIXABAY_API_KEY` is available, use `scripts/find_pixabay_candidates.py` and read `references/pixabay.md`. Record candidate URLs, rights basis, and selection rationale. Commit only the selected 16:9 landscape asset. Use image generation only when real photography cannot express the argument and the brief does not prohibit it.
 8. Create `notes.md` from the bundled template. Include the concise decision record, not private reasoning.
 9. Invoke `repurpose-social` to save X and LinkedIn candidates under `docs/repurposed/`. Draft only. Do not post.
@@ -31,7 +31,7 @@ Never change `draft` to `false`, merge a PR, publish, or post social content unl
 
 ## Authority
 
-Act without approval only for the issue states, drafting, existing taxonomy, feature-image selection with clear rights, branch creation, validation, and PR creation defined above.
+Act without approval only for the issue states, drafting, contextual edits to the draft the agent owns, existing taxonomy, feature-image selection with clear rights, branch creation, validation, and PR creation defined above.
 
 Require human approval for a new category or tag, private or paid sources without explicit issue permission, changing unrelated published posts, publishing, merging, and social posting.
 

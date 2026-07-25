@@ -50,9 +50,13 @@ AI changes the cost of producing an answer. It does not remove the cost of under
 
 That distinction matters in executive work. You can ask a model to summarize a market, compare competitors, or draft an investment memo. You cannot safely outsource the judgment about what is missing, which incentives matter, or what would break the conclusion.
 
+That is the difference between [discovery and knowledge]({{< ref "articles/discovery-to-knowledge" >}}). AI can reveal a field faster than any person can, but it cannot decide which finding matters to your business or carry the accountability for acting on it.
+
 The early research supports caution, not panic. A 2025 CHI study of 319 knowledge workers found that people often reported less effort on cognitive tasks when using generative AI. The authors were explicit that their study did not establish causation. Their more useful observation was that the work shifts: from gathering information to verifying outputs, integrating responses, and supervising the tool. [Read the paper](https://doi.org/10.1145/3706598.3713778).
 
 That is the management problem. If AI removes the lower-value effort but we keep the verification and synthesis, it can make teams stronger. If it removes the struggle before anyone develops a point of view, it can make teams faster and shallower at the same time.
+
+Forming that point of view requires choosing the right level of abstraction, not processing every available detail. That is the practical value of [strategic forgetting and world models]({{< ref "articles/world-models" >}}) for leaders using AI.
 
 ## Why is attention still a leadership issue?
 
@@ -69,6 +73,8 @@ I would set three operating rules.
 1. **Read before you prompt on the work that matters.** For a board decision, investment thesis, regulatory change, or strategic partnership, start with the primary document. Use AI after you have a provisional view.
 2. **Make verification visible.** Require a source list, a counterargument, and a statement of uncertainty in AI-assisted work. “The model said so” is not analysis.
 3. **Protect uninterrupted depth.** Give people time to read and write without the feed, chat, or model in the loop. This is not nostalgia. It is how you preserve the ability to form an original position.
+
+That discipline needs an operating design, not a calendar slogan. [Architecture of Attention]({{< ref "articles/architecture-of-attention" >}}) makes the case for treating information synthesis and focused analysis as deliberate capabilities.
 
 The goal is not to make teams slower. It is to make sure speed does not hide a collapse in comprehension.
 
@@ -99,6 +105,6 @@ Books are not dying. But the discipline that books represent can atrophy if we l
   {{% /faq-item %}}
 {{< /faq >}}
 
-{{< related-posts title="Related Insights" paths="articles/discovery-to-knowledge, articles/moats-vibe-coding" >}}
+{{< related-posts title="Related Insights" paths="articles/the-next-compiler, articles/burke-lecture" >}}
 
 {{< read-next title="Read Next" link="articles/mit-ai-report-2025" buttonText="View More Insights" buttonLink="/articles/" >}}

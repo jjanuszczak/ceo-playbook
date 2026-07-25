@@ -15,6 +15,13 @@ Article, Technology. The post examines AI as an enabling technology and its effe
 - CHI 2025 study of 319 knowledge workers: reported cognitive-effort shifts with GenAI, not causal proof.
 - Bonifacci et al. meta-analysis: relationship between mind wandering and reading comprehension.
 
+## Internal linking record
+
+- `articles/discovery-to-knowledge`: AI can accelerate discovery but cannot replace accountable judgment.
+- `articles/world-models`: forming a view requires selecting the right level of abstraction.
+- `articles/architecture-of-attention`: focused reading and synthesis need an operating design.
+- Incoming-link suggestions were not applied because they would modify older published posts and still require human approval.
+
 ## Featured image candidates and selected asset
 
 All candidates were returned by Pixabay as horizontal photos and were checked for text, logos, watermarks, and the `AI generated` tag.

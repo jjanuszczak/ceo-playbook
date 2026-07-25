@@ -13,6 +13,7 @@ REQUIRED_NOTE_HEADINGS = {
     "Brief and intended reader",
     "Content-type and taxonomy rationale",
     "Research basis and citations",
+    "Internal linking record",
     "Featured image candidates and selected asset",
     "Social draft archive",
     "Validation record",
@@ -28,6 +29,10 @@ def frontmatter(path: Path):
     return yaml.safe_load(match.group(1)) or {}
 
 
+def contextual_link_paths(content: str) -> set[str]:
+    return set(re.findall(r'\]\(\{\{<\s*(?:ref|relref)\s+"([^"]+)"\s*>\}\}\)', content))
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("bundle", type=Path, help="Content leaf bundle directory")
@@ -38,14 +43,19 @@ def main():
     bundle = args.bundle
     index = bundle / "index.md"
     notes = bundle / "notes.md"
+    needs_contextual_links = False
 
     if not index.is_file():
         errors.append(f"Missing index.md: {index}")
     else:
         try:
+            index_content = index.read_text(encoding="utf-8")
             metadata = frontmatter(index)
             if metadata.get("draft") is not True:
                 errors.append("Frontmatter must set draft: true")
+            links = contextual_link_paths(index_content)
+            if len(links) < 2:
+                needs_contextual_links = True
         except (OSError, ValueError, yaml.YAMLError) as exc:
             errors.append(f"Invalid frontmatter: {exc}")
 
@@ -60,6 +70,10 @@ def main():
         missing = sorted(REQUIRED_NOTE_HEADINGS - headings)
         if missing:
             errors.append(f"notes.md missing headings: {', '.join(missing)}")
+        elif needs_contextual_links:
+            notes_content = notes.read_text(encoding="utf-8")
+            if "No contextual-link fit:" not in notes_content:
+                errors.append("Missing contextual links or a documented No contextual-link fit exception")
 
     if not any(bundle.glob("featured.*")):
         errors.append("Missing selected featured image named featured.<extension>")
