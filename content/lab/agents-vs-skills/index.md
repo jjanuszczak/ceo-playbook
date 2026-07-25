@@ -133,6 +133,8 @@ A skill can possess agent-like internals. The key remaining difference is usuall
   {{% /faq-item %}}
 {{< /faq >}}
 
+Featured image source: <a href="https://pixabay.com/users/mrhà-49741683/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=10258355">Mr Hà</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=10258355">Pixabay</a>
+
 {{< related-posts title="Related Insights" paths="articles/architecture-of-attention, lab/deterministic-evals-for-ai-skills" >}}
 
 {{< read-next title="Read Next" link="lab/ai-glossary" buttonText="View more Deep Dives" >}}
