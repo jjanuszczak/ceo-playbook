@@ -17,6 +17,7 @@ Activate this skill when the user wants to:
 ### 0. Phase 0: Provisioning & Normalization
 1.  **Infrastructure Provisioning (New Posts):**
     - If the request is to create a *new* post, you MUST first leverage the `content-creator` skill to provision the GitHub issue, feature branch, and leaf bundle.
+    - When an outer Editorial Agent supplies a backlog issue, pass it to `content-creator` with `--issue <number>` and reuse that issue. Do not create a duplicate issue.
     - Provide the `content-creator` with the `slug`.
     - Once provisioned, continue work in the new feature branch at the returned `index.md` path.
 2.  **Input Normalization:**
@@ -73,9 +74,11 @@ showReadingTime: false
     *   **Related/Read-Next:** MUST conclude with `{{< related-posts ... >}}` and `{{< read-next ... >}}`. Use `related-posts-suggester` and `read-next-suggester`.
     *   **Internal Linking:** After the draft is complete, use `internal-linker` for Articles, Videos, and Labs to identify contextual outgoing links, incoming-link opportunities, and an optional Further Reading section. Apply target-page edits only when authorized. Present edits to other published pages separately for approval. Do not force a Further Reading section or duplicate destinations already covered by `related-posts` or `read-next`.
 *   **Images:** Use `{{< figure src="image.png" alt="SEO text" caption="Visible caption" >}}`.
+*   **Draft protection:** Set `draft: true` for every newly created or edited agent-managed post. Publishing is a separate, explicit workflow.
 
 ### 4. Phase 4: Execution & Verification
 1.  **Propose:** Show the planned file path and frontmatter for approval.
+    - When an outer Editorial Agent has claimed an `editorial:ready` issue, the issue is the approved brief. Record the plan in the issue decision log and continue without an additional pause.
 2.  **Write:** Use `write_file` or `replace` to populate the `index.md`.
 
 ### 5. Phase 5: Self-Evaluation & Correction
