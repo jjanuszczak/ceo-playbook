@@ -7,8 +7,9 @@ Automates the technical provisioning of all site content types (Articles, Resear
 1.  **Identify Content Type:**
     -   Determine the type of content requested (Article, Research, Video, Lab, Portfolio, or Signals).
     -   If unclear, ask the user for clarification.
-2.  **Issue Creation:**
-    -   Create a GitHub issue tagged as an `enhancement` for the specific content type.
+2.  **Issue Creation or Reuse:**
+    -   Create a GitHub issue tagged as an `enhancement` when invoked directly without one.
+    -   Reuse the existing backlog issue when an outer editorial agent provides its issue identifier. Never create a duplicate issue.
 3.  **Branch Isolation:**
     -   Create a new feature branch in the format `feature/<type>-<slug>`.
 4.  **Bundle Provisioning:**
@@ -24,6 +25,9 @@ Automates the technical provisioning of all site content types (Articles, Resear
 
 To execute this workflow, use the supporting Python script:
 `uv run python .agents/skills/content-creator/scripts/create_content.py <content_type> <slug>`
+
+To reuse a backlog issue and create a branch linked to it:
+`uv run python .agents/skills/content-creator/scripts/create_content.py <content_type> <slug> --issue <number>`
 
 **Available Types:** `article`, `research`, `video`, `lab`, `portfolio`, `signals`.
 

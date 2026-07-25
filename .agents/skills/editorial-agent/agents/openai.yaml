@@ -1,0 +1,4 @@
+interface:
+  display_name: "Editorial Agent"
+  short_description: "Turn approved briefs into review-ready posts"
+  default_prompt: "Use $editorial-agent to process the next approved CEO Playbook editorial issue."
