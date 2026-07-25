@@ -6,6 +6,8 @@
 
 ## Research basis and citations
 
+## Internal linking record
+
 ## Featured image candidates and selected asset
 
 ## Social draft archive

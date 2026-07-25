@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rank related published Hugo articles for an internal-linking review."""
+"""Rank published Hugo articles for an internal-linking review."""
 
 from __future__ import annotations
 
@@ -50,9 +50,13 @@ def hugo_path(markdown_path: Path, content_dir: Path) -> str:
     return relative.removesuffix("/index.md").removesuffix(".md")
 
 
-def parse_article(path: Path, content_dir: Path) -> dict[str, Any] | None:
+def parse_article(
+    path: Path, content_dir: Path, *, allow_draft: bool = False
+) -> dict[str, Any] | None:
     frontmatter, body = frontmatter_and_body(path.read_text(encoding="utf-8"))
-    if not frontmatter or scalar(frontmatter, "draft").lower() == "true":
+    if not frontmatter:
+        return None
+    if scalar(frontmatter, "draft").lower() == "true" and not allow_draft:
         return None
     if re.search(r"^externalUrl:\s*[\"']?https?://", frontmatter, re.MULTILINE):
         return None
@@ -108,15 +112,20 @@ def main() -> None:
     parser.add_argument("--content-dir", default="content/articles", help="Published article corpus")
     parser.add_argument("--limit", type=int, default=4, choices=range(1, 11), metavar="1-10")
     parser.add_argument("--as-of", help="Use YYYY-MM-DD as the ranking date for reproducible results")
+    parser.add_argument(
+        "--allow-draft-target",
+        action="store_true",
+        help="Allow the target to be a draft while retaining a published-only candidate corpus",
+    )
     args = parser.parse_args()
     content_dir = Path(args.content_dir).resolve()
     target_path = Path(args.target).resolve()
     if not content_dir.is_dir() or not target_path.is_file():
         parser.error("target and content directory must exist")
     articles = [article for file in content_dir.rglob("*.md") if (article := parse_article(file, content_dir))]
-    target = next((article for article in articles if Path(article["file"]) == target_path), None)
+    target = parse_article(target_path, content_dir, allow_draft=args.allow_draft_target)
     if not target:
-        parser.error("target must be a published Markdown article inside --content-dir")
+        parser.error("target must be a published article, or use --allow-draft-target for a draft")
     try:
         as_of = date.fromisoformat(args.as_of) if args.as_of else date.today()
     except ValueError:

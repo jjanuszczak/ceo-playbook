@@ -17,7 +17,7 @@ Use this skill to make a considered recommendation or an approved edit. Do not a
      content/articles/example/index.md --limit 4
    ```
 
-   Pass `--content-dir content/articles` when the target lives outside the default corpus. The helper ranks published articles with tag, category, keyword, and recency signals. Treat its results as a shortlist, not a decision.
+   Pass `--content-dir content/articles` when the target lives outside the default corpus. For a new draft, add `--allow-draft-target`; it permits only the target to be a draft and keeps the candidate corpus published. The helper ranks articles with tag, category, keyword, and recency signals. Treat its results as a shortlist, not a decision.
 3. Read every shortlisted source file before recommending it. Reject a candidate if the connection is generic, duplicated by an existing internal link, or cannot be justified in the target's own language.
 4. Select 2 to 4 outgoing and 2 to 4 incoming recommendations. Favor complementary depth, a prerequisite, a useful extension, or direct supporting evidence. Prefer material published in the past 12 to 18 months when relevance is otherwise comparable.
 5. Write exact, minimal suggestions. For outgoing links, quote the nearby text and add a natural transition after the relevant paragraph, bullet, or FAQ answer. For incoming links, identify the precise paragraph in the source article and supply its proposed sentence.

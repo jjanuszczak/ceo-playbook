@@ -24,9 +24,9 @@ The Managing Editor remains a reusable specialist skill. The Editorial Agent dec
 A content job is complete when all of the following are true:
 
 1. A leaf bundle exists in the correct section and approved path.
-2. The content type, frontmatter, taxonomy, citations, internal links, and AEO elements meet the published rules.
+2. The content type, frontmatter, taxonomy, citations, AEO elements, and 2 to 4 relevant contextual outbound internal links meet the published rules. A no-fit exception requires a concise record in `notes.md` and the issue.
 3. The selected featured image is relevant, licensed for use, 16:9 landscape, substantially free of text, and stored in the bundle with required attribution recorded.
-4. `notes.md` records the editorial brief, source basis, taxonomy rationale, image candidates and selection, validation outcomes, and unresolved questions.
+4. `notes.md` records the editorial brief, source basis, taxonomy rationale, internal-link decision record, image candidates and selection, validation outcomes, and unresolved questions.
 5. Required deterministic checks, including the Hugo build, pass.
 6. The post frontmatter explicitly sets `draft: true`.
 7. The work is committed and a GitHub PR linked to the original backlog issue is open.
@@ -206,6 +206,7 @@ Required entries:
 ## Brief and intended reader
 ## Content-type and taxonomy rationale
 ## Research basis and citations
+## Internal linking record
 ## Featured image candidates and selected asset
 ## Social draft archive
 ## Validation record
@@ -251,6 +252,7 @@ The Editorial Agent inherits the Managing Editor evaluation suite and adds agent
 - Image is present when required, is landscape 16:9 or compatible with approved crop policy, and has no substantial embedded text.
 - Image source, attribution, and license basis are recorded.
 - Every agent-created post has `draft: true`, regardless of supplied frontmatter.
+- Every agent-created post has 2 to 4 contextual Hugo `ref` or `relref` links to distinct published pages, or a documented no-fit exception. The draft target may be analyzed, but candidate links must remain published content.
 - The agent cannot mark a job review-ready or create its PR if `draft: false`.
 - A social-draft archive exists for the post and contains X and LinkedIn candidates created by the existing `repurpose-social` skill.
 - No duplicate issue is created when the agent begins from an existing backlog issue.
