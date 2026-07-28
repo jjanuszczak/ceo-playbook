@@ -26,7 +26,7 @@ citations:
     url: "https://rogermartin.medium.com/how-to-prepare-for-strategy-4beaa4715c6e"
 ---
 
-_Why Strategy Should Never Begin With Pre-Work: Lessons From Roger Martin’s “Strategy as Choices”_
+_Why Strategy Should Never Begin With "Pre-Work"_
 
 For anyone who has spent time inside a large corporation, the annual strategy cycle is painfully familiar: weeks of pre-work, decks prepared by every function, one-off “strategic inputs” from planning teams and consultants, and a leadership offsite that feels more like a compliance ritual than an exercise in strategic thinking.
 
@@ -40,7 +40,6 @@ Strategy should start with an honest account of the choices that produced today�
 
 ## 1. Strategy Begins With the Gap Between Intent and Outcome
 
-Martin makes a deceptively simple point:
 **The only productive starting point for strategy is the mismatch between what leadership intended and what actually happened.**
 
 Not market trends.
@@ -61,7 +60,6 @@ This is the real work. Everything else is noise.
 
 ## 2. Strategy Is a Leadership Function, Not a Committee Exercise
 
-Martin is unequivocal:
 **Strategy cannot be delegated.**
 
 Not to Corporate Planning.
@@ -77,7 +75,7 @@ There is nothing more dangerous than a company whose staff-defined “strategy�
 ## 3. The Hidden Danger of Pre-Work
 
 In most corporations, pre-work is seen as a way to “prepare” for strategy.
-Martin argues the opposite: **pre-work, especially done without the ELT, creates bias and false certainty.**
+But it is the opposite: **pre-work, especially done without the ELT, creates bias and false certainty.**
 
 It is a way for someone else to set the agenda.
 It “loads the dice” with preferred data.
@@ -94,8 +92,7 @@ The only legitimate pre-work is answering the questions inside the heads of the 
 
 ## 4. Facts Matter. Decks Don’t
 
-Martin emphasizes that strategy teams should not be producing decks.
-Their job is to curate a *concise fact base*, and only the facts directly relevant to the choices leaders must grapple with.
+Strategy teams should not be producing decks. Their job is to curate a *concise fact base*, and only the facts directly relevant to the choices leaders must grapple with.
 
 This is not analysis for analysis’s sake.
 This is data with utility.
@@ -110,7 +107,7 @@ The value of analysis lies not in volume, but in clarity.
 
 Strategy is not a document. Strategy is a discipline of reasoning.
 
-Roger Martin emphasizes that strategy must be a *live, iterative exploration* of possibilities and trade-offs, not a mechanical planning cycle. This aligns closely with the approach popularized by IDEO, whose human-centered design methodology treats strategy as an iterative process of reframing problems, generating hypotheses, and testing them in the real world. Their perspective on strategic planning (summarized in IDEO U’s article *[“Strategic Planning: How to Get Started”](https://www.ideou.com/blogs/inspiration/strategic-planning-how-to-get-started)*) reinforces that leaders must be **in the room**, actively shaping choices, not passively reviewing decks assembled by others.
+Strategy must be a *live, iterative exploration* of possibilities and trade-offs, not a mechanical planning cycle. This aligns closely with the approach popularized by IDEO, whose human-centered design methodology treats strategy as an iterative process of reframing problems, generating hypotheses, and testing them in the real world. Their perspective on strategic planning (summarized in IDEO U’s article *[“Strategic Planning: How to Get Started”](https://www.ideou.com/blogs/inspiration/strategic-planning-how-to-get-started)*) reinforces that leaders must be **in the room**, actively shaping choices, not passively reviewing decks assembled by others.
 
 Both Martin and IDEO converge on the same truth:
 **Great strategy emerges from engaged, creative, participatory thinking, not from documents produced in advance of that thinking.**
@@ -158,7 +155,7 @@ Strategy cannot be allowed to drift with each planning cycle or each incoming de
 
 ## Conclusion: Start With the Truth, End With Shared Choices
 
-If I summarize Martin’s argument in one sentence, it is this:
+If I summarize in one sentence, it is this:
 
 > **Strategy starts with the truth about past choices, lives in the heads of accountable leaders, and succeeds only when those leaders make new choices that close the gap between aspiration and outcome.**
 
