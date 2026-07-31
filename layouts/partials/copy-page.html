@@ -1,0 +1,146 @@
+{{- $page := . -}}
+{{- $markdown := replaceRE `(?s)\{\{[<%].*?[>%]\}\}` "" $page.RawContent -}}
+{{- $markdown = replaceRE `\n{3,}` "\n\n" $markdown -}}
+{{- $copyright := printf "© %s %s" (now.Format "2006") $page.Site.Params.Author.name -}}
+{{- with $page.Site.Params.copyright -}}
+  {{- $copyright = replace . "{ year }" (now.Format "2006") -}}
+{{- end -}}
+{{- $copyText := printf "%s\n\n---\n%s" (strings.TrimSpace $markdown) $copyright -}}
+{{- $id := $page.File.UniqueID -}}
+
+<div id="copy-page-control-{{ $id }}" class="copy-page-control not-prose">
+  <div class="copy-page-actions">
+    <button
+      type="button"
+      class="copy-page-btn"
+      aria-label="Copy page as Markdown"
+      data-copy-label="Copy Page"
+      data-copied-label="Copied"
+      data-failed-label="Copy failed">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+      </svg>
+      <span class="copy-page-btn__label">Copy Page</span>
+    </button>
+    <button
+      type="button"
+      class="copy-page-menu-toggle"
+      aria-label="More copy page options"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-controls="copy-page-menu-{{ $id }}">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m7 9 5 5 5-5"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div id="copy-page-menu-{{ $id }}" class="copy-page-menu" role="menu" hidden>
+    <button type="button" class="copy-page-menu-item" role="menuitem" data-action="copy">
+      <span class="copy-page-menu-icon" aria-hidden="true">⧉</span>
+      <span><strong>Copy Page</strong><small>Copy page as Markdown for LLMs</small></span>
+    </button>
+    <button type="button" class="copy-page-menu-item" role="menuitem" data-action="view">
+      <span class="copy-page-menu-icon" aria-hidden="true">M↓</span>
+      <span><strong>View as Markdown ↗</strong><small>Open this page as plain text</small></span>
+    </button>
+    <button type="button" class="copy-page-menu-item" role="menuitem" data-action="chatgpt">
+      <span class="copy-page-menu-icon" aria-hidden="true">◉</span>
+      <span><strong>Open in ChatGPT ↗</strong><small>Copies the page, then opens ChatGPT</small></span>
+    </button>
+    <button type="button" class="copy-page-menu-item" role="menuitem" data-action="claude">
+      <span class="copy-page-menu-icon" aria-hidden="true">✦</span>
+      <span><strong>Open in Claude ↗</strong><small>Copies the page, then opens Claude</small></span>
+    </button>
+  </div>
+  <span class="sr-only" aria-live="polite"></span>
+</div>
+
+<pre id="copy-page-markdown-{{ $id }}" hidden>{{ $copyText }}</pre>
+
+<script>
+  (() => {
+    const control = document.getElementById("copy-page-control-{{ $id }}");
+    const source = document.getElementById("copy-page-markdown-{{ $id }}");
+    const button = control.querySelector(".copy-page-btn");
+    const label = button.querySelector(".copy-page-btn__label");
+    const toggle = control.querySelector(".copy-page-menu-toggle");
+    const menu = control.querySelector(".copy-page-menu");
+    const status = control.querySelector("[aria-live]");
+
+    const setMenuOpen = (open) => {
+      menu.hidden = !open;
+      toggle.setAttribute("aria-expanded", String(open));
+    };
+
+    const copyPage = async () => {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(source.textContent);
+        return;
+      }
+      const textarea = document.createElement("textarea");
+      textarea.value = source.textContent;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.select();
+      const copied = document.execCommand("copy");
+      textarea.remove();
+      if (!copied) throw new Error("Clipboard fallback failed");
+    };
+
+    const confirmCopy = async () => {
+      try {
+        await copyPage();
+        label.textContent = button.dataset.copiedLabel;
+        status.textContent = "Page copied as Markdown.";
+      } catch (error) {
+        label.textContent = button.dataset.failedLabel;
+        status.textContent = "Could not copy the page. Please select and copy it manually.";
+      }
+      window.setTimeout(() => {
+        label.textContent = button.dataset.copyLabel;
+      }, 1800);
+    };
+
+    button.addEventListener("click", confirmCopy);
+    toggle.addEventListener("click", () => setMenuOpen(menu.hidden));
+
+    menu.addEventListener("click", async (event) => {
+      const item = event.target.closest("[data-action]");
+      if (!item) return;
+      const { action } = item.dataset;
+      setMenuOpen(false);
+
+      if (action === "copy") {
+        await confirmCopy();
+        return;
+      }
+
+      if (action === "view") {
+        const url = URL.createObjectURL(new Blob([source.textContent], { type: "text/markdown;charset=utf-8" }));
+        window.open(url, "_blank", "noopener");
+        window.setTimeout(() => URL.revokeObjectURL(url), 60000);
+        status.textContent = "Opened the Markdown version in a new tab.";
+        return;
+      }
+
+      const destination = action === "chatgpt" ? "https://chatgpt.com/" : "https://claude.ai/";
+      window.open(destination, "_blank", "noopener");
+      await confirmCopy();
+      status.textContent = `Page copied. Paste it into ${action === "chatgpt" ? "ChatGPT" : "Claude"} to ask a question.`;
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!control.contains(event.target)) setMenuOpen(false);
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        toggle.focus();
+      }
+    });
+  })();
+</script>

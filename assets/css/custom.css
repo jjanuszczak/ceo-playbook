@@ -1,0 +1,154 @@
+.copy-page-control {
+  position: relative;
+  display: inline-block;
+}
+
+.copy-page-actions {
+  display: inline-flex;
+  overflow: hidden;
+  border: 1px solid rgb(var(--color-primary-400));
+  border-radius: 0.375rem;
+  background: transparent;
+}
+
+.copy-page-btn,
+.copy-page-menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: rgb(var(--color-neutral-700));
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+}
+
+.copy-page-btn {
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+}
+
+.copy-page-menu-toggle {
+  width: 2rem;
+  border-inline-start: 1px solid rgb(var(--color-primary-400));
+}
+
+.copy-page-btn:hover,
+.copy-page-menu-toggle:hover,
+.copy-page-menu-toggle[aria-expanded="true"] {
+  background-color: rgb(var(--color-neutral-100));
+}
+
+.copy-page-btn:focus-visible,
+.copy-page-menu-toggle:focus-visible,
+.copy-page-menu-item:focus-visible {
+  outline: 2px solid rgb(var(--color-primary-400));
+  outline-offset: -2px;
+}
+
+.copy-page-btn svg,
+.copy-page-menu-toggle svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.copy-page-menu {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: min(20rem, calc(100vw - 2rem));
+  padding: 0.5rem;
+  border: 1px solid rgb(var(--color-neutral-300));
+  border-radius: 0.75rem;
+  background-color: rgb(var(--color-neutral-50));
+  box-shadow: 0 16px 32px rgb(0 0 0 / 18%);
+}
+
+.copy-page-menu[hidden] {
+  display: none;
+}
+
+.copy-page-menu-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.75rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: rgb(var(--color-neutral-700));
+  padding: 0.5rem;
+  text-align: start;
+}
+
+.copy-page-menu-item:hover {
+  background-color: rgb(var(--color-neutral-100));
+}
+
+.copy-page-menu-item strong,
+.copy-page-menu-item small {
+  display: block;
+}
+
+.copy-page-menu-item strong {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+.copy-page-menu-item small {
+  color: rgb(var(--color-neutral-500));
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.copy-page-menu-icon {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(var(--color-neutral-300));
+  border-radius: 0.5rem;
+  color: rgb(var(--color-neutral-600));
+  font-size: 0.75rem;
+}
+
+html.dark .copy-page-actions {
+  border-color: rgb(var(--color-primary-600));
+}
+
+html.dark .copy-page-menu,
+html.dark .copy-page-menu-icon {
+  border-color: rgb(var(--color-neutral-600));
+}
+
+html.dark .copy-page-btn,
+html.dark .copy-page-menu-toggle,
+html.dark .copy-page-menu-item {
+  color: rgb(var(--color-neutral-200));
+}
+
+html.dark .copy-page-menu-toggle {
+  border-inline-start-color: rgb(var(--color-primary-600));
+}
+
+html.dark .copy-page-btn:hover,
+html.dark .copy-page-menu-toggle:hover,
+html.dark .copy-page-menu-toggle[aria-expanded="true"],
+html.dark .copy-page-menu-item:hover {
+  background-color: rgb(var(--color-neutral-700));
+}
+
+html.dark .copy-page-menu {
+  background-color: rgb(var(--color-neutral-800));
+}
+
+html.dark .copy-page-menu-item small,
+html.dark .copy-page-menu-icon {
+  color: rgb(var(--color-neutral-400));
+}
