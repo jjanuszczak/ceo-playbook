@@ -17,6 +17,7 @@ citations:
     url: "https://a16z.com/2023/06/22/the-economic-case-for-generative-ai-and-foundation-models/"
 showReadingTime: false
 showTableOfContents: true
+showCopyPage: true
 ---
 
 {{< quick-answer >}}
@@ -131,7 +132,7 @@ Tokens are the fundamental unit of consumption for AI models, similar to paying 
 A Model is the core mathematical framework. An LLM is a specific type of model trained to understand language. An Agent is a complete system that pairs a model with tools, memory, and an iterative loop, enabling it to act autonomously rather than just answer questions.
 {{% /faq-item %}}
 {{% faq-item question="Why are Evals critical for enterprise AI deployment?" %}}
-Evals (Evaluations) act as the KPI scorecards for AI systems. They provide standardized, quantitative benchmarks to ensure that any updates to a model, prompt, or tool improve performance without breaking existing business rules or compromising safety. Critically, evals can be used by the agents themselves to check their work, sefl-heal and self-improve. Evals are often a key compeonnt of loops. 
+Evals (Evaluations) act as the KPI scorecards for AI systems. They provide standardized, quantitative benchmarks to ensure that any updates to a model, prompt, or tool improve performance without breaking existing business rules or compromising safety. Critically, evals can be used by the agents themselves to check their work, self-heal and self-improve. Evals are often a key component of loops. 
 {{% /faq-item %}}
 {{< /faq >}}
 

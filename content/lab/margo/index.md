@@ -8,6 +8,7 @@ categories: ["Technology"]
 tags: ["hugo", "artificial-intelligence", "open-source", "software-engineering", "markdown", "automation"]
 showReadingTime: false
 showTableOfContents: true
+showCopyPage: true
 about:
   - name: "Markdown"
     url: "https://en.wikipedia.org/wiki/Markdown"
