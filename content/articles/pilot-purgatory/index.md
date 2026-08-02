@@ -34,6 +34,8 @@ There is unanimous agreement that while experimentation is everywhere, value cap
 ### The Shift from Chatbots to "Agentic" Workflows 
 The era of the chatbot is ending; the era of the agent is beginning. Current "stateless" tools like early-2025 ChatGPT are failing in the enterprise because they lack memory and cannot learn from feedback. The consensus solution is "Agentic AI" systems that can execute multi-step workflows, retain context, and improve over time. Even the speculative ["AI 2027"](https://ai-2027.com/) scenario predicts that the transition from "stumbling agents" to "autonomous software engineers" is the critical unlock for the next leap in capability.
 
+The engineering discipline behind that shift is the focus of [Signals: Week 31, 2026]({{< ref "signals/signals-week-31-2026" >}}), which examines why execution harnesses can matter more than a model upgrade.
+
 {{< figure
     src="chatbot-agent.png"
     alt="The Evolution to Agentic Workflows"

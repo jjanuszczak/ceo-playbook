@@ -42,7 +42,7 @@ That is friction at exactly the wrong point. The article is already structured s
 
 The Copy Page control now sits above the table of contents (try it on this very page!). A reader can copy the page as Markdown, open a plain-text Markdown view, or copy the page and open ChatGPT or Claude. The last two actions still require a paste into the assistant. Browsers rightly do not let one site paste text into another site on a reader's behalf.
 
-That is enough. The reader gets the source, the agent gets clean context, and the original page remains the canonical reference.
+That is enough. The reader gets the source, the agent gets clean context, and the original page remains the canonical reference. [Signals: Week 31, 2026]({{< ref "signals/signals-week-31-2026" >}}) is a practical example: a research-heavy page designed to be copied into an agent without its surrounding page furniture.
 
 ## How it works in Hugo
 
