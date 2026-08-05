@@ -15,7 +15,7 @@ tags:
   - "systems-thinking"
 showReadingTime: true
 showTableOfContents: true
-draft: true
+draft: false
 status: agent-draft
 about:
   - name: "Energy transition"
