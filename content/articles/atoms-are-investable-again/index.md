@@ -50,8 +50,6 @@ Then Base Power raised $1 billion to put distributed storage into homes, and Val
 
 That is not a footnote. It is a market signal.
 
-{{< figure src="featured.jpg" alt="Solar panels and energy storage hardware on a roof" caption="Licensed Pixabay photo by bertbraet, selected as a real-photo proxy for distributed energy storage." >}}
-
 {{< quick-answer >}}
 Atoms are investable again because AI, electrification, and grid stress have turned energy hardware from a slow industrial category into a strategic bottleneck. But software is not finished: the market is punishing weak AI stories while still rewarding enterprise software with deep workflows, distribution, and measurable ROI.
 {{< /quick-answer >}}
@@ -64,9 +62,9 @@ Capital-intensive companies fail when they combine high upfront cost with uncert
 
 The difference now is that the demand signal is no longer theoretical.
 
-The International Energy Agency projects that global data centre electricity demand will more than double by 2030 to roughly 945 TWh, with AI-optimised data centres growing even faster. In the United States, the IEA expects data centres to account for almost half of electricity demand growth through 2030 ([IEA](https://www.iea.org/news/ai-is-set-to-drive-surging-electricity-demand-from-data-centres-while-offering-the-potential-to-transform-how-the-energy-sector-works)).
+The [International Energy Agency](https://www.iea.org/news/ai-is-set-to-drive-surging-electricity-demand-from-data-centres-while-offering-the-potential-to-transform-how-the-energy-sector-works) projects that global data centre electricity demand will more than double by 2030 to roughly 945 TWh, with AI-optimised data centres growing even faster. In the United States, the IEA expects data centres to account for almost half of electricity demand growth through 2030.
 
-The U.S. Energy Information Administration tells the same story from the grid side. After more than a decade of flat demand, U.S. electricity load started growing again after 2020. EIA forecasts the fastest growth in ERCOT and PJM, with data centers driving near-term load growth and Texas facing the sharpest pressure ([EIA](https://www.eia.gov/todayinenergy/detail.php?id=67344)).
+The U.S. [Energy Information Administration](https://www.eia.gov/todayinenergy/detail.php?id=67344) tells the same story from the grid side. After more than a decade of flat demand, U.S. electricity load started growing again after 2020. EIA forecasts the fastest growth in ERCOT and PJM, with data centers driving near-term load growth and Texas facing the sharpest pressure.
 
 That changes the capital-allocation math.
 
@@ -82,7 +80,7 @@ Base is not just selling a battery. It is bundling hardware, power retailing, gr
 
 That matters because a standalone home battery is usually an expensive consumer purchase. Base turns it into a distributed grid asset. The homeowner gets backup power and a lower-cost energy service. The grid gets flexible storage that can be aggregated and dispatched. The company gets more than one revenue vector.
 
-Base said its $1 billion Series C would accelerate nationwide availability, expand domestic manufacturing, and support its network of distributed storage technology. It also said it had deployed more than 100 MWh of residential battery capacity in less than two years and qualified for Texas's Aggregated Distributed Energy Resource program, which allows distributed batteries to be combined and bid into the grid ([Base Power](https://www.businesswire.com/news/home/20251008106005/en/Base-Power-Raises-%241-Billion-Series-C-to-Build-the-Future-of-American-Power)).
+[Base](https://www.businesswire.com/news/home/20251008106005/en/Base-Power-Raises-%241-Billion-Series-C-to-Build-the-Future-of-American-Power) said its $1 billion Series C would accelerate nationwide availability, expand domestic manufacturing, and support its network of distributed storage technology. It also said it had deployed more than 100 MWh of residential battery capacity in less than two years and qualified for Texas's Aggregated Distributed Energy Resource program, which allows distributed batteries to be combined and bid into the grid.
 
 That is the investable shape:
 
@@ -104,9 +102,9 @@ Valar is a more extreme version of the same point.
 
 Nuclear used to be where investor decks went to die. Long timelines, licensing risk, public opposition, complex fuel supply, and brutal project finance made the category hostile to venture capital.
 
-Valar's recent momentum gives investors a different underwriting frame. The U.S. Department of Energy selected Valar for its Reactor Pilot Program, a pathway designed to expedite advanced reactor demonstration and target criticality for at least three concepts outside national laboratories by July 4, 2026 ([DOE Reactor Pilot Program](https://www.energy.gov/ne/us-department-energy-reactor-pilot-program)).
+Valar's recent momentum gives investors a different underwriting frame. The U.S. Department of Energy selected Valar for its [Reactor Pilot Program](https://www.energy.gov/ne/us-department-energy-reactor-pilot-program), a pathway designed to expedite advanced reactor demonstration and target criticality for at least three concepts outside national laboratories by July 4, 2026.
 
-On June 18, 2026, DOE said Valar's Ward 250 completed a zero-power fueled criticality demonstration at the Utah San Rafael Energy Lab. DOE described it as the first DOE-authorized reactor built outside a national laboratory ([DOE](https://www.energy.gov/articles/department-energy-celebrates-second-advanced-reactor-achieving-criticality)).
+On June 18, 2026, DOE said Valar's Ward 250 completed a zero-power fueled criticality demonstration at the Utah San Rafael Energy Lab. DOE described it as the [first DOE-authorized reactor](https://www.energy.gov/articles/department-energy-celebrates-second-advanced-reactor-achieving-criticality) built outside a national laboratory.
 
 That milestone does not equal commercial deployment. Cold criticality is not a bankable fleet.
 
@@ -126,13 +124,13 @@ The market is beginning to separate three things that were lazily bundled togeth
 
 The third bucket is under pressure.
 
-Gartner still forecasts worldwide IT spending to grow 10.8% in 2026, with data center systems up 31.7% and software spending up 14.7%. That does not look like a technology depression. It looks like budget rotation ([Gartner](https://www.gartner.com/en/newsroom/press-releases/2026-02-03-gartner-forecasts-worldwide-it-spending-to-grow-10-point-8-percent-in-2026-totaling-6-point-15-trillion-dollars)).
+[Gartner](https://www.gartner.com/en/newsroom/press-releases/2026-02-03-gartner-forecasts-worldwide-it-spending-to-grow-10-point-8-percent-in-2026-totaling-6-point-15-trillion-dollars) still forecasts worldwide IT spending to grow 10.8% in 2026, with data center systems up 31.7% and software spending up 14.7%. That does not look like a technology depression. It looks like budget rotation.
 
 The hard question is where AI spending creates defensible cash flow.
 
 If a company sells generic AI wrappers, the market is right to be skeptical. The product can be copied, the inference cost can eat margin, and the customer may not see enough value to justify premium pricing. If a company owns the infrastructure layer, the system of record, the workflow, the compliance burden, or the distribution channel, AI becomes an accelerant rather than a standalone story.
 
-Deloitte's 2026 software outlook lands on the same tension: enterprise software still grows, generates strong cash flows, and benefits from large installed bases, but AI costs, new pricing models, and AI-native entrants will pressure margins and force software companies to prove value ([Deloitte](https://www.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/software-industry-outlook.html)).
+Deloitte's [2026 software outlook](https://www.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/software-industry-outlook.html) lands on the same tension: enterprise software still grows, generates strong cash flows, and benefits from large installed bases, but AI costs, new pricing models, and AI-native entrants will pressure margins and force software companies to prove value.
 
 That is the twist.
 
@@ -146,7 +144,7 @@ The easy answer is that enterprises move slowly. That is true, but not enough.
 
 Enterprise SaaS survives when it owns a workflow the customer cannot casually replace. Payroll, ERP, security, identity, CRM, compliance, financial close, data governance: these are not weekend projects. A prototype can look impressive and still fail procurement, audit, integration, privacy, and operational uptime.
 
-That is why the public SaaS rebound is important but not broad. Meritech reported that the market-cap-weighted SaaS index rebounded 38% off its April 2026 low in just 34 trading days, but roughly 80% of the regained market cap came from only 10 companies, including AI and security winners. The median software company still traded at 3.3x next-twelve-month revenue, far below the leaders ([Meritech](https://meritech.substack.com/p/2026-saas-rebound)).
+That is why the public SaaS rebound is important but not broad. [Meritech](https://meritech.substack.com/p/2026-saas-rebound) reported that the market-cap-weighted SaaS index rebounded 38% off its April 2026 low in just 34 trading days, but roughly 80% of the regained market cap came from only 10 companies, including AI and security winners. The median software company still traded at 3.3x next-twelve-month revenue, far below the leaders.
 
 So yes, enterprise SaaS can survive. Some will thrive. But not because "software always wins."
 
@@ -204,6 +202,8 @@ But the real winner is not atoms or software. It is the company that owns the co
   Investors should look for visible demand, regulatory progress, repeatable deployment, financing discipline, and software that improves unit economics. Hardware alone is not enough; the company must own a real constraint in the system.
   {{% /faq-item %}}
 {{< /faq >}}
+
+*Featured image by <a href="https://pixabay.com/users/bertbraet-1309704/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2836846">Bert Braet</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2836846">Pixabay</a>.*
 
 {{< related-posts title="Related Insights" paths="articles/vc-atoms, articles/flatpeak" >}}
 
