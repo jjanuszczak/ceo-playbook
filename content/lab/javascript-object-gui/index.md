@@ -1,6 +1,6 @@
 ---
 title: "JavaScript Object GUI"
-date: 2026-08-06T09:03:41+08:00
+date: 2026-08-06T10:23:33+08:00
 summary: "A first look at JavaScript Object GUI, a pre-release browser UI framework for developers who want desktop-style object composition without writing HTML or managing DOM plumbing directly."
 description: "JavaScript Object GUI is a JavaScript-first browser UI framework for internal tools, CRUD-heavy applications, and form-heavy systems. This Lab explains the programming model, what exists today, and where it still needs hardening."
 categories:
@@ -13,8 +13,8 @@ tags:
   - open-source
 showReadingTime: true
 showTableOfContents: true
-draft: true
-status: agent-pending
+draft: false
+status: "published"
 about:
   - name: "JavaScript"
     url: "https://en.wikipedia.org/wiki/JavaScript"
@@ -38,7 +38,7 @@ citations:
     url: "https://github.com/jjanuszczak/jog"
 ---
 
-I started working on this idea in 2006 because I wanted browser software to feel closer to the tools I used to build in WinForms: object-first, event-driven, explicit, and fast to reason about.
+I started working on this idea in 2008 because I wanted browser software to feel closer to the tools I used to build in WinForms: object-first, event-driven, explicit, and fast to reason about.
 
 JavaScript Object GUI, or JOG, is the current implementation of that idea. The timing matters. The web runtime finally has enough baseline capability, and AI-assisted coding finally makes a small custom framework realistic without turning it into a heroic maintenance burden.
 
@@ -48,9 +48,9 @@ JavaScript Object GUI is a pre-release, JavaScript-first browser UI framework fo
 
 ## What problem is JOG trying to solve?
 
-Most web frontend work still starts from markup, templates, components, build tooling, and DOM-shaped mental models. That is powerful, but it is not always the right starting point for internal software.
+Most web frontend work still starts from markup, templates, components, build tooling, and DOM-shaped mental models. That is powerful, but it is not always the right starting point for enterprise or internal software.
 
-The kind of applications I have in mind are less about public marketing surfaces and more about work surfaces:
+The kind of applications I have in mind are less about public marketing sites or consumer apps and more about work tools/apps:
 
 1. Customer admin consoles.
 2. Opportunity boards.
@@ -187,7 +187,7 @@ The same logic is behind [Margo]({{< relref "lab/margo" >}}), a presentation eng
   {{% /faq-item %}}
 {{< /faq >}}
 
-Featured image source: <a href="https://pixabay.com/users/Pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1283624">Pexels</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1283624">Pixabay</a>
+*Featured image source: <a href="https://pixabay.com/users/Pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1283624">Pexels</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1283624">Pixabay</a>*
 
 {{< related-posts title="Related Insights" paths="articles/the-next-compiler, lab/margo" >}}
 
