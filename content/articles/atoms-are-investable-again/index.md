@@ -16,7 +16,7 @@ tags:
 showReadingTime: true
 showTableOfContents: true
 draft: false
-status: agent-draft
+status: published
 about:
   - name: "Energy transition"
     url: "https://en.wikipedia.org/wiki/Energy_transition"
