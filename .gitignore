@@ -5,6 +5,7 @@
 docs/repurposed/
 .env
 .agents/skills/*/evals/reports/
+data/signals-x-quotes/queue.json
 __pycache__/
 *.pyc
 .venv/
