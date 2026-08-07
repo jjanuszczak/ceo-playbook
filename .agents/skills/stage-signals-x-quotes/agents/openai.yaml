@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stage Signals X Quotes"
+  short_description: "Stage native X quote-post drafts"
+  default_prompt: "Use $stage-signals-x-quotes to stage the next Signals-backed X quote-post draft."
