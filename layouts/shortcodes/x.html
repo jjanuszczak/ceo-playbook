@@ -1,0 +1,28 @@
+{{- /*
+  Local override of Hugo's built-in x shortcode.
+
+  This intentionally does not use resources.GetRemote or X's oEmbed endpoint.
+  X upgrades the blockquote in the browser when widgets.js is available; the
+  ordinary link remains usable when it is blocked or JavaScript is disabled.
+  Remove this file to restore Hugo's built-in shortcode behaviour.
+*/ -}}
+{{- $user := replaceRE "^@" "" (.Get "user") -}}
+{{- $id := .Get "id" -}}
+{{- if or (not $user) (not $id) -}}
+  {{- errorf "The x shortcode requires both user and id parameters: %s" .Position -}}
+{{- end -}}
+{{- $postURL := printf "https://x.com/%s/status/%s" $user $id -}}
+
+<div class="x-embed">
+  <blockquote class="twitter-tweet" data-dnt="true">
+    <a href="{{ $postURL }}">View @{{ $user }}'s post on X</a>
+  </blockquote>
+  <noscript>
+    <p><a href="{{ $postURL }}">View @{{ $user }}'s post on X</a></p>
+  </noscript>
+</div>
+
+{{- if not (.Page.Store.Get "x-widget-script") -}}
+  {{- .Page.Store.Set "x-widget-script" true -}}
+  <script defer src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+{{- end -}}
