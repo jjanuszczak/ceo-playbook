@@ -15,6 +15,11 @@ SIGNALS_DIR = ROOT / "content" / "signals"
 STATE_PATH = ROOT / "data" / "signals-x-quotes" / "queue.json"
 CARD_PATH = ROOT / "docs" / "repurposed" / "signals-x-quote-queue.md"
 BASE_URL = "https://januszczak.org"
+SIGNALS_INDEX_URL = f"{BASE_URL}/signals/"
+SIGNALS_CALLOUT = (
+    "I curate, expand on, and share my take on great content like this "
+    f"in my weekly Signals: {SIGNALS_INDEX_URL}"
+)
 X_URL = re.compile(r"https?://(?:www\.)?(?:x|twitter)\.com/[^\s)]+", re.IGNORECASE)
 X_SHORTCODE = re.compile(r"{{<\s*(x|x-article)\s+([^>]+?)\s*>}}")
 ATTR = re.compile(r'(\w+)="([^"]+)"')
@@ -100,7 +105,7 @@ def candidates() -> list[dict[str, str]]:
 
 def make_draft(item: dict[str, str]) -> str:
     return (f"Summary: {item['summary']}\n\nWhy it matters: {item['why_it_matters']}\n\n"
-            f"My take: {item['my_take']}\n\nFull Signals: {item['signal_post_url']}")
+            f"My take: {item['my_take']}\n\n{SIGNALS_CALLOUT}")
 
 
 def find_item(state: dict[str, Any], source_value: str) -> dict[str, Any]:
@@ -149,7 +154,7 @@ def stage(_: argparse.Namespace) -> None:
     print(f"Source: {item['source_x_id_or_url']}")
     print(f"Queue card: {CARD_PATH.relative_to(ROOT)} ({item['character_count']}/280 characters)")
     if item["character_count"] > 280:
-        print("[ACTION REQUIRED] Draft exceeds 280 characters. Edit it before using X’s native Quote action.")
+        print("[ACTION REQUIRED] Draft exceeds 280 characters. Review it before using X’s native Quote action; retain the full Signals copy unless John requests an edit.")
 
 
 def list_items(_: argparse.Namespace) -> None:

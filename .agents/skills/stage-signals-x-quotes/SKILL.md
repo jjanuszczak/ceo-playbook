@@ -15,9 +15,9 @@ Run the staging command from the repository root:
 python3 .agents/skills/stage-signals-x-quotes/scripts/stage_signals_x_quotes.py stage
 ```
 
-The command selects the next eligible source from the most recent published Signals post, proceeding in editorial order. It extracts the source, Summary, Why it Matters, My Take, and canonical Signals URL. It writes durable local state to `data/signals-x-quotes/queue.json` and a ready-to-copy Markdown card to `docs/repurposed/signals-x-quote-queue.md`.
+The command selects the next eligible source from the most recent published Signals post, proceeding in editorial order. It extracts the source, Summary, Why it Matters, and My Take. It writes durable local state to `data/signals-x-quotes/queue.json` and a ready-to-copy Markdown card to `docs/repurposed/signals-x-quote-queue.md`.
 
-If the proposed copy exceeds the X character limit, rewrite it into a concise draft that retains all four required elements: summary, why it matters, my take, and the Signals URL. Keep every claim grounded in the extracted fields. Save the approved draft with:
+Use the original Signals copy for the Summary, Why it Matters, and My Take with only light edits for X readability. Do not trim or rewrite those sections merely to fit X's character limit. End each draft with this generic Signals callout, linking to the Signals section rather than the source post: `I curate, expand on, and share my take on great content like this in my weekly Signals: https://januszczak.org/signals/`. Flag any character-limit overage for John's review, but retain the full draft. Save an approved manual edit with:
 
 ```bash
 python3 .agents/skills/stage-signals-x-quotes/scripts/stage_signals_x_quotes.py set-draft --source <source-url-or-id> --text "..."
