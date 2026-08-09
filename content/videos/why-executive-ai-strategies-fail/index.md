@@ -50,7 +50,7 @@ That is also why agents expose weak management. A useful agent needs documented 
 
 ## Where does the hidden ROI sit?
 
-Start with high-volume workflows where repetitive first-pass judgment, fragmented information, and slow handoffs consume time before a human can make a useful decision. Recruitment, finance, procurement, customer operations, IT, and security operations are often stronger starting points than a public-facing demonstration.
+Start with high-volume workflows where repetitive first-pass judgment, fragmented information, and slow handoffs consume time before a human can make a useful decision. Recruitment, finance, procurement, customer operations, IT, and security operations are often stronger starting points than a public-facing demonstration. (For an analysis of why typical rollouts yield low utilization rates, see the discussion on the token-burn barbell in [Signals: Week 32, 2026]({{< ref "signals/signals-week-32-2026" >}})).
 
 The recruitment example in this presentation makes the point. A screening layer that reads every résumé, carries evidence and risk flags forward, and gives recruiters better interview prompts does not remove human judgment. It moves human time away from sorting and toward probing, interviewing, and deciding.
 

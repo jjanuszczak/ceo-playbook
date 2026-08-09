@@ -121,7 +121,7 @@ def main():
     page.get("https://x.com/i/bookmarks")
     
     print("Waiting for page to load timeline...")
-    page.ele('@data-testid=tweet', timeout=30)
+    page.ele('@data-testid=tweet', timeout=120)
     
     # ----------------------------------------------------
     # PASS 1: COLLECT TARGET URLS FROM THE TIMELINE

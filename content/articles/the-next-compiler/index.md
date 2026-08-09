@@ -65,7 +65,7 @@ Large Language Models do not replace the developer: they serve as the next level
 
 *   **Elevated Abstraction:** You describe *what* you want (the system flow, the data structures, the business rules) instead of manually typing out every line of syntax.
 *   **Boilerplate Delegation:** The AI handles scaffolding, routine tests, and syntax formatting, similar to how a compiler handles register allocation or instruction scheduling.
-*   **Focus on System Design:** Advanced developers see this as the natural progression. Writing every line of code by hand will eventually feel as low-level as writing assembly does today. The same move toward higher-level reasoning sits at the center of [the debate over world models]({{< ref "articles/world-models" >}}).
+*   **Focus on System Design:** Advanced developers see this as the natural progression. Writing every line of code by hand will eventually feel as low-level as writing assembly does today. The same move toward higher-level reasoning sits at the center of [the debate over world models]({{< ref "articles/world-models" >}}), while returning to the fundamentals of system components remains the ultimate foundation for engineers, as noted in the commentary on [Signals: Week 32, 2026]({{< ref "signals/signals-week-32-2026" >}}).
 
 ## Does This Mean We Stop Reading and Reviewing Code?
 
