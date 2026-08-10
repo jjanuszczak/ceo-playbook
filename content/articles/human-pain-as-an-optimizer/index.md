@@ -1,5 +1,5 @@
 ---
-title: "AI Agents Do Not Feel Technical Debt"
+title: "AI Agents Do Not Feel Pain"
 date: 2026-08-10T09:01:57+08:00
 summary: "AI coding agents can write code quickly, but they do not feel the future maintenance pain that teaches human engineers to avoid brittle architecture."
 description: "A practical argument for why human judgment still matters in agentic coding: senior engineers optimize against future maintenance pain, while AI agents optimize for the immediate stated goal."
@@ -44,11 +44,11 @@ citations:
 
 The most useful warning I have heard about AI coding agents is not about hallucinations, security, or prompt tricks.
 
-It is simpler than that: agents do not feel pain.
+It is simpler than that: **agents do not feel pain**.
 
 A human engineer feels bad architecture in their body. They remember the weekend production fire. They remember the interface that looked clever in March and became impossible to change in October. They remember the pull request that took three days to review because every decision was buried behind a layer of unnecessary abstraction.
 
-That pain is not sentimental. It is an optimizer.
+That pain is not sentimental. **It is an optimizer**.
 
 {{< quick-answer >}}
 AI coding agents can produce useful code, but they do not feel the future maintenance pain that teaches human engineers to avoid complexity, duplication, and weak abstractions. The executive lesson is not to stop using agents. It is to redesign the engineering system so human judgment, review friction, automated checks, and refactoring capacity protect the codebase from output that looks productive today and becomes expensive later.
