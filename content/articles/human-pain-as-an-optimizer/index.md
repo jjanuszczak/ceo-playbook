@@ -14,7 +14,7 @@ tags:
 showReadingTime: true
 showTableOfContents: true
 draft: true
-status: "agent-review"
+status: "user-review"
 about:
   - name: "AI-assisted programming"
     url: "https://en.wikipedia.org/wiki/Artificial_intelligence_in_software_engineering"
