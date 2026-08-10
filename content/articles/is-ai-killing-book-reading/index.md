@@ -1,11 +1,11 @@
 ---
 title: "AI Is Not Killing Reading. It Is Testing Whether We Still Think."
-date: 2026-07-25
+date: 2026-08-11
 summary: "Book reading has not collapsed, but generative AI can make it easier to skip the hard cognitive work that reading develops. The leadership issue is how we use AI without outsourcing judgment."
 description: "The evidence does not support a simple claim that AI is killing books or attention. It does show why leaders need deliberate habits for reading, synthesis, and verification as AI absorbs more knowledge work."
 categories: ["Technology"]
 tags: ["artificial-intelligence", "productivity", "systems-thinking", "mental-models", "knowledge-management"]
-draft: true
+draft: false
 showTableOfContents: true
 about:
   - name: "Generative artificial intelligence"
