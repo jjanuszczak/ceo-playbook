@@ -26,7 +26,7 @@ citations:
     url: "https://doi.org/10.1145/3706598.3713778"
 ---
 
-Every few months, someone declares that nobody can read a book anymore. The evidence is less dramatic. The more useful question is whether we are losing the habit of doing the mental work that books demand.
+Every few months, someone declares that nobody can read a book anymore. The evidence is less dramatic. **The more useful question is whether we are losing the habit of doing the mental work that books demand**.
 
 AI did not create the problem. It makes the trade-off sharper. A good model can summarize a report, produce a first draft, and retrieve an argument in seconds. That is useful. It is also an invitation to stop before you have formed a view of your own.
 
