@@ -33,6 +33,8 @@ citations:
     url: "https://doi.org/10.1016/j.tourman.2006.04.003"
 ---
 
+I have often said that the three [critical characterisitics](https://x.com/johnjanuszczak/status/1909005638077940075?s=20) of a successful founder are the ability to: (1) build an audience, (2) sell, and (3) build a product.
+
 Last year, I ran a small experiment in audience-building: a professional speaking series for expatriates in the Philippines.
 
 It did not begin as a media brand. It did not begin with a funnel. It began with a simpler question: could we create a serious forum where internationally minded professionals could meet one another, hear useful ideas, and connect with the local Rotary movement?
@@ -43,17 +45,13 @@ That framing mattered more than I expected.
 An audience compounds when a credible mission gives the right people a reason to belong, each event improves the contact list, and the organizer learns the operating model manually before automating it. Promotion matters, but legitimacy, relevance, follow-up, and realistic attendance economics matter more.
 {{< /quick-answer >}}
 
-People rarely join a new community because someone announces an event. They join because the event gives them a credible reason to belong. In our case, the Rotary brand and its professional and social mission made the series feel less like a networking scheme and more like a legitimate venue for people building a life, career, and network in the Philippines.
+People rarely join a new community because someone announces an event. They join because the event gives them a credible reason to belong. In our case, the [Rotary](https://manilaexpats.org/) brand and its professional and social mission made the series feel less like a networking scheme and more like a legitimate venue for people building a life, career, and network in the Philippines.
 
-The experiment went from fewer than 20 people at early events to more than 110 at one of the latest. That event had multiple sponsors and a premier venue.
+The experiment went from fewer than 20 people at early events to well over 100 at one of the latest events. Our latest event having multiple sponsors and a premier venue:
+
+{{< youtubeLite id="KP9mOujK1N4" label="Audience-building starts with a credible room, not a bigger blast list." >}}
 
 Here is what I learned.
-
-{{< figure
-  src="featured.jpg"
-  alt="A small professional group working together around a table"
-  caption="Audience-building starts with a credible room, not a bigger blast list. Photo via Pixabay."
->}}
 
 ## Why does legitimacy come before promotion?
 
@@ -61,7 +59,7 @@ The first problem in building an audience is not reach. It is legitimacy.
 
 Nobody owes a new organizer their time, particularly an executive, founder, academic, or experienced operator. A recognizable institution, a clear mission, and a defined audience give people enough confidence to take the first meeting.
 
-Rotary helped because it did three things at once:
+[Rotary](https://www.rotary.org/) helped because it did three things at once:
 
 - It gave the series a professional identity.
 - It gave expatriates a social purpose beyond self-promotion.
@@ -79,14 +77,19 @@ That is the compounding asset.
 
 The room matters, but the contact record matters more. Each event should leave you with three things: a better understanding of who responds, permission to contact them again, and a stronger reason for the right people to bring someone new next time.
 
-This is also why events should not be measured only by who was in the room. LinkedIn's B2B Institute makes a similar argument: events can work as reach multipliers, content engines, and customer-access mechanisms when the organizer uses them beyond the event moment itself. That fits my experience. The event is not just the room. It is the next invitation, the next conversation, and the next person a member decides to bring.
+This is also why events should not be measured only by who was in the room. [LinkedIn's B2B Institute](https://www.linkedin.com/business/marketing/blog/research-and-insights/the-undervalued-value-of-b2b-marketing-events) makes a similar argument: events can work as reach multipliers, content engines, and customer-access mechanisms when the organizer uses them beyond the event moment itself. That fits my experience. The event is not just the room. It is the next invitation, the next conversation, and the next person a member decides to bring.
 
 For us, the loop was simple:
 
-```text
-Strong topic -> credible event -> member invitations and social promotion
--> qualified registrations -> follow-up list -> stronger next event
-```
+{{< mermaid >}}
+graph TD;
+  A[strong Topic] --> B[credible event]
+  B --> C[member invitations and social promotion]
+  C --> D[qualified registrations]
+  D --> E[follow-up list]
+  E --> F[stronger next event]
+  F --> A
+{{< /mermaid >}}
 
 You do not need a huge mailing list. You need a list built around a real common interest.
 
@@ -114,7 +117,7 @@ A personal call does more than remind people. It asks for a decision. "Will you 
 
 One of the early surprises was the gap between signing up and showing up.
 
-For virtual events, roughly half of registrants did not attend live. That initially felt disappointing. It should not have. ON24's 2025 Webinar Benchmarks report, based on 2024 platform data, reported a 57% registration-to-attendance conversion rate. ON24 also reported that 45% of attendees watched on demand, which reinforces the point that live attendance is not the whole outcome.
+For virtual events, roughly half of registrants did not attend live. That initially felt disappointing. It should not have. [ON24's 2025 Webinar Benchmarks report](https://www.on24.com/blog/key-takeaways-from-the-2025-webinar-benchmarks-report/), based on 2024 platform data, reported a 57% registration-to-attendance conversion rate. ON24 also reported that 45% of attendees watched on demand, which reinforces the point that live attendance is not the whole outcome.
 
 A free virtual registration is a low-commitment action. Someone may intend to attend, then receive a call, hit traffic, get dragged into a family obligation, or simply decide the topic is not worth protecting an hour for.
 
@@ -128,21 +131,24 @@ Build the economics around expected attendance, not the optimistic registration 
 
 We deliberately avoided the usual hunt for VIPs and influencers.
 
-Instead, we looked for speakers and subjects that were unusually relevant to expatriates in the Philippines. One of our strongest virtual sessions featured a young academic and historian discussing the role of expatriate contract workers in Philippine history.
+Instead, we looked for speakers and subjects that were unusually relevant to expatriates in the Philippines. One of our strongest virtual sessions featured a young academic and historian discussing the role of specific expatriates in Philippine history.
 
-He had a thoughtful YouTube channel, but he was not a celebrity. That was not a weakness. The topic was specific, surprising, and directly connected to the audience's lived experience. He was an excellent product.
+He had a thoughtful [YouTube channel](https://www.youtube.com/@TheIlustrado), but he was not a celebrity. That was not a weakness. The topic was specific, surprising, and directly connected to the audience's lived experience. He delivered an excellent product.
+
+> [!TIP]+ Bonus
+> This speaker also left us with an unforgettable tagline for the group: "as an expat in the Philippines, will you be a chronicler or a contributor?"
 
 This is the part many event organizers get wrong. They borrow a famous name, then hope the audience will find a reason to care. We started with the group's real interests, then found someone who could satisfy them.
 
-Research on convention attendees has long treated education and networking as core attendance motivations, not incidental extras. A regional-conference study in *Tourism Management* found attendee motivation included networking and educational benefits, and that educational activities were linked to satisfaction, word of mouth, and intent to return. The practical version is simpler: do not book someone because they are important. Book someone because the audience will repeat the idea from the session to someone else the next day.
+Research on convention attendees has long treated education and networking as core attendance motivations, not incidental extras. A regional-conference [study](https://doi.org/10.1016/j.tourman.2006.04.003) in *Tourism Management* found attendee motivation included networking and educational benefits, and that educational activities were linked to satisfaction, word of mouth, and intent to return. The practical version is simpler: do not book someone because they are important. Book someone because the audience will repeat the idea from the session to someone else the next day.
 
 ## When do sponsors arrive?
 
-The series became more attractive to venue sponsors as the audience grew.
+The series became more attractive to sponsors as the audience grew.
 
 That is the natural order. Early on, we invested to cover losses because we were buying learning: Which topics travel? Which distribution channels work? Who actually attends? How much capacity do we need? What kind of room creates the right conversations?
 
-By the time we could attract more than 110 people, sponsorship became easier to discuss. The sponsor was no longer taking a bet on a concept. They could see the audience, the venue, the speakers, and the quality of the people in the room.
+By the time we could attract more than 100 people, sponsorship became easier to discuss. The sponsor was no longer taking a bet on a concept. They could see the audience, the venue, the speakers, and the quality of the people in the room.
 
 You earn sponsorship by first proving that the room is worth sponsoring.
 
