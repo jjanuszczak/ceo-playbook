@@ -1,6 +1,6 @@
 ---
 title: "Building an Audience Starts With a Reason to Belong"
-date: 2026-08-14T09:02:23+08:00
+date: 2026-08-18
 summary: "A practical first-person operating model for building a qualified audience through credible mission, manual learning, relevant programming, and realistic event economics."
 description: "Audience-building is not just promotion. This article explains how a recurring professional event series grew from fewer than 20 people to more than 110 by starting with legitimacy, member distribution, specific programming, and manual operating discipline."
 categories:
@@ -13,7 +13,7 @@ tags:
   - "systems-thinking"
 showReadingTime: false
 showTableOfContents: true
-draft: true
+draft: false
 about:
   - name: "Community building"
     url: "https://en.wikipedia.org/wiki/Community_building"
@@ -35,9 +35,9 @@ citations:
 
 I have often said that the three [critical characterisitics](https://x.com/johnjanuszczak/status/1909005638077940075?s=20) of a successful founder are the ability to: (1) build an audience, (2) sell, and (3) build a product.
 
-Last year, I ran a small experiment in audience-building: a professional speaking series for expatriates in the Philippines.
+Last year, I ran an experiment in audience-building: a professional speaking series for expatriates in the Philippines.
 
-It did not begin as a media brand. It did not begin with a funnel. It began with a simpler question: could we create a serious forum where internationally minded professionals could meet one another, hear useful ideas, and connect with the local Rotary movement?
+It did not begin as a media brand. It did not begin with a funnel. It began with a simpler question: could we create a serious forum where internationally minded professionals could meet one another, hear useful ideas, and connect with a local service movement?
 
 That framing mattered more than I expected.
 
@@ -107,7 +107,7 @@ Before automating a process, you need to understand the process. Manual work exp
 
 Automation is useful once you know what deserves to be automated. If you automate too early, you scale a set of assumptions and lose the feedback that would have fixed them.
 
-We eventually built our own membership and registration tool, but only after learning the operating model the hard way. That is a story for another day.
+We eventually built our own [membership and registration tool](https://www.membervu.com/), but only after learning the operating model the hard way. That is a story for another day.
 
 One practical rule still holds: if a core group really needs to be in the room, someone has to call them.
 
@@ -171,6 +171,14 @@ For our series, that meant:
 The series did not grow because we discovered a clever event-marketing trick. It grew because people found a forum that was relevant to them, and then had a reason to bring someone else.
 
 That is how audiences compound.
+
+## Before the Crowd: The People Who Transformed this Series
+
+As famously shared by [Derek Sivers on TED](https://www.youtube.com/watch?v=V74AxCqOTvg), ideas are often over-glorified. The real power lies in the courageous first followers who show everyone else how to join. I want to acknowledge and thank [Curtis Forbes](https://www.curtisforbes.com/) (absolutely awesome website btw!), [Jon Engalla](https://engalla.com/) and [Urs Bolt](https://www.linkedin.com/in/ursbolt/) for being the early recruits who helped make all of this possible. Maraming salamat po!
+
+## Are you an Expat in the Philippines?
+
+Are you ready to make an impact? If you’re a professional or corporate sponsor who wants elite networking and real community impact in the Philippines, backed by Rotary’s global legacy while locally focused on economic development, social impact, and cultural exchange: join a [community of leaders and doers](https://manilaexpats.org/) making a difference!
 
 ## FAQ
 
