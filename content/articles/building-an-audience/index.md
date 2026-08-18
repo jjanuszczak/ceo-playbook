@@ -1,6 +1,6 @@
 ---
 title: "Building an Audience Starts With a Reason to Belong"
-date: 2026-08-14T09:02:23+08:00
+date: 2026-08-18
 summary: "A practical first-person operating model for building a qualified audience through credible mission, manual learning, relevant programming, and realistic event economics."
 description: "Audience-building is not just promotion. This article explains how a recurring professional event series grew from fewer than 20 people to more than 110 by starting with legitimacy, member distribution, specific programming, and manual operating discipline."
 categories:
