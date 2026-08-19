@@ -1,6 +1,6 @@
 ---
 title: "Reliable Agents Need Contracts, Not Better Prompts"
-date: 2026-08-18T09:03:50+08:00
+date: 2026-08-19
 summary: "A practical Lab memo on turning a vague calendar assistant into a reliable agent with canonical records, deterministic tools, approval gates, and fixture-based evals."
 description: "A scheduler-agent case study for operators and technical leaders: why effective AI agents need explicit contracts, deterministic components, approval boundaries, and regression tests before they touch real workflows."
 categories:
@@ -13,8 +13,8 @@ tags:
   - productivity
 showReadingTime: true
 showTableOfContents: true
-draft: true
-status: agent-pending
+draft: false
+status: published
 about:
   - name: "Intelligent agent"
     url: "https://en.wikipedia.org/wiki/Intelligent_agent"
@@ -48,7 +48,7 @@ citations:
 
 Most teams do not fail at agents because the prompt is weak. They fail because the agent has no contract.
 
-The brief usually starts cleanly enough: "Build me a calendar assistant." Then the edge cases arrive. Which calendar is authoritative? Is "next Thursday afternoon" the organizer's afternoon or the client's? Can the agent book, or only propose? What happens when a participant has no known time zone?
+Consider the case of building a simple scheduling agent to help schedule meetings. The request usually starts cleanly enough: "Build me a calendar assistant." Then the edge cases arrive. Which calendar is authoritative? Is "next Thursday afternoon" the organizer's afternoon or the client's? Can the agent book, or only propose? What happens when a participant has no known time zone?
 
 Those questions are the product. The model is only one component.
 
@@ -58,9 +58,9 @@ Reliable agents are built around explicit contracts: a canonical record, determi
 
 ## Why is a vague agent request dangerous?
 
-A vague request creates fake autonomy. The agent sounds capable because it can describe the workflow, but it has no stable boundary between interpretation and execution.
+**A vague request creates fake autonomy**. The agent sounds capable because it can describe the workflow, but it has no stable boundary between interpretation and execution.
 
-Scheduling is a clean example because it looks simple and punishes sloppiness. A human can say, "Find time next week with two attendees, use Google Meet, and avoid late Manila calls." That sentence contains intent, constraints, tool choices, risk, and authority in one line.
+Scheduling is a clean example because it looks simple but punishes sloppiness. A human can say, "Find time next week with two attendees, use Google Meet, and avoid late calls on my end." That sentence contains intent, constraints, tool choices, risk, and authority in one line.
 
 If the agent treats that sentence as pure prose, it will improvise. It may infer a time zone, book an unapproved option, invent a video link, or ignore daylight saving time because the calendar math was never made explicit.
 
@@ -72,9 +72,9 @@ The operational lesson is blunt: **do not start by making the model smarter. Sta
 
 ## What contract should every workflow agent have?
 
-For the scheduler agent, the contract started with a canonical event record. I used JSCalendar as the stable representation because RFC 8984 defines a JSON data model for calendar storage and exchange, with explicit attention to ambiguity, extensibility, and processing simplicity. The agent could interpret a request, but the durable draft had to become structured data.
+Let's consider the case of the scheduling agent. The contract starts with a canonical event record. In my case, I used [JSCalendar](https://datatracker.ietf.org/doc/draft-ietf-calext-jscalendarbis/) as a stable representation because [RFC 8984](https://www.rfc-editor.org/info/rfc8984/) defines a JSON data model for calendar storage and exchange, with explicit attention to ambiguity, extensibility, and processing simplicity. The agent can interpret a request, but the durable draft has to become structured data.
 
-That separation matters. Google Calendar's Events API has its own event resource shape, conference creation rules, attendee fields, reminders, recurrence, and organizer semantics. Its FreeBusy API answers a narrower question: which calendars are unavailable across a time window. Python's `zoneinfo` handles IANA time zones and daylight saving transitions.
+That separation matters. I happen to mostly use Google Calendar. Google Calendar's Events API has its own event resource shape, conference creation rules, attendee fields, reminders, recurrence, and organizer semantics. Its FreeBusy API answers a narrower question: which calendars are unavailable across a time window. Python's `zoneinfo` [handles IANA time zones](https://docs.python.org/3/library/zoneinfo.html) and daylight saving transitions.
 
 No prompt should carry all of that in its head.
 
@@ -83,7 +83,7 @@ The contract:
 1. User intent enters as natural language.
 2. Missing facts become questions, not guesses.
 3. The agent drafts a canonical JSCalendar record.
-4. Deterministic adapters convert that record to and from Google Calendar.
+4. Deterministic adapters convert that record to and from Google Calendar (or whatever client you are targetting).
 5. Free/busy and time-zone calculations run through scripts.
 6. Any insert, update, delete, or external side effect requires approval.
 7. The final read-back is reconciled against the canonical record.
@@ -94,7 +94,7 @@ That design also strengthens [the agent-versus-skill boundary]({{< relref "lab/a
 
 The more predictable a decision is, the less it belongs in the model loop.
 
-In the scheduler build, code handled:
+In a scheduler build, code can handle:
 
 1. Free/busy filtering.
 2. Cross-time-zone overlap.
@@ -105,12 +105,12 @@ In the scheduler build, code handled:
 7. Fixture evaluation.
 8. Repair-budget enforcement.
 
-The model handled:
+The model handles:
 
 1. Interpreting the user's intent.
 2. Identifying missing facts.
 3. Explaining tradeoffs between candidate slots.
-4. Deciding when the request needed approval or escalation.
+4. Deciding when the request needs approval or escalation.
 
 This is the same lesson behind [deterministic evals for AI skills]({{< relref "lab/deterministic-evals-for-ai-skills" >}}): fixed rules should become checks. If the rule is "never create an event before approval," make that a policy gate. If the rule is "never cross the user's 10:00 PM to 6:00 AM Manila sleep window," make that a time-window constraint. If the rule is "do not invent meeting URLs," make the converter reject missing virtual-location data unless the user explicitly requested platform-native creation.
 
@@ -118,11 +118,11 @@ Anthropic's tool-design guidance makes a related point: tools form a contract be
 
 A scheduler agent should expose higher-level, validated operations: find candidate slots, draft canonical event, convert event, insert approved event, read back event, reconcile result.
 
-## What does the reliable scheduling loop look like?
+## What does a reliable scheduling loop look like?
 
-Here is the pattern I would reuse for CRM agents, inbox agents, research agents, document agents, and reporting agents:
+Here is the pattern I would reuse for agents such as CRM agents, inbox agents, research agents, document agents, and reporting agents:
 
-```mermaid
+{{< mermaid >}}
 flowchart TD
     A["User intent"] --> B["Resolve missing facts"]
     B --> C["Apply deterministic policy"]
@@ -135,11 +135,11 @@ flowchart TD
     I --> J["Read back external state"]
     J --> K["Reconcile against canonical record"]
     K --> L["Run fixture-based evals"]
-```
+{{< /mermaid >}}
 
 The loop is intentionally boring. Agents should be exciting because they handle useful work, not because the runtime is mysterious.
 
-The scheduler's core decision path can be reduced to a small pseudocode block:
+A scheduler's core decision path can be reduced to a small pseudocode block:
 
 ```text
 intent = parse_request(user_message)
@@ -168,11 +168,11 @@ Notice what is absent: no live write before approval, no invented attendee email
 
 Public agent benchmarks are imperfect, but they make one point clear: tool use and rule-following remain bottlenecks.
 
-The Berkeley Function Calling Leaderboard tracks tool-use accuracy across single-turn, multi-turn, live, and agentic scenarios. Its current leaderboard still leaves meaningful headroom even for top models, which is why production systems should verify tool selection and parameters.
+The [Berkeley Function Calling Leaderboard](https://gorilla.cs.berkeley.edu/leaderboard.html) tracks tool-use accuracy across single-turn, multi-turn, live, and agentic scenarios. Its current leaderboard still leaves meaningful headroom even for top models, which is why production systems should verify tool selection and parameters.
 
-The tau-bench paper is even closer to real workflow risk. It evaluates agents through conversations with simulated users, domain-specific API tools, and policy guidelines. The paper reports that state-of-the-art function-calling agents succeeded on less than half of tasks in its tested domains and behaved inconsistently across repeated trials.
+The [tau-bench paper](https://sierra.ai/resources/research/tau-bench) is even closer to real workflow risk. It evaluates agents through conversations with simulated users, domain-specific API tools, and policy guidelines. The paper reports that state-of-the-art function-calling agents succeeded on less than half of tasks in its tested domains and behaved inconsistently across repeated trials.
 
-Benchmarks do not tell you whether your calendar agent is ready for your board, your customers, or your regulated workflow. They tell you why your local evals matter.
+Benchmarks do not tell you whether your calendar agent is ready for your use, your customers, or your regulated workflow. They tell you why your local evals matter.
 
 For a scheduler, local evals should cover:
 

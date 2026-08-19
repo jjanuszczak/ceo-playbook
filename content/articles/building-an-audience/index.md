@@ -11,7 +11,7 @@ tags:
   - "ecosystem-design"
   - "organizational-design"
   - "systems-thinking"
-showReadingTime: false
+showReadingTime: true
 showTableOfContents: true
 draft: false
 about:
