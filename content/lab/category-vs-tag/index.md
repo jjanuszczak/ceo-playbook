@@ -1,272 +1,143 @@
 ---
 title: "You’re Using Categories and Tags Wrong (Here’s How to Fix It)"
 date: 2026-01-10
-summary: "An in-depth explanation of the differences and strategic uses of categories and tags, drawing parallels to taxonomies in content management systems."
-description: "This post explores the philosophical and practical distinctions between categories and tags, arguing that they are both forms of taxonomy serving different strategic purposes for content organization and discovery, particularly for a personal brand site."
-draft: false
+draft: true
+summary: "Categories define the durable role of a post. Tags connect the ideas that recur across the site. Treat both as governed systems, not decorative labels."
+description: "A practical operating model for using Hugo categories and tags to create a durable content architecture, strengthen discovery, and avoid a pile of one-off labels."
 categories:
-  - technology
+  - Technology
 tags:
   - systems-thinking
-  - information-architecture
-  - hugo
   - taxonomy
-  - publishing
+  - hugo
+  - knowledge-management
+  - digital-transformation
+showReadingTime: true
+showTableOfContents: true
+about:
+  - name: "Taxonomy"
+    url: "https://en.wikipedia.org/wiki/Taxonomy_(general)"
+  - name: "Knowledge organization"
+    url: "https://www.w3.org/TR/skos-primer/"
+mentions:
+  - name: "Hugo"
+    url: "https://gohugo.io/"
+citations:
+  - title: "Hugo Taxonomies"
+    url: "https://gohugo.io/content-management/taxonomies/"
+  - title: "SKOS Simple Knowledge Organization System Primer"
+    url: "https://www.w3.org/TR/skos-primer/"
 ---
-## Categories, tags, and the broader idea of taxonomies
 
-If you have ever created a blog, you know that blog _posts_ are usually associated with _categories_ and _tags_. What are they and what are best practices for their use?
+Most sites treat categories and tags as a filing exercise. That is how they end up with 30 categories, hundreds of one-off tags, and no useful path from one idea to the next.
 
-**Categories and tags are most common on content-management-driven websites**, where content is published continuously and needs to be organized, discovered, and reused over time. For example:
+I use them differently, and so should you! Categories state the durable role of a post on this site. Tags connect the recurring ideas that cut across that structure. Together, they turn a growing archive into an intelligible body of work.
 
-* Blogs and personal sites
-* Media and publishing sites
-* Knowledge bases and documentation portals
-* Research libraries
-* Corporate content hubs
+{{< quick-answer >}}
+Use one category to answer, "What kind of work is this?" Use a small set of reused tags to answer, "Which ideas does this work extend?" Categories should change rarely. Tags should create useful connections across the archive, not merely describe every noun on the page.
+{{< /quick-answer >}}
 
-In all of these, content is not just *pages*, it’s a growing body of material that benefits from structure beyond simple navigation menus.
+## What are categories and tags actually for?
 
-## From categories and tags to taxonomies
+Both are taxonomies, which are classification systems for expressing relationships between content. [Hugo](https://gohugo.io/) (the site generator I use) makes that explicit: a taxonomy groups content under terms and automatically creates pages for those terms. 
 
-**Categories and tags are not special in themselves.** They are simply **two well-known examples of a more general concept called a taxonomy**.
+The mechanics are straightforward. The editorial decision is harder. A taxonomy only helps when its terms remain stable enough to mean something, and specific enough to guide a reader to the next useful piece of work.
 
-### What is a taxonomy?
+For this site, the division is deliberate:
 
-A **taxonomy** is:
+* Categories describe my role and the durable pillars of the work.
+* Tags describe the concepts, domains, practices, and sources that recur across those pillars.
 
-> A structured classification system used to group and relate content based on shared characteristics.
+That distinction keeps the navigation legible while giving the archive a real *semantic graph* (which is a fancy way of saying a web of connected ideas based on what they mean).
 
-In practical terms, a taxonomy allows you to answer questions like:
+## Why should categories stay broad and stable?
 
-* What kind of content is this?
-* What themes does it relate to?
-* How does it connect to other content?
-* How should users browse or filter it?
+Categories are the macro-structure. A reader should be able to see them in a navigation bar and immediately understand the kind of work I do.
 
-Taxonomies come from fields like biology, library science, and information architecture, but they are now a core concept in modern web systems.
+This site uses a single approved category per post. `Strategy`, `Technology`, `Fintech`, and `Venture Building` are useful because they can hold years of writing without becoming vague. `AI`, `Innovation`, and `Blog` are not categories. They are topics, claims, or empty labels.
 
-## Why categories and tags became defaults
+If I need a new category every month, I have not discovered a new pillar. I have avoided making a classification decision.
 
-Historically:
+```yaml
+categories:
+  - Technology
+```
 
-* **Categories** emerged as *top-level groupings* (few, broad, stable)
-* **Tags** emerged as *descriptive labels* (many, flexible, granular)
+## How should tags build a useful knowledge graph?
 
-They proved so useful that most content management system (CMS) platforms adopted them as defaults.
+Tags do the connective work. They should cross category boundaries and reflect concepts I expect to return to, such as `systems-thinking`, `knowledge-management`, `platform-economics`, or `board-governance`.
 
-But conceptually:
+The test is practical: would I want a landing page for this tag, and can I credibly use it across at least ten posts? If not, it is probably a detail, not a tag.
 
-* Categories = one type of taxonomy
-* Tags = another type of taxonomy
+For example, `hugo` is useful when a post is materially about the platform. `taxonomy` is useful when a post examines how knowledge is organized. A tag such as `publishing-thoughts-2026` is not useful. It creates an archive page with no future.
 
-They differ mainly in **intent and governance**, not in underlying mechanics.
+```yaml
+tags:
+  - systems-thinking
+  - taxonomy
+  - hugo
+  - knowledge-management
+  - digital-transformation
+```
 
-## Modern frameworks and “custom taxonomies”
+This is also why I avoid treating every keyword as a tag. A tag is an editorial commitment to an intellectual thread, not a search index.
 
-Modern content frameworks (static and dynamic) generalize this idea.
+## What does the decision look like on a real post?
 
-Instead of hard-coding only “categories” and “tags”, they allow you to define:
+Take a post about a new Hugo capability that lets readers carry clean Markdown into their own working context. Its category is `Technology` because that states the role of the work. Its tags could include `hugo`, `knowledge-management`, and `software-engineering` because those threads recur elsewhere on the site.
 
-* Any number of **custom taxonomies**
-* With custom names, rules, and behaviors
-* Applied selectively to different content types
-
-Examples of additional taxonomies might include:
-
-* `series` (multi-part content)
-* `topics` (curated themes)
-* `industries`
-* `frameworks`
-* `use-cases`
-* `roles` or `perspectives`
-
-Each taxonomy:
-
-* Groups content
-* Generates its own listing views
-* Supports navigation, filtering, and discovery
-
-In other words, **categories and tags are conventions, not limitations**.
-
-## The key idea to internalize
-
-> **Categories and tags are just named taxonomies with historical defaults.**
-> What matters is not the labels—but the classification intent behind them.
-
-Modern frameworks give you the tools to define:
-
-* How content should be grouped
-* How users should explore it
-* How ideas connect over time
-
-The discipline lies not in *adding taxonomies*, but in **knowing when a new lens genuinely improves understanding**.
-
-That’s the difference between a blog archive and a durable knowledge system.
-
-## Back to the diference between categories and tags
-
-When using tools like **Wordpress** or **Hugo** for a websites, **tags** and **categories** are both *taxonomies* serving different strategic purposes.
-
-### The short version
-
-* **Categories = broad buckets**
-
-  * High-level themes
-  * Few in number
-  * Usually **1 (maybe 2) per post**
-
-* **Tags = fine-grained descriptors**
-
-  * Specific topics, ideas, tools
-  * Many in number
-  * Often **5–10+ per post**
-
-Think of it like this:
-
-> **Categories answer:** *“What kind of content is this?”*
-> **Tags answer:** *“What exactly is this about?”*
+[The Copy Page feature]({{< ref "lab/ai-built-copy-page-hugo" >}}) is a concrete example. The implementation is small, but the editorial point is larger: structured source material becomes more useful when readers and their agents can work with it directly.
 
 {{< figure
     src="category-vs-tag.png"
-    alt="Categories vs. Tags infographic"
-    caption="Categories vs. Tags"
+    alt="Decision model showing categories as durable site pillars and tags as reusable cross-cutting concepts"
+    caption="Use categories to define a post’s durable role. Use tags to connect its recurring ideas."
     >}}
 
-## Categories: your site’s macro-structure
+## When should I create a new taxonomy instead?
 
-Categories define the **primary pillars** of your thinking.
+Do not create a new taxonomy because the existing ones feel inconvenient. Create one only when the site needs a genuinely different browsing lens with its own rules and landing pages.
 
-For a personal brand site like mine, good categories might be:
+For example, a `series` taxonomy can make sense for a deliberate multi-part body of work. A `role` taxonomy could make sense if executives, operators, and investors need distinct paths through the archive. A redundant `topics` taxonomy usually does not. It often duplicates tags without solving a reader problem.
 
-* `Essays`
-* `Fintech`
-* `Strategy`
-* `Leadership`
-* `Technology`
-* `Energy Transition`
+Many content management systems (like Hugo) support custom taxonomies, but the framework does not supply the governance. That is the editorial work. The same principle applies to the wider platform: [the architecture of attention]({{< ref "articles/architecture-of-attention" >}}) matters because structure determines what readers can discover, connect, and act on.
 
-**Rules of thumb**
+## What are the common mistakes?
 
-* Keep categories **stable over years**
-* If you add one every month, you’re doing it wrong
-* Categories often map to:
+* Creating categories that describe a passing topic rather than a durable role.
+* Adding tags that appear once and never build a reader path.
+* Using categories and tags interchangeably because the CMS permits both.
+* Creating a custom taxonomy before proving that categories and tags cannot do the job.
+* Letting front matter drift away from the site’s published governance.
 
-  * Nav items
-  * Top-level content sections
-  * “What I write about” framing
+The last mistake is the most expensive. Weak labels do not fail loudly. They quietly turn an archive into a pile of isolated pages.
 
-**Example post front matter**
+## How do I keep the system useful as the site grows?
 
-```yaml
-categories:
-  - Strategy
-```
+Review the taxonomy periodically. Retire labels that never gained a body of work. Do not invent replacements merely to make a dashboard look complete. Keep the categories narrow and durable; use tags only where there is a real recurring thread.
 
-## Tags: your semantic graph
+That discipline is the difference between discovery and knowledge. [From Discovery to Knowledge]({{< ref "articles/discovery-to-knowledge" >}}) makes the same point in a different context: more information does not create understanding until someone imposes judgment, context, and accountability.
 
-Tags capture **specific ideas, tools, or lenses** that cut across categories.
+{{< faq >}}
+  {{% faq-item question="Can a post have more than one category?" %}}
+  It can technically, but I use one category per post. A single durable role keeps the primary structure clear. If a post spans several themes, tags should capture the cross-cutting ideas.
+  {{% /faq-item %}}
+  {{% faq-item question="How many tags should a post have?" %}}
+  Use enough to create meaningful connections, usually five to eight. Every tag should be reusable, lower-case and hyphenated, and strong enough to deserve its own archive page.
+  {{% /faq-item %}}
+  {{% faq-item question="When is a new tag justified?" %}}
+  Add one only when it names a core idea that I expect to reuse repeatedly, not a one-off detail. If an existing tag can carry the meaning, use the existing tag.
+  {{% /faq-item %}}
+{{< /faq >}}
 
-Examples from my own site:
+## Is there a video associated with this article?
 
-* `embedded-finance`
-* `platform-economics`
-* `stablecoins`
-* `venture-building`
-* `ai`
-* `ceo-playbook`
-* `long-term-thinking`
-
-Tags are powerful because:
-
-* They enable **cross-pollination**
-* They create a **knowledge graph** of your thinking
-* They age well even as categories stay fixed
-
-**Example front matter**
-
-```yaml
-tags:
-  - platform-economics
-  - venture-building
-  - long-term-thinking
-  - kevin-kelly
-```
-
-## What's a practical mental model?
-
-Use this decision test:
-
-* If someone asks *“What kind of writer are you?”* → **Category**
-* If someone asks *“What ideas do you explore?”* → **Tags**
-
-Or:
-
-* **Categories = bookshelf labels**
-* **Tags = index entries**
-
-## SEO & discoverability implications
-
-**Categories**
-
-* Stronger internal linking
-* Clear topical authority
-* Useful for cornerstone / evergreen pages
-
-**Tags**
-
-* Long-tail SEO
-* Better content resurfacing
-* Encourages deeper session depth (“related posts”)
-
-For personal sites, **tags usually do more work than categories**.
-
-## Common mistakes to avoid
-
-- ❌ Using tags and categories interchangeably
-- ❌ Having 30+ categories
-- ❌ One-off categories used once
-- ❌ Putting people’s names as categories
-- ❌ Treating categories as chronological (that’s what dates are for)
-
-## What is the Recommended setup for a personal site?
-
-**Categories**
-
-* 5–8 max
-* Strategic, durable, opinionated
-
-**Tags**
-
-* Flexible
-* Reused intentionally
-* Reflect how *you* think, not generic blog taxonomies
-
-## Can you show me an Example?
-
-For my [Kevin Kelly / platform economics]({{< relref "articles/the-inevitable/index.md" >}}) post:
-
-```yaml
-categories:
-  - Strategy
-
-tags:
-  - platform-economics
-  - business-models
-  - ecosystems
-  - kevin-kelly
-  - long-term-thinking
-```
-
-That tells both humans and search engines:
-
-* *This is strategic thinking*
-* *About platforms, ecosystems, and long-term dynamics*
-
-## Where can I find a great video on this topic?
-
-Here is a video version that covers more or less the same material if you prefer watching vs reading!
+If you enjoy watching more than reading, check this out:
 
 {{< youtubeLite id="ISzNJ_FTMhQ" label="Categories vs Tags: You’re Doing It WRONG!" >}}
 
-Featured image by [StockSnap](https://pixabay.com/users/stocksnap-894430/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=923188) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=923188)
+Featured image by [StockSnap](https://pixabay.com/users/stocksnap-894430/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=923188) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=923188).
+
+{{< related-posts title="Related Insights" paths="lab/deterministic-evals-for-ai-skills, lab/agents-vs-skills" >}}
+
+{{< read-next title="Read Next" link="lab/pyenv" buttonText="View more Deep Dives" >}}
