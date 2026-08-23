@@ -1,0 +1,46 @@
+
+# Strict GA4 campaign-link policy managed by hs.
+[campaign]
+strict = true
+policy_version = 1
+allowed_mediums = ["email", "social", "paid_social", "cpc"]
+
+[[campaign.sources]]
+key = "newsletter"
+allowed_mediums = ["email"]
+
+[[campaign.sources]]
+key = "x"
+allowed_mediums = ["social", "paid_social"]
+
+[[campaign.sources]]
+key = "linkedin"
+allowed_mediums = ["social", "paid_social"]
+
+[[campaign.sources]]
+key = "messenger"
+allowed_mediums = ["social", "paid_social"]
+
+[[campaigns]]
+key = "signals-x-quotes"
+label = "Signals X Quotes"
+status = "active"
+description = "Sharing of Signals content via quoting of highlighted X posts"
+
+[[campaigns]]
+key = "weekly-signals"
+label = "Weekly Signals"
+status = "active"
+description = "Weekly collection of web, long form media and book highlights"
+
+[[campaigns]]
+key = "thought-leadership"
+label = "Thought Leadership"
+status = "active"
+description = "Articles on operating lessons, and observations"
+
+[[campaigns]]
+key = "tech-lab"
+label = "Tech Lab"
+status = "active"
+description = "Technical, explainer, or experimental pieces"

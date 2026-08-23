@@ -15,7 +15,7 @@ SIGNALS_DIR = ROOT / "content" / "signals"
 STATE_PATH = ROOT / "data" / "signals-x-quotes" / "queue.json"
 CARD_PATH = ROOT / "docs" / "repurposed" / "signals-x-quote-queue.md"
 BASE_URL = "https://januszczak.org"
-SIGNALS_INDEX_URL = f"{BASE_URL}/signals/"
+SIGNALS_INDEX_URL = f"{BASE_URL}/signals/?utm_campaign=signals-x-quotes&utm_medium=social&utm_source=x"
 SIGNALS_CALLOUT = (
     "I curate, expand on, and share my take on great content like this "
     f"in my weekly Signals: {SIGNALS_INDEX_URL}"

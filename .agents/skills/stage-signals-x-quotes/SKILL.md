@@ -17,7 +17,7 @@ python3 .agents/skills/stage-signals-x-quotes/scripts/stage_signals_x_quotes.py 
 
 The command selects the next eligible source from the most recent published Signals post, proceeding in editorial order. It extracts the source, Summary, Why it Matters, and My Take. It writes durable local state to `data/signals-x-quotes/queue.json` and a ready-to-copy Markdown card to `docs/repurposed/signals-x-quote-queue.md`.
 
-Use the original Signals copy for the Summary, Why it Matters, and My Take with only light edits for X readability. Do not trim or rewrite those sections merely to fit X's character limit. End each draft with this generic Signals callout, linking to the Signals section rather than the source post: `I curate, expand on, and share my take on great content like this in my weekly Signals: https://januszczak.org/signals/`. Flag any character-limit overage for John's review, but retain the full draft. Save an approved manual edit with:
+Use the original Signals copy for the Summary, Why it Matters, and My Take with only light edits for X readability. Do not trim or rewrite those sections merely to fit X's character limit. End each draft with this generic Signals callout, linking to the Signals section rather than the source post: `I curate, expand on, and share my take on great content like this in my weekly Signals: https://januszczak.org/signals/?utm_campaign=signals-x-quotes&utm_medium=social&utm_source=x`. Flag any character-limit overage for John's review, but retain the full draft. Save an approved manual edit with:
 
 ```bash
 python3 .agents/skills/stage-signals-x-quotes/scripts/stage_signals_x_quotes.py set-draft --source <source-url-or-id> --text "..."
