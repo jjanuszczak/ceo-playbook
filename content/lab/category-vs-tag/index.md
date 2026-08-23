@@ -1,13 +1,17 @@
 ---
-title: "Category vs Tag"
+title: "You’re Using Categories and Tags Wrong (Here’s How to Fix It)"
 date: 2026-01-10
 summary: "An in-depth explanation of the differences and strategic uses of categories and tags, drawing parallels to taxonomies in content management systems."
 description: "This post explores the philosophical and practical distinctions between categories and tags, arguing that they are both forms of taxonomy serving different strategic purposes for content organization and discovery, particularly for a personal brand site."
 draft: false
+categories:
+  - technology
 tags:
   - systems-thinking
+  - information-architecture
   - hugo
   - taxonomy
+  - publishing
 ---
 ## Categories, tags, and the broader idea of taxonomies
 
@@ -189,7 +193,7 @@ tags:
   - kevin-kelly
 ```
 
-## A practical mental model (very useful)
+## What's a practical mental model?
 
 Use this decision test:
 
@@ -225,7 +229,7 @@ For personal sites, **tags usually do more work than categories**.
 - ❌ Putting people’s names as categories
 - ❌ Treating categories as chronological (that’s what dates are for)
 
-## Recommended setup for a personal site
+## What is the Recommended setup for a personal site?
 
 **Categories**
 
@@ -238,7 +242,7 @@ For personal sites, **tags usually do more work than categories**.
 * Reused intentionally
 * Reflect how *you* think, not generic blog taxonomies
 
-## Example (applied)
+## Can you show me an Example?
 
 For my [Kevin Kelly / platform economics]({{< relref "articles/the-inevitable/index.md" >}}) post:
 
@@ -259,3 +263,10 @@ That tells both humans and search engines:
 * *This is strategic thinking*
 * *About platforms, ecosystems, and long-term dynamics*
 
+## Where can I find a great video on this topic?
+
+Here is a video version that covers more or less the same material if you prefer watching vs reading!
+
+{{< youtubeLite id="ISzNJ_FTMhQ" label="Categories vs Tags: You’re Doing It WRONG!" >}}
+
+Featured image by [StockSnap](https://pixabay.com/users/stocksnap-894430/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=923188) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=923188)
