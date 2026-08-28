@@ -308,7 +308,7 @@ An agent without a contract is unsafe. An agent without a loss function is unman
   {{% /faq-item %}}
 {{< /faq >}}
 
-Featured image source: <a href="https://pixabay.com/users/u_syz4wcgykc-31328924/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7592568">u_syz4wcgykc</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7592568">Pixabay</a>
+*Featured image source: <a href="https://pixabay.com/users/orko46-16495679/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7320893">orko46</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7320893">Pixabay</a>*
 
 {{< related-posts title="Related Insights" paths="lab/developing-effective-agents, lab/deterministic-evals-for-ai-skills, lab/agent-vs-harness-explainer" >}}
 

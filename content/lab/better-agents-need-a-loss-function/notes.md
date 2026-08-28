@@ -24,10 +24,11 @@ Research authority came from the issue brief. Sources used: local part-one post,
 Pixabay search query: `data dashboard feedback`.
 
 1. https://pixabay.com/photos/computer-summary-chart-business-767776/ by Lalmch. Rights basis: Pixabay Content License, candidate returned by project adapter. Rejected because the laptop/chart composition felt generic.
-2. https://pixabay.com/photos/data-digital-technology-analysis-7592568/ by u_syz4wcgykc. Rights basis: Pixabay Content License, candidate returned by project adapter. Selected because the data-analysis/dashboard subject fits outcome instrumentation and performance tracking.
+2. https://pixabay.com/photos/data-digital-technology-analysis-7592568/ by u_syz4wcgykc. Rights basis: Pixabay Content License, candidate returned by project adapter. Originally selected, later replaced by the author.
 3. https://pixabay.com/photos/speedometer-dashboard-car-speed-1249610/ by qimono. Rights basis: Pixabay Content License, candidate returned by project adapter. Rejected because the automotive dashboard metaphor was less precise.
+4. https://pixabay.com/photos/map-compass-navigation-travel-7320893/ by orko46. Rights basis: Pixabay Content License, author-selected replacement image. Selected because the map and compass signal outcome-directed routing and feedback without a generic data-dashboard visual.
 
-Selected asset: `featured.jpg`, cropped from 1280x868 to 1280x720.
+Selected asset: `featured.jpg`, normalized from the author-selected 6000x3368 image to 1280x720.
 
 ## Social draft archive
 
@@ -37,9 +38,9 @@ Saved to `docs/repurposed/2026-08-28-better-agents-need-a-loss-function.md`.
 
 Content-creator provisioning eval reported a known issue-reuse false failure because it expected `feature/lab-better-agents-need-a-loss-function`; the workflow correctly used issue-linked branch `feature/141-lab-better-agents-need-a-loss-function`.
 
-Managing Editor eval passed on 2026-08-28T09:08+08:00.
+Managing Editor eval passed on 2026-08-28T09:08+08:00 and again after the featured-image update on 2026-08-28T15:05+08:00.
 
-Full Editorial Agent eval passed on 2026-08-28T09:08+08:00, including local editorial package validation and Hugo build.
+Full Editorial Agent eval passed on 2026-08-28T09:08+08:00 and again after the featured-image update on 2026-08-28T15:05+08:00, including local editorial package validation and Hugo build.
 
 ## Open questions and human decisions
 
