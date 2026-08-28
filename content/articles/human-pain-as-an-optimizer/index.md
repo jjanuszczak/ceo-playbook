@@ -1,6 +1,6 @@
 ---
 title: "AI Agents Do Not Feel Pain"
-date: 2026-08-10T09:01:57+08:00
+date: 2026-08-28
 summary: "AI coding agents can write code quickly, but they do not feel the future maintenance pain that teaches human engineers to avoid brittle architecture."
 description: "A practical argument for why human judgment still matters in agentic coding: senior engineers optimize against future maintenance pain, while AI agents optimize for the immediate stated goal."
 categories:
@@ -13,8 +13,8 @@ tags:
   - "productivity"
 showReadingTime: true
 showTableOfContents: true
-draft: true
-status: "user-review"
+draft: false
+status: "published"
 about:
   - name: "AI-assisted programming"
     url: "https://en.wikipedia.org/wiki/Artificial_intelligence_in_software_engineering"
@@ -213,6 +213,12 @@ The future of software engineering is not humans versus agents. It is humans tea
   Engineering leaders should treat AI output as a draft, not a final answer. They should track churn and duplication, require stronger gates for high-risk changes, preserve refactoring capacity, and codify lessons from incidents into tests, evals, and review rules.
   {{% /faq-item %}}
 {{< /faq >}}
+
+## Margin Notes: Building Pi
+
+Here is the talk on The Pragmatic Engineer referecned above on what makes self-modifying software so fascinating in case you want to watch the whole thing:
+
+{{< youtubeLite id="n5f51gtuGHE" label="Building Pi, and what makes self-modifying software so fascinating" >}}
 
 *Featured image source: <a href="https://pixabay.com/users/51581-51581/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1627703">51581</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1627703">Pixabay</a>.*
 
