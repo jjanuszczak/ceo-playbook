@@ -166,6 +166,8 @@ The answer is not "remove all friction." That would be reckless. The answer is t
 
 ## Why does design become more important, not less?
 
+The closer software gets to intent, the more consequential its product decisions become.
+
 AI makes bad product decisions faster.
 
 That is the core risk.
