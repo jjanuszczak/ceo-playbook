@@ -71,6 +71,18 @@
   display: none;
 }
 
+@media (max-width: 639px) {
+  .copy-page-menu {
+    position: fixed;
+    inset-inline: 1rem;
+    top: auto;
+    bottom: 1rem;
+    width: auto;
+    max-height: calc(100dvh - 2rem);
+    overflow-y: auto;
+  }
+}
+
 .copy-page-menu-item {
   display: flex;
   width: 100%;
