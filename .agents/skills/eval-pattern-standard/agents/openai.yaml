@@ -1,0 +1,4 @@
+interface:
+  display_name: "Eval Pattern Standard"
+  short_description: "Standardize reusable skill eval suites"
+  default_prompt: "Use $eval-pattern-standard to add or review a configured evaluation suite for this skill."

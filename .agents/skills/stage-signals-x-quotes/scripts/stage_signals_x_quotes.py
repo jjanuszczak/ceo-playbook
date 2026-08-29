@@ -5,7 +5,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import random
 import re
+import subprocess
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -15,11 +17,12 @@ SIGNALS_DIR = ROOT / "content" / "signals"
 STATE_PATH = ROOT / "data" / "signals-x-quotes" / "queue.json"
 CARD_PATH = ROOT / "docs" / "repurposed" / "signals-x-quote-queue.md"
 BASE_URL = "https://januszczak.org"
-SIGNALS_INDEX_URL = f"{BASE_URL}/signals/?utm_campaign=signals-x-quotes&utm_medium=social&utm_source=x"
-SIGNALS_CALLOUT = (
-    "I curate, expand on, and share my take on great content like this "
-    f"in my weekly Signals: {SIGNALS_INDEX_URL}"
-)
+SIGNALS_INDEX_PATH = ROOT / "content" / "signals" / "_index.md"
+DEFAULT_CAMPAIGN = "signals-x-quotes"
+DEFAULT_MEDIUM = "social"
+DEFAULT_SOURCE = "x"
+CALLOUT_INTROS = ("By the way,", "Btw", "Fyi", "Just to let you know,")
+CALLOUT_ADJECTIVES = ("great", "interesting", "informative", "thoughtful", "important")
 X_URL = re.compile(r"https?://(?:www\.)?(?:x|twitter)\.com/[^\s)]+", re.IGNORECASE)
 X_SHORTCODE = re.compile(r"{{<\s*(x|x-article)\s+([^>]+?)\s*>}}")
 ATTR = re.compile(r'(\w+)="([^"]+)"')
@@ -103,9 +106,48 @@ def candidates() -> list[dict[str, str]]:
     return result
 
 
+def tracking_url(campaign: str, medium: str, source: str) -> str:
+    """Build and verify the Signals index URL against the site's hs campaign policy."""
+    link = subprocess.run(
+        [
+            "hs", "campaign", "link", str(SIGNALS_INDEX_PATH), str(ROOT),
+            "--campaign", campaign, "--medium", medium, "--source", source,
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    subprocess.run(
+        ["hs", "campaign", "validate", link, str(ROOT), "--format", "json"],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    return link
+
+
+def split_hook(my_take: str) -> tuple[str | None, str]:
+    """Promote a leading bold My-Take sentence, retaining the remaining commentary."""
+    bold = re.match(r"^\s*(\*\*.+?\*\*[.!?]?)\s*(.*)$", my_take, re.DOTALL)
+    if bold:
+        hook, remainder = bold.group(1).strip(), bold.group(2).strip()
+        return hook, remainder
+    return None, my_take.strip()
+
+
 def make_draft(item: dict[str, str]) -> str:
-    return (f"Summary: {item['summary']}\n\nWhy it matters: {item['why_it_matters']}\n\n"
-            f"My take: {item['my_take']}\n\n{SIGNALS_CALLOUT}")
+    hook, take_remainder = split_hook(item["my_take"])
+    intro = item.get("callout_intro") or random.choice(CALLOUT_INTROS)
+    adjective = item.get("callout_adjective") or random.choice(CALLOUT_ADJECTIVES)
+    url = item["signals_index_url"]
+    parts = [part for part in (
+        hook,
+        item["summary"],
+        f"Why it matters: {item['why_it_matters']}",
+        f"My take: {take_remainder}" if take_remainder else None,
+        f"{intro} I curate, expand on, and share my take on {adjective} content like this in my weekly Signals: {url}",
+    ) if part]
+    return "\n\n".join(parts)
 
 
 def find_item(state: dict[str, Any], source_value: str) -> dict[str, Any]:
@@ -131,7 +173,7 @@ def write_card(item: dict[str, Any]) -> None:
     )
 
 
-def stage(_: argparse.Namespace) -> None:
+def stage(args: argparse.Namespace) -> None:
     state = read_state()
     open_items = [item for item in state["items"] if item["status"] in {"ready", "deferred"}]
     if open_items:
@@ -145,7 +187,20 @@ def stage(_: argparse.Namespace) -> None:
     if not item:
         print("[UPDATE] No eligible unshared X sources found in published Signals posts.")
         return
-    item.update({"draft_text": make_draft(item), "status": "ready", "created_at": now(), "approved_at": None, "posted_at": None, "published_x_url": None})
+    item.update({
+        "utm_campaign": args.campaign,
+        "utm_medium": args.medium,
+        "utm_source": args.source,
+        "signals_index_url": tracking_url(args.campaign, args.medium, args.source),
+        "callout_intro": random.choice(CALLOUT_INTROS),
+        "callout_adjective": random.choice(CALLOUT_ADJECTIVES),
+        "status": "ready",
+        "created_at": now(),
+        "approved_at": None,
+        "posted_at": None,
+        "published_x_url": None,
+    })
+    item["draft_text"] = make_draft(item)
     item["character_count"] = len(item["draft_text"])
     state["items"].append(item)
     write_state(state)
@@ -174,6 +229,33 @@ def set_draft(args: argparse.Namespace) -> None:
     print(f"[UPDATE] Saved draft ({item['character_count']}/280 characters).")
 
 
+def refresh(args: argparse.Namespace) -> None:
+    """Rebuild a queued draft with the latest card format and validated attribution."""
+    state = read_state()
+    if args.source:
+        item = find_item(state, args.source)
+    else:
+        item = next((entry for entry in state["items"] if entry["status"] in {"ready", "deferred"}), None)
+        if not item:
+            raise SystemExit("No ready or deferred queue item to refresh.")
+    campaign = args.campaign or item.get("utm_campaign", DEFAULT_CAMPAIGN)
+    medium = args.medium or item.get("utm_medium", DEFAULT_MEDIUM)
+    source = args.utm_source or item.get("utm_source", DEFAULT_SOURCE)
+    item.update({
+        "utm_campaign": campaign,
+        "utm_medium": medium,
+        "utm_source": source,
+        "signals_index_url": tracking_url(campaign, medium, source),
+        "callout_intro": item.get("callout_intro") or random.choice(CALLOUT_INTROS),
+        "callout_adjective": item.get("callout_adjective") or random.choice(CALLOUT_ADJECTIVES),
+    })
+    item["draft_text"] = make_draft(item)
+    item["character_count"] = len(item["draft_text"])
+    write_state(state)
+    write_card(item)
+    print(f"[UPDATE] Refreshed draft ({item['character_count']}/280 characters).")
+
+
 def transition(args: argparse.Namespace, status: str) -> None:
     state = read_state()
     item = find_item(state, args.source)
@@ -188,12 +270,22 @@ def transition(args: argparse.Namespace, status: str) -> None:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
-    commands.add_parser("stage").set_defaults(func=stage)
+    stage_command = commands.add_parser("stage")
+    stage_command.add_argument("--campaign", default=DEFAULT_CAMPAIGN)
+    stage_command.add_argument("--medium", default=DEFAULT_MEDIUM)
+    stage_command.add_argument("--source", default=DEFAULT_SOURCE)
+    stage_command.set_defaults(func=stage)
     commands.add_parser("list").set_defaults(func=list_items)
     draft = commands.add_parser("set-draft")
     draft.add_argument("--source", required=True)
     draft.add_argument("--text", required=True)
     draft.set_defaults(func=set_draft)
+    refresh_command = commands.add_parser("refresh", help="Rebuild a queued card with the latest format.")
+    refresh_command.add_argument("--source")
+    refresh_command.add_argument("--campaign")
+    refresh_command.add_argument("--medium")
+    refresh_command.add_argument("--utm-source", dest="utm_source")
+    refresh_command.set_defaults(func=refresh)
     for name, status in (("mark-posted", "posted"), ("skip", "skipped"), ("defer", "deferred")):
         command = commands.add_parser(name)
         command.add_argument("--source", required=True)
