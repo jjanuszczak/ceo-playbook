@@ -1,0 +1,15 @@
+pipeline:
+  target_version: "1.0"
+  steps:
+    - name: "Stage Command Defaults"
+      id: "cli_defaults"
+      script: "checks/cli_defaults_check.py"
+      halt_on_fail: true
+    - name: "Campaign Link Generation & Validation"
+      id: "campaign_attribution"
+      script: "checks/campaign_attribution_check.py"
+      halt_on_fail: true
+    - name: "Quote Card Formatting"
+      id: "card_formatting"
+      script: "checks/card_formatting_check.py"
+      halt_on_fail: true
