@@ -1,5 +1,13 @@
 {{- $page := . -}}
-{{- $markdown := replaceRE `(?s)\{\{[<%].*?[>%]\}\}` "" $page.RawContent -}}
+{{- $markdown := $page.RawContent -}}
+{{- /* Preserve source links from link-bearing embeds before stripping remaining Hugo syntax. */ -}}
+{{- $markdown = replaceRE `\{\{<\s*x-article\s+user="([^"]+)"\s+id="([^"]+)"\s+title="([^"]*)"[^\n]*>\}\}` `[$3](https://x.com/$1/article/$2)` $markdown -}}
+{{- $markdown = replaceRE `\{\{<\s*x\s+user="([^"]+)"\s+id="([^"]+)"[^\n]*>\}\}` `[@$1 on X](https://x.com/$1/status/$2)` $markdown -}}
+{{- $markdown = replaceRE `\{\{<\s*youtubeLite\s+id="([^"]+)"\s+label="([^"]*)"[^\n]*>\}\}` `[$2](https://www.youtube.com/watch?v=$1)` $markdown -}}
+{{- $markdown = replaceRE `\{\{<\s*youtube\s+id="([^"]+)"[^\n]*>\}\}` `[Watch on YouTube](https://www.youtube.com/watch?v=$1)` $markdown -}}
+{{- $markdown = replaceRE `\{\{<\s*spotify\s+type="([^"]+)"\s+id="([^"]+)"[^\n]*>\}\}` `[Listen on Spotify](https://open.spotify.com/$1/$2)` $markdown -}}
+{{- $markdown = replaceRE `\{\{<\s*spotify\s+"([^"]+)"\s+"([^"]+)"[^\n]*>\}\}` `[Listen on Spotify](https://open.spotify.com/$1/$2)` $markdown -}}
+{{- $markdown = replaceRE `(?s)\{\{[<%].*?[>%]\}\}` "" $markdown -}}
 {{- $markdown = replaceRE `\n{3,}` "\n\n" $markdown -}}
 {{- $copyright := printf "© %s %s" (now.Format "2006") $page.Site.Params.Author.name -}}
 {{- with $page.Site.Params.copyright -}}
