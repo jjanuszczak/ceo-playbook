@@ -1,7 +1,7 @@
 ---
 title: "You’re Using Categories and Tags Wrong (Here’s How to Fix It)"
 date: 2026-01-10
-draft: true
+draft: false
 summary: "Categories define the durable role of a post. Tags connect the ideas that recur across the site. Treat both as governed systems, not decorative labels."
 description: "A practical operating model for using Hugo categories and tags to create a durable content architecture, strengthen discovery, and avoid a pile of one-off labels."
 categories:
