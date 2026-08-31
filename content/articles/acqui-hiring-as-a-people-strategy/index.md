@@ -1,6 +1,6 @@
 ---
 title: "Acqui-Hiring Is Now a Leadership Strategy"
-date: 2026-08-11T09:02:41+08:00
+date: 2026-09-01
 summary: "Acqui-hiring is no longer just a soft landing for struggling startups. In scarce AI and specialist talent markets, it has become a leadership tool for buying cohesive teams, speed, and product judgment."
 description: "A practical CEO-level view of acqui-hiring as a people strategy: why AI has made team acquisitions more attractive, where the integration risks sit, and how leaders should design retention, autonomy, and operating support."
 categories:
