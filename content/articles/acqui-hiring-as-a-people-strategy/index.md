@@ -14,8 +14,8 @@ tags:
   - "systems-thinking"
 showReadingTime: true
 showTableOfContents: true
-draft: true
-status: "user-review"
+draft: false
+status: "published"
 about:
   - name: "Acqui-hiring"
     url: "https://en.wikipedia.org/wiki/Acqui-hiring"
