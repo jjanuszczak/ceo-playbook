@@ -8,8 +8,8 @@ This site is a static website built with **Hugo** and the **Blowfish** theme. It
 
 ## Tech Stack
 
-- **Static Site Generator:** [Hugo](https://gohugo.io/) (Extended version)
-- **Theme:** [Blowfish](https://blowfish.page/)
+- **Static Site Generator:** [Hugo](https://gohugo.io/) Extended v0.165.0
+- **Theme:** [Blowfish](https://blowfish.page/) v3.6.0
 - **Styling:** Tailwind CSS (via Hugo Pipes)
 - **Hosting:** GitHub Pages
 - **Python Tooling:** [uv](https://docs.astral.sh/uv/) managed project environment for repo automation
@@ -21,7 +21,7 @@ This repository is primarily a Hugo site, but it also includes Python-based auto
 ### Prerequisites
 
 - Install `uv`
-- Install Hugo Extended
+- Install Hugo Extended v0.165.0
 
 ### Python Tooling Setup
 

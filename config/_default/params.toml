@@ -24,6 +24,7 @@ disableTextInHeader = false
 # backgroundImageWidth = 1200
 
 defaultBackgroundImage = "/images/background-milky-way.jpg" # used as default for background images
+backgroundCanvas = false # enable only after the landing-layout visual review
 defaultFeaturedImage = "/images/background-milky-way.jpg" # used as default for featured images in all articles
 defaultSocialImage = "/android-chrome-512x512.png" # used as default for social media sharing (Open Graph and Twitter)
 hotlinkFeatureImage = false
@@ -49,7 +50,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showScrollToTop = true
 
 [homepage]
-  layout = "background" # valid options: page, profile, hero, card, background, custom
+  layout = "landing" # valid options: page, profile, hero, card, background, landing, custom
   #homepageImage = "IMAGE.jpg" # used in: hero, and card
   showRecent = true
   showRecentItems = 3
@@ -85,8 +86,9 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showTableOfContents = true
   # showRelatedContent = false
   # relatedContentLimit = 3
-  showTaxonomies = true # use showTaxonomies OR showCategoryOnly, not both
-  showCategoryOnly = false # use showTaxonomies OR showCategoryOnly, not both
+  showTaxonomies = true
+  showCategories = true
+  showTags = true
   showAuthorsBadges = false
   showWordCount = false
   sharingLinks = [ "linkedin", "twitter", "reddit", "facebook", "email", "whatsapp", "telegram", "line"]

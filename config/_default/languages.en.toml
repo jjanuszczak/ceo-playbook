@@ -1,6 +1,6 @@
 disabled = false
-languageCode = "en"
-languageName = "English"
+locale = "en"
+label = "English"
 weight = 1
 # title = "John Januszczak | Fintech & Innovation Strategy"
 title = "<span class='font-light'> >_ </span>John Januszczak<span class='font-light'> | Technology & Innovation</span>"

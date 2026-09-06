@@ -14,13 +14,13 @@
   }
 </style>
 
-<footer id="site-footer" class="pt-12 pb-8 bg-neutral-100 dark:bg-neutral-800 border-t border-neutral-200 dark:border-neutral-700 print:hidden mt-12 text-neutral-900 dark:text-neutral-100" style="padding-bottom: 2rem;">
+<footer id="site-footer" class="pt-8 pb-8 bg-neutral-100 dark:bg-neutral-800 border-t border-neutral-200 dark:border-neutral-700 print:hidden mt-12 text-neutral-900 dark:text-neutral-100" style="padding-bottom: 2rem;">
   
   <!-- Content Container (Centers content to match main page layout) -->
   <div class="max-w-7xl mx-auto px-6 sm:px-14 md:px-24 lg:px-32">
     
     <!-- 1. Navigation Columns (Top section) -->
-    <div class="pt-8 flex flex-col md:flex-row md:flex-nowrap md:gap-8 mb-12">
+    <div class="pt-8 flex flex-col md:flex-row md:flex-nowrap md:gap-8 mb-16">
       
       <!-- Column 1: Brand & Socials -->
       <div class="footer-col-brand w-full space-y-4 mb-10 md:mb-0">
@@ -130,20 +130,6 @@
     </div>
   </div>
 
-  {{/* JS for back-to-top if not already present */}}
-  {{ if not .Site.Params.disableImageZoom | default true }}
-    <script>
-      (function() {
-        if (typeof mediumZoom !== 'undefined') {
-          mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
-            margin: 24,
-            background: "rgba(0,0,0,0.5)",
-            scrollOffset: 0,
-          });
-        }
-      })();
-    </script>
-  {{ end }}
   {{ $jsProcess := resources.Get "js/process.js" }}
   {{ if $jsProcess }}
     {{ $jsProcess = $jsProcess | resources.Minify | resources.Fingerprint (.Site.Params.fingerprintAlgorithm | default "sha512") }}

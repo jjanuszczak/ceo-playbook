@@ -1,7 +1,17 @@
 ---
-title: "John Januszczak | Fintech Executive Advisor & Venture Builder (SEA)"
+title: "Don’t Just Launch. Scale to Exit."
+seoTitle: "John Januszczak | Fintech Executive Advisor & Venture Builder (SEA)"
 description: "Former UBX CEO & Manulife COO offering pragmatic advisory for market entry, regulation, and venture building in the Philippines."
-layout: background
+heroCaption: "John Januszczak | Technology & Innovation"
+heroLead: "Deploy institutional-grade execution to scale ventures from speculative innovation to standalone market leaders."
+heroImage: "images/background-milky-way.jpg"
+heroButtons:
+  - label: "View Playbooks"
+    url: "/advisory/"
+    style: "primary"
+  - label: "Book a Call"
+    url: "/contact/"
+    style: "outline"
 showDate: false
 showWordCount: false
 showReadingTime: false
@@ -9,26 +19,7 @@ sharingLinks: false
 draft: false
 ---
 
----
-
-# Don't Just Launch. <span class="text-primary-600 dark:text-primary-400">Scale to Exit.</span>
-
-{{< lead >}}
-Deploy institutional-grade execution to scale ventures from speculative "innovation" to standalone market leaders.
-{{< /lead >}}
-
 Most corporate innovation labs are cost centers. Most market entrants get stuck in regulatory limbo. I help Board Directors and CEOs build **independent, revenue-generating ventures** that return capital.
-
-<div class="flex flex-wrap justify-center gap-4 mt-10">
-  {{< button href="/advisory" >}}View Playbooks{{< /button >}}
-  <a class="!no-underline" href="/contact">
-    <button class="bg-transparent hover:text-primary-500 font-semibold py-2 px-4 border border-primary-500 hover:border-transparent rounded-md transition-all duration-300">
-      Book a Call
-    </button>
-  </a>
-</div>
-
----
 
 ## Proven Execution at Scale
 
@@ -118,63 +109,20 @@ As the former **President & CEO, UBX** (Fintech & Venture Capital arm, **UnionBa
 
 This is not a consulting framework; it is an execution blueprint. Refined through billions in transaction volume and multiple exits, this system minimizes risk and accelerates the path to liquidity.
 
-<style>
-.venture-grid {
-display: grid;
-grid-template-columns: 1fr;
-gap: 1rem;
-width: 100%;
-}
-@media (min-width: 768px) {
-.venture-grid {
-grid-template-columns: repeat(2, 1fr);
-gap: 1.5rem;
-}
-}
-</style>
-
-<div class="venture-grid not-prose my-10">
-<div class="p-6 border border-neutral-200 dark:border-neutral-700 rounded-lg hover:shadow-lg transition-shadow flex flex-col bg-neutral-50 dark:bg-neutral-900/50 text-center aspect-square justify-center">
-<div class="mb-4 text-primary-600 dark:text-primary-400">
-<div class="text-4xl mb-2">
-{{< icon "lightbulb" >}}
-</div>
-<h3 class="text-xl font-bold">1. Feasibility</h3>
-</div>
-<p class="text-sm text-neutral-600 dark:text-neutral-400">Market Entry & Entity Structuring. Before you burn capital, we validate the business model against local realities.</p>
-<a href="/advisory/market-entry-strategic-structuring" class="text-primary-600 hover:text-primary-800 font-semibold text-sm mt-4 inline-block">Explore Market Entry &rarr;</a>
-</div>
-<div class="p-6 border border-neutral-200 dark:border-neutral-700 rounded-lg hover:shadow-lg transition-shadow flex flex-col bg-neutral-50 dark:bg-neutral-900/50 text-center aspect-square justify-center">
-<div class="mb-4 text-primary-600 dark:text-primary-400">
-<div class="text-4xl mb-2">
-{{< icon "scale-balanced" >}}
-</div>
-<h3 class="text-xl font-bold">2. Market Entry</h3>
-</div>
-<p class="text-sm text-neutral-600 dark:text-neutral-400">Regulator Engagement & Licensing. Turning compliance from a blocker into a competitive moat.</p>
-<a href="/advisory/market-entry-strategic-structuring" class="text-primary-600 hover:text-primary-800 font-semibold text-sm mt-4 inline-block">See Regulatory Strategy &rarr;</a>
-</div>
-<div class="p-6 border border-neutral-200 dark:border-neutral-700 rounded-lg hover:shadow-lg transition-shadow flex flex-col bg-neutral-50 dark:bg-neutral-900/50 text-center aspect-square justify-center">
-<div class="mb-4 text-primary-600 dark:text-primary-400">
-<div class="text-4xl mb-2">
-{{< icon "wand-magic-sparkles" >}}
-</div>
-<h3 class="text-xl font-bold">3. Build</h3>
-</div>
-<p class="text-sm text-neutral-600 dark:text-neutral-400">Venture Building & Talent. Recruiting the "net-new" DNA required to ship product at startup speed.</p>
-<a href="/advisory/venture-building" class="text-primary-600 hover:text-primary-800 font-semibold text-sm mt-4 inline-block">View Venture Playbook &rarr;</a>
-</div>
-<div class="p-6 border border-neutral-200 dark:border-neutral-700 rounded-lg hover:shadow-lg transition-shadow flex flex-col bg-neutral-50 dark:bg-neutral-900/50 text-center aspect-square justify-center">
-<div class="mb-4 text-primary-600 dark:text-primary-400">
-<div class="text-4xl mb-2">
-{{< icon "star" >}}
-</div>
-<h3 class="text-xl font-bold">4. Scale / Exit</h3>
-</div>
-<p class="text-sm text-neutral-600 dark:text-neutral-400">Fund Management & Returns. Structuring CVC funds to deliver 3.0x TVPI and strategic liquidity.</p>
-<a href="/advisory/corporate-innovation" class="text-primary-600 hover:text-primary-800 font-semibold text-sm mt-4 inline-block">Audit Your Innovation &rarr;</a>
-</div>
-</div>
+{{< feature-grid columns="4" >}}
+  {{< feature icon="lightbulb" title="1. Feasibility" url="/advisory/market-entry-strategic-structuring/" label="Explore Market Entry" headingLevel="h3" >}}
+  Market Entry & Entity Structuring. Before you burn capital, we validate the business model against local realities.
+  {{< /feature >}}
+  {{< feature icon="scale-balanced" title="2. Market Entry" url="/advisory/market-entry-strategic-structuring/" label="See Regulatory Strategy" headingLevel="h3" >}}
+  Regulator Engagement & Licensing. Turning compliance from a blocker into a competitive moat.
+  {{< /feature >}}
+  {{< feature icon="wand-magic-sparkles" title="3. Build" url="/advisory/venture-building/" label="View Venture Playbook" headingLevel="h3" >}}
+  Venture Building & Talent. Recruiting the net-new DNA required to ship product at startup speed.
+  {{< /feature >}}
+  {{< feature icon="star" title="4. Scale / Exit" url="/advisory/corporate-innovation/" label="Audit Your Innovation" headingLevel="h3" >}}
+  Fund Management & Returns. Structuring CVC funds to deliver 3.0x TVPI and strategic liquidity.
+  {{< /feature >}}
+{{< /feature-grid >}}
 
 ---
 
@@ -194,9 +142,11 @@ The market is flooded with consultants who sell strategy decks. I sell operation
 
 ## Standout Achievements
 
-*   **Scaling the Philippines' Leading Embedded Finance Platform:** Built UBX from zero to **>100B GTV** and **22% market share** in just 6 years.
-*   **Achieved Top-Tier CVC Returns:** Directed corporate capital allocation to deliver 3.0x TVPI and full liquidity (1.05x DPI) in under 4 years—outperforming industry benchmarks for corporate venture.
-*   **Regulatory Firsts:** Launched the first Central Bank approved stablecoin (PHX) and established the country's leading Open Finance platform.
+{{< stats columns="3" >}}
+  {{< stat value="100B+ GTV" label="Embedded-finance scale" >}}Built UBX from zero to 22% market share in six years.{{< /stat >}}
+  {{< stat value="3.0x TVPI" label="CVC returns" >}}Directed capital allocation to full liquidity at 1.05x DPI in under four years.{{< /stat >}}
+  {{< stat value="1st" label="Central Bank-approved stablecoin" >}}Launched PHX and established the country’s leading Open Finance platform.{{< /stat >}}
+{{< /stats >}}
 
 {{< button href="/contact" >}}Get the Strategy{{< /button >}}
 
