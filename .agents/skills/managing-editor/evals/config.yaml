@@ -1,5 +1,5 @@
 pipeline:
-  target_version: "hugo-blowfish-v2"
+  target_version: "hugo-blowfish-v3"
   steps:
     - name: "Leaf Bundle Verification"
       id: "structure"

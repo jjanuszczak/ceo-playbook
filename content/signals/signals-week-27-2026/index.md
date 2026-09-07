@@ -105,6 +105,8 @@ This week's signals converged on a simple point: the AI edge is moving out of th
 *   **Why it Matters:** That is worth remembering in an AI market racing toward cheaper inference and faster output. Lower cost expands access, but quality still determines who wins trust and repeat demand.
 *   **My Take:** **Cheap intelligence is not the same as valuable intelligence.** As models commoditize, quality control becomes the margin layer.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="lab/chalk-circle, lab/prompt-diet-agent-efficiency" >}}
 
 ---

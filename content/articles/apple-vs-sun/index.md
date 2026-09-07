@@ -113,6 +113,8 @@ I was reminded of a lot of this when watching this video on rise and fall of Sun
 
 {{< youtubeLite id="x2zFYG_oVlo" label="Sun Microsystems: The Fastest Computer of 1987 and the Decision That Ended a $10B Empire" >}}
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/beos, research/gbri" >}}
 
 {{< read-next title="Read Next" link="articles/world-models" buttonText="View More Insights" >}}

@@ -94,6 +94,8 @@ A true core value is a principle that is costly to defend. If a value doesn't co
 {{% /faq-item %}}
 {{< /faq >}}
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/top-podcasts-2025,articles/ev-mobility-sea" >}}
 
 {{< read-next title="Read Next" link="videos/scaling-innovation" buttonText="View More Media" >}}

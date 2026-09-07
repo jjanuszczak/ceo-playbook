@@ -4,8 +4,8 @@
 This is a static website built with Hugo, using the Blowfish theme, and deployed to Github Pages. It is the personal branding site for John Januszczak, a C-Suite executive specializing in Fintech & Innovation Strategy.
 
 ## Tech Stack
-- **Engine:** Hugo Extended
-- **Theme:** Blowfish
+- **Engine:** Hugo Extended v0.165.0
+- **Theme:** Blowfish v3.6.0
 - **Scripting:** Vanilla JS
 - **Styling:** Tailwind CSS 
 
@@ -29,7 +29,7 @@ This is a static website built with Hugo, using the Blowfish theme, and deployed
   - `_index.md`: The home page content.
   - `about.md`: The about page.
   - `contact.md`: The contact page.
-- `/layouts`: Holds templates that override the theme's default layouts.
+- `/layouts`: Holds templates that override the theme's default layouts. Preserve these overrides when updating Blowfish; they contain intentional site-specific behavior.
   - `/shortcodes`: Custom Hugo shortcodes.
 - `/public`: The output directory where the generated static site is placed. This directory is usually not tracked in git.
 - `/resources`: Caches for processed assets. This directory is usually not tracked in git.

@@ -224,6 +224,8 @@ That is the reusable pattern: judgment in the agent, rules in policy, transforma
 
 Featured image source: <a href="https://pixabay.com/users/Ralf1403-21380246/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=10045176">Ralf1403</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=10045176">Pixabay</a>
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="lab/agents-vs-skills, lab/deterministic-evals-for-ai-skills, lab/prompt-diet-agent-efficiency" >}}
 
 {{< read-next title="Read Next" link="lab/javascript-object-gui" buttonText="View more Deep Dives" >}}

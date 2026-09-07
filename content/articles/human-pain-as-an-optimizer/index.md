@@ -222,6 +222,8 @@ Here is the talk on The Pragmatic Engineer referecned above on what makes self-m
 
 *Featured image source: <a href="https://pixabay.com/users/51581-51581/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1627703">51581</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1627703">Pixabay</a>.*
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/the-next-compiler, articles/discovery-to-knowledge" >}}
 
 {{< read-next title="Read Next" link="articles/moats-vibe-coding" buttonText="View More Insights" buttonLink="/articles/" >}}

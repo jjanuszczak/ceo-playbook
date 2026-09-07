@@ -194,6 +194,8 @@ Are you ready to make an impact? If you’re a professional or corporate sponsor
   {{% /faq-item %}}
 {{< /faq >}}
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/responsiveness, articles/cvc-vs-cvb, articles/pushkin" >}}
 
 {{< read-next title="Read Next" link="articles/is-ai-killing-book-reading" buttonText="View More Insights" >}}

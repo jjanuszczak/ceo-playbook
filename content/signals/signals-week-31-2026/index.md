@@ -93,6 +93,8 @@ This theme of robust design and operational focus echoes through other domains, 
 *   **Why it Matters:** Organizational design directly dictates product feedback loops. High-bandwidth communication and physical proximity drastically accelerate iteration cycles.
 *   **My Take:** **Colocation is communication.** If you want high-speed innovation, destroy the physical and organizational walls between the people who dream the product and the people who build it.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="lab/chalk-circle,articles/moats-vibe-coding" >}}
 
 ***

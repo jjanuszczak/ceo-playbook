@@ -189,6 +189,8 @@ The same logic is behind [Margo]({{< relref "lab/margo" >}}), a presentation eng
 
 *Featured image source: <a href="https://pixabay.com/users/Pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1283624">Pexels</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1283624">Pixabay</a>*
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/the-next-compiler, lab/margo" >}}
 
 {{< read-next title="Read Next" link="lab/deterministic-evals-for-ai-skills" buttonText="View more Deep Dives" >}}

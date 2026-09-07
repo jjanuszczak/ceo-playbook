@@ -161,6 +161,8 @@ That is the shift from building demos to building operating systems.
   {{% /faq-item %}}
 {{< /faq >}}
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="lab/chalk-circle, lab/pyenv" >}}
 
 {{< read-next title="Read Next" link="lab/margo" buttonText="View more Deep Dives" >}}

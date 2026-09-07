@@ -61,6 +61,8 @@ The "experiment" of 2019 has stood the test of time. in 2025, that vision had ev
 
 The lesson for today’s leaders is clear: The "stablecoin revolution" isn't a future event. For those of us who were in the trenches in 2019, it’s a proven reality. If you want to scale in Southeast Asia, you don't wait for the theory to be perfect. You build the bridge.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/cbdc, videos/final-pitch-s06" >}}
 
 

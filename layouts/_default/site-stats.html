@@ -1,6 +1,6 @@
 {{ define "main" }}
   {{/* The stats generator can briefly remove the data file while rewriting it. Keep Hugo's watch rebuild healthy during that window. */}}
-  {{ $stats := index site.Data "site-stats" | default dict }}
+  {{ $stats := index hugo.Data "site-stats" | default dict }}
   {{ $generatedAt := time.AsTime ($stats.generated_at | default "1970-01-01T00:00:00Z") }}
   {{ $firstPublished := time.AsTime ($stats.first_published | default "1970-01-01") }}
   {{ $latestPublished := time.AsTime ($stats.latest_published | default "1970-01-01") }}

@@ -103,6 +103,8 @@ Directly from the orginal BeOS team:
 
 {{< youtubeLite id="cjriSNgFHsM" label="BeOS Demo Video" >}}
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/burke-lecture, articles/pushkin" >}}
 
 {{< read-next title="Read Next" link="articles/prediction-insurance" buttonText="View More Insights" buttonLink="/articles/" >}}

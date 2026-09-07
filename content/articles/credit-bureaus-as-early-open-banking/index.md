@@ -196,6 +196,8 @@ The old bureau model made credit information portable for lenders. The next mode
 
 *Featured image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1851218">Pexels</a> from <a href="https://pixabay.com/photos/hands-phone-smartphone-electronics-1851218/">Pixabay</a>.*
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/future-of-finance, articles/ai-enabling-bank-infrastructure-matters" >}}
 
 {{< read-next title="Read Next" link="articles/ikbr-ban" buttonText="View More Insights" buttonLink="/articles/" >}}

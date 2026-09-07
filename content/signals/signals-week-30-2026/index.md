@@ -101,6 +101,8 @@ Finally, for a Philippine spin, we dissect Jollibee's proposed international spi
 *   **Why it Matters:** In platform economics, the transition from transactional utility to relational community lock-in is the ultimate moat. Customers pay a premium to feel like insiders rather than generic buyers.
 *   **My Take:** **Moats are relational, not transactional.** If your product or service is just a commodity utility, you are vulnerable to price wars. Build an experience that integrates your customer into a community.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/i2i-phx,videos/final-pitch-s06" >}}
 
 ---

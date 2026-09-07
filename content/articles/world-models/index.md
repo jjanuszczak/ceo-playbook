@@ -96,5 +96,7 @@ If you have an hour, watch the whole lecture for yourself:
 
 {{< youtubeLite id="ZbrfvMLZZK4" label="2026 Lemley Lecture Featuring AI Pioneer Yann LeCun" >}}
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/beos,lab/chalk-circle" >}}
 {{< read-next title="Read Next" link="articles/burke-lecture" buttonText="View more Insights" buttonLink="/articles/" >}}

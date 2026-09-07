@@ -181,6 +181,8 @@ That is the real point for executives and boards. Do not approve "AI agents" as 
 
 Featured image source: <a href="https://pixabay.com/users/Pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1853330">Pexels</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1853330">Pixabay</a>
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="lab/agents-vs-skills, lab/deterministic-evals-for-ai-skills" >}}
 
 {{< read-next title="Read Next" link="lab/agents-vs-skills" buttonText="View more Deep Dives" >}}

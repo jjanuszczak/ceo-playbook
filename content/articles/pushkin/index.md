@@ -94,6 +94,8 @@ By prioritizing operational efficiency and diversifying revenue streams, Pushkin
 
 {{< /accordion >}}
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/pilot-purgatory, articles/nytimes" >}}
 
 {{< read-next title="Read Next" link="articles/ikbr-ban" buttonText="View More Insights" buttonLink="/articles/" >}}

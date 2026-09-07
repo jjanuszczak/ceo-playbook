@@ -117,6 +117,8 @@ I did an [article]({{< relref "articles/ikbr-ban" >}}) on this, but really worth
 
 **My Take:** **Rules are better than silence.** Builders can navigate a maze; they can't navigate a void. **Governance is a feature.**
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="lab/context-hub, lab/chalk-circle" >}}
 
 {{< read-next title="Read Next" link="signals/signals-week-20-2026" buttonText="View more Signals" >}}

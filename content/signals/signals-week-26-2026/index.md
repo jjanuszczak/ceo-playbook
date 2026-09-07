@@ -104,6 +104,8 @@ This week's signals kept pointing at the same hard truth: AI value is shifting a
 *   **Why it Matters:** This lands directly on the AI moment. The biggest opportunity is not cutting cost for its own sake, but building cleaner systems that produce more value with less friction.
 *   **My Take:** **Production beats austerity.** Strong operators use new tools to widen output, not just to trim headcount and call it strategy.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="lab/context-hub, lab/chalk-circle" >}}
 
 ---

@@ -112,6 +112,8 @@ The lesson of the week: **technology doesn't automate away the need for systems 
 - [Why 95% of Executive AI Strategies Fail (And How to Fix It)]({{< ref "videos/why-executive-ai-strategies-fail" >}}): Frameworks for moving from standalone tool rollouts to governed workflows.
 - [The Next Compiler: AI and the Evolution of Abstraction]({{< ref "articles/the-next-compiler" >}}): Exploring the levels of abstraction shift for engineers in the AI era.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/i2i-phx, videos/proptech" >}}
 
 {{< read-next title="Read Next" link="signals/signals-week-31-2026" buttonText="View more Signals" >}}

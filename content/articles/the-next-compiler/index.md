@@ -90,6 +90,8 @@ Experienced developers know that AI-generated code can look clean and correct wh
 - [Moats in the Era of Vibe Coding]({{< ref "articles/moats-vibe-coding" >}}): Why faster software creation does not, by itself, create a durable advantage.
 - [The Most Brilliant Failure in Tech: What Leaders Can Learn from BeOS]({{< ref "articles/beos" >}}): Why superior engineering still loses when the ecosystem is missing.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="lab/prompt-diet-agent-efficiency, lab/chalk-circle" >}}
 
 {{< read-next title="Read Next" link="articles/apple-vs-sun" buttonText="View More Insights" >}}

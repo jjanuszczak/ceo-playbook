@@ -94,6 +94,8 @@ Once built, use the [authoring guide](/margo-guide/) to create your first slide 
   {{% /faq-item %}}
 {{< /faq >}}
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="lab/category-vs-tag,lab/crm-llm" >}}
 
 {{< read-next title="Read Next" link="lab/deterministic-evals-for-ai-skills" buttonText="View more Deep Dives" >}}

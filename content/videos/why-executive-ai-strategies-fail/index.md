@@ -83,6 +83,8 @@ The first 90 days are not about declaring an AI victory. They are about proving 
 - [From Discovery to Knowledge]({{< ref "articles/discovery-to-knowledge" >}}): Why speed and output still require human judgment, context, and accountability.
 - [From CRM App to LLM Knowledge Base]({{< ref "lab/crm-llm" >}}): A practical example of building durable, inspectable memory for agents and operators.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/burke-lecture, lab/context-hub" >}}
 
 {{< read-next title="Read Next" link="videos/fintech-to-energy-abundance" buttonText="View more Media" >}}
