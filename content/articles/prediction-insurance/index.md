@@ -55,6 +55,8 @@ Prediction markets aren't graduating from the casino to the boardroom: they are 
 
 **The question is no longer *if* these markets are an economic good. The question is: are you liquid enough to survive the transition?**
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="videos/cyber-resilience, articles/prediction-market" >}}
 
 {{< read-next title="Read Next" link="articles/pushkin" buttonText="View More Insights" buttonLink="/articles/" >}}

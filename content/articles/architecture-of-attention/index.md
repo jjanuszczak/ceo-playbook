@@ -81,6 +81,8 @@ We are moving out of the "AI Model Era" and into the Systemic AI Era, where the 
   {{% /faq-item %}}
 {{< /faq >}}
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="lab/category-vs-tag, articles/burke-lecture" >}}
 
 {{< read-next title="Read Next" link="/articles/world-models/" buttonText="View More Insights" >}}

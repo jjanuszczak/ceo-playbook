@@ -84,6 +84,8 @@ This week's signals trace a fundamental shift in the architecture of both techno
 *   **Why it Matters:** Disrupters in highly regulated fields (like Fintech or Energy) cannot wait for permission. Scale creates the economic gravitational pull that rewrites the rules.
 *   **My Take:** **Scale is its own regulatory strategy.** Do not ask for permission to build a better future. Focus entirely on customer obsession and growth; once you become indispensable to the market, legitimacy and regulatory frameworks will adapt to you.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="portfolio/intelletto,lab/chalk-circle" >}}
 
 ---

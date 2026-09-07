@@ -85,6 +85,8 @@ This week’s signals converged on a singular theme: the structural shift from *
 *   **Why it Matters:** In an era of infinite AI-generated "slop," taste becomes the ultimate filter.
 *   **My Take:** **Taste is the last human moat.** When everything can be produced at zero marginal cost, the value shifts to the curation.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="lab/chalk-circle, articles/cvc-vs-cvb" >}}
 
 ---

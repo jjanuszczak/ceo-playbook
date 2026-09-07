@@ -88,6 +88,8 @@ Major OEMs (Chinese battery makers, European EV manufacturers) face a fragmented
 
 The future of energy isn't just about building more power plants. **It's about building the digital layer that tells the electrons where to go**.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/ev-mobility-sea, articles/cvc-vs-cvb" >}}
 
 

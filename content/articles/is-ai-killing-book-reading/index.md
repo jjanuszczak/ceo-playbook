@@ -105,6 +105,8 @@ Books are not dying. But the discipline that books represent can atrophy if we l
   {{% /faq-item %}}
 {{< /faq >}}
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/the-next-compiler, articles/burke-lecture" >}}
 
 {{< read-next title="Read Next" link="articles/mit-ai-report-2025" buttonText="View More Insights" buttonLink="/articles/" >}}

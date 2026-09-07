@@ -205,6 +205,8 @@ But the real winner is not atoms or software. It is the company that owns the co
 
 *Featured image by <a href="https://pixabay.com/users/bertbraet-1309704/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2836846">Bert Braet</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2836846">Pixabay</a>.*
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/vc-atoms, articles/flatpeak" >}}
 
 {{< read-next title="Read Next" link="articles/moats-vibe-coding" buttonText="View More Insights" buttonLink="/articles/" >}}

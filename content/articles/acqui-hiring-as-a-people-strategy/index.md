@@ -207,6 +207,8 @@ That usually wastes the very thing the deal was meant to acquire.
 
 *Featured image by <a href="https://pixabay.com/users/mwitt1337-889520/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2284501">mwitt1337</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2284501">Pixabay</a>.*
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/cvc-vs-cvb, articles/atoms-are-investable-again" >}}
 
 {{< read-next title="Read Next" link="articles/atoms-are-investable-again" buttonText="View More Insights" buttonLink="/articles/" >}}

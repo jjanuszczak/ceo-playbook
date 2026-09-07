@@ -266,6 +266,8 @@ Slowly, then contractually, then all at once.
 
 *Featured image by <a href="https://pixabay.com/users/cegoh-94852/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=255116">cegoh</a> from <a href="https://pixabay.com/photos/skyline-cityscape-buildings-255116/">Pixabay</a>.*
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/cbdc, articles/future-of-finance" >}}
 
 {{< read-next title="Read Next" link="articles/human-pain-as-an-optimizer" buttonText="View More Insights" buttonLink="/articles/" >}}

@@ -108,6 +108,8 @@ This week's signals point to a shared strategic question: what matters more now,
 *   **Why it Matters:** As organizations adopt AI copilots and automated decision support, the ability to preserve high-quality dissent becomes more important, not less.
 *   **My Take:** **Truth needs structured disagreement.** Consensus without friction is usually just hierarchy wearing the mask of alignment.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="lab/chalk-circle, lab/context-hub" >}}
 
 ---

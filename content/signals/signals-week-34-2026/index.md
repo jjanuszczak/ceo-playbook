@@ -99,6 +99,8 @@ This week's theme is the battle between the **middle** and the **edge**. As digi
 *   **Why it Matters:** Organizational design. Scale is a balance between centralized standards (the cookbook) and local autonomy (the adjustments).
 *   **My Take:** **Centralize the template, decentralize the execution.** Don't try to micromanage the edge; give them the playbook and get out of the way.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="lab/crm-llm, articles/x402-intro" >}}
 
 ---

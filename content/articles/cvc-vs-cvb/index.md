@@ -140,6 +140,8 @@ Use your **Venture Builder as a laser**. When your CVC radar identifies a gap th
   {{% /faq-item %}}
 {{< /faq >}}
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/ev-mobility-sea, articles/moats-vibe-coding" >}}
 
 {{< read-next title="Read Next" link="articles/ikbr-ban" buttonText="View More Insights" buttonLink="/articles/" >}}

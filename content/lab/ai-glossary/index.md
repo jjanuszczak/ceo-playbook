@@ -136,6 +136,8 @@ Evals (Evaluations) act as the KPI scorecards for AI systems. They provide stand
 {{% /faq-item %}}
 {{< /faq >}}
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/burke-lecture, videos/next-gen-bank-tech" >}}
 
 {{< read-next title="Read Next" link="lab/prompt-diet-agent-efficiency" buttonText="View more Deep Dives" >}}

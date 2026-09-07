@@ -137,6 +137,8 @@ This week's signals converge on the theme of **Systems, Survival, and the Archit
 
 **My Take:** **Survival is the first directive.** If you have a non-zero chance of going broke, the expected value of your return is irrelevant.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/burke-lecture,articles/beos" >}}
 
 ---

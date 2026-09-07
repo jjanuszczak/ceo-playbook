@@ -86,6 +86,8 @@ This week's signals focus on the mechanics of complex systems, from the lowest l
 *   **Why it Matters:** Competing on price is a race to the bottom that turns premium services into low-margin commodities.
 *   **My Take:** **Pricing power is the ultimate proxy for value.** Let competitors win the low-margin battles; focus your energy on defending quality and maintaining trust.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="lab/crm-llm,lab/context-hub" >}}
 
 ---

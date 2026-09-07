@@ -95,6 +95,8 @@ The core lesson is clear: **differentiation is the ultimate competitive strategy
 *   **Why it Matters:** In hyper-efficient organizations, the obsession with utilization rates kills the very slack required to stumble upon non-linear innovations.
 *   **My Take:** **Slack is the precursor to breakthrough.** If you do not design unstructured time into your schedule, you will remain optimized for incrementalism.
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/nytimes, articles/pushkin" >}}
 
 ---

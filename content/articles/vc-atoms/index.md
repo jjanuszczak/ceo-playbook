@@ -103,6 +103,8 @@ Investors should reallocate capital toward energy, infrastructure, and deep-tech
 {{% /faq-item %}}
 {{< /faq >}}
 
+{{< subscribe >}}
+
 {{< related-posts title="Related Insights" paths="articles/bdc, articles/top-podcasts-2025" >}}
 
 {{< read-next title="Read Next" link="articles/world-models" buttonText="View more Insights" >}}
