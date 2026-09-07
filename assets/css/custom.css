@@ -3,6 +3,184 @@
   display: inline-block;
 }
 
+.margo-embed {
+  margin: 2rem 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.margo-embed__frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid rgb(var(--color-neutral-300));
+  border-radius: 0.75rem;
+  background: rgb(var(--color-neutral-900));
+  box-shadow: 0 12px 32px rgb(0 0 0 / 16%);
+}
+
+.margo-embed__frame iframe {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: var(--margo-canvas-width, 1440px);
+  height: calc(var(--margo-canvas-width, 1440px) * 0.5625);
+  border: 0;
+  overflow: hidden;
+  transform: scale(var(--margo-scale, 1));
+  transform-origin: top left;
+}
+
+.margo-embed__frame iframe:fullscreen,
+.margo-embed__frame iframe:-webkit-full-screen {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: none;
+}
+
+.margo-embed__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+  color: rgb(var(--color-neutral-500));
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.margo-embed__caption {
+  flex: 1 1 16rem;
+}
+
+.margo-embed__actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.margo-embed__button,
+.margo-embed__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid rgb(var(--color-primary-500));
+  border-radius: 0.375rem;
+  background: transparent;
+  color: rgb(var(--color-primary-600));
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.margo-embed__button {
+  cursor: pointer;
+}
+
+.margo-embed__zoom-button {
+  gap: 0.375rem;
+}
+
+.margo-embed__zoom-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.margo-embed__button:hover,
+.margo-embed__link:hover {
+  background: rgb(var(--color-primary-100));
+}
+
+.margo-embed__button:focus-visible,
+.margo-embed__link:focus-visible {
+  outline: 2px solid rgb(var(--color-primary-500));
+  outline-offset: 2px;
+}
+
+.margo-embed__dialog {
+  position: relative;
+  width: min(1200px, calc(100vw - 2rem));
+  max-width: none;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgb(var(--color-neutral-500));
+  border-radius: 0.875rem;
+  background: rgb(var(--color-neutral-900));
+  box-shadow: 0 24px 80px rgb(0 0 0 / 45%);
+}
+
+.margo-embed__dialog::backdrop {
+  background: rgb(0 0 0 / 70%);
+  backdrop-filter: blur(3px);
+}
+
+.margo-embed__dialog-frame {
+  width: 100%;
+}
+
+.margo-embed__dialog-close {
+  position: absolute;
+  z-index: 2;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: inline-flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(255 255 255 / 35%);
+  border-radius: 999px;
+  background: rgb(0 0 0 / 55%);
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.margo-embed__dialog-close:hover {
+  background: rgb(0 0 0 / 80%);
+}
+
+.margo-embed__dialog-close:focus-visible {
+  outline: 2px solid rgb(var(--color-primary-400));
+  outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+  .margo-embed__button[data-margo-fullscreen] {
+    display: none;
+  }
+}
+
+html.dark .margo-embed__frame {
+  border-color: rgb(var(--color-neutral-600));
+}
+
+html.dark .margo-embed__controls {
+  color: rgb(var(--color-neutral-400));
+}
+
+html.dark .margo-embed__button,
+html.dark .margo-embed__link {
+  color: rgb(var(--color-primary-400));
+}
+
+html.dark .margo-embed__button:hover,
+html.dark .margo-embed__link:hover {
+  background: rgb(var(--color-neutral-700));
+}
+
 .copy-page-actions {
   display: inline-flex;
   overflow: hidden;

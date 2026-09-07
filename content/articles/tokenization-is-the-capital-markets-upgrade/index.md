@@ -1,6 +1,6 @@
 ---
 title: "Tokenization Is the Capital Markets Upgrade"
-date: 2026-08-31T10:45:10+08:00
+date: 2026-09-07
 # externalUrl: ""
 summary: "Debt, equities, funds, and collateral are moving toward tokenized rails because capital markets keep paying for fragmented records, delayed settlement, and avoidable reconciliation."
 description: "A strategic argument for why tokenization of debt, equities, funds, and real-world assets is becoming inevitable, with the caveat that legal rights, regulated money, custody, and governance still decide whether the upgrade works."
@@ -17,7 +17,7 @@ tags:
   - "systems-thinking"
 showReadingTime: true
 showTableOfContents: true
-draft: true
+draft: false
 # Pillar 2: Advanced Schema
 about:
   - name: "Tokenization"
@@ -63,10 +63,12 @@ That architecture worked because the alternatives were worse.
 The alternatives are no longer worse.
 
 {{< quick-answer >}}
-Tokenization is inevitable because it turns ownership, transfer rules, and settlement logic into programmable market infrastructure. The asset does not magically become safer or more valuable, but the recordkeeping, transfer, collateral, and settlement stack can become faster, more transparent, and less dependent on duplicated reconciliation across intermediaries.
+Tokenization is inevitable because it turns ownership, transfer rules, and settlement logic into programmable market infrastructure. The asset does not magically become safer or more valuable, but the recordkeeping, transfer, collateral, and settlement infrastructure can become faster, more transparent, and less dependent on duplicated reconciliation across intermediaries.
 {{< /quick-answer >}}
 
 Brian Armstrong recently framed the financial system as still needing a serious update: tokenized real-world assets, 24/7 markets, stablecoin payments, AI-native financial services, self-custody, and clearer regulation. You can dismiss that as a Coinbase CEO talking his book. You should not dismiss the direction of travel.
+
+{{< x user="brian_armstrong" id="2058657471301103957" >}}
 
 The stronger version of the claim comes from less promotional sources. The [Bank for International Settlements](https://www.bis.org/publications/aer-2025/next-generation-monetary-financial-system) now talks about tokenized central bank reserves, commercial bank money, and government bonds as a possible foundation for the next monetary and financial system. The [SEC staff](https://www.sec.gov/newsroom/speeches-statements/corp-fin-statement-tokenized-securities-012826-statement-tokenized-securities) has clarified how tokenized securities fit into existing securities law categories. [DTCC](https://www.dtcc.com/dtcc-connection/articles/2024/may/16/smart-nav-pilot-report-bringing-trusted-data-to-the-blockchain-ecosystem) has tested on-chain mutual fund NAV data with major market participants. Mercer has now published a tokenization primer for investors.
 
@@ -84,15 +86,15 @@ One party has the trade record. Another has the client record. Another has the c
 
 That is why settlement cycles matter.
 
-The U.S. move to [T+1 settlement](https://www.sifma.org/news/press-releases/sifma-statement-on-first-day-of-t1-settlement) in May 2024 was a real operational achievement. It reduced risk and forced industry coordination across brokers, custodians, asset managers, clearinghouses, and service providers. But T+1 also proves the deeper point: even after decades of investment, public securities still settle on a timetable that exists because records and cash do not naturally move as one.
+The U.S. move to [T+1 settlement](https://www.sifma.org/news/press-releases/sifma-statement-on-first-day-of-t1-settlement) in May 2024 was a real operational achievement. It reduced risk and forced industry coordination across brokers, custodians, asset managers, clearinghouses, and service providers. But T+1 also proves the deeper point: even after decades of investment, public securities still settle on a timetable that exists because **records and cash do not naturally move as one**.
 
-Tokenization attacks that design problem.
+Tokenization attacks that issue head-on.
 
 It does not simply digitize a certificate. We already did that. It tries to put the ownership record, transfer restrictions, entitlement logic, compliance rules, and settlement mechanics closer together. In the BIS language, tokenization can merge messaging, reconciliation, and asset transfer into a single programmable operation.
 
 That is why this is not a UX upgrade. It is a market-structure upgrade.
 
-## Why is tokenization the next ledger step?
+## Why is tokenization the next step?
 
 Capital markets have gone through a long progression:
 
@@ -111,9 +113,7 @@ Tokenization is the next step because the current system still treats the asset 
 
 That does not eliminate legal work. It moves the operational center of gravity.
 
-The [SSRN paper by Tuongvy Le and Austin Campbell](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5250986) makes this argument directly from capital-market history: the current securities stack traces much of its structure to the 1970s, when regulation and intermediaries were layered on top of each other to create fairness, transparency, and operational control with the tools available at the time. Their argument is not that blockchain removes every intermediary. It is that the market should stop treating a 1970s settlement and custody architecture as destiny.
-
-That is the right frame.
+A recent [paper by Tuongvy Le and Austin Campbell](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5250986) makes this argument directly from capital-market history: the current securities infrastructure traces much of its design to the 1970s, when regulation and intermediaries were layered on top of each other to create fairness, transparency, and operational control with the tools available at the time. Their argument is not that blockchain removes every intermediary. It is that the market should stop treating a 1970s settlement and custody as destiny.
 
 The future is not "everything becomes crypto." The future is that more financial assets become programmable, transferable claims inside regulated market infrastructure.
 
@@ -138,7 +138,7 @@ This is why tokenized cash and tokenized government bonds matter so much. If the
 
 You need reliable money on the same rails as reliable assets.
 
-That connects directly to my earlier point in [Central Bank Digital Currencies will Redefine Money]({{< ref "articles/cbdc" >}}): the killer use case for digital central-bank or regulated bank money is settlement. A wholesale CBDC is not mainly about a consumer wallet. It is about making the final cash leg programmable enough for institutional markets.
+That connects directly to my earlier point in [Central Bank Digital Currencies will Redefine Money]({{< ref "articles/cbdc" >}}): the killer use case for digital central-bank or regulated bank money is settlement. A digital currency is not mainly about a consumer wallet. It is about making the final cash leg programmable enough for institutional markets.
 
 For debt markets, that is powerful. Coupon payments can become less manual. Collateral can move faster. Repo can become more precise. Private credit interests can be administered with cleaner transfer rules. Funds can subscribe, redeem, and rebalance with less operational drag.
 
@@ -238,13 +238,13 @@ Tokenization is inevitable because the market keeps moving toward fewer breaks b
 
 That does not mean every asset becomes a bearer token. It does not mean regulation disappears. It does not mean intermediaries vanish. It does not mean today's crypto market structure wins by default.
 
-It means the old stack has a structural disadvantage.
+It means the old infrastructure has a structural disadvantage.
 
 Markets want longer operating hours, faster settlement, better collateral mobility, cleaner audit trails, broader access, lower reconciliation cost, and more programmable product design. Tokenization is one of the few architectures that can plausibly deliver all of those at once.
 
 The key is to stop treating tokenization as a new asset class. It is not.
 
-It is a new control plane for existing asset classes.
+It is a new infrastructure **for existing asset classes**.
 
 Debt will move. Funds will move. Collateral will move. Eventually, equities will move. The sequence will be slower and more regulated than crypto natives want, but faster than many incumbents expect.
 

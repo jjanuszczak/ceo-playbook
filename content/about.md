@@ -26,6 +26,8 @@ Today, I work with financial institutions, venture studios, startups and investo
 
 Having worked across Canada, the United States, and Asia, I bring a global perspective to how financial systems evolve and how emerging markets leapfrog technology. I’m committed to strengthening innovation ecosystems, developing leaders, and advancing responsible transformation that expands access, opportunity, and economic participation.
 
+{{< margo deck="profile" title="John Januszczak, Operator-Advisor Profile" caption="Interactive profile deck. Use the arrow keys after selecting the presentation." canvasWidth="1440" >}}
+
 ## Find Me on Social
 
 You can also find my work, thoughts, and professional updates on the following platforms:

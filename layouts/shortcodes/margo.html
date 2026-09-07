@@ -1,0 +1,115 @@
+{{- $deck := strings.Trim ((.Get "deck") | default "") "/" -}}
+{{- if not $deck -}}
+  {{- errorf "margo shortcode requires a deck parameter: %s" .Position -}}
+{{- end -}}
+{{- if not (findRE `^[A-Za-z0-9][A-Za-z0-9/_-]*$` $deck) -}}
+  {{- errorf "margo shortcode deck must contain only letters, numbers, hyphens, underscores, and slashes: %q" $deck -}}
+{{- end -}}
+{{- $title := (.Get "title") | default "Margo presentation" -}}
+{{- $caption := .Get "caption" -}}
+{{- $src := (printf "margo/%s/" $deck) | relURL -}}
+{{- $canvasWidth := (.Get "canvasWidth") | default "1440" -}}
+{{- if not (findRE `^[1-9][0-9]{2,3}$` $canvasWidth) -}}
+  {{- errorf "margo shortcode canvasWidth must be a whole number between 100 and 9999: %q" $canvasWidth -}}
+{{- end -}}
+
+<figure class="margo-embed" style="--margo-canvas-width: {{ $canvasWidth }}px;">
+  <div class="margo-embed__frame">
+    <iframe
+      src="{{ $src }}"
+      title="{{ $title }}"
+      loading="lazy"
+      scrolling="no"
+      allow="fullscreen"
+      allowfullscreen></iframe>
+  </div>
+  <figcaption class="margo-embed__controls">
+    {{ with $caption }}<span class="margo-embed__caption">{{ . }}</span>{{ end }}
+    <span class="margo-embed__actions">
+      <button class="margo-embed__button margo-embed__zoom-button" type="button" data-margo-zoom aria-label="Open expanded presentation" title="Open expanded presentation">
+        <svg class="margo-embed__zoom-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"></path></svg>
+        <span>Zoom</span>
+      </button>
+      <button class="margo-embed__button" type="button" data-margo-fullscreen>View fullscreen</button>
+      <a class="margo-embed__link" href="{{ $src }}" target="_blank" rel="noopener">Open in new tab</a>
+    </span>
+  </figcaption>
+  <dialog class="margo-embed__dialog" data-margo-dialog aria-label="Expanded {{ $title }} presentation">
+    <button class="margo-embed__dialog-close" type="button" data-margo-dialog-close aria-label="Close expanded presentation">×</button>
+    <div class="margo-embed__frame margo-embed__dialog-frame">
+      <iframe
+        data-margo-dialog-src="{{ $src }}"
+        title="Expanded {{ $title }}"
+        scrolling="no"
+        allow="fullscreen"
+        allowfullscreen></iframe>
+    </div>
+  </dialog>
+</figure>
+
+<script>
+  if (!window.__margoEmbedControls) {
+    window.__margoEmbedControls = true;
+    const resizeMargoEmbed = (frame) => {
+      const embed = frame.closest('.margo-embed');
+      const canvasWidth = Number.parseFloat(getComputedStyle(embed).getPropertyValue('--margo-canvas-width')) || 1440;
+      frame.style.setProperty('--margo-scale', String(frame.clientWidth / canvasWidth));
+    };
+    const resizeMargoEmbeds = () => {
+      document.querySelectorAll('.margo-embed__frame').forEach(resizeMargoEmbed);
+    };
+    const applyMargoEmbedMode = (frame) => {
+      try {
+        const deckDocument = frame.contentDocument;
+        if (!deckDocument || deckDocument.getElementById('margo-embed-mode')) return;
+        const style = deckDocument.createElement('style');
+        style.id = 'margo-embed-mode';
+        style.textContent = 'html, body { overflow: hidden !important; } main { padding: 0 !important; }';
+        deckDocument.head.append(style);
+      } catch (_) {}
+    };
+    resizeMargoEmbeds();
+    new ResizeObserver(resizeMargoEmbeds).observe(document.documentElement);
+    document.querySelectorAll('.margo-embed__frame iframe').forEach((frame) => {
+      if (!frame.hasAttribute('src')) return;
+      applyMargoEmbedMode(frame);
+      frame.addEventListener('load', () => applyMargoEmbedMode(frame));
+    });
+    document.addEventListener('click', async (event) => {
+      const zoomButton = event.target.closest('[data-margo-zoom]');
+      if (zoomButton) {
+        const embed = zoomButton.closest('.margo-embed');
+        const dialog = embed?.querySelector('[data-margo-dialog]');
+        const frame = dialog?.querySelector('iframe');
+        if (!dialog || !frame) return;
+        if (!frame.hasAttribute('src')) {
+          frame.src = frame.dataset.margoDialogSrc;
+          frame.addEventListener('load', () => applyMargoEmbedMode(frame), { once: true });
+        }
+        dialog.showModal();
+        requestAnimationFrame(() => resizeMargoEmbed(frame.parentElement));
+        return;
+      }
+      const closeButton = event.target.closest('[data-margo-dialog-close]');
+      if (closeButton) {
+        closeButton.closest('[data-margo-dialog]')?.close();
+        return;
+      }
+      const button = event.target.closest('[data-margo-fullscreen]');
+      if (!button) return;
+      const frame = button.closest('.margo-embed')?.querySelector('iframe');
+      if (!frame) return;
+      try {
+        if (document.fullscreenElement === frame) {
+          await document.exitFullscreen();
+        } else if (frame.requestFullscreen) {
+          await frame.requestFullscreen();
+        } else if (frame.webkitRequestFullscreen) {
+          frame.webkitRequestFullscreen();
+        }
+      } catch (error) {
+        window.open(frame.src, '_blank', 'noopener');
+      }
+    });
+  }
+</script>
