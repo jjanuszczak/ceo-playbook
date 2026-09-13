@@ -7,6 +7,8 @@ showReadingTime: false
 showAuthor: false
 showZenMode: false
 sharingLinks: false
+showPagination: false
+showRelatedContent: false
 showTableOfContents: false
 draft: false
 ---

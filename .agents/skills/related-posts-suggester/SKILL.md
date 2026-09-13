@@ -1,11 +1,11 @@
 ---
 name: related-posts-suggester
-description: Automatically identifies and embeds related posts based on tag similarity. Use when the user asks for "related posts" or "related content" for a specific article.
+description: Identifies related posts based on tag similarity. Use when the user asks for related-post recommendations, without modifying the post.
 ---
 
 # Related Posts Suggester
 
-This skill helps you automatically identify and embed related content into a Hugo post based on tag similarity.
+This skill identifies related content for a Hugo post based on tag similarity. It is advisory only and must not modify the target file.
 
 ## Workflow
 
@@ -14,13 +14,10 @@ This skill helps you automatically identify and embed related content into a Hug
     ```bash
     uv run python .agents/skills/related-posts-suggester/scripts/find_related_posts.py <path/to/article.md> --limit <count>
     ```
-3.  **Automatic Embedding (Default):**
-    Unless the user explicitly asks to "show" or "suggest" without inserting, automatically append the generated `related-posts` shortcode to the target article.
-    
-    **Placement Strategy:**
+3.  **Prepare Suggestion:**
     - Read the file content.
-    - If a `{{< read-next ... >}}` shortcode exists, insert the `related-posts` shortcode *immediately before* it.
-    - Otherwise, append it to the very end of the file.
+    - Show the recommended posts and, optionally, the generated `related-posts` shortcode as copyable text in the response.
+    - Never append or otherwise write a `related-posts` shortcode to the target file.
 
 ## Guidance
 

@@ -83,8 +83,3 @@ No. When treated as infrastructure, compliance mandates like real-time fraud mon
 AFASA is a Philippine law (RA 12010) that mandates real-time fraud management systems and allows for faster coordination between institutions to freeze stolen funds.
 {{% /faq-item %}}
 {{< /faq >}}
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="articles/burke-lecture, lab/unlocking-the-basel-framework" >}}
-{{< read-next title="Read Next" link="articles/architecture-of-attention" buttonText="View More Insights" >}}

@@ -85,12 +85,3 @@ This week's signals focus on the mechanics of complex systems, from the lowest l
 *   **Summary:** Chernow describes the philosophy of Junius Morgan, who rejected price-cutting wars to preserve the firm's elite status, pricing power, and long-term viability.
 *   **Why it Matters:** Competing on price is a race to the bottom that turns premium services into low-margin commodities.
 *   **My Take:** **Pricing power is the ultimate proxy for value.** Let competitors win the low-margin battles; focus your energy on defending quality and maintaining trust.
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="lab/crm-llm,lab/context-hub" >}}
-
----
-
-{{< read-next title="Read Next" link="signals/signals-week-28-2026" buttonText="View more Signals" >}}
-

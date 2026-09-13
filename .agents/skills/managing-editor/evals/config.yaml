@@ -13,7 +13,7 @@ pipeline:
       id: "aeo"
       script: "checks/aeo.py"
       halt_on_fail: false
-    - name: "Semantic Navigation"
+    - name: "Contextual Linking"
       id: "links"
       script: "checks/links.py"
       halt_on_fail: false

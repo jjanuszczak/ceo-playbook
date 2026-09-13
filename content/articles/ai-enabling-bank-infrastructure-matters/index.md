@@ -124,10 +124,3 @@ The following table provides a comprehensive view of the current state of API ac
   Open Finance is a critical foundation, but being AI-enabling goes further by providing the specialized tools, real-time data streams, and standardized protocols that AI agents specifically require to function autonomously.
   {{% /faq-item %}}
 {{< /faq >}}
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="articles/flatpeak, articles/ikbr-ban" >}}
-
-{{< read-next title="Read Next" link="articles/architecture-of-attention" buttonText="View More Insights" >}}
-

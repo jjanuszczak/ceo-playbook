@@ -112,5 +112,3 @@ This week’s signals reveal a profound shift in the architecture of intelligenc
 * **My Take:** **Anticipation is the highest form of leadership.**
 
 ---
-
-{{< read-next title="Read Next" link="signals/signals-week-16-2026" buttonText="View more Signals" >}}

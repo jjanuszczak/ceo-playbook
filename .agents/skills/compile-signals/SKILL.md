@@ -67,30 +67,18 @@ Use the following structure as the canonical Signals format:
     *   Prefer short, strong, self-contained quotes.
     *   Local figure filenames should be short and slug-like, for example `chernow.png`, `peterson.png`, `ford.png`.
     *   If the quote image asset does not exist yet, create it before finalizing the post.
-*   **Footer Navigation:**
-    *   Add `{{< related-posts title="Related Insights" paths="..." >}}`
-    *   Add a horizontal rule `---`
-    *   Add `{{< read-next title="Read Next" link="..." buttonText="View more Signals" >}}`
+*   **Footer Shortcodes:** Do not add `subscribe`, `related-posts`, or `read-next` shortcodes. The single-post layout provides the required footer experience.
 
 ### 5. Execution Order
 1.  **Write File:** write the complete synthesized Markdown to the generated `index.md`.
-2.  **Add Navigation:**
-    *   Invoke `related-posts-suggester` to identify and embed related content.
-    *   Invoke `read-next-suggester` to identify and embed the "Read Next" section.
-3.  **Report:** Confirm creation and list the tags used.
-
-### 6. Related and Next Posts Promotion
-*   **Workflow:** Once the `index.md` for the current week is written with the full content, you will add related an read next posts.
-*   **Tool:** Invoke the `related-posts-suggester` skill.
-*   **Tool:** Invoke the `read-next-suggester` skill.
-*   **Goal:** Ensure the new signals post is well integrated into the site's content ecosystem, maximizing internal discovery and SEO.
+2.  **Report:** Confirm creation and list the tags used.
 
 ### 7. Self-Evaluation & Correction
 You MUST autonomously verify every provisioning task:
 1.  **Run Evaluation Suite:** `uv run python .agents/skills/compile-signals/evals/runner.py <content_type> <slug>`
 2.  **Analyze Report:** Read results in `.agents/skills/compile-signals/evals/reports/latest_results.json`.
 3.  **Self-Correction Loop:**
-    - **Attempt 1:** If any checks `FAIL`, analyze the report and fix the formatting, structure, navigation, or assets.
+    - **Attempt 1:** If any checks `FAIL`, analyze the report and fix the formatting, structure, or assets.
     - **Attempt 2:** One final targeted fix and re-run.
 4.  **Escalation:** If still failing after 2 attempts, stop and present the failure report to the user.
 

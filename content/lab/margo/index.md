@@ -93,9 +93,3 @@ Once built, use the [authoring guide](/margo-guide/) to create your first slide 
   Yes. Margo uses standard HTML and CSS, allowing anyone with web development skills to create or override themes, much like Hugo.
   {{% /faq-item %}}
 {{< /faq >}}
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="lab/category-vs-tag,lab/crm-llm" >}}
-
-{{< read-next title="Read Next" link="lab/deterministic-evals-for-ai-skills" buttonText="View more Deep Dives" >}}

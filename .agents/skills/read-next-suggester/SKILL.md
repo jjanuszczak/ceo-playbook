@@ -1,11 +1,11 @@
 ---
 name: read-next-suggester
-description: Automatically suggests and embeds the "Read Next" shortcode at the end of an article. Use when the user wants to add a "Read Next" section to a post, linking to the latest published content in the same section.
+description: Suggests a potential next post from the same content section. Use when the user wants a recommendation, without modifying the post.
 ---
 
 # Read Next Suggester
 
-This skill helps you automatically identify and embed a "Read Next" section into a Hugo post.
+This skill identifies a potential "Read Next" post for a Hugo post. It is advisory only and must not modify the target file.
 
 ## Workflow
 
@@ -17,10 +17,11 @@ This skill helps you automatically identify and embed a "Read Next" section into
     - The script identifies the content section of the target file.
     - It finds the latest non-draft post in that section.
     - If the target file itself is the latest, it returns the previous latest post.
-3.  **Embed Shortcode:**
+3.  **Prepare Suggestion:**
     - Read the target file content.
-    - If a `{{< read-next ... >}}` shortcode already exists, ask the user if they want to replace it.
-    - Append the `read-next` shortcode to the end of the file.
+    - If a `{{< read-next ... >}}` shortcode already exists, report that it is present.
+    - Show the recommended post and, optionally, the shortcode as copyable text in the response.
+    - Never append or otherwise write a `read-next` shortcode to the target file.
 
 ## Guidance
 

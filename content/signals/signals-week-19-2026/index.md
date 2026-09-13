@@ -94,5 +94,3 @@ This week’s signals point to a transition from raw capability to strategic inf
 *   **My Take:** **Utility is the ultimate arbiter.**
 
 ---
-
-{{< read-next title="Read Next" link="signals/signals-week-18-2026" buttonText="View more Signals" >}}

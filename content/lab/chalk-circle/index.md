@@ -60,9 +60,3 @@ Throughout my career, from founding UBX to scaling corporate venture funds, the 
 If you want to lead in this new era, stop trying to be the fastest typist in the room. Draw your circle. Step inside. Use the terminal to observe the flow, eliminate the waste, and make sure the line is moving properly.
 
 The era of the "coder" is transitioning into the era of the "system architect." Make sure you're standing in the right spot to see the difference.
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="lab/context-hub,lab/pyenv" >}}
-
-{{< read-next title="Read Next" link="lab/crm-llm" buttonText="View more Deep Dives" buttonLink="/lab/" >}}

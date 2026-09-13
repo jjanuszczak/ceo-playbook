@@ -193,9 +193,3 @@ Are you ready to make an impact? If you’re a professional or corporate sponsor
   Treat registration and attendance as different numbers. ON24 reported a 57% registration-to-attendance conversion for webinars in its 2024 platform data, while this series saw roughly 30 to 35% in-person no-shows. Use your own data for capacity planning.
   {{% /faq-item %}}
 {{< /faq >}}
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="articles/responsiveness, articles/cvc-vs-cvb, articles/pushkin" >}}
-
-{{< read-next title="Read Next" link="articles/is-ai-killing-book-reading" buttonText="View More Insights" >}}

@@ -64,9 +64,3 @@ The future isn't a straight line; it’s a web. It’s time we started leading l
 You can watch the lecture here:
 
 {{< youtubeLite id="gvIy52kX-uU" label="James Burke – Internet Knowledge" >}}
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="lab/crm-llm, articles/discovery-to-knowledge" >}}
-
-{{< read-next title="Read Next" link="articles/ikbr-ban" buttonText="View More Insights" buttonLink="/articles/" >}}

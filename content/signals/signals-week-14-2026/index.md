@@ -84,7 +84,6 @@ This week, the signals are clear: we are in a massive, systemic re-coding of our
 
 Looking for more? You can explore the archives of previous fast-twitch market observation and insights on the [Signals]({{< relref "signals" >}}) page and have them delivered directly to your inbox going forward:
 
-{{< subscribe >}}
 
 ---
 

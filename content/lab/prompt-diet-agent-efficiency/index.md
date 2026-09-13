@@ -160,9 +160,3 @@ That is the shift from building demos to building operating systems.
   It reduces unnecessary flexibility, which is usually a benefit. The model still handles reasoning and adaptation, but it no longer has to simulate precision for tasks that software can enforce directly.
   {{% /faq-item %}}
 {{< /faq >}}
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="lab/chalk-circle, lab/pyenv" >}}
-
-{{< read-next title="Read Next" link="lab/margo" buttonText="View more Deep Dives" >}}

@@ -90,11 +90,3 @@ It is who controls the rails!
 *   **Summary:** Tan Twan Eng describes the necessity of flow and adaptation over rigid, tense resistance when mastering physical or mental disciplines.
 *   **Why it Matters:** The technology landscape is shifting weekly. Leaders who try to resist the structural changes in how software is written, compiled, and coordinated will burn out trying to maintain outdated paradigms.
 *   **My Take:** **Adaptability is survival.** Instead of fighting the migration toward agentic automation and open models, align your team to leverage the shift and master the new operating systems.
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="articles/moats-vibe-coding, lab/chalk-circle" >}}
-
----
-
-{{< read-next title="Read Next" link="signals/signals-week-27-2026" buttonText="View more Signals" >}}

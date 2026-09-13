@@ -102,9 +102,3 @@ Between 2006 and 2011, VCs lost billions in clean energy startups due to high ca
 Investors should reallocate capital toward energy, infrastructure, and deep-tech. This involves developing expertise in physical systems, permitting, and partnering with hyperscalers for de-risked infrastructure projects.
 {{% /faq-item %}}
 {{< /faq >}}
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="articles/bdc, articles/top-podcasts-2025" >}}
-
-{{< read-next title="Read Next" link="articles/world-models" buttonText="View more Insights" >}}

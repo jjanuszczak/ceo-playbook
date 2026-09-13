@@ -56,5 +56,3 @@ As the curve finally returns to a "Normal" slope this year, the engine room is h
 
 **Want to dive deeper?**
 You can follow my latest thoughts on AI, SaaS, and the future of software here at [januszczak.org](https://januszczak.org) or connect with me on **[LinkedIn](https://linkedin.com/in/johnjanuszzcak)** and **[X](https://twitter.com/johnjanuszczak)**. Or simply subscribe to get regular insights and direct intelligence on fintech, strategy, innovation and fast-twitch market observations delivered directly to your inbox.
-
-{{< subscribe >}}

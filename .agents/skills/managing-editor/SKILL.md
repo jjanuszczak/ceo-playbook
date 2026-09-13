@@ -71,8 +71,8 @@ showReadingTime: false
     *   **Quick Answer:** Start with `{{< quick-answer >}}` shortcode after the introduction (2-3 sentence summary).
     *   **Semantic Hierarchy:** H2 headings (`##`) phrased as questions where possible.
     *   **FAQ Section:** Conclude with `{{< faq >}}` block and at least 2-3 `{{% faq-item %}}` pairs.
-    *   **Related/Read-Next:** MUST conclude with `{{< related-posts ... >}}` and `{{< read-next ... >}}`. Use `related-posts-suggester` and `read-next-suggester`.
-    *   **Internal Linking:** After the draft is complete, use `internal-linker` for Articles, Videos, and Labs to identify 2 to 4 contextual outgoing links, incoming-link opportunities, and an optional Further Reading section. For a draft target, run the helper with `--allow-draft-target`. When an outer Editorial Agent owns the draft, apply relevant target-page links without further approval and record them in `notes.md`. Present edits to other published pages separately for approval. Do not force a Further Reading section or duplicate destinations already covered by `related-posts` or `read-next`.
+    *   **Footer Shortcodes:** Do not add `subscribe`, `related-posts`, or `read-next` shortcodes to new posts. The single-post layout provides the required footer experience.
+    *   **Internal Linking:** After the draft is complete, use `internal-linker` for Articles, Videos, and Labs to identify 2 to 4 contextual outgoing links, incoming-link opportunities, and an optional Further Reading section. For a draft target, run the helper with `--allow-draft-target`. When an outer Editorial Agent owns the draft, apply relevant target-page links without further approval and record them in `notes.md`. Present edits to other published pages separately for approval. Do not force a Further Reading section.
 *   **Images:** Use `{{< figure src="image.png" alt="SEO text" caption="Visible caption" >}}`.
 *   **Draft protection:** Set `draft: true` for every newly created or edited agent-managed post. Publishing is a separate, explicit workflow.
 

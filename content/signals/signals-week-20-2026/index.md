@@ -95,11 +95,3 @@ As the distinction between tools that guide work and systems that *do* work coll
 * **Summary:** Examining the historical role of insurance in the formation of capitalist structures.
 * **Why it Matters:** Risk management is the "silent partner" in every venture ever built.
 * **My Take:** **Capitalism is just priced risk.** If you can't price it, you can't trade it.
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="articles/ev-mobility-sea, lab/chalk-circle" >}}
-
----
-
-{{< read-next title="Read Next" link="signals/signals-week-19-2026" buttonText="View more Signals" >}}

@@ -68,4 +68,3 @@ As AI coding agents become indispensable, tools like Context Hub and Context7 ar
 
 ---
 Looking for more? Explore the archives of fast-twitch market observations and insights on the [Signals]({{< relref "signals" >}}) page or **subscribe** to automatically receive them in your inbox!
-{{< subscribe >}}

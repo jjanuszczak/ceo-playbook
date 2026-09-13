@@ -179,9 +179,3 @@ Leadership owns strategy, or you don’t have one.
   The board should challenge the quality of the choices, assumptions, risks, and measures of success. Management must own the strategy itself because management is responsible for executing it.
   {{% /faq-item %}}
 {{< /faq >}}
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="articles/values, articles/cvc-vs-cvb" >}}
-
-{{< read-next title="Read Next" link="articles/nytimes" buttonText="View More Insights" buttonLink="/articles/" >}}

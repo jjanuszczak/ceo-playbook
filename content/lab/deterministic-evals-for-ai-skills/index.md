@@ -107,9 +107,3 @@ By moving from "vibe-checking" to "automated verification," we transform AI agen
   Bundling evals with the skill ensures that the verification logic is always available wherever the skill is used, creating a self-contained, portable, and production-ready unit of automation.
   {{% /faq-item %}}
 {{< /faq >}}
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="lab/chalk-circle, articles/git-design" >}}
-
-{{< read-next title="Read Next" link="lab/chalk-circle" buttonText="View more Deep Dives" >}}

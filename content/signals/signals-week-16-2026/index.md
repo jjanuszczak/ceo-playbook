@@ -138,7 +138,3 @@ This week’s signals revolve around the intersection of **probability, infrastr
 - **My Take:** **Law is the original source code.** If you don't understand the legal coding of your assets, you don't really own them.
 
 ---
-
-{{< read-next title="Read Next" link="signals/signals-week-15-2026" buttonText="View More Signals" buttonLink="/signals/" >}}
-
-{{< subscribe >}}

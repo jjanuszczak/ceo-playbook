@@ -80,9 +80,3 @@ We are moving out of the "AI Model Era" and into the Systemic AI Era, where the 
   Success now requires leaders to design an organization’s operating model with the same rigor used to code software. This means blending CTO-level technical insight with COO-level operational precision to align the entire organization around clear, AI-governed outcomes.
   {{% /faq-item %}}
 {{< /faq >}}
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="lab/category-vs-tag, articles/burke-lecture" >}}
-
-{{< read-next title="Read Next" link="/articles/world-models/" buttonText="View More Insights" >}}
