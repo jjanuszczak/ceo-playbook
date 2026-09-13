@@ -90,6 +90,3 @@ The theme of the week is **The Agentic Pivot**. We are witnessing a fundamental 
 
 ---
 If you enjoyed these, see previous editions [Signals]({{< relref "signals" >}}) or subscribe to automatically receive them in your inbox!
-
-{{< subscribe >}}
-

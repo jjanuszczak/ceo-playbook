@@ -108,6 +108,3 @@ This week’s signals highlight a critical decoupling in the enterprise: the gap
 *   **My Take:** **Implementation is the only strategy the customer ever sees.**
 
 ---
-
-{{< read-next title="Read Next" link="signals/signals-week-17-2026" buttonText="View more Signals" >}}
-

@@ -9,6 +9,9 @@ showAuthor: false
 showReadingTime: false
 showWordCount: false
 showDate: false
+showPagination: false
+showRelatedContent: false
+sharingLinks: false
 # layoutBackgroundHeaderSpace: true
 # featureimage: "images/jj-final-pitch.jpg"
 featureimage: "images/jj-on-tv.jpg"

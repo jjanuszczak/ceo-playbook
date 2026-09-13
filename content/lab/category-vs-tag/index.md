@@ -137,9 +137,3 @@ If you enjoy watching more than reading, check this out:
 {{< youtubeLite id="ISzNJ_FTMhQ" label="Categories vs Tags: You’re Doing It WRONG!" >}}
 
 Featured image by [StockSnap](https://pixabay.com/users/stocksnap-894430/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=923188) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=923188).
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="lab/deterministic-evals-for-ai-skills, lab/agents-vs-skills" >}}
-
-{{< read-next title="Read Next" link="lab/pyenv" buttonText="View more Deep Dives" >}}

@@ -98,6 +98,3 @@ If these market observations are relevant to the operations of, or innovation at
 
 ---
 Looking for more? You can explore the archives of previous fast-twitch market observation and insights on the [Signals]({{< relref "signals" >}}) page or **subscribe** to automatically receive them in your inbox!
-
-{{< subscribe >}}
-

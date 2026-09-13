@@ -138,5 +138,3 @@ This week's signals converge on the intersection of **Systemic Resilience** and 
 ---
 
 Looking for more? You can explore the archives of previous fast-twitch market observation and insights on the [Signals]({{< relref "signals" >}}) page and going forward, have it delivered directly to your inbox:
-
-{{< subscribe >}}

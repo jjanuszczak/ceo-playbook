@@ -18,22 +18,6 @@ def check_links(article_path):
 
     contextual_paths = set(CONTEXTUAL_LINK.findall(content))
 
-    # Check Related Posts
-    if "{{< related-posts" not in content:
-        errors.append("Missing '{{< related-posts >}}' shortcode")
-    else:
-        # Check for paths parameter
-        if 'paths="' not in content:
-            errors.append("'{{< related-posts >}}' shortcode is missing the 'paths' parameter")
-    
-    # Check Read Next
-    if "{{< read-next" not in content:
-        errors.append("Missing '{{< read-next >}}' shortcode")
-    else:
-        # Check for link parameter
-        if 'link="' not in content:
-            errors.append("'{{< read-next >}}' shortcode is missing the 'link' parameter")
-
     if len(contextual_paths) < 2:
         notes_path = os.path.join(os.path.dirname(article_path), "notes.md")
         no_fit_exception = False
@@ -47,7 +31,7 @@ def check_links(article_path):
         print(json.dumps({"errors": errors}))
         return 1
     else:
-        print(json.dumps({"message": f"Semantic navigation verified with {len(contextual_paths)} contextual links"}))
+        print(json.dumps({"message": f"Contextual linking verified with {len(contextual_paths)} Hugo links"}))
         return 0
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ pipeline:
       id: "content"
       script: "checks/content_check.py"
       halt_on_fail: true
-    - name: "Navigation & Discovery"
+    - name: "Footer Shortcode Policy"
       id: "navigation"
       script: "checks/navigation_check.py"
       halt_on_fail: false

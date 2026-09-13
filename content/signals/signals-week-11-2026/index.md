@@ -65,5 +65,3 @@ This week’s signals point toward a fundamental shift in how we conceive of aut
 
 ---
 Looking for more? You can explore the archives of previous fast-twitch market observation and insights on the [Signals]({{< relref "signals" >}}) page or **subscribe** to automatically receive them in your inbox!
-
-{{< subscribe >}}

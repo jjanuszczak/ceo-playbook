@@ -99,7 +99,3 @@ This week's signals converge on the theme of **reckoning vs. simulation**. In th
 *   **My Take:** **The feedback loop is the ultimate moat.** If you can learn from your customers and pivot your strategy faster than your competitors can execute their "perfect" plan, you have already won the game.
 
 ---
-
-{{< read-next title="Read Next" link="signals/signals-week-14-2026" buttonText="View More Signals" >}}
-
-{{< subscribe >}}

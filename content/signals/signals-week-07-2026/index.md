@@ -111,6 +111,3 @@ The theme of the week is **The Architect of Outcomes**. As we move deeper into t
 
 ---
 If you enjoyed these, see previous editions [Signals]({{< relref "signals" >}}) or subscribe to automatically receive them in your inbox!
-
-{{< subscribe >}}
-

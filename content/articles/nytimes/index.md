@@ -49,10 +49,3 @@ Get the Case Study
 
 ---
 Featured image by [Wally Gobetz](https://www.flickr.com/photos/wallyg/) is licensed under [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en)
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="articles/pilot-purgatory, articles/pushkin" >}}
-
-
-{{< read-next title="Read Next" link="articles/i2i-phx" buttonText="View More Insights" buttonLink="/articles/" >}}

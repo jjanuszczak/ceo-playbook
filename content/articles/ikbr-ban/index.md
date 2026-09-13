@@ -44,9 +44,3 @@ The real heroes of our digital economy, the founders, the small businesses, and 
 I really enjoyed this discussion, take a look:
 
 {{< youtubeLite id="2rnoD0JLIpg" label="SEC Bans Interactive Brokers (IBKR): Discussion with Jon Lim (DragonFi)" >}}
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="lab/yield-curve, lab/unlocking-the-basel-framework" >}}
-
-{{< read-next title="Read Next" link="articles/ev-mobility-sea" buttonText="View More Insights" buttonLink="/articles/" >}}

@@ -94,5 +94,3 @@ The convergence of AI agentic frameworks and the evolution of financial settleme
 ---
 
 Looking for more? You can explore the archives of previous fast-twitch market observation and insights on the [Signals]({{< relref "signals" >}}) page. You can also have the latest Signals delivered directly to your inbox!
-
-{{< subscribe >}}

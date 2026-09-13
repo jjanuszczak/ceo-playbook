@@ -93,9 +93,3 @@ Generative AI is automating code generation and architectural design, shifting t
 A true core value is a principle that is costly to defend. If a value doesn't cost you anything (like "honesty"), it is likely just "table stakes" rather than a differentiating core value.
 {{% /faq-item %}}
 {{< /faq >}}
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="articles/top-podcasts-2025,articles/ev-mobility-sea" >}}
-
-{{< read-next title="Read Next" link="videos/scaling-innovation" buttonText="View More Media" >}}

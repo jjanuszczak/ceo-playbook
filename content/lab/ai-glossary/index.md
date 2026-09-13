@@ -135,9 +135,3 @@ A Model is the core mathematical framework. An LLM is a specific type of model t
 Evals (Evaluations) act as the KPI scorecards for AI systems. They provide standardized, quantitative benchmarks to ensure that any updates to a model, prompt, or tool improve performance without breaking existing business rules or compromising safety. Critically, evals can be used by the agents themselves to check their work, self-heal and self-improve. Evals are often a key component of loops. 
 {{% /faq-item %}}
 {{< /faq >}}
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="articles/burke-lecture, videos/next-gen-bank-tech" >}}
-
-{{< read-next title="Read Next" link="lab/prompt-diet-agent-efficiency" buttonText="View more Deep Dives" >}}

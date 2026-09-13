@@ -35,6 +35,9 @@ Simultaneously, in capital markets, tokenization is moving from speculative side
 
 PS. I will have something to say about all this at greater length tomorrow. Stay tuned!
 
+> [!NOTE]
+> Please see the latest article [Tokenization Is the Capital Markets Upgrade]({{< relref "articles/tokenization-is-the-capital-markets-upgrade" >}})
+
 ### Tokenizing Sovereign Market Plumbing
 {{< x user="sytaylor" id="2094747983665381493" >}}
 *   **Summary:** Simon Taylor analyzes the London Stock Exchange’s initiative with Kraken parent Payward to bring the FTSE 100 onchain via 1:1 backed xStocks, contrasting London’s self-custody and native issuance exploration with the US DTCC’s closed-vault tokenization approach.
@@ -90,11 +93,3 @@ PS. I will have something to say about all this at greater length tomorrow. Stay
 *   **Summary:** Henry Ford encapsulates the operational philosophy that drove the modern assembly line: no process, regardless of historical precedent or current profitability, is exempt from radical continuous improvement.
 *   **Why it Matters:** Organizations naturally calcify around their existing operating models, mistaking temporary profitability for operational perfection. Complacency invites disruptive displacement.
 *   **My Take:** **The status quo is a depreciating asset.** The moment a leadership team convinces itself that an operational workflow has reached its optimal state is the moment a leaner competitor begins re-engineering the economics from the ground up.
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="articles/acqui-hiring-as-a-people-strategy,lab/chalk-circle" >}}
-
----
-
-{{< read-next title="Read Next" link="signals/signals-week-35-2026" buttonText="View more Signals" >}}

@@ -100,11 +100,3 @@ Finally, for a Philippine spin, we dissect Jollibee's proposed international spi
 *   **Summary:** Brian Chesky details Airbnb's strategic pivot from selling transactional travel accommodations to offering immersive, community-integrated insider experiences.
 *   **Why it Matters:** In platform economics, the transition from transactional utility to relational community lock-in is the ultimate moat. Customers pay a premium to feel like insiders rather than generic buyers.
 *   **My Take:** **Moats are relational, not transactional.** If your product or service is just a commodity utility, you are vulnerable to price wars. Build an experience that integrates your customer into a community.
-
-{{< subscribe >}}
-
-{{< related-posts title="Related Insights" paths="articles/i2i-phx,videos/final-pitch-s06" >}}
-
----
-
-{{< read-next title="Read Next" link="signals/signals-week-29-2026" buttonText="View more Signals" >}}
