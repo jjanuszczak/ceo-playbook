@@ -1,7 +1,7 @@
 ---
 title: "The Presentation Is Not the Product. The System Is."
 date: 2026-09-17
-draft: true
+draft: false
 summary: "Margo turns presentations from disposable AI-generated decks into versioned, portable company assets that improve with use."
 description: "Why the defensible value in AI-era presentations is not generating the first deck, but preserving the evidence, narrative, visual rules, and institutional memory that make every subsequent deck better."
 categories: ["Technology"]
