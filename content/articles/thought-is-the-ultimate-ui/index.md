@@ -1,6 +1,6 @@
 ---
 title: "Thought Is the Ultimate UI"
-date: 2026-08-24T09:03:35+08:00
+date: 2026-09-22
 # externalUrl: ""
 summary: "AI is pushing interfaces from screens and buttons toward intent, voice, adaptive components, and eventually brain-computer input. The real issue is not whether the GUI dies, but which decisions remain visible and accountable."
 description: "A strategic look at the future of user interfaces in the age of AI: why thought may become the highest-level input, why graphical interfaces will not disappear, and why enterprise leaders still need visible controls, state, trust boundaries, and human judgment."
@@ -15,8 +15,8 @@ tags:
   - "digital-transformation"
 showReadingTime: true
 showTableOfContents: true
-draft: true
-status: "user-review"
+draft: false
+status: "published"
 # Pillar 2: Advanced Schema
 about:
   - name: "User interface"
