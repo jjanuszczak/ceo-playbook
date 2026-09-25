@@ -1,6 +1,6 @@
 ---
 title: "Better Agents Need a Loss Function"
-date: 2026-08-28T09:03:12+08:00
+date: 2026-09-25
 summary: "A practical Lab memo on turning agent feedback into a measurable loss function, using a scheduling agent as the working example."
 description: "A follow-up to Reliable Agents Need Contracts, Not Better Prompts: how to instrument outcomes, define a loss function, and use feedback loops to improve the judgment layer of workflow agents."
 categories:
@@ -13,7 +13,7 @@ tags:
   - dev-ops
 showReadingTime: true
 showTableOfContents: true
-draft: true
+draft: false
 status: agent-pending
 about:
   - name: "Intelligent agent"
@@ -48,7 +48,7 @@ But a contract only tells the agent what it is allowed to do.
 
 It does not tell the agent whether its judgment is improving.
 
-A scheduling agent makes the gap obvious. The deterministic layer can prove that a proposed meeting time is valid, inside policy, correctly converted across time zones, and safe to send. That is necessary. It is not enough. The better question is whether the proposed time actually worked: did people accept it, counter it, move it, ignore it, or quietly resent it?
+The example scheduling agent I used in [part one]({{< ref "lab/developing-effective-agents" >}}) makes the gap obvious. The deterministic layer can prove that a proposed meeting time is valid, inside policy, correctly converted across time zones, and safe to send. That is necessary. It is not enough. The better question is whether the proposed time actually worked: did people accept it, counter it, move it, ignore it, or quietly resent it?
 
 That outcome is the training signal.
 
@@ -60,7 +60,7 @@ Workflow agents improve when you separate hard constraints from learned judgment
 
 A contract can keep an agent inside the lines. It cannot prove the agent made the best call.
 
-For a scheduler, the hard rules are clear:
+For the example scheduler, the hard rules are clear:
 
 1. Do not propose a slot that conflicts with a required participant.
 2. Do not cross a protected sleep window.
@@ -82,7 +82,7 @@ Start with the trajectory, not the prompt.
 
 Anthropic's 2026 eval guidance makes a useful distinction between a transcript or trajectory and the final outcome. The transcript records the agent's turns, tool calls, intermediate results, and reasoning context. The outcome is the actual end state in the environment. For a scheduling agent, the outcome is not "the agent said the meeting was proposed." The outcome is whether the meeting stuck.
 
-For every scheduling attempt, log a compact event trail:
+Back to our example: for every scheduling attempt, start by logging a compact event trail:
 
 ```text
 scheduling_session_id
