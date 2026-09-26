@@ -1,47 +1,48 @@
 {
-  "generated_at": "2026-07-22T09:01:42.527191Z",
-  "posts": 142,
-  "total_words": 132216,
-  "average_words_per_post": 931,
-  "average_time_between_posts": "-42 days -9 hours",
+  "generated_at": "2026-09-26T00:20:59.349506Z",
+  "posts": 162,
+  "total_words": 168879,
+  "average_words_per_post": 1042,
+  "average_time_between_posts": "37 days 1 hours",
   "first_published": "2011-12-01",
-  "latest_published": "2026-07-19",
+  "latest_published": "2026-09-25",
+  "categories": {
+    "Energy Transition": 3,
+    "Essays": 3,
+    "Fintech": 17,
+    "Leadership": 3,
+    "Strategy": 15,
+    "Technology": 31,
+    "Venture Building": 10
+  },
   "sections": {
-    "": {
-      "posts": 4,
-      "words": 2162
-    },
     "advisory": {
-      "posts": 5,
-      "words": 2639
+      "posts": 4,
+      "words": 2543
     },
     "articles": {
-      "posts": 46,
-      "words": 44802
-    },
-    "categories": {
-      "posts": 7,
-      "words": 2948
+      "posts": 62,
+      "words": 62807
     },
     "lab": {
-      "posts": 15,
-      "words": 16091
+      "posts": 25,
+      "words": 26718
     },
     "portfolio": {
-      "posts": 26,
-      "words": 1539
+      "posts": 25,
+      "words": 1474
     },
     "research": {
-      "posts": 3,
-      "words": 33401
+      "posts": 2,
+      "words": 33331
     },
     "signals": {
-      "posts": 27,
-      "words": 24512
+      "posts": 35,
+      "words": 37137
     },
     "videos": {
       "posts": 9,
-      "words": 4122
+      "words": 4869
     }
   },
   "tags": {
@@ -55,21 +56,21 @@
     "aggregation-theory": 1,
     "agritech": 1,
     "api-economy": 4,
-    "artificial-intelligence": 55,
-    "asset-management": 4,
+    "artificial-intelligence": 76,
+    "asset-management": 5,
     "asynchronous-work": 1,
     "automation": 1,
     "autonomous-finance": 1,
     "banking": 1,
     "banking-as-a-service": 3,
     "basel-framework": 1,
-    "ben-thompson": 4,
-    "blockchain": 8,
+    "ben-thompson": 5,
+    "blockchain": 9,
     "bnpl": 1,
     "board-governance": 6,
     "bpm": 1,
     "brand-governance": 1,
-    "capital-allocation": 15,
+    "capital-allocation": 21,
     "cardano": 1,
     "cleantech": 1,
     "corporate-structuring": 1,
@@ -78,83 +79,83 @@
     "cybersecurity": 1,
     "data-science": 2,
     "deep-tech": 1,
-    "defi": 2,
-    "design-systems": 2,
-    "dev-ops": 4,
-    "digital-assets": 2,
+    "defi": 3,
+    "design-systems": 5,
+    "dev-ops": 6,
+    "digital-assets": 4,
     "digital-infrastructure": 1,
-    "digital-transformation": 15,
+    "digital-transformation": 18,
     "digital-twin": 1,
     "e-commerce": 4,
-    "ecosystem-design": 4,
+    "ecosystem-design": 5,
     "ekyc": 1,
     "electric-vehicles": 5,
-    "embedded-finance": 17,
-    "energy-markets": 5,
+    "embedded-finance": 18,
+    "energy-markets": 6,
     "enterprise-dlt": 1,
     "erp": 1,
     "ethereum": 1,
     "financial-inclusion": 9,
     "fintech": 7,
     "foodtech": 1,
-    "git": 2,
-    "go-to-market": 4,
+    "git": 3,
+    "go-to-market": 6,
     "hardware-software-synergy": 1,
     "hr-tech": 1,
-    "hugo": 2,
-    "identity": 2,
+    "hugo": 3,
+    "identity": 1,
     "incentive-design": 2,
     "infrastructure": 1,
     "insurtech": 6,
     "kevin-kelly": 2,
-    "knowledge-management": 7,
+    "knowledge-management": 15,
     "leadership": 2,
     "lending": 6,
     "logistics": 2,
-    "long-term-thinking": 14,
+    "long-term-thinking": 15,
     "macro-economics": 1,
     "markdown": 1,
-    "mental-models": 8,
+    "mental-models": 9,
     "metamask": 1,
     "mit": 1,
     "monetary-policy": 3,
     "money": 1,
     "nft": 1,
     "open-finance": 9,
-    "open-source": 7,
-    "organizational-design": 20,
+    "open-source": 10,
+    "organizational-design": 29,
     "parametric-insurance": 1,
-    "payments": 9,
+    "payments": 11,
     "philippine-banking": 1,
     "philippines": 1,
-    "platform-economics": 22,
+    "platform-economics": 24,
     "podcasts": 4,
     "prediction-markets": 6,
     "product-management": 1,
-    "productivity": 12,
-    "programming": 4,
-    "project-finance": 3,
+    "productivity": 20,
+    "programming": 6,
+    "project-finance": 4,
     "proptech": 2,
     "python": 1,
-    "reading-list": 30,
+    "reading-list": 39,
     "real-estate": 1,
     "real-time-data": 1,
-    "regtech": 4,
+    "regtech": 3,
     "risk-management": 2,
-    "saas": 7,
+    "saas": 9,
     "second-brain": 2,
     "simulation": 2,
     "smb": 9,
-    "software-engineering": 22,
+    "software-engineering": 35,
     "solar": 2,
-    "stablecoins": 8,
+    "stablecoins": 11,
     "strategy": 3,
     "supply-chain": 3,
-    "systems-thinking": 45,
-    "taxonomy": 3,
-    "tokenization": 2,
-    "venture-building": 20,
-    "venture-capital": 11,
+    "systems-thinking": 62,
+    "taxonomy": 4,
+    "tokenization": 7,
+    "venture-building": 27,
+    "venture-capital": 13,
     "vertical-integration": 1,
     "wealth-management": 2,
     "web3": 7
@@ -197,173 +198,216 @@
       "words": 1729
     },
     "2025": {
-      "posts": 17,
-      "words": 18682
+      "posts": 15,
+      "words": 18375
     },
     "2026": {
-      "posts": 72,
-      "words": 97921
+      "posts": 94,
+      "words": 133309
     }
   },
   "recent": [
     {
-      "title": "Signals: Week 29, 2026",
-      "date": "2026-07-19T00:00:00Z",
-      "section": "signals",
-      "tags": [
-        "reading-list",
-        "artificial-intelligence",
-        "software-engineering",
-        "payments",
-        "knowledge-management",
-        "systems-thinking"
-      ],
-      "draft": false,
-      "word_count": 1140,
-      "url": "/signals/signals-week-29-2026/",
-      "source": "content/signals/signals-week-29-2026/index.md"
-    },
-    {
-      "title": "Executive AI Strategy Discovery",
-      "date": "2026-07-17T00:00:00Z",
-      "section": "advisory",
-      "draft": false,
-      "word_count": 752,
-      "url": "/advisory/ai-executive-strategy-discovery/",
-      "source": "content/advisory/ai-executive-strategy-discovery/index.md"
-    },
-    {
-      "title": "Signals: Week 28, 2026",
-      "date": "2026-07-12T00:00:00Z",
-      "section": "signals",
-      "tags": [
-        "reading-list",
-        "artificial-intelligence",
-        "software-engineering",
-        "venture-building",
-        "platform-economics",
-        "systems-thinking"
-      ],
-      "draft": false,
-      "word_count": 1386,
-      "url": "/signals/signals-week-28-2026/",
-      "source": "content/signals/signals-week-28-2026/index.md"
-    },
-    {
-      "title": "The Next Compiler: AI and the Evolution of Abstraction",
-      "date": "2026-07-06T00:00:00Z",
-      "section": "articles",
-      "tags": [
-        "artificial-intelligence",
-        "software-engineering",
-        "productivity",
-        "systems-thinking",
-        "programming"
-      ],
-      "draft": false,
-      "word_count": 857,
-      "url": "https://twitter.com/karpathy/status/1763260790858174730",
-      "source": "content/articles/the-next-compiler/index.md"
-    },
-    {
-      "title": "The AI Strategy Glossary for Executives",
-      "date": "2026-07-05T00:00:00Z",
+      "title": "Better Agents Need a Loss Function",
+      "date": "2026-09-25T00:00:00Z",
       "section": "lab",
+      "categories": [
+        "Technology"
+      ],
       "tags": [
         "artificial-intelligence",
+        "software-engineering",
         "systems-thinking",
+        "productivity",
+        "dev-ops"
+      ],
+      "draft": false,
+      "word_count": 2039,
+      "url": "https://arxiv.org/abs/2406.12045",
+      "site_url": "/lab/better-agents-need-a-loss-function/",
+      "source": "content/lab/better-agents-need-a-loss-function/index.md"
+    },
+    {
+      "title": "Thought Is the Ultimate UI",
+      "date": "2026-09-22T00:00:00Z",
+      "section": "articles",
+      "categories": [
+        "Technology"
+      ],
+      "tags": [
+        "artificial-intelligence",
+        "design-systems",
+        "systems-thinking",
+        "software-engineering",
         "digital-transformation"
       ],
       "draft": false,
-      "word_count": 1762,
-      "url": "https://a16z.com/2023/06/22/the-economic-case-for-generative-ai-and-foundation-models/",
-      "source": "content/lab/ai-glossary/index.md"
+      "word_count": 1893,
+      "url": "https://www.nature.com/articles/s41586-023-06443-4",
+      "site_url": "/articles/thought-is-the-ultimate-ui/",
+      "source": "content/articles/thought-is-the-ultimate-ui/index.md"
     },
     {
-      "title": "Signals: Week 27, 2026",
-      "date": "2026-07-04T00:00:00Z",
+      "title": "Signals: Week 38, 2026",
+      "date": "2026-09-20T06:30:00+08:00",
       "section": "signals",
       "tags": [
         "reading-list",
         "artificial-intelligence",
-        "venture-building",
         "software-engineering",
-        "organizational-design",
+        "embedded-finance",
+        "stablecoins",
         "systems-thinking",
-        "productivity"
+        "capital-allocation"
       ],
       "draft": false,
-      "word_count": 1311,
-      "url": "/signals/signals-week-27-2026/",
-      "source": "content/signals/signals-week-27-2026/index.md"
+      "word_count": 1888,
+      "url": "/signals/signals-week-38-2026/",
+      "site_url": "/signals/signals-week-38-2026/",
+      "source": "content/signals/signals-week-38-2026/index.md"
     },
     {
-      "title": "Signals: Week 26, 2026",
-      "date": "2026-06-28T00:00:00Z",
-      "section": "signals",
-      "tags": [
-        "reading-list",
-        "artificial-intelligence",
-        "venture-building",
-        "organizational-design",
-        "open-source",
-        "productivity",
-        "software-engineering"
-      ],
-      "draft": false,
-      "word_count": 1237,
-      "url": "/signals/signals-week-26-2026/",
-      "source": "content/signals/signals-week-26-2026/index.md"
-    },
-    {
-      "title": "The Prompt Diet: How We Chopped 57% of Our Agent's Mind and Made It Smarter",
-      "date": "2026-06-22T00:00:00Z",
+      "title": "The Presentation Is Not the Product. The System Is.",
+      "date": "2026-09-17T00:00:00Z",
       "section": "lab",
+      "categories": [
+        "Technology"
+      ],
       "tags": [
         "artificial-intelligence",
-        "software-engineering",
+        "knowledge-management",
+        "design-systems",
         "systems-thinking",
-        "productivity",
-        "programming"
+        "software-engineering",
+        "open-source"
       ],
       "draft": false,
-      "word_count": 1288,
-      "url": "https://arxiv.org/abs/2307.03172",
-      "source": "content/lab/prompt-diet-agent-efficiency/index.md"
+      "word_count": 1128,
+      "url": "https://claude.com/blog/cowork-is-now-claude",
+      "site_url": "/lab/presentation-system-not-product/",
+      "source": "content/lab/presentation-system-not-product/index.md"
     },
     {
-      "title": "Signals: Week 25, 2026",
-      "date": "2026-06-21T00:00:00Z",
+      "title": "$10 Million Inbox",
+      "date": "2026-09-13T00:00:00Z",
+      "section": "articles",
+      "categories": [
+        "Strategy"
+      ],
+      "tags": [
+        "artificial-intelligence",
+        "knowledge-management",
+        "long-term-thinking",
+        "systems-thinking",
+        "capital-allocation",
+        "digital-transformation"
+      ],
+      "draft": false,
+      "word_count": 1463,
+      "url": "https://arstechnica.com/tech-policy/2026/09/panic-builds-over-bankrupt-spirits-looming-data-sale-to-google/",
+      "site_url": "/articles/10-million-inbox/",
+      "source": "content/articles/10-million-inbox/index.md"
+    },
+    {
+      "title": "Signals: Week 37, 2026",
+      "date": "2026-09-13T06:30:00+08:00",
       "section": "signals",
       "tags": [
         "reading-list",
         "artificial-intelligence",
-        "venture-building",
-        "organizational-design",
+        "systems-thinking",
         "software-engineering",
-        "productivity",
+        "organizational-design",
+        "tokenization",
+        "venture-building"
+      ],
+      "draft": false,
+      "word_count": 1964,
+      "url": "/signals/signals-week-37-2026/",
+      "site_url": "/signals/signals-week-37-2026/",
+      "source": "content/signals/signals-week-37-2026/index.md"
+    },
+    {
+      "title": "Tokenization Is the Capital Markets Upgrade",
+      "date": "2026-09-07T00:00:00Z",
+      "section": "articles",
+      "categories": [
+        "Fintech"
+      ],
+      "tags": [
+        "tokenization",
+        "digital-assets",
+        "blockchain",
+        "capital-allocation",
+        "asset-management",
+        "stablecoins",
         "systems-thinking"
       ],
       "draft": false,
-      "word_count": 1110,
-      "url": "/signals/signals-week-25-2026/",
-      "source": "content/signals/signals-week-25-2026/index.md"
+      "word_count": 2448,
+      "url": "https://www.bcg.com/publications/2026/an-imperative-for-growth-and-the-new-economics-of-asset-management",
+      "site_url": "/articles/tokenization-is-the-capital-markets-upgrade/",
+      "source": "content/articles/tokenization-is-the-capital-markets-upgrade/index.md"
     },
     {
-      "title": "Intelletto",
-      "date": "2026-06-16T00:00:00Z",
-      "section": "portfolio",
+      "title": "Signals: Week 36, 2026",
+      "date": "2026-09-06T06:30:00+08:00",
+      "section": "signals",
       "tags": [
+        "reading-list",
         "artificial-intelligence",
-        "hr-tech",
-        "saas",
-        "venture-building",
-        "corporate-structuring"
+        "systems-thinking",
+        "organizational-design",
+        "tokenization",
+        "software-engineering",
+        "venture-building"
       ],
       "draft": false,
-      "word_count": 389,
-      "url": "/portfolio/intelletto/",
-      "source": "content/portfolio/intelletto/index.md"
+      "word_count": 1648,
+      "url": "/signals/signals-week-36-2026/",
+      "site_url": "/signals/signals-week-36-2026/",
+      "source": "content/signals/signals-week-36-2026/index.md"
+    },
+    {
+      "title": "Acqui-Hiring Is Now a Leadership Strategy",
+      "date": "2026-09-01T00:00:00Z",
+      "section": "articles",
+      "categories": [
+        "Leadership"
+      ],
+      "tags": [
+        "artificial-intelligence",
+        "organizational-design",
+        "venture-building",
+        "venture-capital",
+        "capital-allocation",
+        "systems-thinking"
+      ],
+      "draft": false,
+      "word_count": 1792,
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2024/01/ftc-launches-inquiry-generative-ai-investments-partnerships",
+      "site_url": "/articles/acqui-hiring-as-a-people-strategy/",
+      "source": "content/articles/acqui-hiring-as-a-people-strategy/index.md"
+    },
+    {
+      "title": "Signals: Week 35, 2026",
+      "date": "2026-08-30T00:00:00Z",
+      "section": "signals",
+      "tags": [
+        "reading-list",
+        "artificial-intelligence",
+        "venture-building",
+        "organizational-design",
+        "productivity",
+        "saas",
+        "platform-economics",
+        "defi"
+      ],
+      "draft": false,
+      "word_count": 1369,
+      "url": "/signals/signals-week-35-2026/",
+      "site_url": "/signals/signals-week-35-2026/",
+      "source": "content/signals/signals-week-35-2026/index.md"
     }
   ]
 }

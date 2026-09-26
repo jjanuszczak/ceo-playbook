@@ -1,0 +1,7 @@
+{{ $alg := .Site.Params.fingerprintAlgorithm | default "sha512" }}
+{{ $chartLib := resources.Get "lib/chart/chart.min.js" }}
+{{ $chartConfig := resources.Get "js/chart.js" | resources.Minify }}
+{{ $chartJS := slice $chartLib $chartConfig | resources.Concat "js/chart.bundle.js" | resources.Fingerprint $alg }}
+{{ $section := .Get "section" | default "all" }}
+{{ if or (eq $section "all") (eq $section "overview") }}<script defer src="{{ $chartJS.RelPermalink }}" integrity="{{ $chartJS.Data.Integrity }}"></script>{{ end }}
+{{ partial "site-stats.html" (dict "Page" .Page "Section" $section) }}

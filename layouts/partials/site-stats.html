@@ -1,0 +1,195 @@
+{{ $stats := index hugo.Data "site-stats" | default dict }}
+{{ $section := .Section | default "all" }}
+{{ $posts := $stats.posts | default 0 }}
+{{ $totalWords := $stats.total_words | default 0 }}
+{{ $averageWords := $stats.average_words_per_post | default 0 }}
+{{ $firstPublished := time.AsTime ($stats.first_published | default "1970-01-01") }}
+{{ $latestPublished := time.AsTime ($stats.latest_published | default "1970-01-01") }}
+{{ $publishingYears := 0 }}
+{{ if gt $posts 0 }}{{ $publishingYears = add (sub $latestPublished.Year $firstPublished.Year) 1 }}{{ end }}
+{{ $categories := $stats.categories | default dict }}
+{{ $categoryRows := slice }}
+{{ range $name, $count := $categories }}
+  {{ $categoryRows = $categoryRows | append (dict "name" $name "count" $count) }}
+{{ end }}
+{{ $categoryRows = sort $categoryRows "count" "desc" }}
+{{ $categoryTotal := 0 }}
+{{ range $categoryRows }}{{ $categoryTotal = add $categoryTotal .count }}{{ end }}
+{{ $categoryLabels := slice }}
+{{ $categoryValues := slice }}
+{{ range $categoryRows }}
+  {{ $categoryLabels = $categoryLabels | append .name }}
+  {{ $categoryValues = $categoryValues | append .count }}
+{{ end }}
+{{ $categoryColors := slice "#0f766e" "#2563eb" "#c2410c" "#7c3aed" "#be123c" "#15803d" "#a16207" "#475569" }}
+{{ $sections := $stats.sections | default dict }}
+{{ $sectionRows := slice }}
+{{ range $name, $record := $sections }}
+  {{ $sectionRows = $sectionRows | append (dict "name" $name "posts" $record.posts "words" $record.words) }}
+{{ end }}
+{{ $sectionRows = sort $sectionRows "posts" "desc" }}
+{{ $sectionLabels := slice }}
+{{ $sectionValues := slice }}
+{{ range $sectionRows }}
+  {{ $sectionLabels = $sectionLabels | append .name }}
+  {{ $sectionValues = $sectionValues | append .posts }}
+{{ end }}
+{{ $years := $stats.years | default dict }}
+{{ $yearRows := slice }}
+{{ range $year, $record := $years }}
+  {{ $yearRows = $yearRows | append (dict "name" $year "posts" $record.posts) }}
+{{ end }}
+{{ $yearRows = sort $yearRows "name" }}
+{{ $yearLabels := slice }}
+{{ $yearValues := slice }}
+{{ range $yearRows }}
+  {{ $yearLabels = $yearLabels | append .name }}
+  {{ $yearValues = $yearValues | append .posts }}
+{{ end }}
+{{ $tags := $stats.tags | default dict }}
+{{ $tagRows := slice }}
+{{ range $name, $count := $tags }}
+  {{ $tagRows = $tagRows | append (dict "name" $name "count" $count) }}
+{{ end }}
+{{ $topTags := first 12 (sort $tagRows "count" "desc") }}
+{{ $recent := $stats.recent | default slice }}
+
+{{ if or (eq $section "all") (eq $section "overview") }}
+<div class="site-stats-dashboard mb-16">
+  <div class="lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl">A living record of the ideas, operating principles, and strategic work shaping how I think about technology, innovation, and executive leadership.</div>
+  <div class="not-prose my-10 grid gap-4 sm:grid-cols-2 grid-balance lg:grid-cols-4 grid-balance-4" aria-label="Publishing overview">
+    <div class="rounded-2xl border border-neutral-200/80 bg-white/60 p-6 text-center shadow-sm backdrop-blur-xl dark:border-neutral-800 dark:bg-neutral-900/50"><div class="site-stats-kpi-value text-4xl font-black tracking-tight text-primary-600 dark:text-primary-400">{{ lang.FormatNumber 0 $posts }}</div><p class="mt-2 font-bold text-neutral-900 dark:text-white">Published pages</p></div>
+    <div class="rounded-2xl border border-neutral-200/80 bg-white/60 p-6 text-center shadow-sm backdrop-blur-xl dark:border-neutral-800 dark:bg-neutral-900/50"><div class="site-stats-kpi-value site-stats-kpi-value-wide text-4xl font-black tracking-tight text-primary-600 dark:text-primary-400">{{ lang.FormatNumber 0 $totalWords }}</div><p class="mt-2 font-bold text-neutral-900 dark:text-white">Words published</p></div>
+    <div class="rounded-2xl border border-neutral-200/80 bg-white/60 p-6 text-center shadow-sm backdrop-blur-xl dark:border-neutral-800 dark:bg-neutral-900/50"><div class="site-stats-kpi-value text-4xl font-black tracking-tight text-primary-600 dark:text-primary-400">{{ lang.FormatNumber 0 $averageWords }}</div><p class="mt-2 font-bold text-neutral-900 dark:text-white">Average words per page</p></div>
+    <div class="rounded-2xl border border-neutral-200/80 bg-white/60 p-6 text-center shadow-sm backdrop-blur-xl dark:border-neutral-800 dark:bg-neutral-900/50"><div class="site-stats-kpi-value text-4xl font-black tracking-tight text-primary-600 dark:text-primary-400">{{ $publishingYears }}</div><p class="mt-2 font-bold text-neutral-900 dark:text-white">Years publishing</p></div>
+  </div>
+</div>
+{{ end }}
+
+{{ if eq $section "all" }}<h2 id="content-by-category">Content by category</h2>{{ end }}
+{{ if or (eq $section "all") (eq $section "category") }}
+  <p>The category chart uses the first category on each page. Pages without a category are excluded from this view.</p>
+  {{ if $categoryRows }}
+    <div class="site-stats-chart chart" role="img" aria-label="Content by category doughnut chart">
+      <canvas id="site-stats-category-chart"></canvas>
+    </div>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const canvas = document.getElementById("site-stats-category-chart");
+        if (!canvas || typeof Chart === "undefined") return;
+        const labels = {{ $categoryLabels | jsonify | safeJS }};
+        const values = {{ $categoryValues | jsonify | safeJS }};
+        const colors = {{ $categoryColors | jsonify | safeJS }}.slice(0, labels.length);
+        new Chart(canvas, {
+          type: "doughnut",
+          data: { labels, datasets: [{ label: "Pages", data: values, backgroundColor: colors }] },
+          plugins: [{
+            id: "percentageLabels",
+            afterDatasetDraw(chart) {
+              const dataset = chart.data.datasets[0];
+              const total = dataset.data.reduce((sum, value) => sum + value, 0);
+              const ctx = chart.ctx;
+              const dark = document.documentElement.classList.contains("dark");
+              ctx.save();
+              ctx.fillStyle = dark ? "#f5f5f5" : "#17202a";
+              ctx.font = "700 12px system-ui, sans-serif";
+              ctx.textAlign = "center";
+              ctx.textBaseline = "middle";
+              chart.getDatasetMeta(0).data.forEach((arc, index) => {
+                const percentage = dataset.data[index] / total * 100;
+                if (percentage < 3) return;
+                const angle = (arc.startAngle + arc.endAngle) / 2;
+                const radius = (arc.innerRadius + arc.outerRadius) / 2;
+                ctx.fillText(percentage.toFixed(1) + "%", arc.x + Math.cos(angle) * radius, arc.y + Math.sin(angle) * radius);
+              });
+              ctx.restore();
+            }
+          }],
+          options: { responsive: true, plugins: { legend: { position: "bottom" }, tooltip: { callbacks: { label(context) { const total = values.reduce((sum, value) => sum + value, 0); return context.label + ": " + (context.raw / total * 100).toFixed(1) + "%"; } } } } }
+        });
+      });
+    </script>
+    {{/*
+    <table><thead><tr><th>Category</th><th>Pages</th><th>Share</th></tr></thead><tbody>
+      {{ range $categoryRows }}<tr><td>{{ .name }}</td><td>{{ lang.FormatNumber 0 .count }}</td><td>{{ printf "%.1f%%" (div (mul .count 100) $categoryTotal) }}</td></tr>{{ end }}
+    </tbody></table>
+    */}}
+  {{ else }}
+    <p>No categorized content yet.</p>
+  {{ end }}
+{{ end }}
+
+{{ if eq $section "all" }}<h2 id="publishing-by-section">Publishing by section</h2>{{ end }}
+{{ if or (eq $section "all") (eq $section "section") }}
+  {{ if $sectionRows }}
+    <div class="site-stats-chart chart" role="img" aria-label="Publishing by section doughnut chart"><canvas id="site-stats-section-chart"></canvas></div>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const canvas = document.getElementById("site-stats-section-chart");
+        if (!canvas || typeof Chart === "undefined") return;
+        const labels = {{ $sectionLabels | jsonify | safeJS }};
+        const values = {{ $sectionValues | jsonify | safeJS }};
+        const colors = {{ $categoryColors | jsonify | safeJS }}.slice(0, labels.length);
+        const total = values.reduce((sum, value) => sum + value, 0);
+        new Chart(canvas, {
+          type: "doughnut",
+          data: { labels, datasets: [{ label: "Pages", data: values, backgroundColor: colors }] },
+          plugins: [{
+            id: "sectionPercentageLabels",
+            afterDatasetDraw(chart) {
+              const ctx = chart.ctx;
+              const dark = document.documentElement.classList.contains("dark");
+              ctx.save();
+              ctx.fillStyle = dark ? "#f5f5f5" : "#17202a";
+              ctx.font = "700 12px system-ui, sans-serif";
+              ctx.textAlign = "center";
+              ctx.textBaseline = "middle";
+              chart.getDatasetMeta(0).data.forEach((arc, index) => {
+                const percentage = values[index] / total * 100;
+                if (percentage < 3) return;
+                const angle = (arc.startAngle + arc.endAngle) / 2;
+                const radius = (arc.innerRadius + arc.outerRadius) / 2;
+                ctx.fillText(percentage.toFixed(1) + "%", arc.x + Math.cos(angle) * radius, arc.y + Math.sin(angle) * radius);
+              });
+              ctx.restore();
+            }
+          }],
+          options: { responsive: true, plugins: { legend: { position: "bottom" }, tooltip: { callbacks: { label(context) { return context.label + ": " + (context.raw / total * 100).toFixed(1) + "%"; } } } } }
+        });
+      });
+    </script>
+  {{ end }}
+  {{/*
+  <table><thead><tr><th>Section</th><th>Pages</th><th>Words</th></tr></thead><tbody>
+    {{ range $sectionRows }}{{ $name := .name }}{{ if eq $name "" }}{{ $name = "Top-level pages" }}{{ end }}<tr><td>{{ $name }}</td><td>{{ lang.FormatNumber 0 .posts }}</td><td>{{ lang.FormatNumber 0 .words }}</td></tr>{{ end }}
+  </tbody></table>
+  */}}
+{{ end }}
+
+{{ if eq $section "all" }}<h2 id="publishing-over-time">Publishing over time</h2>{{ end }}
+{{ if or (eq $section "all") (eq $section "time") }}
+  {{ if $yearRows }}
+    <div class="site-stats-chart chart" role="img" aria-label="Pages published by year bar chart"><canvas id="site-stats-year-chart"></canvas></div>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const canvas = document.getElementById("site-stats-year-chart");
+        if (!canvas || typeof Chart === "undefined") return;
+        new Chart(canvas, { type: "bar", data: { labels: {{ $yearLabels | jsonify | safeJS }}, datasets: [{ label: "Pages published", data: {{ $yearValues | jsonify | safeJS }} }] }, options: { responsive: true, plugins: { legend: { display: false } } } });
+      });
+    </script>
+  {{ else }}<p>No dated content yet.</p>{{ end }}
+{{ end }}
+
+{{ if eq $section "all" }}<h2 id="most-discussed-topics">Most discussed topics</h2>{{ end }}
+{{ if or (eq $section "all") (eq $section "topics") }}
+  {{ if $topTags }}<ul>{{ range $topTags }}<li><a href="{{ printf "/tags/%s/" (urlize .name) }}"><strong>{{ .name }}</strong></a>: {{ lang.FormatNumber 0 .count }} pages</li>{{ end }}</ul>{{ else }}<p>No tags yet.</p>{{ end }}
+{{ end }}
+
+{{ if eq $section "all" }}<h2 id="recent-publishing">Recent publishing</h2>{{ end }}
+{{ if or (eq $section "all") (eq $section "recent") }}
+  {{ if $recent }}<ul>{{ range $recent }}{{ $date := "Undated" }}{{ with .date }}{{ $date = (time.AsTime .).Format "2 Jan 2006" }}{{ end }}<li><a href="{{ .site_url | default .url }}">{{ .title }}</a>, {{ $date }}, {{ lang.FormatNumber 0 .word_count }} words</li>{{ end }}</ul>{{ else }}<p>No published content yet.</p>{{ end }}
+{{ end }}
+
+{{ if eq $section "all" }}
+  <p><em>Statistics calculated {{ (time.AsTime ($stats.generated_at | default "1970-01-01T00:00:00Z")).Format "2 January 2006, 15:04 MST" }}.</em></p>
+{{ end }}
