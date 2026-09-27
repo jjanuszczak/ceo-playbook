@@ -92,7 +92,7 @@ Tokenization attacks that issue head-on.
 
 It does not simply digitize a certificate. We already did that. It tries to put the ownership record, transfer restrictions, entitlement logic, compliance rules, and settlement mechanics closer together. In the BIS language, tokenization can merge messaging, reconciliation, and asset transfer into a single programmable operation.
 
-That is why this is not a UX upgrade. It is a market-structure upgrade.
+That is why this is not a UX upgrade. It is a market-structure upgrade. This week’s [Signals discussion on moving moats and institutional stablecoin governance]({{< ref "signals/signals-week-39-2026" >}}) extends the same point into current market activity.
 
 ## Why is tokenization the next step?
 
