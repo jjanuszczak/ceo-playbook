@@ -74,6 +74,8 @@ The financial system is being rebuilt in parallel. Stablecoin infrastructure is 
 *   **Why it Matters:** Strategy without implementation is theatre. A strong point of view only matters when it changes resource allocation, operating cadence, and what the team does next.
 *   **My Take:** **Strategy is a design decision with a payroll attached.** The test is not whether the plan sounds intelligent. The test is whether it changes behaviour and survives contact with the operating system.
 
+*Image: Mulally (wearing the red tie) with President George W. Bush at the Kansas City Assembly Plant in Claycomo, Missouri on March 20, 2007, touring Ford's new hybrid cars. Credit: By [Eric Draper](https://en.wikipedia.org/wiki/en:Eric_Draper) [Public Domain](https://commons.wikimedia.org/w/index.php?curid=3641028)*
+
 ### [BPMN Method and Style](https://www.amazon.com/dp/B0076R7Y8Q)
 {{< figure src="bpmn.png" alt="BPMN Method and Style by Bruce Silver" >}}
 > In my BPMN training, a student once asked me how to show that an activity normally completes in five hours. I replied that this is not a question BPMN asks. It asks what action occurs if the activity is not completed in five hours.
