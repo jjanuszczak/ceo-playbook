@@ -14,7 +14,7 @@ tags:
   - "systems-thinking"
 showReadingTime: true
 showTableOfContents: true
-draft: true
+draft: false
 status: agent-review
 about:
   - name: "Venture capital"
