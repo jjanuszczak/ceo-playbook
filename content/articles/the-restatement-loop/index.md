@@ -56,7 +56,7 @@ That is how a feed becomes a restatement loop.
 
 The social feed makes repetition look like consensus.
 
-Pew Research Center has documented the concentration problem for years. In its 2019 analysis of U.S. adult Twitter users, the most active 10% produced 80% of all tweets from U.S. users. In its 2021 analysis, the most active quarter of U.S. adult Twitter users produced 97% of all tweets from the observed sample. Pew also found that original posts were only 14% of tweets from that highly active group. Most of the output was retweets or replies.
+Pew Research Center has documented the concentration problem for years. In its 2019 analysis of U.S. adult Twitter users, the most active 10% produced 80% of all tweets from U.S. users. In its 2021 [analysis](https://www.pewresearch.org/internet/2021/11/15/the-behaviors-and-attitudes-of-u-s-adults-on-twitter/), the most active quarter of U.S. adult Twitter users produced 97% of all tweets from the observed sample. Pew also found that original posts were only [14% of tweets](https://www.pewresearch.org/short-reads/2023/05/17/how-us-adults-on-twitter-use-the-site-in-the-elon-musk-era/) from that highly active group. Most of the output was retweets or replies.
 
 That does not mean every retweet or reply is low value. Conversation matters. Curation matters. A sharp response can be more useful than the original post.
 
@@ -70,7 +70,7 @@ That is why the feed feels so loud and so thin at the same time.
 
 ## Why did the follower stop being infrastructure?
 
-Jack Conte's 2024 SXSW keynote, "Death of the Follower," is useful because it does not frame the problem as a simple fight between chronological feeds and ranking. His point is sharper: the follow used to be architecture.
+Jack Conte's 2024 [SXSW keynote](https://www.youtube.com/watch?v=5zUndMfMInc), "Death of the Follower," is useful because it does not frame the problem as a simple fight between chronological feeds and ranking. His point is sharper: the follow used to be architecture.
 
 The follow was a relationship. A reader, listener, or fan made a decision. The creator published. The follower had a reasonable expectation that the work would arrive.
 
@@ -86,9 +86,11 @@ The creator thinks they built distribution. The platform knows it owns allocatio
 
 RSS is boring in the best possible way.
 
+{{< x user="oldstackjournal" id="2103952778406318474" >}}
+
 A site publishes. A feed reader checks. New items appear. No ranking committee. No engagement auction. No forced pivot into short video because a competitor's format spiked last quarter.
 
-That simplicity is easy to underrate because the consumer web taught people to confuse convenience with control. Google Reader made RSS easy enough for normal people, then Google shut it down in 2013. Google later turned down the Google Feed API in 2016 after years of deprecation. Platform APIs tightened. Social networks preferred traffic, identity, and monetization to stay inside their walls.
+That simplicity is easy to underrate because the consumer web taught people to confuse convenience with control. Google Reader made RSS easy enough for normal people, then Google shut it down in 2013. Google later turned off the Google Feed API in 2016 after years of deprecation. Platform APIs tightened. Social networks preferred traffic, identity, and monetization to stay inside their walls.
 
 None of that made open feeds technically obsolete. It made them commercially inconvenient for companies that wanted to own the whole loop.
 
@@ -173,6 +175,12 @@ The feed is broken because we outsourced too much of the follow to systems that 
 The future of the web does not need fewer algorithms.
 
 It needs more user-owned intent.
+
+## Death of the Follower
+
+It is worth watching Jack Conte's keynote. So much here:
+
+{{< youtubeLite id="5zUndMfMInc" label="Death of the Follower & the Future of Creativity on the Web with Jack Conte | SXSW 2024 Keynote" >}}
 
 {{< faq >}}
   {{% faq-item question="Is RSS still useful in 2026?" %}}
