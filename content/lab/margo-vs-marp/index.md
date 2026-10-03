@@ -47,7 +47,7 @@ But Marp solves a narrower problem than the one many teams now have.
 
 Marp turns a Markdown file into slides.
 
-Margo treats a presentation as a maintained, structured project.
+[Margo](https://github.com/jjanuszczak/margo) treats a presentation as a maintained, structured project.
 
 That difference matters when an LLM, a team, or a company needs to create more than one disposable deck.
 
