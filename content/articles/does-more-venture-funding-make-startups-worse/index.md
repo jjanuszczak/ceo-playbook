@@ -1,6 +1,6 @@
 ---
 title: "Does More Venture Funding Make Startups Worse?"
-date: 2026-09-24T09:02:33+08:00
+date: 2026-09-29
 summary: "More venture money does not automatically hurt startups. The real risk is raising too much before product-market fit, when capital turns small experiments into expensive commitments."
 description: "A practical founder and investor analysis of whether startup success is inversely proportional to funds raised, using IPO data, seed funding research, and case studies from WhatsApp, Veeva, Atlassian, Color, and Quibi."
 categories:

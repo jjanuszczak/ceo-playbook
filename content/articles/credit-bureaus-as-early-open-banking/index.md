@@ -1,6 +1,6 @@
 ---
 title: "Credit Bureaus Were Open Banking Before APIs"
-date: 2026-08-07T09:15:00+08:00
+date: 2026-10-05
 summary: "Credit bureaus show that open banking is not a new idea. It is the latest version of a much older bargain: share trusted financial data, reduce risk, and widen access to credit."
 description: "A strategic look at credit bureaus as the analog predecessor to open banking, with lessons for financial inclusion, open finance regulation, and LenderLink in the Philippines."
 categories:
@@ -15,7 +15,7 @@ tags:
   - "systems-thinking"
 showReadingTime: true
 showTableOfContents: true
-draft: true
+draft: false
 about:
   - name: "Open banking"
     url: "https://en.wikipedia.org/wiki/Open_banking"
