@@ -58,6 +58,8 @@ The next great Filipino ERP won't look like QuickBooks. It won't have a "Chart o
 
 **That is the difference between a tool and a teammate. That is how we win.**
 
+This shift from scorekeeper to builder is now fundamentally reshaping executive finance as well, giving rise to the "finance engineer" and the real-time financial close (explored in [Signals: Week 41, 2026]({{< ref "signals/signals-week-41-2026" >}})).
+
 ## Endnotes
 
 ### Jeff Seibert on Digits

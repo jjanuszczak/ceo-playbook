@@ -48,6 +48,8 @@ AI coding tools represent the next major leap in software engineering abstractio
 
 In the history of software engineering, we have consistently sought higher levels of abstraction. We move away from the raw hardware to focus on business logic, user experience, and systems architecture. AI coding assistants (like Cursor, Copilot, and Claude) represent the latest leap in this ongoing cycle.
 
+As industry leaders now openly acknowledge, handwriting syntax line-by-line is rapidly becoming an unviable economic proposition in favor of directing agentic workflows (see [Signals: Week 41, 2026]({{< ref "signals/signals-week-41-2026" >}})).
+
 To understand why this is inevitable, we only need to look at how we got here.
 
 ## How Did Compilers Change Software Engineering?
