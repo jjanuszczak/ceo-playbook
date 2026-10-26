@@ -1,6 +1,6 @@
 ---
 title: "The Restatement Loop"
-date: 2026-09-30T09:03:39+08:00
+date: 2026-10-25
 summary: "Algorithmic feeds turn one post into a thousand restatements. RSS and modern user-owned readers are not nostalgia. They are distribution infrastructure for people who want to follow ideas on purpose."
 description: "A practical argument for treating RSS, open feeds, and modern personal readers as counterweights to algorithmic restatement loops, creator dependence on For You feeds, and AI-accelerated summary farming."
 categories:
@@ -13,7 +13,7 @@ tags:
   - "open-source"
 showReadingTime: true
 showTableOfContents: true
-draft: true
+draft: false
 status: "agent-review"
 about:
   - name: "RSS"
@@ -56,7 +56,7 @@ That is how a feed becomes a restatement loop.
 
 The social feed makes repetition look like consensus.
 
-Pew Research Center has documented the concentration problem for years. In its 2019 analysis of U.S. adult Twitter users, the most active 10% produced 80% of all tweets from U.S. users. In its 2021 [analysis](https://www.pewresearch.org/internet/2021/11/15/the-behaviors-and-attitudes-of-u-s-adults-on-twitter/), the most active quarter of U.S. adult Twitter users produced 97% of all tweets from the observed sample. Pew also found that original posts were only [14% of tweets](https://www.pewresearch.org/short-reads/2023/05/17/how-us-adults-on-twitter-use-the-site-in-the-elon-musk-era/) from that highly active group. Most of the output was retweets or replies.
+Pew Research Center has documented the concentration problem for years. In its 2019 analysis of U.S. adult Twitter users, the most active 10% produced 80% of all tweets from U.S. users. In its 2021 [analysis](https://www.pewresearch.org/internet/2021/11/15/the-behaviors-and-attitudes-of-u-s-adults-on-twitter/), the most active quarter of U.S. adult Twitter users produced 97% of all tweets from the observed sample. Pew also found that original posts were only [14% of tweets](https://www.pewresearch.org/short-reads/2023/05/17/how-us-adults-on-twitter-use-the-site-in-the-elon-musk-era/) from that highly active group. **Most of the output was retweets or replies**.
 
 That does not mean every retweet or reply is low value. Conversation matters. Curation matters. A sharp response can be more useful than the original post.
 
@@ -64,7 +64,7 @@ But the structure matters more than the intention.
 
 When a small group produces most of the visible output, and most of that output responds to other output, the feed naturally becomes recursive. A topic can feel culturally dominant because thousands of posts are orbiting one originating item. The volume is real. The independence is not.
 
-X's trend and ranking systems do not need to surface a single tweet as the unit of attention. They can surface the topic, the argument, the phrase, the screenshot, or the argument about the screenshot. The result is the same for the reader: repetition becomes atmosphere.
+A social media's trend and ranking systems do not need to surface a single tweet as the unit of attention. They can surface the topic, the argument, the phrase, the screenshot, or the argument about the screenshot. The result is the same for the reader: repetition becomes atmosphere.
 
 That is why the feed feels so loud and so thin at the same time.
 
