@@ -44,3 +44,11 @@ key = "tech-lab"
 label = "Tech Lab"
 status = "active"
 description = "Technical, explainer, or experimental pieces"
+
+[epub]
+
+[[epub.replacements]]
+find = "[!NOTE]+"
+replace = "**Note!**"
+scope = "body"
+format = "markdown"
