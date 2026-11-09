@@ -1,0 +1,34 @@
+{{ define "main" }}
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+    <header class="mb-12 max-w-3xl">
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral sm:text-5xl">{{ .Title }}</h1>
+      {{ with .Description }}<p class="mt-4 text-lg text-neutral-600 dark:text-neutral-300">{{ . }}</p>{{ end }}
+      <div class="books-list__intro prose dark:prose-invert mt-5">{{ .Content }}</div>
+    </header>
+
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {{ range .RegularPages.ByDate.Reverse }}
+        {{ $source := site.GetPage .Params.sourcePage }}
+        {{ $cover := false }}
+        {{ if $source }}{{ $cover = $source.Resources.GetMatch .Params.coverResource }}{{ end }}
+        <article class="overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800">
+          <a class="books-card__cover-link block" href="{{ .RelPermalink }}" aria-label="View {{ .Title }}">
+            {{ if $cover }}
+              <div class="books-cover books-cover--card mx-auto">
+                <img src="{{ $cover.RelPermalink }}" alt="Cover of {{ .Title }}" loading="lazy">
+                <span class="books-cover__spine" aria-hidden="true"></span>
+              </div>
+            {{ end }}
+          </a>
+          <div class="p-6 pt-3">
+            <h2 class="mt-0 text-xl font-bold text-neutral-900 dark:text-neutral"><a href="{{ .RelPermalink }}" class="no-underline hover:underline">{{ .Title }}</a></h2>
+            {{ with .Description }}<p class="mb-0 text-sm text-neutral-600 dark:text-neutral-300">{{ . }}</p>{{ else }}<p class="mb-0 text-sm text-neutral-600 dark:text-neutral-300">{{ .Summary }}</p>{{ end }}
+            <a class="mt-5 inline-flex items-center font-medium text-primary-600 underline decoration-2 underline-offset-4 hover:text-primary-500 dark:text-primary-400" href="{{ .RelPermalink }}">View book <span class="ms-2" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+      {{ else }}
+        <p class="text-neutral-600 dark:text-neutral-300">Books will appear here as they become available.</p>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
