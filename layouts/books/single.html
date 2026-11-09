@@ -1,0 +1,53 @@
+{{ define "main" }}
+  {{ $source := site.GetPage .Params.sourcePage }}
+  {{ $cover := false }}
+  {{ $epub := false }}
+  {{ if $source }}
+    {{ $cover = $source.Resources.GetMatch .Params.coverResource }}
+    {{ $epub = $source.Resources.GetMatch .Params.epubResource }}
+  {{ end }}
+
+  <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+    <a class="mb-8 inline-flex items-center gap-2 text-sm font-medium text-primary-600 hover:underline dark:text-primary-400" href="{{ "books/" | relURL }}"><span aria-hidden="true">&larr;</span> Back to books</a>
+
+    <article class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+      <div class="rounded-2xl bg-neutral-100 p-8 dark:bg-neutral-800 sm:p-12">
+        {{ if $cover }}
+          <div class="books-cover books-cover--feature mx-auto">
+            <img src="{{ $cover.RelPermalink }}" alt="Cover of {{ .Title }}" fetchpriority="high">
+            <span class="books-cover__spine" aria-hidden="true"></span>
+          </div>
+        {{ else }}
+          <div class="flex aspect-[3/4] items-center justify-center rounded bg-neutral-200 p-8 text-center font-semibold text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200">{{ .Title }}</div>
+        {{ end }}
+      </div>
+
+      <div class="py-2">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-primary-600 dark:text-primary-400">CEO Playbook · Digital Edition</p>
+        <h1 class="mt-0 text-4xl font-extrabold leading-tight text-neutral-900 dark:text-neutral sm:text-5xl">{{ .Title }}</h1>
+        {{ with .Summary }}<p class="mt-5 text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">{{ . }}</p>{{ end }}
+        <div class="prose dark:prose-invert mt-4">{{ .Content }}</div>
+
+        {{ if $epub }}
+          <a class="books-download mt-8" href="{{ $epub.RelPermalink }}" download>
+            <span class="books-download__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8">
+                <path d="M12 3v12m0 0 5-5m-5 5-5-5" />
+                <path d="M5 19h14" />
+              </svg>
+            </span>
+            <span class="books-download__label">Download EPUB</span>
+            {{ with $.Params.fileSize }}<span class="books-download__size">{{ . }}</span>{{ end }}
+          </a>
+        {{ else }}
+          <p class="mt-8 rounded border border-neutral-300 p-4 text-sm dark:border-neutral-600">The EPUB file is not available yet.</p>
+        {{ end }}
+
+        {{ with $source }}
+          <p class="mt-8 text-sm text-neutral-500 dark:text-neutral-400">EPUB format. Read in Apple Books, Kobo, or send to Kindle.</p>
+          <a class="mt-4 inline-flex items-center gap-2 font-medium text-primary-600 underline decoration-2 underline-offset-4 hover:text-primary-500 dark:text-primary-400" href="{{ .RelPermalink }}">Read the original research <span aria-hidden="true">&#8599;</span></a>
+        {{ end }}
+      </div>
+    </article>
+  </div>
+{{ end }}

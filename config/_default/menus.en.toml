@@ -56,10 +56,16 @@
   weight = 33
 
 [[main]]
+  name = "Books"
+  parent = "Insights"
+  pageRef = "books"
+  weight = 34
+
+[[main]]
   name = "Engine Room"
   parent = "Insights"
   pageRef = "lab"
-  weight = 34
+  weight = 35
 
 [[main]]
   name = "Portfolio"
