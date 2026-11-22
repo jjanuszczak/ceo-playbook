@@ -17,7 +17,9 @@ def scrape_hydrated_page(page, url):
         time.sleep(2.5)
 
         # Locate the core post container to isolate our search away from sidebars/comments
-        main_tweet = page.ele('@data-testid=tweet', timeout=3)
+        main_tweet = page.ele('@data-testid=tweet', timeout=2)
+        if not main_tweet:
+            main_tweet = page.ele('tag:article', timeout=2)
         
         text_content = ""
         # Base classification from URL routing
@@ -121,7 +123,9 @@ def main():
     page.get("https://x.com/i/bookmarks")
     
     print("Waiting for page to load timeline...")
-    page.ele('@data-testid=tweet', timeout=120)
+    time.sleep(3)
+    # Wait for either legacy tweet testid, bookmarks container, or status links
+    page.ele('xpath:.//a[contains(@href, "/status/")] | @data-testid=tweet | @id=urt:bookmarks', timeout=15)
     
     # ----------------------------------------------------
     # PASS 1: COLLECT TARGET URLS FROM THE TIMELINE
@@ -132,18 +136,36 @@ def main():
     
     while len(target_urls) < limit and consecutive_no_change < 5:
         initial_count = len(target_urls)
-        tweet_elements = page.eles('@data-testid=tweet')
         
-        for elem in tweet_elements:
-            # Captures both standard status targets and pure article routing targets
-            link_elem = elem.ele('xpath:.//a[contains(@href, "/status/") or contains(@href, "/article/")]', timeout=0)
-            if link_elem:
-                raw_url = link_elem.attr('href')
-                clean_url = raw_url.split("?")[0] if "?" in raw_url else raw_url
-                if clean_url not in target_urls:
-                    target_urls.append(clean_url)
-                    if len(target_urls) >= limit:
-                        break
+        # 1. Collect from links
+        link_candidates = page.eles('xpath:.//a[contains(@href, "/status/") or contains(@href, "/article/")]')
+        # 2. Collect from data-href elements
+        data_href_candidates = page.eles('xpath:.//*[@data-href and (contains(@data-href, "/status/") or contains(@data-href, "/article/"))]')
+        
+        all_raw_urls = []
+        for elem in link_candidates:
+            href = elem.attr('href')
+            if href:
+                all_raw_urls.append(href)
+        for elem in data_href_candidates:
+            dhref = elem.attr('data-href')
+            if dhref:
+                all_raw_urls.append(dhref)
+
+        for raw_url in all_raw_urls:
+            clean_url = raw_url.split("?")[0] if "?" in raw_url else raw_url
+            # Clean subpaths like /analytics, /photo/1
+            if "/status/" in clean_url:
+                base_status = clean_url.split("/status/")[0]
+                status_id = clean_url.split("/status/")[1].split("/")[0]
+                clean_url = f"{base_status}/status/{status_id}"
+            if not clean_url.startswith("http"):
+                clean_url = f"https://x.com{clean_url}"
+                
+            if clean_url not in target_urls:
+                target_urls.append(clean_url)
+                if len(target_urls) >= limit:
+                    break
                         
         if len(target_urls) == initial_count:
             consecutive_no_change += 1
