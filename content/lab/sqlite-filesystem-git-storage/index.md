@@ -14,7 +14,7 @@ tags:
   - mental-models
 showReadingTime: true
 showTableOfContents: true
-draft: true
+draft: false
 about:
   - name: "SQLite"
     url: "https://en.wikipedia.org/wiki/SQLite"
