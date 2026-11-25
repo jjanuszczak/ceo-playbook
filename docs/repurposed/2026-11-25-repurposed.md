@@ -1,10 +1,10 @@
 # Social Media Drafts: Why SQLite Beats the Filesystem on Small Blobs (And Why Git Doesn't Need It)
 
-- **Source Article:** `content/articles/sqlite-filesystem-git-storage/index.md`
-- **Campaign:** `thought-leadership`
+- **Source Article:** `content/lab/sqlite-filesystem-git-storage/index.md`
+- **Campaign:** `tech-lab`
 - **Medium:** `social`
-- **X URL:** `https://januszczak.org/articles/sqlite-filesystem-git-storage/?utm_campaign=thought-leadership&utm_medium=social&utm_source=x`
-- **LinkedIn URL:** `https://januszczak.org/articles/sqlite-filesystem-git-storage/?utm_campaign=thought-leadership&utm_medium=social&utm_source=linkedin`
+- **X URL:** `https://januszczak.org/lab/sqlite-filesystem-git-storage/?utm_campaign=tech-lab&utm_medium=social&utm_source=x`
+- **LinkedIn URL:** `https://januszczak.org/lab/sqlite-filesystem-git-storage/?utm_campaign=tech-lab&utm_medium=social&utm_source=linkedin`
 
 ## X
 
@@ -17,7 +17,7 @@ above 100kb? the filesystem wins again.
 
 know where your workload sits before you rip out ext4.
 
-https://januszczak.org/articles/sqlite-filesystem-git-storage/?utm_campaign=thought-leadership&utm_medium=social&utm_source=x
+https://januszczak.org/lab/sqlite-filesystem-git-storage/?utm_campaign=tech-lab&utm_medium=social&utm_source=x
 
 ### Option 2: BeFS vs WinFS
 history already ran the database-as-filesystem experiment twice.
@@ -28,7 +28,7 @@ winfs layered a sql server engine over ntfs. microsoft canceled it in 2006.
 
 targeted hybrids beat wholesale replacement.
 
-https://januszczak.org/articles/sqlite-filesystem-git-storage/?utm_campaign=thought-leadership&utm_medium=social&utm_source=x
+https://januszczak.org/lab/sqlite-filesystem-git-storage/?utm_campaign=tech-lab&utm_medium=social&utm_source=x
 
 ### Option 3: Git packfiles
 every few months someone asks why git doesn't just use sqlite instead of `.git/objects/`.
@@ -39,7 +39,7 @@ answer: packfiles already solved the small-file problem.
 
 sqlite only helps at the loose-object edges.
 
-https://januszczak.org/articles/sqlite-filesystem-git-storage/?utm_campaign=thought-leadership&utm_medium=social&utm_source=x
+https://januszczak.org/lab/sqlite-filesystem-git-storage/?utm_campaign=tech-lab&utm_medium=social&utm_source=x
 
 ## LinkedIn
 
@@ -55,7 +55,7 @@ But the advantage flips back to the native filesystem above ~100 KB, and OS hist
 **So What?**
 Great systems architecture rarely comes from forcing one abstraction to do everything. Use SQLite for high-volume small blobs and queryable metadata, keep large sequential files on the filesystem, and avoid dual-copy arbitration layers that create more operational pain than they solve.
 
-https://januszczak.org/articles/sqlite-filesystem-git-storage/?utm_campaign=thought-leadership&utm_medium=social&utm_source=linkedin
+https://januszczak.org/lab/sqlite-filesystem-git-storage/?utm_campaign=tech-lab&utm_medium=social&utm_source=linkedin
 
 ### Option 2: Why Git Doesn't Need to Replace Packfiles with SQLite
 If SQLite is faster than the filesystem for thousands of tiny files, shouldn't Git replace `.git/objects/` with a SQLite database?
@@ -69,4 +69,4 @@ Meanwhile, Fossil SCM (written by SQLite's creator) proves an all-SQLite VCS wor
 **So What?**
 Before proposing a storage rewrite, check whether the existing system already has a packing layer solving the bottleneck. Targeted improvements at the edges beat rebuilding the core.
 
-https://januszczak.org/articles/sqlite-filesystem-git-storage/?utm_campaign=thought-leadership&utm_medium=social&utm_source=linkedin
+https://januszczak.org/lab/sqlite-filesystem-git-storage/?utm_campaign=tech-lab&utm_medium=social&utm_source=linkedin
